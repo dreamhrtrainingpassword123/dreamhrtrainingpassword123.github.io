@@ -3,106 +3,172 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Institute of Dream HR Training & Compliance</title>
+
+<title>Institute of Dream HR Training & Compliance | PF ESIC Payroll Consultant Delhi NCR</title>
+
+<meta name="description" content="Institute of Dream HR Training & Compliance provides PF, ESIC, Payroll, Labour Law Compliance & Practical HR Training Services in Delhi NCR. 10+ Years Experience.">
+<meta name="keywords" content="PF Consultant Delhi, ESIC Consultant Delhi, Payroll Services, Labour Law Compliance, HR Training Delhi NCR">
+<meta name="author" content="Institute of Dream HR Training & Compliance">
 
 <style>
-body {
-    margin:0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background:#f4f6f9;
-    color:#333;
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:#f4f6f9;
+color:#333;
+scroll-behavior:smooth;
 }
 
 /* HEADER */
-header {
-    background:#0d1b4c;
-    color:white;
-    padding:20px 0;
-    text-align:center;
+header{
+background:#0d1b4c;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 8%;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-header h1 {
-    margin:0;
-    font-size:28px;
-    letter-spacing:1px;
+.logo{
+display:flex;
+align-items:center;
 }
 
-header p {
-    margin-top:8px;
-    font-size:15px;
-    color:#dcdcdc;
+.logo img{
+height:50px;
+margin-right:10px;
 }
 
-/* HERO SECTION */
-.hero {
-    background:linear-gradient(rgba(13,27,76,0.85), rgba(13,27,76,0.85)),
-    url('https://images.unsplash.com/photo-1557804506-669a67965ba0') center/cover;
-    color:white;
-    text-align:center;
-    padding:80px 20px;
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-size:15px;
 }
 
-.hero h2 {
-    font-size:32px;
-    margin-bottom:15px;
+nav a:hover{
+text-decoration:underline;
 }
 
-.hero p {
-    font-size:18px;
-    margin-bottom:25px;
+/* HERO */
+.hero{
+background:linear-gradient(rgba(13,27,76,0.85), rgba(13,27,76,0.85)),
+url('https://images.unsplash.com/photo-1557804506-669a67965ba0') center/cover;
+color:white;
+text-align:center;
+padding:90px 20px;
 }
 
-.btn {
-    background:#25D366;
-    padding:14px 30px;
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-    border-radius:30px;
-    font-size:16px;
+.hero h1{
+font-size:34px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:25px;
+}
+
+.btn{
+background:#25D366;
+padding:14px 30px;
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
 }
 
 /* SECTION */
-.section {
-    padding:60px 10%;
-    background:white;
+.section{
+padding:60px 10%;
+background:white;
 }
 
-.section:nth-child(even) {
-    background:#f9fafc;
+.section:nth-child(even){
+background:#f9fafc;
 }
 
-.section h3 {
-    text-align:center;
-    color:#0d1b4c;
-    margin-bottom:30px;
-    font-size:24px;
+.section h2{
+text-align:center;
+color:#0d1b4c;
+margin-bottom:40px;
 }
 
-.services {
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-    gap:25px;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
-.card {
-    background:white;
-    padding:25px;
-    border-radius:8px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+.card{
+background:white;
+padding:25px;
+border-radius:8px;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
 }
 
-.card h4 {
-    margin-top:0;
-    color:#1a237e;
+.card h3{
+margin-top:0;
+color:#1a237e;
 }
 
-footer {
-    background:#0d1b4c;
-    color:white;
-    text-align:center;
-    padding:20px;
-    font-size:14px;
+/* CONTACT FORM */
+form{
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
+}
+
+input,textarea{
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:5px;
+font-size:14px;
+}
+
+button{
+background:#0d1b4c;
+color:white;
+padding:12px;
+border:none;
+border-radius:5px;
+font-size:16px;
+cursor:pointer;
+}
+
+/* MAP */
+iframe{
+width:100%;
+height:350px;
+border:0;
+border-radius:8px;
+}
+
+/* FOOTER */
+footer{
+background:#0d1b4c;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* FLOATING WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+font-size:18px;
+text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 </style>
 </head>
@@ -110,77 +176,83 @@ footer {
 <body>
 
 <header>
-<h1>Institute of Dream HR Training & Compliance</h1>
-<p>PF | ESIC | Payroll | Labour Law Compliance | HR Practical Training</p>
+<div class="logo">
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Logo">
+<strong>Dream HR Training</strong>
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#training">Training</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
 <section class="hero">
-<h2>Professional HR Compliance Solutions for Businesses</h2>
-<p>10+ Years Experience in PF, ESIC, Payroll & Labour Law Management</p>
-<a href="https://wa.me/918863962310" target="_blank" class="btn">📲 Get Consultation</a>
+<h1>Professional PF, ESIC & Labour Law Compliance Services</h1>
+<p>10+ Years Experience | Delhi NCR Based HR Consultant</p>
+<a href="https://wa.me/918863962310" target="_blank" class="btn">Get Consultation</a>
 </section>
 
-<section class="section">
-<h3>Our Services</h3>
-<div class="services">
-
+<section class="section" id="services">
+<h2>Our Services</h2>
+<div class="grid">
 <div class="card">
-<h4>PF & ESIC Compliance</h4>
-<p>Registration, Monthly Filing, Inspection Handling & Complete Documentation Support.</p>
+<h3>PF & ESIC Compliance</h3>
+<p>Registration, Monthly Filing & Inspection Support.</p>
 </div>
-
 <div class="card">
-<h4>Payroll Management</h4>
-<p>Accurate Salary Processing, Payslip Generation & Compliance Structured Payroll System.</p>
+<h3>Payroll Management</h3>
+<p>Salary Processing, Payslips & Structured Payroll System.</p>
 </div>
-
 <div class="card">
-<h4>Labour Law Compliance</h4>
-<p>Shops Act, CLRA, Registers Maintenance & Complete Statutory Compliance Management.</p>
+<h3>Labour Law Compliance</h3>
+<p>Shops Act, CLRA & Statutory Register Maintenance.</p>
 </div>
-
-<div class="card">
-<h4>HR Practical Training</h4>
-<p>Real-time Practical HR Training in PF, ESIC, Payroll & Labour Law Documentation.</p>
-</div>
-
 </div>
 </section>
 
-<section class="section">
-<h3>Why Choose Us</h3>
-<div class="services">
-
+<section class="section" id="training">
+<h2>HR Practical Training</h2>
+<div class="grid">
 <div class="card">
-<h4>✔ Experienced Consultant</h4>
-<p>10+ Years Industry Exposure in Corporate HR & Compliance Management.</p>
+<h3>PF & ESIC Practical</h3>
+<p>Real-time practical compliance training.</p>
 </div>
-
 <div class="card">
-<h4>✔ On-Site Support</h4>
-<p>Delhi NCR Based Field Inspection & Audit Assistance.</p>
+<h3>Payroll Training</h3>
+<p>Live salary sheet & calculation practice.</p>
 </div>
-
 <div class="card">
-<h4>✔ Affordable Packages</h4>
-<p>Monthly Compliance Plans Suitable for Startups & SMEs.</p>
+<h3>Complete HR Compliance Course</h3>
+<p>End-to-end HR statutory working training.</p>
 </div>
-
 </div>
 </section>
 
-<section class="section">
-<h3>Contact Us</h3>
-<p style="text-align:center; font-size:18px;">
-📍 Service Area: Delhi NCR <br><br>
-📧 Email: dreamhrtraining@gmail.com <br><br>
-📞 Phone: 8863962310
-</p>
+<section class="section" id="contact">
+<h2>Contact Us</h2>
+
+<form action="https://formsubmit.co/dreamhrtraining@gmail.com" method="POST">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<input type="text" name="phone" placeholder="Your Phone Number" required>
+<textarea name="message" rows="5" placeholder="Your Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+
+<br><br>
+
+<iframe src="https://www.google.com/maps?q=Delhi%20NCR&output=embed"></iframe>
+
 </section>
 
 <footer>
 © 2026 Institute of Dream HR Training & Compliance | All Rights Reserved
 </footer>
+
+<a href="https://wa.me/8863962310" class="whatsapp" target="_blank">💬</a>
 
 </body>
 </html>
