@@ -1,144 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Institute of Dream HR Training and Compliance</title>
 
+<meta name="description" content="PF ESIC Payroll Labour Law Consultant Delhi NCR. Practical HR Training and Compliance Services.">
+
 <style>
 
 body{
-font-family: Arial;
+font-family:Arial;
 margin:0;
-background:#f4f6f9;
+background:#f4f6fb;
 }
+
+/* HEADER */
 
 header{
-background:#002147;
+background:#0b2a5c;
 color:white;
-padding:15px;
 text-align:center;
+padding:25px;
 }
 
+header h1{
+margin:0;
+}
+
+/* NAVIGATION */
+
 nav{
-background:#0a58ca;
-padding:10px;
+background:#1e63d6;
+padding:12px;
 text-align:center;
 }
 
 nav a{
 color:white;
-margin:10px;
+margin:15px;
 text-decoration:none;
 font-weight:bold;
 }
 
+/* HERO */
+
 .hero{
-background:#e8f0ff;
-padding:60px;
 text-align:center;
+padding:70px 20px;
+background:white;
 }
 
-.hero h1{
-color:#002147;
+.hero h2{
+font-size:36px;
+color:#0b2a5c;
 }
 
-.section{
-padding:40px;
+.hero p{
+font-size:18px;
+}
+
+/* CONTAINER */
+
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
+padding:40px 0;
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 .card{
 background:white;
 padding:20px;
-margin:15px;
 border-radius:8px;
 box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
-.services button{
-width:100%;
-padding:15px;
-border:none;
-background:#0a58ca;
-color:white;
-margin-top:10px;
-font-size:16px;
-cursor:pointer;
+.card h3{
+color:#1e63d6;
 }
 
-.services-content{
-display:none;
-padding:15px;
-background:#f9f9f9;
-}
+/* TRAINING */
 
-.profile{
-display:flex;
-align-items:center;
+.training{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
-.profile img{
-width:180px;
-border-radius:100px;
+/* ABOUT */
+
+.about{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+align-items:center;
 }
 
-.contact-form input, textarea{
+.about img{
+width:200px;
+border-radius:10px;
+}
+
+/* FORM */
+
+form input, form textarea{
 width:100%;
 padding:10px;
-margin-top:10px;
+margin-bottom:12px;
+border:1px solid #ccc;
+border-radius:5px;
 }
 
-footer{
-background:#002147;
+button{
+background:#1e63d6;
 color:white;
-text-align:center;
-padding:20px;
+border:none;
+padding:12px 20px;
+cursor:pointer;
+border-radius:5px;
 }
+
+/* MAP */
+
+.map iframe{
+width:100%;
+height:350px;
+border:0;
+}
+
+/* FLOAT BUTTON */
 
 .whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
-background:#25D366;
+background:#25d366;
 color:white;
-padding:15px;
-border-radius:50px;
+padding:12px 18px;
+border-radius:30px;
 text-decoration:none;
 }
 
 .call{
 position:fixed;
-bottom:80px;
+bottom:70px;
 right:20px;
-background:#0a58ca;
+background:#1e63d6;
 color:white;
-padding:15px;
-border-radius:50px;
+padding:12px 18px;
+border-radius:30px;
 text-decoration:none;
 }
 
+/* FOOTER */
+
+footer{
+background:#0b2a5c;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
 </style>
-
-<script>
-
-function toggleService(id){
-
-var x=document.getElementById(id);
-
-if(x.style.display==="block")
-{
-x.style.display="none";
-}
-else
-{
-x.style.display="block";
-}
-
-}
-
-</script>
 
 </head>
 
@@ -147,7 +182,8 @@ x.style.display="block";
 <header>
 
 <h1>Institute of Dream HR Training and Compliance</h1>
-<p>Professional PF ESIC Payroll & Labour Law Services</p>
+
+<p>Professional PF ESIC Payroll & Labour Law Consultant</p>
 
 </header>
 
@@ -163,94 +199,63 @@ x.style.display="block";
 
 <section class="hero" id="home">
 
-<h1>Delhi NCR Based HR Consultant</h1>
+<h2>Delhi NCR Based HR Consultant</h2>
 
 <p>10+ Years Practical Experience in PF ESIC Payroll and Labour Law Compliance</p>
 
 </section>
 
-<section class="section" id="services">
+<div class="container">
 
 <h2>Our Professional Services</h2>
 
 <div class="services">
 
-<button onclick="toggleService('s1')">PF & ESIC Compliance</button>
-
-<div id="s1" class="services-content">
-
-PF Registration, ESIC Registration, Monthly Return Filing, Notice Handling, Inspection Support and Online Compliance Management.
-
+<div class="card">
+<h3>PF & ESIC Compliance</h3>
+<p>Monthly PF ESIC return filing, employee registration, inspection support and complete compliance management.</p>
 </div>
 
-
-<button onclick="toggleService('s2')">Payroll Management</button>
-
-<div id="s2" class="services-content">
-
-Salary Structure Design, Payroll Processing, Payslip Generation, Attendance Integration and Statutory Deductions.
-
+<div class="card">
+<h3>Payroll Management</h3>
+<p>Salary structure design, payroll processing, payslip generation and statutory deduction management.</p>
 </div>
 
-
-<button onclick="toggleService('s3')">Labour Law Compliance</button>
-
-<div id="s3" class="services-content">
-
-Shops Act Registration, CLRA License, Labour Registers Maintenance, Minimum Wages Compliance and Labour Inspection Handling.
-
+<div class="card">
+<h3>Labour Law Compliance</h3>
+<p>Shops Act registration, CLRA compliance, statutory registers and labour law advisory services.</p>
 </div>
 
-
-<button onclick="toggleService('s4')">Recruitment Services (Pan India)</button>
-
-<div id="s4" class="services-content">
-
-Manpower hiring for companies across India including HR executives, office staff, factory workers and bulk recruitment.
-
+<div class="card">
+<h3>Recruitment Services</h3>
+<p>Pan India recruitment support for startups, SMEs and growing companies.</p>
 </div>
 
-
-<button onclick="toggleService('s5')">Factory License & NOC</button>
-
-<div id="s5" class="services-content">
-
-Factory License Registration, Pollution NOC support, documentation and renewal assistance.
-
+<div class="card">
+<h3>Factory Licensing</h3>
+<p>Factory license registration, renewal and statutory compliance documentation.</p>
 </div>
 
-
-<button onclick="toggleService('s6')">Compliance Audit</button>
-
-<div id="s6" class="services-content">
-
-PF ESIC audit, labour law audit, documentation review and risk assessment for businesses.
-
+<div class="card">
+<h3>Compliance Audit</h3>
+<p>PF ESIC and labour law compliance audit for companies.</p>
 </div>
-
-
-<button onclick="toggleService('s7')">Digital Marketing for Businesses</button>
-
-<div id="s7" class="services-content">
-
-Google Business setup, SEO optimization, social media marketing and lead generation for businesses.
 
 </div>
 
 </div>
 
-</section>
+<div class="container" id="training">
 
+<h2>HR Practical Training Programs</h2>
 
-<section class="section" id="training">
-
-<h2>HR Training Programs</h2>
+<div class="training">
 
 <div class="card">
 
 <h3>Practical HR Training</h3>
 
-Complete HR practical training including PF ESIC compliance, payroll processing and labour law management.
+<p>Complete HR practical training including PF ESIC payroll and labour law compliance.</p>
 
 </div>
 
@@ -258,7 +263,7 @@ Complete HR practical training including PF ESIC compliance, payroll processing 
 
 <h3>Online HR Classes</h3>
 
-Live online classes for HR students, HR executives, job seekers and MBA/BBA students.
+<p>Live online HR training classes for students, HR executives and job seekers.</p>
 
 </div>
 
@@ -266,32 +271,33 @@ Live online classes for HR students, HR executives, job seekers and MBA/BBA stud
 
 <h3>Payroll & Compliance Course</h3>
 
-Learn salary structure design, payroll processing, PF ESIC calculation and labour law compliance.
+<p>Learn salary structure, payroll processing, PF ESIC filing and statutory compliance.</p>
 
 </div>
 
-</section>
+</div>
 
+</div>
 
-<section class="section" id="about">
+<div class="container" id="about">
 
-<h2>About Founder</h2>
+<h2>Founder / HR Consultant</h2>
 
-<div class="profile">
+<div class="about">
 
 <img src="profile.jpg">
 
-<div>
-
-<h3>C.K. Jha</h3>
-
 <p>
 
-C.K. Jha is the Founder of the Institute of Dream HR Training and Compliance based in Delhi NCR. He has more than 10 years of professional experience in Human Resource Management, Payroll Processing, PF & ESIC Compliance and Labour Law Advisory.
+<strong>C.K. Jha</strong> is the Founder of Institute of Dream HR Training and Compliance.
 
-He has supported startups, MSMEs and growing companies in building proper statutory compliance systems and managing labour law documentation effectively.
+He has more than 10 years of practical experience in PF, ESIC, Payroll Processing and Labour Law Compliance.
 
-Through his institute he also provides practical HR training programs designed for HR students, job seekers and professionals who want to gain real industry knowledge and practical compliance skills.
+He has worked with startups, SMEs and growing companies across Delhi NCR to ensure proper statutory compliance and smooth HR operations.
+
+His expertise includes compliance management, payroll systems, labour law documentation, inspection handling and HR training programs.
+
+Through his practical HR training programs he has helped many students and HR professionals build strong careers in Human Resource and compliance domain.
 
 </p>
 
@@ -299,53 +305,19 @@ Through his institute he also provides practical HR training programs designed f
 
 </div>
 
-</section>
-
-
-<section class="section">
-
-<h2>HR Course Fees</h2>
-
-<div class="card">
-
-Practical HR Training Course Fees: Contact for Details
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<h2>Client Companies</h2>
-
-<div class="card">
-
-Your client company logos can be displayed here.
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<h2>Student Testimonials</h2>
-
-<div class="card">
-
-"Very practical HR training and PF ESIC knowledge."  
-
-</div>
-
-</section>
-
-
-<section class="section" id="contact">
+<div class="container" id="contact">
 
 <h2>Contact Us</h2>
 
-<div class="contact-form">
+<p>
+
+Phone: 8863962310<br>
+
+Email: dreamhrtraining@gmail.com
+
+</p>
+
+<form>
 
 <input type="text" placeholder="Your Name">
 
@@ -359,32 +331,28 @@ Your client company logos can be displayed here.
 
 <button>Send Message</button>
 
+</form>
+
 </div>
 
-</section>
-
-
-<section class="section">
+<div class="container map">
 
 <h2>Our Location</h2>
 
-<iframe 
-src="https://maps.google.com/maps?q=dilshad%20garden%20delhi&t=&z=13&ie=UTF8&iwloc=&output=embed"
-width="100%" height="350"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.9611155155676!2d77.32448697529114!3d28.685297075635933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfb978822b0e7%3A0x116ae7ef25089bde!2sInstitute%20of%20Dream%20HR%20Training%20and%20Compliance!5e1!3m2!1sen!2sin!4v1772543862516!5m2!1sen!2sin"></iframe>
 
-</section>
-
-
-<a class="whatsapp" href="https://wa.me/918863962310">WhatsApp</a>
+</div>
 
 <a class="call" href="tel:8863962310">Call</a>
 
+<a class="whatsapp" href="https://wa.me/918863962310">WhatsApp</a>
 
 <footer>
 
-<p>© 2026 Institute of Dream HR Training and Compliance</p>
+© 2026 Institute of Dream HR Training and Compliance
 
 </footer>
 
 </body>
+
 </html>
