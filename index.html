@@ -1,151 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>HR Compliance Services | PF ESIC Consultant | Payroll Services India | Dream HR Consultancy</title>
+<title>Dream HR Consultancy | HR Compliance | PF ESIC | Payroll</title>
 
-<meta name="description" content="Dream HR Consultancy provides HR Compliance Services, PF ESIC Consultant, Payroll Services in India. Expert in Labour Law Compliance, PF ESIC Filing, Payroll Management. Contact now.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f5f7fa;}
 
+/* HEADER */
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 50px;
+background:#0a2a43;
+color:white;
+position:fixed;
+width:100%;
+z-index:1000;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+.logo img{height:40px;}
+
+nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+}
+
+/* HERO SLIDER */
+.hero{
+height:100vh;
+position:relative;
+overflow:hidden;
+}
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+opacity:0;
+transition:1s;
+}
+
+.slide.active{opacity:1;}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+}
+
+.content{
+position:relative;
+text-align:center;
+}
+
+.content h1{
+font-size:45px;
+margin-bottom:10px;
+}
+
+.btn{
+background:#00c6ff;
+padding:12px 25px;
+color:white;
+text-decoration:none;
+}
+
+/* OWNER PHOTO */
+.owner{
+position:absolute;
+bottom:30px;
+right:30px;
+background:white;
+padding:10px;
+border-radius:10px;
+text-align:center;
+}
+.owner img{
+width:80px;
+border-radius:50%;
+}
+
+/* NOTICE */
+.notice{
+background:#0077b6;
+color:white;
+padding:10px;
+white-space:nowrap;
+overflow:hidden;
+}
+.notice span{
+display:inline-block;
+padding-left:100%;
+animation:scroll 15s linear infinite;
+}
+@keyframes scroll{
+0%{transform:translateX(0);}
+100%{transform:translateX(-100%);}
+}
+
+/* SERVICES */
+.container{padding:60px 40px;text-align:center;}
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+.card:hover{transform:translateY(-10px);}
+
+/* CONTACT BUTTONS */
+.call, .whatsapp{
+position:fixed;
+bottom:20px;
+padding:12px;
+color:white;
+border-radius:50px;
+text-decoration:none;
+}
+.call{left:20px;background:red;}
+.whatsapp{right:20px;background:green;}
+
+/* FOOTER */
+footer{
+background:black;
+color:white;
+padding:20px;
+text-align:center;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-
 <div class="logo">
 <img src="logo.png">
 <span>Dream HR Consultancy</span>
 </div>
 
 <nav>
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="training.html">HR Training</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">Jobs</a>
+<a href="#">Contact</a>
 </nav>
-
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<div class="hero">
 
-<h1>HR Compliance Services | PF ESIC Consultant | Payroll Services India</h1>
+<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f');">
+<div class="overlay"></div>
+<div class="content">
+<h1>PF & ESIC Compliance</h1>
+<p>Complete compliance solutions for your business</p>
+<a href="#" class="btn">Get Consultation</a>
+</div>
+</div>
 
-<p>Expert HR Consultant providing PF ESIC Services, Payroll Management and Labour Law Compliance across India.</p>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40');">
+<div class="overlay"></div>
+<div class="content">
+<h1>Payroll Processing</h1>
+<p>Accurate & hassle-free payroll management</p>
+</div>
+</div>
 
-<a href="services.html" class="btn">Explore Services</a>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f');">
+<div class="overlay"></div>
+<div class="content">
+<h1>Labour Law Compliance</h1>
+<p>Stay legally safe with expert support</p>
+</div>
+</div>
 
-</section>
+<!-- OWNER PHOTO -->
+<div class="owner">
+<img src="owner.jpg">
+<p>Founder</p>
+</div>
 
-<!-- SEO TEXT -->
-<div class="container">
-<p>
-We are a leading HR Consultancy in India offering complete HR Compliance Services including PF ESIC Registration, Payroll Processing, Labour Law Advisory and Compliance Audit. We help businesses stay compliant and avoid penalties while improving HR systems and processes.
-</p>
+</div>
+
+<!-- NOTICE -->
+<div class="notice">
+<span>📢 Minimum Wages Updated | PF ESIC Changes | Contact Dream HR Consultancy - 8863962310</span>
 </div>
 
 <!-- SERVICES -->
 <div class="container">
-
-<h2>Our Core Services</h2>
+<h2>Our Services</h2>
 
 <div class="services">
 
-<div class="card">
-<h3>PF & ESIC Compliance</h3>
-<p>Complete PF ESIC registration, filing and inspection support.</p>
-<a href="pf-esic.html" class="btn">Read More</a>
-</div>
-
-<div class="card">
-<h3>Payroll Management</h3>
-<p>Accurate salary processing, payslips and compliance.</p>
-<a href="payroll.html" class="btn">Read More</a>
-</div>
-
-<div class="card">
-<h3>Labour Law Compliance</h3>
-<p>Shops Act, CLRA and documentation support.</p>
-<a href="labour-law.html" class="btn">Read More</a>
-</div>
-
-<div class="card">
-<h3>Recruitment Services</h3>
-<p>Hire skilled candidates across India.</p>
-<a href="recruitment.html" class="btn">Read More</a>
-</div>
-
-<div class="card">
-<h3>Factory License</h3>
-<p>Factory license registration & renewal.</p>
-<a href="factory-license.html" class="btn">Read More</a>
-</div>
-
-<div class="card">
-<h3>Compliance Audit</h3>
-<p>Audit services to avoid penalties.</p>
-<a href="compliance-audit.html" class="btn">Read More</a>
-</div>
-
-<div class="card">
-<h3>HR Consulting</h3>
-<p>HR setup, policy and documentation services.</p>
-<a href="hr-consulting.html" class="btn">Read More</a>
-</div>
+<div class="card">PF & ESIC Compliance</div>
+<div class="card">Payroll Processing</div>
+<div class="card">Establishment Compliance</div>
+<div class="card">Factory Act Compliance</div>
+<div class="card">BOCW Compliance</div>
+<div class="card">Contract Labour Compliance</div>
+<div class="card">Compliance Audit</div>
+<div class="card">Labour Law Licensing</div>
+<div class="card">Pollution Registration</div>
+<div class="card">POSH Consultant</div>
+<div class="card">Professional Tax</div>
+<div class="card">Food License</div>
 
 </div>
-
-</div>
-
-<!-- WHY CHOOSE US -->
-<div class="container">
-
-<h2>Why Choose Dream HR Consultancy?</h2>
-
-<ul>
-<li>10+ Years Practical Experience</li>
-<li>100% Compliance Support</li>
-<li>Affordable Pricing</li>
-<li>Expert Consultation</li>
-<li>Fast Service Delivery</li>
-</ul>
-
 </div>
 
 <!-- CONTACT -->
 <div class="container">
-
 <h2>Contact Us</h2>
 
 <p>
-Phone: 8863962320 <br>
-Email: support@idhrt.com
+📞 8863962310 <br>
+📧 support@idhrt.com <br>
+🌐 www.idhrt.com
 </p>
-
-<a href="contact.html" class="btn">Send Enquiry</a>
-
 </div>
 
-<!-- MAP -->
-<div class="map">
-<iframe src="https://www.google.com/maps?q=28.685297,77.324487&output=embed"></iframe>
-</div>
-
-<!-- CALL BUTTON -->
-<a class="call" href="tel:8863962320">📞 Call Now</a>
-
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/918863962320">💬 WhatsApp</a>
+<!-- BUTTONS -->
+<a class="call" href="tel:8863962310">📞</a>
+<a class="whatsapp" href="https://wa.me/918863962310">💬</a>
 
 <footer>
 © 2026 Dream HR Consultancy
 </footer>
+
+<script>
+let slides=document.querySelectorAll(".slide");
+let index=0;
+
+setInterval(()=>{
+slides[index].classList.remove("active");
+index=(index+1)%slides.length;
+slides[index].classList.add("active");
+},3000);
+</script>
 
 </body>
 </html>
