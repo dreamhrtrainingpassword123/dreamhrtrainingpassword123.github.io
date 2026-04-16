@@ -25,11 +25,7 @@ width:100%;
 z-index:1000;
 }
 
-.logo{
-display:flex;
-align-items:center;
-gap:10px;
-}
+.logo{display:flex;align-items:center;gap:10px;}
 .logo img{height:40px;}
 
 nav a{
@@ -38,11 +34,12 @@ margin:0 15px;
 text-decoration:none;
 }
 
-/* HERO SLIDER */
+/* HERO */
 .hero{
 height:100vh;
 position:relative;
 overflow:hidden;
+margin-top:70px;
 }
 
 .slide{
@@ -56,10 +53,14 @@ align-items:center;
 justify-content:center;
 color:white;
 opacity:0;
-transition:1s;
+transform:scale(1.1);
+transition:opacity 1s, transform 4s;
 }
 
-.slide.active{opacity:1;}
+.slide.active{
+opacity:1;
+transform:scale(1);
+}
 
 .overlay{
 position:absolute;
@@ -71,18 +72,27 @@ background:rgba(0,0,0,0.6);
 .content{
 position:relative;
 text-align:center;
+max-width:700px;
+padding:20px;
 }
 
 .content h1{
-font-size:45px;
-margin-bottom:10px;
+font-size:42px;
+margin-bottom:15px;
+line-height:1.2;
+}
+
+.content p{
+font-size:18px;
+margin-bottom:30px;
 }
 
 .btn{
 background:#00c6ff;
-padding:12px 25px;
+padding:12px 30px;
 color:white;
 text-decoration:none;
+display:inline-block;
 }
 
 /* OWNER PHOTO */
@@ -189,6 +199,7 @@ text-align:center;
 <div class="content">
 <h1>Payroll Processing</h1>
 <p>Accurate & hassle-free payroll management</p>
+<a href="#" class="btn">Get Consultation</a>
 </div>
 </div>
 
@@ -197,6 +208,16 @@ text-align:center;
 <div class="content">
 <h1>Labour Law Compliance</h1>
 <p>Stay legally safe with expert support</p>
+<a href="#" class="btn">Get Consultation</a>
+</div>
+</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216');">
+<div class="overlay"></div>
+<div class="content">
+<h1>Factory & BOCW Compliance</h1>
+<p>Complete industrial compliance services</p>
+<a href="#" class="btn">Get Consultation</a>
 </div>
 </div>
 
@@ -210,7 +231,7 @@ text-align:center;
 
 <!-- NOTICE -->
 <div class="notice">
-<span>📢 Minimum Wages Updated | PF ESIC Changes | Contact Dream HR Consultancy - 8863962310</span>
+<span>📢 Minimum Wages Updated | PF ESIC Changes | Call Now: 8863962310 | Email: support@idhrt.com</span>
 </div>
 
 <!-- SERVICES -->
