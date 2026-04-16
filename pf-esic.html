@@ -40,21 +40,22 @@ opacity:0;transition:1s;
 .right{flex:1;background:white;padding:20px;border-radius:10px;}
 
 /* BUTTON */
-.btn{background:#00c6ff;color:white;padding:10px 20px;cursor:pointer;margin-top:20px;display:inline-block;}
+.btn{
+background:#00c6ff;
+color:white;
+padding:12px 22px;
+cursor:pointer;
+margin-top:20px;
+display:inline-block;
+text-decoration:none;
+border-radius:5px;
+}
 
-/* POPUP */
+/* POPUP (kept but unused now) */
 .popup{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:#000000cc;justify-content:center;align-items:center;}
 .popup-box{background:white;padding:20px;width:350px;border-radius:10px;}
 
 input,textarea{width:100%;margin:8px 0;padding:8px;}
-
-/* TABS */
-.tabs button{margin:5px;padding:8px 15px;cursor:pointer;}
-
-/* SLOT */
-.slot{padding:8px;margin:5px;display:inline-block;border-radius:5px;cursor:pointer;}
-.available{background:green;color:white;}
-.booked{background:red;color:white;}
 </style>
 
 </head>
@@ -99,11 +100,14 @@ input,textarea{width:100%;margin:8px 0;padding:8px;}
 
 <h2>PF ESI Inspection</h2>
 
-<p>Employees State Insurance Corporation (ESIC) provides social security...</p>
+<p>Employees State Insurance Corporation (ESIC) provides social security to employees and ensures financial protection during medical emergencies.</p>
 
-<p>Inspection ensures compliance, detects hidden employment and verifies records.</p>
+<p>Inspection ensures compliance, detects hidden employment and verifies records properly for legal safety.</p>
 
-<button class="btn" onclick="openForm()">Get Consultation</button>
+<!-- ✅ UPDATED BUTTON -->
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn">
+Book Free Consultation
+</a>
 
 </div>
 
@@ -116,72 +120,15 @@ input,textarea{width:100%;margin:8px 0;padding:8px;}
 
 </div>
 
-<!-- POPUP FORM -->
-<div class="popup" id="popup">
-<div class="popup-box">
-
-<div class="tabs">
-<button onclick="showForm('enquiry')">Enquiry</button>
-<button onclick="showForm('meeting')">Schedule Meeting</button>
-</div>
-
-<!-- ENQUIRY -->
-<div id="enquiry">
-<form>
-<input placeholder="Full Name" required>
-<input placeholder="Company Name">
-<input placeholder="Mobile No." required>
-<textarea placeholder="Message"></textarea>
-<button class="btn">Submit</button>
-</form>
-</div>
-
-<!-- MEETING -->
-<div id="meeting" style="display:none;">
-<form>
-<input placeholder="Full Name">
-<input placeholder="Company Name">
-<input placeholder="Mobile No.">
-<input placeholder="Purpose">
-<input placeholder="Meeting Address">
-<input placeholder="Contact Person">
-<input type="date">
-<input type="time">
-
-<h4>Select Slot</h4>
-
-<div>
-<span class="slot available">10:00 AM</span>
-<span class="slot booked">11:00 AM</span>
-<span class="slot available">12:00 PM</span>
-</div>
-
-<button class="btn">Book Slot</button>
-</form>
-</div>
-
-<br>
-<button onclick="closeForm()">Close</button>
-
-</div>
-</div>
-
 <script>
 let slides=document.querySelectorAll(".slide");
 let index=0;
+
 setInterval(()=>{
 slides[index].classList.remove("active");
 index=(index+1)%slides.length;
 slides[index].classList.add("active");
 },3000);
-
-function openForm(){document.getElementById("popup").style.display="flex";}
-function closeForm(){document.getElementById("popup").style.display="none";}
-
-function showForm(type){
-document.getElementById("enquiry").style.display = type==='enquiry'?'block':'none';
-document.getElementById("meeting").style.display = type==='meeting'?'block':'none';
-}
 </script>
 
 </body>
