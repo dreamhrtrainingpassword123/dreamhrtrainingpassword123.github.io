@@ -6,138 +6,161 @@
 <title>PF & ESIC Compliance | Dream HR Consultancy</title>
 
 <style>
-body {font-family: Arial; margin:0; background:#f4f6f9;}
+body{font-family:Arial;margin:0;background:#f4f6f9;}
 
-header {background:#0a2540; color:#fff; padding:20px;}
-nav {background:#133b63; padding:10px;}
-nav a {color:#fff; margin:10px; text-decoration:none;}
+/* HEADER */
+header{
+background:#0a2a43;
+color:white;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
 
-.container {max-width:1100px; margin:auto; background:#fff; padding:30px;}
+nav a{
+color:white;
+margin:0 10px;
+text-decoration:none;
+}
 
-h2 {color:#0a2540;}
-ul {line-height:1.8;}
+/* CONTENT */
+.container{
+max-width:1000px;
+margin:30px auto;
+background:white;
+padding:30px;
+}
 
-.footer {background:#0a2540; color:#fff; padding:20px; margin-top:30px;}
+h1,h2{color:#0a2540;}
+ul{line-height:1.8;}
 
 /* BUTTON */
 .btn{
 background:#00c6ff;
 color:white;
-padding:12px 25px;
-text-decoration:none;
+padding:12px 20px;
 display:inline-block;
 margin-top:20px;
 cursor:pointer;
 }
 
-/* POPUP FORM */
+/* POPUP */
 .popup{
 display:none;
 position:fixed;
-top:0; left:0;
-width:100%; height:100%;
+top:0;left:0;
+width:100%;height:100%;
 background:rgba(0,0,0,0.6);
 justify-content:center;
 align-items:center;
 }
 
-.popup-content{
+.popup-box{
 background:white;
-padding:30px;
-width:300px;
+padding:20px;
 border-radius:10px;
-text-align:center;
-}
-
-.popup-content input, .popup-content textarea{
-width:100%;
-padding:10px;
-margin:10px 0;
-}
-
-.close{
-float:right;
-cursor:pointer;
-font-size:18px;
+width:300px;
 }
 </style>
-
 </head>
 
 <body>
 
 <header>
-<h1>Dream HR Consultancy</h1>
-</header>
-
+<div><strong>Dream HR Consultancy</strong></div>
 <nav>
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
 <a href="contact.html">Contact</a>
 </nav>
+</header>
 
 <div class="container">
 
-<h2>PF & ESIC Compliance and Inspection</h2>
+<h1>PF ESI Inspection</h1>
 
-<p>Employees’ Provident Fund (PF) and ESIC are key compliances...</p>
+<p>
+Employees State Insurance Corporation (ESIC) is a multifaceted governmental structure designed to give much-needed socioeconomic protection to Indian workers.
+</p>
 
-<h2>Why PF & ESIC Compliance is Important</h2>
+<p>
+ESI inspection ensures employee benefits and labour law compliance. It helps detect hidden employment and verifies records properly.
+</p>
+
+<h2>Advantages of the ESI Scheme</h2>
+
 <ul>
-<li>Mandatory requirement under Indian labour laws</li>
-<li>Ensures employee social security</li>
-<li>Protects employer from penalties</li>
+<li>Complete medical care</li>
+<li>Compensation for lost wages</li>
+<li>Family coverage</li>
+<li>Monetary & non-monetary benefits</li>
 </ul>
 
-<h2>Our Services Include</h2>
+<h2>Types of Benefits</h2>
+
 <ul>
-<li>PF Registration</li>
-<li>ESIC Registration</li>
-<li>Monthly Filing</li>
+<li>Medical Benefits</li>
+<li>Disability Compensation</li>
+<li>Sickness Benefits</li>
+<li>Maternity Benefits</li>
+<li>Unemployment Allowance</li>
+<li>Dependents Benefits</li>
+</ul>
+
+<h2>Inspection Process</h2>
+
+<ul>
+<li>Salary register verification</li>
+<li>Contribution checking</li>
+<li>Expense verification</li>
+<li>Compliance validation</li>
+</ul>
+
+<h2>Our Services</h2>
+
+<ul>
+<li>PF & ESIC Compliance</li>
+<li>Payroll Processing</li>
+<li>Factory Compliance</li>
+<li>Labour Law Licensing</li>
+<li>Vendor Compliance</li>
 <li>Inspection Handling</li>
 </ul>
 
-<!-- BUTTON -->
 <button class="btn" onclick="openForm()">Get Consultation</button>
 
 </div>
 
 <!-- POPUP FORM -->
-<div class="popup" id="formPopup">
+<div class="popup" id="popup">
 
-<div class="popup-content">
-<span class="close" onclick="closeForm()">❌</span>
+<div class="popup-box">
 
 <h3>Get Consultation</h3>
 
 <form action="https://formspree.io/f/mayvlkzb" method="POST">
 
-<input type="text" name="name" placeholder="Your Name" required>
-
-<input type="tel" name="phone" placeholder="Mobile Number" required>
-
-<input type="email" name="email" placeholder="Email">
-
-<textarea name="message" placeholder="Your Requirement"></textarea>
+<input type="text" name="name" placeholder="Name" required style="width:100%;margin:10px 0;">
+<input type="tel" name="phone" placeholder="Mobile" required style="width:100%;margin:10px 0;">
+<input type="email" name="email" placeholder="Email" style="width:100%;margin:10px 0;">
 
 <button type="submit" class="btn">Submit</button>
 
 </form>
 
-</div>
-</div>
+<br>
+<button onclick="closeForm()">Close</button>
 
-<div class="footer">
-<p>📞 8863962310 | 📧 support@idhrt.com</p>
+</div>
 </div>
 
 <script>
 function openForm(){
-document.getElementById("formPopup").style.display="flex";
+document.getElementById("popup").style.display="flex";
 }
-
 function closeForm(){
-document.getElementById("formPopup").style.display="none";
+document.getElementById("popup").style.display="none";
 }
 </script>
 
