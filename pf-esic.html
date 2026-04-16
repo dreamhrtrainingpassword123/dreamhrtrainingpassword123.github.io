@@ -7,13 +7,59 @@
 
 <style>
 body {font-family: Arial; margin:0; background:#f4f6f9;}
+
 header {background:#0a2540; color:#fff; padding:20px;}
 nav {background:#133b63; padding:10px;}
 nav a {color:#fff; margin:10px; text-decoration:none;}
+
 .container {max-width:1100px; margin:auto; background:#fff; padding:30px;}
+
 h2 {color:#0a2540;}
 ul {line-height:1.8;}
+
 .footer {background:#0a2540; color:#fff; padding:20px; margin-top:30px;}
+
+/* BUTTON */
+.btn{
+background:#00c6ff;
+color:white;
+padding:12px 25px;
+text-decoration:none;
+display:inline-block;
+margin-top:20px;
+cursor:pointer;
+}
+
+/* POPUP FORM */
+.popup{
+display:none;
+position:fixed;
+top:0; left:0;
+width:100%; height:100%;
+background:rgba(0,0,0,0.6);
+justify-content:center;
+align-items:center;
+}
+
+.popup-content{
+background:white;
+padding:30px;
+width:300px;
+border-radius:10px;
+text-align:center;
+}
+
+.popup-content input, .popup-content textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+
+.close{
+float:right;
+cursor:pointer;
+font-size:18px;
+}
 </style>
 
 </head>
@@ -34,124 +80,66 @@ ul {line-height:1.8;}
 
 <h2>PF & ESIC Compliance and Inspection</h2>
 
-<p>
-Employees’ Provident Fund (PF) and Employees State Insurance (ESIC) are two of the most important statutory compliances for any organization in India. These laws are designed to provide financial security, medical benefits, and social protection to employees.
-</p>
-
-<p>
-The ESIC system, governed by the Ministry of Labour and Employment, ensures that employees receive medical care, compensation during sickness, maternity benefits, and financial support during emergencies. Similarly, PF ensures long-term savings and retirement security.
-</p>
-
-<p>
-Inspection under PF & ESIC plays a very critical role in ensuring that organizations are following all legal provisions correctly. Government authorities conduct inspections to verify employee records, salary registers, contribution payments, and compliance with labour laws.
-</p>
-
----
+<p>Employees’ Provident Fund (PF) and ESIC are key compliances...</p>
 
 <h2>Why PF & ESIC Compliance is Important</h2>
-
 <ul>
 <li>Mandatory requirement under Indian labour laws</li>
-<li>Ensures employee social security and benefits</li>
-<li>Protects employer from penalties and legal action</li>
-<li>Builds trust and credibility among employees</li>
-<li>Helps in smooth business operations without government interference</li>
+<li>Ensures employee social security</li>
+<li>Protects employer from penalties</li>
 </ul>
 
----
-
-<h2>Role of Inspection in Compliance</h2>
-
-<p>
-Inspection helps authorities identify whether all eligible employees are covered under PF & ESIC schemes. It ensures that contributions are calculated correctly and deposited on time.
-</p>
-
-<p>
-During inspection, authorities may:
-</p>
-
+<h2>Our Services Include</h2>
 <ul>
-<li>Verify salary and wage registers</li>
-<li>Check challans and contribution records</li>
-<li>Review employee coverage under PF & ESIC</li>
-<li>Inspect financial records related to labour payments</li>
-<li>Identify hidden employment or unregistered workers</li>
+<li>PF Registration</li>
+<li>ESIC Registration</li>
+<li>Monthly Filing</li>
+<li>Inspection Handling</li>
 </ul>
 
----
+<!-- BUTTON -->
+<button class="btn" onclick="openForm()">Get Consultation</button>
 
-<h2>Benefits of PF & ESIC Scheme</h2>
+</div>
 
-<ul>
-<li>Complete medical care for employees and their families</li>
-<li>Financial support during sickness or disability</li>
-<li>Maternity benefits for female employees</li>
-<li>Compensation for employment injury</li>
-<li>Long-term savings through PF</li>
-<li>Pension benefits after retirement</li>
-</ul>
+<!-- POPUP FORM -->
+<div class="popup" id="formPopup">
 
----
+<div class="popup-content">
+<span class="close" onclick="closeForm()">❌</span>
 
-<h2>Common Challenges Faced by Businesses</h2>
+<h3>Get Consultation</h3>
 
-<ul>
-<li>Incorrect calculation of PF & ESIC contributions</li>
-<li>Delay in filings and payments</li>
-<li>Handling inspections and notices</li>
-<li>Managing employee claims and documentation</li>
-<li>Lack of updated knowledge of compliance rules</li>
-</ul>
+<form action="https://formspree.io/f/mayvlkzb" method="POST">
 
----
+<input type="text" name="name" placeholder="Your Name" required>
 
-<h2>Dream HR Consultancy – Our Role</h2>
+<input type="tel" name="phone" placeholder="Mobile Number" required>
 
-<p>
-At Dream HR Consultancy, we help businesses achieve 100% compliance with PF & ESIC regulations. Our expert team ensures that all statutory requirements are fulfilled accurately and on time.
-</p>
+<input type="email" name="email" placeholder="Email">
 
-<ul>
-<li>PF & ESIC Registration</li>
-<li>Monthly Return Filing & Challan Preparation</li>
-<li>Employee Registration & UAN Management</li>
-<li>Handling Transfer, Withdrawal & Claims</li>
-<li>Inspection Handling & Department Coordination</li>
-<li>Representation in Legal Cases (7A, 7Q, 14B, 45A etc.)</li>
-<li>Employee Help Desk Support</li>
-</ul>
+<textarea name="message" placeholder="Your Requirement"></textarea>
 
----
+<button type="submit" class="btn">Submit</button>
 
-<h2>Our Compliance Solutions</h2>
+</form>
 
-<ul>
-<li>PF & ESIC Compliance Services</li>
-<li>Shop & Establishment Compliance</li>
-<li>Payroll Processing Services</li>
-<li>Labour Laws Licensing</li>
-<li>Factory Act Compliance</li>
-<li>Vendor Compliance Management</li>
-<li>Handling Departmental Inspections</li>
-<li>Liaising with Authorities</li>
-<li>Labour Law Compliance & Documentation</li>
-</ul>
-
----
-
-<h2>How Can We Help You?</h2>
-
-<p>
-Contact us today to get expert support for your compliance needs. We ensure hassle-free compliance so you can focus on growing your business.
-</p>
-
-<p><strong>📞 8863962320 | 📧 support@idhrt.com</strong></p>
-
+</div>
 </div>
 
 <div class="footer">
-<p>© 2026 Dream HR Consultancy | All Rights Reserved</p>
+<p>📞 8863962310 | 📧 support@idhrt.com</p>
 </div>
+
+<script>
+function openForm(){
+document.getElementById("formPopup").style.display="flex";
+}
+
+function closeForm(){
+document.getElementById("formPopup").style.display="none";
+}
+</script>
 
 </body>
 </html>
