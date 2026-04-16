@@ -3,44 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PF & ESIC Compliance | Dream HR Consultancy</title>
+<title>PF ESIC Compliance | Dream HR Consultancy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-body{font-family:Arial;margin:0;background:#f4f6f9;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f5f7fa;}
 
 /* HEADER */
 header{
+position:fixed;
+top:0;
+width:100%;
 background:#0a2a43;
 color:white;
 padding:15px 40px;
 display:flex;
 justify-content:space-between;
-align-items:center;
+z-index:1000;
 }
 
-nav a{
+nav a{color:white;margin:0 10px;text-decoration:none;}
+
+/* HERO */
+.hero{
+height:400px;
+background:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
 color:white;
-margin:0 10px;
-text-decoration:none;
+position:relative;
+margin-top:70px;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+}
+
+.hero h1{
+position:relative;
+font-size:40px;
 }
 
 /* CONTENT */
 .container{
 max-width:1000px;
-margin:30px auto;
+margin:auto;
+padding:40px;
 background:white;
-padding:30px;
+margin-top:-50px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-h1,h2{color:#0a2540;}
+h2{color:#0a2a43;margin-top:20px;}
 ul{line-height:1.8;}
 
 /* BUTTON */
 .btn{
 background:#00c6ff;
 color:white;
-padding:12px 20px;
-display:inline-block;
+padding:12px 25px;
+border:none;
 margin-top:20px;
 cursor:pointer;
 }
@@ -51,18 +81,33 @@ display:none;
 position:fixed;
 top:0;left:0;
 width:100%;height:100%;
-background:rgba(0,0,0,0.6);
+background:rgba(0,0,0,0.7);
 justify-content:center;
 align-items:center;
 }
 
 .popup-box{
 background:white;
-padding:20px;
+padding:25px;
 border-radius:10px;
-width:300px;
+width:320px;
+animation:fade 0.3s;
+}
+
+@keyframes fade{
+from{transform:scale(0.8);}
+to{transform:scale(1);}
+}
+
+input,textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:5px;
 }
 </style>
+
 </head>
 
 <body>
@@ -76,16 +121,20 @@ width:300px;
 </nav>
 </header>
 
-<div class="container">
+<!-- HERO -->
+<div class="hero">
+<h1>PF & ESIC Compliance</h1>
+</div>
 
-<h1>PF ESI Inspection</h1>
+<!-- CONTENT -->
+<div class="container">
 
 <p>
 Employees State Insurance Corporation (ESIC) is a multifaceted governmental structure designed to give much-needed socioeconomic protection to Indian workers.
 </p>
 
 <p>
-ESI inspection ensures employee benefits and labour law compliance. It helps detect hidden employment and verifies records properly.
+ESI inspection ensures employee benefits and labor law compliance. It helps detect hidden employment and verifies records properly.
 </p>
 
 <h2>Advantages of the ESI Scheme</h2>
@@ -141,9 +190,10 @@ ESI inspection ensures employee benefits and labour law compliance. It helps det
 
 <form action="https://formspree.io/f/mayvlkzb" method="POST">
 
-<input type="text" name="name" placeholder="Name" required style="width:100%;margin:10px 0;">
-<input type="tel" name="phone" placeholder="Mobile" required style="width:100%;margin:10px 0;">
-<input type="email" name="email" placeholder="Email" style="width:100%;margin:10px 0;">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="tel" name="phone" placeholder="Mobile Number" required>
+<input type="email" name="email" placeholder="Email">
+<textarea name="message" placeholder="Your Requirement"></textarea>
 
 <button type="submit" class="btn">Submit</button>
 
