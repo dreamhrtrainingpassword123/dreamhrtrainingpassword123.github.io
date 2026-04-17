@@ -8,52 +8,197 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:#f5f7fa;line-height:1.7;color:#222;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f7fa;
+line-height:1.7;
+color:#222;
+}
 
 /* HEADER */
 header{
-position:fixed;top:0;width:100%;
-background:#0a2a43;color:white;
-display:flex;justify-content:space-between;
-padding:15px 40px;z-index:1000;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#0a2a43;
+padding:12px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:9999;
+box-shadow:0 4px 15px rgba(0,0,0,0.15);
 }
-.logo img{height:40px;vertical-align:middle;margin-right:8px;}
-nav a{color:white;margin:0 10px;text-decoration:none;}
-.back{background:#ff5722;padding:5px 10px;border-radius:5px;}
 
-/* HERO */
-.hero{height:90vh;margin-top:70px;position:relative;overflow:hidden;}
-.slide{
-position:absolute;width:100%;height:100%;
-background-size:cover;background-position:center;
-display:flex;align-items:center;justify-content:center;
-color:#fff;font-size:40px;font-weight:700;
-opacity:0;transition:1s;text-align:center;padding:20px;
+.logo a{
+display:flex;
+align-items:center;
+gap:10px;
+text-decoration:none;
+color:#fff;
+font-size:22px;
+font-weight:700;
 }
-.slide.active{opacity:1;}
-.overlay{position:absolute;width:100%;height:100%;background:rgba(0,0,0,.55);}
+
+.logo img{
+height:42px;
+border-radius:6px;
+}
+
+nav{
+display:flex;
+align-items:center;
+gap:18px;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+font-size:15px;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00c6ff;
+}
+
+.book-btn{
+background:#00c6ff;
+padding:10px 15px;
+border-radius:6px;
+font-weight:600;
+}
+
+.book-btn:hover{
+background:#009ed1;
+color:#fff;
+}
+
+.whatsapp-btn{
+background:#25D366;
+padding:10px 15px;
+border-radius:6px;
+font-weight:600;
+}
+
+.whatsapp-btn:hover{
+background:#1daa50;
+color:#fff;
+}
+
+.menu-toggle{
+display:none;
+font-size:30px;
+color:#fff;
+cursor:pointer;
+}
+
+/* HERO SLIDER */
+.hero{
+height:90vh;
+margin-top:72px;
+position:relative;
+overflow:hidden;
+}
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+font-size:42px;
+font-weight:700;
+color:#fff;
+opacity:0;
+transition:1s;
+}
+
+.slide.active{
+opacity:1;
+}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.55);
+}
 
 /* CONTENT */
-.container{max-width:1200px;margin:auto;padding:40px;display:flex;gap:30px;align-items:flex-start;}
-.left{flex:2;background:#fff;padding:30px;border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,.08);}
-.right{flex:1;background:#fff;padding:25px;border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,.08);}
+.container{
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+display:flex;
+gap:30px;
+align-items:flex-start;
+}
 
-h2{color:#0a2a43;margin-bottom:15px;}
-h3{color:#0a2a43;margin:25px 0 12px;}
-p{margin-bottom:14px;}
-ul{padding-left:20px;margin-bottom:18px;}
-li{margin-bottom:8px;}
+.left{
+flex:2;
+background:#fff;
+padding:30px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
 
-/* BUTTON */
+.right{
+flex:1;
+background:#fff;
+padding:25px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+h2{
+color:#0a2a43;
+margin-bottom:15px;
+}
+
+h3{
+color:#0a2a43;
+margin:25px 0 12px;
+}
+
+p{
+margin-bottom:14px;
+}
+
+ul{
+padding-left:20px;
+margin-bottom:18px;
+}
+
+li{
+margin-bottom:8px;
+}
+
 .btn{
-background:#00c6ff;color:#fff;
+background:#00c6ff;
+color:#fff;
 padding:12px 22px;
 display:inline-block;
 text-decoration:none;
 border-radius:6px;
 margin-top:15px;
 font-weight:600;
+}
+
+.btn:hover{
+background:#009ed1;
 }
 
 .right a{
@@ -71,24 +216,85 @@ border-radius:8px;
 margin-top:20px;
 font-size:14px;
 }
+
+/* MOBILE */
+@media(max-width:992px){
+
+.menu-toggle{
+display:block;
+}
+
+nav{
+position:absolute;
+top:72px;
+left:0;
+width:100%;
+background:#0a2a43;
+display:none;
+flex-direction:column;
+padding:20px;
+gap:15px;
+}
+
+nav.show{
+display:flex;
+}
+
+nav a{
+width:100%;
+padding:10px;
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.container{
+flex-direction:column;
+}
+
+.slide{
+font-size:28px;
+}
+
+.logo a{
+font-size:18px;
+}
+}
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
+
 <div class="logo">
-<img src="logo.png"> Dream HR Consultancy
+<a href="index.html">
+<img src="logo.png" alt="Logo">
+<span>Dream HR Consultancy</span>
+</a>
 </div>
 
-<nav>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav id="navbar">
 <a href="index.html">Home</a>
+<a href="about.html">About Us</a>
 <a href="services.html">Services</a>
-<a href="index.html" class="back">⬅ Back</a>
+<a href="jobs.html">Jobs</a>
+<a href="news.html">Notifications</a>
+<a href="contact.html">Contact</a>
+
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="book-btn">
+Book Meeting
+</a>
+
+<a href="https://wa.me/918863962310" target="_blank" class="whatsapp-btn">
+WhatsApp
+</a>
 </nav>
+
 </header>
 
-<!-- SLIDER -->
+<!-- HERO -->
 <div class="hero">
 
 <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f');">
@@ -121,53 +327,34 @@ Business Compliance Solutions
 <h2>PF & ESIC Compliance Services</h2>
 
 <p>
-The objectives of the Employees Provident Fund Act, 1952 and Employees State Insurance Act, 1948 are to provide social security benefits to employees and industrial workers. Even a minor calculation error or delay in compliance may lead to employee disputes, legal notices, and heavy financial penalties.
+The objectives of the Employees Provident Fund Act, 1952 and Employees State Insurance Act, 1948 are to provide social security benefits to employees and workers. A small mistake in calculation or delay in compliance may lead to disputes, notices, and financial penalties.
 </p>
 
 <p>
-Dream HR Consultancy is professionally equipped to manage compliance for PAN India locations and become your trusted strategic partner in corporate governance, payroll discipline, and statutory compliance management.
+Dream HR Consultancy is professionally equipped to manage PAN India statutory compliances and become your trusted strategic partner in corporate governance and labour law compliance.
 </p>
 
-<h3>Our Services – What We Do</h3>
+<h3>Our Services</h3>
 
 <ul>
-<li>EPF & ESI Code Registration and Amendments</li>
-<li>Sub Code Generation for PAN India Branches</li>
-<li>Monthly Contribution Challan Processing</li>
-<li>Timely Deposit of Statutory Contributions</li>
-<li>ESI Number Registration & Insurance Card Support</li>
-<li>Certificate of Coverage from EPFO</li>
-<li>Preparation of Registers & Statutory Returns</li>
-<li>PF Transfer, Withdrawal & Pension Claim Support</li>
-<li>ESI Accident / Medical Claim Assistance</li>
-<li>Employee Help Desk Facility</li>
-<li>Inspection Handling with Authorities</li>
-<li>Representation in PF & ESI Legal Matters</li>
+<li>EPF & ESI Registration / Amendments</li>
+<li>Monthly Challan Processing</li>
+<li>PF Transfer / Withdrawal / Pension Support</li>
+<li>ESI Claim Assistance</li>
+<li>Inspection Handling</li>
+<li>Department Liaison Support</li>
+<li>Statutory Returns & Registers</li>
+<li>Multi-State Compliance Support</li>
 </ul>
 
 <h3>Advantages with Dream HR Consultancy</h3>
 
 <ul>
-<li>Strong Liaison with Government Departments</li>
-<li>Employee & Employer Tracking Support</li>
-<li>Expertise in Large Volume Data Handling</li>
-<li>Support for Multi-State / PAN India Locations</li>
-<li>Strong Domain Expertise in Management Team</li>
-<li>Fast, Accurate & Reliable Service Delivery</li>
-</ul>
-
-<h3>Our Simplified Solutions</h3>
-
-<ul>
-<li>PF & ESIC Compliance Services</li>
-<li>Shop & Establishment Compliance</li>
-<li>Payroll Processing Services</li>
-<li>Labour Law Licensing</li>
-<li>Factory Act Compliance</li>
-<li>Vendor Compliance Management</li>
-<li>Departmental Inspection Handling</li>
-<li>Liaising with Authorities</li>
-<li>Notice Board Compliance</li>
+<li>Strong Government Liaison</li>
+<li>Expert Compliance Team</li>
+<li>Fast & Accurate Service</li>
+<li>PAN India Coverage</li>
+<li>Corporate Governance Support</li>
 </ul>
 
 <a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn">
@@ -197,10 +384,14 @@ Latest PF / ESIC / Labour Law updates available. Contact us for guidance.
 </div>
 
 <script>
+function toggleMenu(){
+document.getElementById("navbar").classList.toggle("show");
+}
+
 let slides=document.querySelectorAll(".slide");
 let index=0;
 
-setInterval(()=>{
+setInterval(function(){
 slides[index].classList.remove("active");
 index=(index+1)%slides.length;
 slides[index].classList.add("active");
