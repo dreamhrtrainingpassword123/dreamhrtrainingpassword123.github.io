@@ -3,105 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dream HR Consultancy | PF ESIC Payroll Labour Law Compliance</title>
-
+<title>Dream HR Consultancy</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:#f5f7fa;
-color:#222;
-line-height:1.6;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f5f7fa;color:#222;}
 
 /* HEADER */
 header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
+position:fixed;top:0;left:0;width:100%;
 background:#0a2a43;
-padding:12px 30px;
+padding:12px 25px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 z-index:9999;
 box-shadow:0 4px 15px rgba(0,0,0,.15);
 }
-
 .logo a{
-display:flex;
-align-items:center;
-gap:10px;
-text-decoration:none;
-color:#fff;
-font-size:22px;
-font-weight:700;
+display:flex;align-items:center;gap:10px;
+color:#fff;text-decoration:none;
+font-size:22px;font-weight:700;
 }
+.logo img{height:42px;border-radius:6px;}
 
-.logo img{
-height:42px;
-border-radius:6px;
-}
-
-nav{
-display:flex;
-gap:18px;
-align-items:center;
-}
-
+nav{display:flex;gap:14px;align-items:center;flex-wrap:wrap;}
 nav a{
-color:#fff;
-text-decoration:none;
-font-size:15px;
-font-weight:500;
-transition:.3s;
+color:#fff;text-decoration:none;
+font-size:14px;font-weight:500;
 }
+.book-btn{background:#00c6ff;padding:9px 12px;border-radius:6px;}
+.whatsapp-btn{background:#25D366;padding:9px 12px;border-radius:6px;}
+.back-btn{background:#ff5722;padding:9px 12px;border-radius:6px;}
 
-nav a:hover{
-color:#00c6ff;
+/* NEWS BAR */
+.news-bar{
+margin-top:72px;
+display:flex;
+background:#081d2f;
+overflow:hidden;
+border-top:2px solid #00c6ff;
+border-bottom:2px solid #00c6ff;
 }
-
-.book-btn{
+.news-title{
 background:#00c6ff;
-padding:10px 14px;
-border-radius:6px;
-}
-
-.whatsapp-btn{
-background:#25D366;
-padding:10px 14px;
-border-radius:6px;
-}
-
-.back-btn{
-background:#ff5722;
-padding:10px 14px;
-border-radius:6px;
-}
-
-.menu-toggle{
-display:none;
-font-size:30px;
 color:#fff;
-cursor:pointer;
+padding:12px 18px;
+font-weight:700;
+white-space:nowrap;
+}
+.news-scroll{
+flex:1;
+overflow:hidden;
+height:45px;
+display:flex;
+align-items:center;
+}
+.news-track{
+display:flex;
+width:max-content;
+animation:moveNews 45s linear infinite;
+}
+.news-track span{
+color:#fff;
+padding:0 30px;
+white-space:nowrap;
+font-size:14px;
+}
+.news-track:hover{animation-play-state:paused;}
+
+@keyframes moveNews{
+0%{transform:translateX(100%);}
+100%{transform:translateX(-100%);}
 }
 
 /* HERO */
 .hero{
 height:100vh;
-margin-top:70px;
 position:relative;
 overflow:hidden;
 }
-
 .slide{
 position:absolute;
 width:100%;
@@ -113,34 +95,28 @@ justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
-font-size:44px;
-font-weight:700;
-color:#fff;
 opacity:0;
 transition:1s;
+color:#fff;
 }
-
-.slide.active{
-opacity:1;
-}
-
+.slide.active{opacity:1;}
 .overlay{
 position:absolute;
 width:100%;
 height:100%;
 background:rgba(0,0,0,.55);
 }
-
 .hero-content{
 position:relative;
 z-index:2;
 max-width:900px;
 }
-
+.hero-content h1{
+font-size:46px;
+margin-bottom:15px;
+}
 .hero-content p{
 font-size:18px;
-margin-top:15px;
-font-weight:300;
 }
 
 /* SECTION */
@@ -149,58 +125,34 @@ max-width:1200px;
 margin:auto;
 padding:60px 20px;
 }
-
 .section h2{
-font-size:34px;
-margin-bottom:25px;
-color:#0a2a43;
 text-align:center;
+font-size:34px;
+color:#0a2a43;
+margin-bottom:25px;
 }
 
 .services{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
-
 .card{
 background:#fff;
 padding:25px;
 border-radius:14px;
 box-shadow:0 8px 20px rgba(0,0,0,.08);
-transition:.3s;
 }
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.card h3{
-color:#0a2a43;
-margin-bottom:10px;
-}
-
-.card p{
-font-size:14px;
-margin-bottom:15px;
-}
-
+.card h3{color:#0a2a43;margin-bottom:10px;}
+.card p{font-size:14px;margin-bottom:15px;}
 .btn{
 display:inline-block;
 background:#00c6ff;
 color:#fff;
-padding:10px 16px;
+padding:10px 15px;
 border-radius:6px;
 text-decoration:none;
 font-size:14px;
-}
-
-.notice{
-background:#fff3cd;
-padding:18px;
-border-radius:10px;
-font-size:15px;
-margin-top:20px;
 }
 
 .contact-box{
@@ -214,92 +166,65 @@ text-align:center;
 footer{
 background:#0a2a43;
 color:#fff;
-padding:25px;
 text-align:center;
-margin-top:40px;
+padding:25px;
 }
 
 /* MOBILE */
-@media(max-width:992px){
-
-.menu-toggle{
-display:block;
-}
-
-nav{
-position:absolute;
-top:72px;
-left:0;
-width:100%;
-background:#0a2a43;
-display:none;
-flex-direction:column;
-padding:20px;
-gap:15px;
-}
-
-nav.show{
-display:flex;
-}
-
-nav a{
-width:100%;
-padding:10px;
-border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.slide{
-font-size:28px;
-}
-
-.hero-content p{
-font-size:16px;
-}
-
-.logo a{
-font-size:18px;
-}
+@media(max-width:768px){
+nav{gap:8px;}
+nav a{font-size:12px;}
+.hero-content h1{font-size:28px;}
+.hero-content p{font-size:15px;}
+.news-title{font-size:13px;padding:10px;}
+.news-track span{font-size:13px;padding:0 20px;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
-
 <div class="logo">
 <a href="index.html">
-<img src="logo.png" alt="Logo">
+<img src="logo.png">
 <span>Dream HR Consultancy</span>
 </a>
 </div>
 
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-<nav id="navbar">
+<nav>
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="services.html">Services</a>
 <a href="jobs.html">Jobs</a>
 <a href="news.html">Notifications</a>
 <a href="contact.html">Contact</a>
-
-<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="book-btn">
-Book Meeting
-</a>
-
-<a href="https://wa.me/918863962310" target="_blank" class="whatsapp-btn">
-WhatsApp
-</a>
-
-<a href="javascript:history.back()" class="back-btn">
-⬅ Back
-</a>
-
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="book-btn">Book Meeting</a>
+<a href="https://wa.me/918863962310" target="_blank" class="whatsapp-btn">WhatsApp</a>
+<a href="javascript:history.back()" class="back-btn">⬅ Back</a>
 </nav>
-
 </header>
+
+<!-- MOVING NEWS -->
+<div class="news-bar">
+<div class="news-title">Latest Updates</div>
+<div class="news-scroll">
+<div class="news-track">
+
+<span>🎉 Welcome to Dream HR Consultancy.</span>
+<span>📢 New Jobs Opening – Apply Now.</span>
+<span>⚖️ Labour Law Compliance Deadline This Month.</span>
+<span>🧾 PF Return Filing Assistance Available.</span>
+<span>🏥 ESIC Claim Support Open.</span>
+<span>💼 Payroll Services for All India Companies.</span>
+<span>🏭 Factory License Renewal Support.</span>
+<span>🚨 Avoid Penalties – Book Audit Today.</span>
+<span>📞 Free Consultation Slots Open.</span>
+<span>🌟 Thank You For Visiting Our Website.</span>
+
+</div>
+</div>
+</div>
 
 <!-- HERO -->
 <div class="hero">
@@ -307,32 +232,24 @@ WhatsApp
 <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85');">
 <div class="overlay"></div>
 <div class="hero-content">
-Dream HR Consultancy
-<p>PF | ESIC | Payroll | Labour Law | Compliance Solutions</p>
+<h1>Dream HR Consultancy</h1>
+<p>PF | ESIC | Payroll | Labour Law Compliance</p>
 </div>
 </div>
 
 <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f');">
 <div class="overlay"></div>
 <div class="hero-content">
-PF & ESIC Expert Support
-<p>Registration, Returns, Claims & Inspections</p>
-</div>
-</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1528747045269-390fe33c19d3');">
-<div class="overlay"></div>
-<div class="hero-content">
-Payroll & HR Solutions
-<p>Accurate Salary Processing with Full Compliance</p>
+<h1>PF & ESIC Expert Support</h1>
+<p>Registration, Returns & Inspections</p>
 </div>
 </div>
 
 <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f');">
 <div class="overlay"></div>
 <div class="hero-content">
-Legal & Labour Law Advisory
-<p>Inspection Handling & Licensing Support</p>
+<h1>Legal & Labour Advisory</h1>
+<p>Inspection Handling & Licensing</p>
 </div>
 </div>
 
@@ -340,77 +257,58 @@ Legal & Labour Law Advisory
 
 <!-- SERVICES -->
 <section class="section">
-
-<h2>Our Premium Services</h2>
+<h2>Our Services</h2>
 
 <div class="services">
 
 <div class="card">
 <h3>PF & ESIC Compliance</h3>
-<p>Complete PF / ESIC registration, returns, claims and inspection support.</p>
+<p>Registration, filing, claims, inspection support.</p>
 <a href="pf-esic.html" class="btn">Get Consultation</a>
 </div>
 
 <div class="card">
 <h3>Payroll Processing</h3>
-<p>Monthly salary processing, payslips and statutory deductions.</p>
+<p>Salary processing with statutory deductions.</p>
 <a href="payroll.html" class="btn">Get Consultation</a>
 </div>
 
 <div class="card">
 <h3>Factory Act Compliance</h3>
-<p>Factory license, renewal and documentation support.</p>
-<a href="factory.html" class="btn">Get Consultation</a>
+<p>Factory license & renewal support.</p>
+<a href="services.html" class="btn">Get Consultation</a>
 </div>
 
 <div class="card">
 <h3>Labour Law Licensing</h3>
-<p>CLRA, Shop Act, registrations and approvals.</p>
+<p>CLRA, Shop Act and approvals.</p>
 <a href="services.html" class="btn">Get Consultation</a>
 </div>
 
 <div class="card">
 <h3>Compliance Audit</h3>
-<p>Find risks and avoid penalties with expert audit support.</p>
+<p>Avoid penalties with audit support.</p>
 <a href="services.html" class="btn">Get Consultation</a>
 </div>
 
 <div class="card">
 <h3>Recruitment & HR Setup</h3>
-<p>Hiring support, HR policies and company setup solutions.</p>
+<p>Hiring support and HR systems.</p>
 <a href="jobs.html" class="btn">Get Consultation</a>
 </div>
 
 </div>
-
-</section>
-
-<!-- NOTICE -->
-<section class="section">
-
-<h2>Latest Notifications</h2>
-
-<div class="notice">
-EPF / ESIC / Minimum Wages / Labour Law latest updates available. Contact Dream HR Consultancy for compliance guidance.
-</div>
-
 </section>
 
 <!-- CONTACT -->
 <section class="section">
-
 <h2>Contact Us</h2>
 
 <div class="contact-box">
-
 <p><strong>Mobile:</strong> 8863962310</p>
 <p><strong>Email:</strong> support@idhrt.com</p>
 <br>
-
-<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn">
-Book Free Consultation
-</a>
-
+<a href="https://calendly.com/dreamhrtraining/30min" class="btn" target="_blank">Book Free Consultation</a>
 </div>
 
 </section>
@@ -420,14 +318,9 @@ Book Free Consultation
 </footer>
 
 <script>
-function toggleMenu(){
-document.getElementById("navbar").classList.toggle("show");
-}
-
 let slides=document.querySelectorAll(".slide");
 let index=0;
-
-setInterval(function(){
+setInterval(()=>{
 slides[index].classList.remove("active");
 index=(index+1)%slides.length;
 slides[index].classList.add("active");
