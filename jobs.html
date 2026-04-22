@@ -1,1 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Jobs & Hiring | Dream HR Consultancy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f7fb;
+color:#222;
+}
+
+/* HEADER */
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#0a2a43;
+padding:14px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+box-shadow:0 4px 12px rgba(0,0,0,.18);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+color:#fff;
+font-size:16px;
+font-weight:700;
+}
+
+.logo img{
+width:42px;
+height:42px;
+border-radius:50%;
+object-fit:cover;
+}
+
+nav{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+padding:10px 14px;
+border-radius:6px;
+font-size:14px;
+font-weight:600;
+}
+
+nav a:hover{
+background:#123c5e;
+}
+
+.book{background:#00c6ff;}
+.whatsapp{background:#25D366;}
+.back{background:#ff5a1f;}
+
+/* NEWS */
+.newsbar{
+margin-top:72px;
+display:flex;
+height:48px;
+overflow:hidden;
+}
+
+.newsleft{
+background:#00c6ff;
+color:#fff;
+padding:12px 18px;
+font-weight:700;
+min-width:170px;
+}
+
+.newsright{
+background:#08263b;
+color:#fff;
+flex:1;
+overflow:hidden;
+white-space:nowrap;
+display:flex;
+align-items:center;
+}
+
+.newsright span{
+display:inline-block;
+padding-left:100%;
+animation:news 28s linear infinite;
+font-size:14px;
+}
+
+@keyframes news{
+0%{transform:translateX(0);}
+100%{transform:translateX(-100%);}
+}
+
+/* HERO */
+.hero{
+height:85vh;
+position:relative;
+overflow:hidden;
+}
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+top:0;
+left:0;
+background-size:cover;
+background-position:center;
+opacity:0;
+transition:1s;
+}
+
+.slide.active{
+opacity:1;
+}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.55);
+}
+
+.hero-text{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+color:#fff;
+width:90%;
+z-index:2;
+}
+
+.hero-text h1{
+font-size:58px;
+margin-bottom:12px;
+}
+
+.hero-text p{
+font-size:22px;
+}
+
+/* JOB SECTION */
+.container{
+max-width:1300px;
+margin:auto;
+padding:60px 20px;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+font-weight:700;
+color:#0a2a43;
+margin-bottom:35px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+}
+
+.card{
+background:#fff;
+padding:28px;
+border-radius:14px;
+box-shadow:0 10px 24px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+font-size:24px;
+color:#0a2a43;
+margin-bottom:12px;
+}
+
+.meta{
+font-size:14px;
+color:#666;
+margin-bottom:14px;
+line-height:1.8;
+}
+
+.card p{
+font-size:15px;
+line-height:1.8;
+margin-bottom:18px;
+}
+
+.btn{
+display:inline-block;
+background:#00c6ff;
+color:#fff;
+text-decoration:none;
+padding:11px 18px;
+border-radius:7px;
+font-size:14px;
+font-weight:600;
+}
+
+.btn:hover{
+background:#0098c7;
+}
+
+/* FOOTER */
+footer{
+background:#0a2a43;
+color:#fff;
+text-align:center;
+padding:22px;
+margin-top:40px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+header{
+flex-direction:column;
+gap:12px;
+padding:15px;
+}
+
+nav{
+justify-content:center;
+}
+
+.newsbar{
+margin-top:130px;
+}
+
+.hero-text h1{
+font-size:36px;
+}
+
+.hero-text p{
+font-size:17px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="logo.png">
+<span>Dream HR Consultancy</span>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="jobs.html">Jobs</a>
+<a href="notifications.html">Notifications</a>
+<a href="contact.html">Contact</a>
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="book">Book Meeting</a>
+<a href="https://wa.me/918863962310" target="_blank" class="whatsapp">WhatsApp</a>
+<a href="javascript:history.back()" class="back">⬅ Back</a>
+</nav>
+
+</header>
+
+<!-- NEWS -->
+<div class="newsbar">
+<div class="newsleft">Latest Updates</div>
+<div class="newsright">
+<span>
+🔥 HR Executive Hiring Open • Payroll Manager Required • Apply Today • Freshers Can Apply • Walk-In Interviews • Resume Send on support@idhrt.com • Dream HR Consultancy Welcomes You
+</span>
+</div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216');"></div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978');"></div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3');"></div>
+
+<div class="overlay"></div>
+
+<div class="hero-text">
+<h1>Jobs & Hiring</h1>
+<p>Find HR, Payroll & Compliance Career Opportunities</p>
+</div>
+
+</section>
+
+<!-- JOB LIST -->
+<div class="container">
+
+<div class="title">Current Openings</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>HR Executive</h3>
+<div class="meta">
+📍 Delhi NCR<br>
+💼 Experience: 1-3 Years<br>
+💰 Salary: ₹18,000 - ₹28,000
+</div>
+<p>Handle attendance, joining formalities, documentation and employee support.</p>
+<a href="mailto:support@idhrt.com?subject=Apply for HR Executive" class="btn">Apply Now</a>
+</div>
+
+<div class="card">
+<h3>Payroll Executive</h3>
+<div class="meta">
+📍 Remote / Delhi<br>
+💼 Experience: 2+ Years<br>
+💰 Salary: ₹22,000 - ₹35,000
+</div>
+<p>Salary processing, payslips, PF ESIC deductions and MIS reports.</p>
+<a href="mailto:support@idhrt.com?subject=Apply for Payroll Executive" class="btn">Apply Now</a>
+</div>
+
+<div class="card">
+<h3>Compliance Officer</h3>
+<div class="meta">
+📍 Gurgaon<br>
+💼 Experience: 2-5 Years<br>
+💰 Salary: Negotiable
+</div>
+<p>PF ESIC returns, labour law registers, inspections and licences.</p>
+<a href="mailto:support@idhrt.com?subject=Apply for Compliance Officer" class="btn">Apply Now</a>
+</div>
+
+<div class="card">
+<h3>HR Intern</h3>
+<div class="meta">
+📍 Work From Office<br>
+🎓 Freshers Welcome<br>
+💰 Stipend Available
+</div>
+<p>Learn practical HR operations, recruitment and payroll systems.</p>
+<a href="mailto:support@idhrt.com?subject=Apply for HR Intern" class="btn">Apply Now</a>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 Dream HR Consultancy | support@idhrt.com | +91 8863962310
+</footer>
+
+<script>
+let slides=document.querySelectorAll('.slide');
+let i=0;
+
+setInterval(()=>{
+slides[i].classList.remove('active');
+i=(i+1)%slides.length;
+slides[i].classList.add('active');
+},3000);
+</script>
+
+</body>
+</html>
