@@ -3,21 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Contact Dream HR Consultancy</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<title>Contact Us | Dream HR Consultancy</title>
 
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:Arial;
 }
 
 body{
-background:#f4f7fb;
+background:#f4f6f9;
 }
 
 /* HEADER */
@@ -26,84 +23,66 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-background:#082743;
-padding:14px 30px;
+background:#0a2540;
+padding:15px 30px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-z-index:9999;
+z-index:999;
 }
 
 .logo{
-display:flex;
-align-items:center;
 color:#fff;
 font-size:30px;
-font-weight:700;
+font-weight:bold;
+display:flex;
+align-items:center;
+gap:10px;
 }
 
 .logo img{
-height:55px;
-margin-right:12px;
-border-radius:50%;
+height:45px;
 }
 
 nav a{
 color:#fff;
 text-decoration:none;
-margin:0 8px;
+margin:0 10px;
+font-weight:bold;
 font-size:15px;
-font-weight:600;
-padding:10px 14px;
-border-radius:6px;
-transition:0.3s;
 }
 
-nav a:hover{background:#00c6ff;}
-.book{background:#00c6ff;}
-.whatsapp{background:#25d366;}
-.back{background:#ff5a2c;}
+.btn-top{
+background:#00c6ff;
+padding:8px 14px;
+border-radius:6px;
+}
 
 /* NEWS */
-.newsbar{
-margin-top:86px;
-display:flex;
-height:46px;
-overflow:hidden;
-}
-
-.news-title{
+.news{
+margin-top:78px;
 background:#00c6ff;
 color:#fff;
-padding:11px 20px;
-font-weight:700;
-min-width:180px;
-}
-
-.news-scroll{
-background:#03213b;
-color:#fff;
-flex:1;
+padding:10px;
+font-weight:bold;
 overflow:hidden;
-position:relative;
 white-space:nowrap;
 }
 
-.news-scroll span{
-position:absolute;
-padding-top:11px;
-animation:move 30s linear infinite;
-font-weight:600;
+.news span{
+display:inline-block;
+padding-left:100%;
+animation:move 22s linear infinite;
 }
 
 @keyframes move{
-0%{left:100%;}
-100%{left:-2500px;}
+0%{transform:translateX(0);}
+100%{transform:translateX(-100%);}
 }
 
-/* HERO */
+/* SLIDER */
 .hero{
-height:520px;
+height:90vh;
 position:relative;
 overflow:hidden;
 }
@@ -123,7 +102,6 @@ opacity:1;
 }
 
 .overlay{
-position:absolute;
 width:100%;
 height:100%;
 background:rgba(0,0,0,0.55);
@@ -131,131 +109,85 @@ display:flex;
 justify-content:center;
 align-items:center;
 flex-direction:column;
-text-align:center;
 color:#fff;
+text-align:center;
 padding:20px;
 }
 
 .overlay h1{
-font-size:58px;
-margin-bottom:12px;
+font-size:55px;
+margin-bottom:10px;
 }
 
 .overlay p{
 font-size:24px;
 }
 
-/* CONTENT */
+/* CONTACT BOX */
 .container{
-max-width:1250px;
+max-width:1200px;
 margin:auto;
-padding:60px 20px;
+padding:50px 20px;
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:40px;
+gap:30px;
 }
 
-.card{
+.box{
 background:#fff;
-padding:35px;
-border-radius:16px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
+padding:30px;
+border-radius:10px;
+box-shadow:0 0 15px rgba(0,0,0,0.1);
 }
 
-.card h2{
-font-size:34px;
+.box h2{
 margin-bottom:20px;
-color:#082743;
-}
-
-.card p{
-font-size:18px;
-line-height:1.8;
-margin-bottom:14px;
+color:#0a2540;
 }
 
 input,textarea{
 width:100%;
-padding:14px;
-margin-bottom:14px;
+padding:12px;
+margin-bottom:15px;
 border:1px solid #ccc;
-border-radius:8px;
-font-size:15px;
-}
-
-textarea{
-height:130px;
-resize:none;
+border-radius:6px;
 }
 
 button{
-width:100%;
 background:#00c6ff;
 color:#fff;
 border:none;
-padding:15px;
-font-size:18px;
-font-weight:700;
-border-radius:8px;
+padding:14px;
+width:100%;
+font-size:16px;
+border-radius:6px;
 cursor:pointer;
 }
 
-button:hover{
-background:#0099cc;
-}
-
-/* MAP */
-.map{
-max-width:1250px;
-margin:auto;
-padding:0 20px 60px;
-}
-
-.map iframe{
+iframe{
 width:100%;
-height:420px;
+height:350px;
 border:0;
-border-radius:16px;
+border-radius:10px;
 }
 
-/* FOOTER */
 footer{
-background:#082743;
+background:#0a2540;
 color:#fff;
 text-align:center;
-padding:24px;
-font-size:16px;
+padding:20px;
+margin-top:30px;
 }
 
-@media(max-width:950px){
-
-header{
-flex-direction:column;
-gap:10px;
-}
-
-.logo{
-font-size:22px;
-}
-
-.hero{
-height:420px;
-}
-
-.overlay h1{
-font-size:36px;
-}
-
-.overlay p{
-font-size:18px;
-}
-
+@media(max-width:900px){
 .container{
 grid-template-columns:1fr;
 }
-
-.newsbar{
-margin-top:130px;
+nav{
+display:none;
+}
+.overlay h1{
+font-size:36px;
 }
 }
 </style>
@@ -264,6 +196,7 @@ margin-top:130px;
 <body>
 
 <header>
+
 <div class="logo">
 <img src="logo.png">
 Dream HR Consultancy
@@ -274,84 +207,82 @@ Dream HR Consultancy
 <a href="about.html">About</a>
 <a href="services.html">Services</a>
 <a href="jobs.html">Jobs</a>
-<a href="notification.html">Notifications</a>
+<a href="notifications.html">Notifications</a>
 <a href="contact.html">Contact</a>
-<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="book">Book Meeting</a>
-<a href="https://wa.me/918863962310" target="_blank" class="whatsapp">WhatsApp</a>
-<a href="javascript:history.back()" class="back">⬅ Back</a>
+<a href="https://calendly.com/dreamhrtraining/30min" class="btn-top">Book Meeting</a>
+<a href="https://wa.me/918863962320" class="btn-top">WhatsApp</a>
+<a href="javascript:history.back()" class="btn-top">⬅ Back</a>
 </nav>
+
 </header>
 
-<!-- NEWS -->
-<div class="newsbar">
-<div class="news-title">Latest Updates</div>
-<div class="news-scroll">
+<div class="news">
 <span>
-📢 PF Filing Open | 💼 HR Jobs Hiring | 📞 Contact for Instant Support | 🧾 Payroll Services Available | 🎉 Welcome to Dream HR Consultancy | 📍 PAN India Compliance Support |
+📢 Welcome to Dream HR Consultancy | PF ESIC Support | Payroll Help | New Jobs Opening | Book Free Consultation | Contact Us Today
 </span>
 </div>
-</div>
 
-<!-- HERO -->
+<!-- SLIDER -->
+
 <div class="hero">
 
-<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1596524430615-b46475ddff6e?auto=format&fit=crop&w=1600&q=80');">
+<div class="slide active" style="background-image:url('contact1.jpg');">
 <div class="overlay">
-<h1>Customer Support Team</h1>
-<p>Talk With Our HR Experts</p>
+<h1>Contact Our Experts</h1>
+<p>Call Center Support Team Available</p>
 </div>
 </div>
 
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1600&q=80');">
+<div class="slide" style="background-image:url('contact2.jpg');">
 <div class="overlay">
-<h1>24x7 Consultation Help</h1>
-<p>Fast Response & Professional Guidance</p>
-</div>
-</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1600&q=80');">
-<div class="overlay">
-<h1>Call Us Today</h1>
-<p>PF | ESIC | Payroll | Labour Law</p>
+<h1>24x7 Business Support</h1>
+<p>We Help Companies Across India</p>
 </div>
 </div>
 
 </div>
 
 <!-- CONTACT -->
+
 <div class="container">
 
-<div class="card">
-<h2>Contact Details</h2>
+<div class="box">
 
-<p><strong>Phone:</strong> 8863962310</p>
-<p><strong>Email:</strong> support@idhrt.com</p>
-<p><strong>Website:</strong> www.idhrt.com</p>
-<p><strong>Office Time:</strong> Monday to Saturday (9 AM - 7 PM)</p>
-<p><strong>Support:</strong> HR Compliance, PF, ESIC, Payroll, Hiring</p>
-</div>
+<h2>Send Message</h2>
 
-<div class="card">
-<h2>Send Enquiry</h2>
+<form action="https://formspree.io/f/mayvlkzb" method="POST">
 
-<form action="https://formsubmit.co/support@idhrt.com" method="POST">
+<input type="text" name="name" placeholder="Your Name" required>
 
-<input type="text" placeholder="Your Name" required>
-<input type="text" placeholder="Your Designation">
-<input type="email" placeholder="Your Email">
-<input type="text" placeholder="Your Phone" required>
-<textarea placeholder="Your Message"></textarea>
+<input type="text" name="designation" placeholder="Your Designation">
+
+<input type="email" name="email" placeholder="Your Email">
+
+<input type="text" name="phone" placeholder="Your Phone">
+
+<textarea name="message" rows="6" placeholder="Your Message"></textarea>
 
 <button type="submit">Send Message</button>
 
 </form>
-</div>
 
 </div>
 
-<!-- MAP -->
-<div class="map">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.9611155155676!2d77.32448697529114!3d28.685297075635933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfb978822b0e7%3A0x116ae7ef25089bde!2sInstitute%20of%20Dream%20HR%20Training%20and%20Compliance!5e1!3m2!1sen!2sin!4v1772543862516!5m2!1sen!2sin"></iframe>
+<div class="box">
+
+<h2>Contact Details</h2>
+
+<p><b>Phone:</b> 8863962320</p>
+<br>
+<p><b>Email:</b> support@idhrt.com</p>
+<br>
+<p><b>Office:</b> Dream HR Consultancy</p>
+<br><br>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18"></iframe>
+
+</div>
+
 </div>
 
 <footer>
@@ -359,6 +290,7 @@ Dream HR Consultancy
 </footer>
 
 <script>
+
 let slides=document.querySelectorAll(".slide");
 let i=0;
 
@@ -366,7 +298,8 @@ setInterval(()=>{
 slides[i].classList.remove("active");
 i=(i+1)%slides.length;
 slides[i].classList.add("active");
-},3500);
+},3000);
+
 </script>
 
 </body>
