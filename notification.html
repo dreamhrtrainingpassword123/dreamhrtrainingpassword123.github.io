@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Latest Notifications | Dream HR Consultancy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f7fb;
+color:#222;
+}
+
+/* HEADER */
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#072b49;
+padding:14px 25px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+color:#fff;
+font-size:28px;
+font-weight:700;
+}
+
+.logo img{
+height:48px;
+width:48px;
+border-radius:50%;
+object-fit:cover;
+}
+
+nav{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+padding:10px 14px;
+border-radius:8px;
+font-size:14px;
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover{
+background:#0ea5e9;
+}
+
+.btn-blue{background:#00b7ff;}
+.btn-green{background:#22c55e;}
+.btn-red{background:#ff5a36;}
+
+/* NEWS BAR */
+.newsbar{
+margin-top:78px;
+display:flex;
+height:50px;
+overflow:hidden;
+}
+
+.news-title{
+background:#00b7ff;
+color:#fff;
+font-weight:700;
+padding:14px 20px;
+min-width:170px;
+font-size:26px;
+}
+
+.marquee{
+background:#08253e;
+color:#fff;
+flex:1;
+display:flex;
+align-items:center;
+overflow:hidden;
+white-space:nowrap;
+}
+
+.marquee span{
+display:inline-block;
+padding-left:100%;
+animation:move 28s linear infinite;
+font-size:22px;
+font-weight:600;
+}
+
+@keyframes move{
+0%{transform:translateX(0);}
+100%{transform:translateX(-100%);}
+}
+
+/* HERO */
+.hero{
+height:90vh;
+position:relative;
+overflow:hidden;
+}
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
+opacity:0;
+transition:1s;
+}
+
+.slide.active{
+opacity:1;
+}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.55);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+color:#fff;
+}
+
+.overlay h1{
+font-size:58px;
+margin-bottom:15px;
+}
+
+.overlay p{
+font-size:24px;
+max-width:900px;
+line-height:1.6;
+}
+
+/* CONTENT */
+.container{
+max-width:1300px;
+margin:auto;
+padding:50px 20px;
+}
+
+.section-title{
+text-align:center;
+font-size:42px;
+color:#072b49;
+margin-bottom:35px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+}
+
+.card{
+background:#fff;
+padding:28px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+font-size:26px;
+color:#072b49;
+margin-bottom:12px;
+}
+
+.card p{
+font-size:17px;
+line-height:1.7;
+color:#444;
+margin-bottom:15px;
+}
+
+.tag{
+display:inline-block;
+background:#e0f2fe;
+color:#0369a1;
+padding:6px 12px;
+border-radius:20px;
+font-size:14px;
+font-weight:700;
+}
+
+/* FOOTER */
+footer{
+background:#072b49;
+color:#fff;
+text-align:center;
+padding:25px;
+margin-top:40px;
+font-size:18px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+header{
+flex-direction:column;
+gap:12px;
+padding:12px;
+}
+
+.logo{
+font-size:22px;
+}
+
+nav{
+justify-content:center;
+}
+
+.newsbar{
+margin-top:145px;
+}
+
+.news-title{
+font-size:18px;
+min-width:120px;
+padding:15px 10px;
+}
+
+.marquee span{
+font-size:16px;
+}
+
+.overlay h1{
+font-size:34px;
+}
+
+.overlay p{
+font-size:18px;
+}
+
+.section-title{
+font-size:32px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="logo.png">
+<span>Dream HR Consultancy</span>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="jobs.html">Jobs</a>
+<a href="notifications.html">Notifications</a>
+<a href="contact.html">Contact</a>
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn-blue">Book Meeting</a>
+<a href="https://wa.me/918863962310" target="_blank" class="btn-green">WhatsApp</a>
+<a href="javascript:history.back()" class="btn-red">⬅ Back</a>
+</nav>
+
+</header>
+
+<!-- MOVING NEWS -->
+<div class="newsbar">
+<div class="news-title">Latest Updates</div>
+<div class="marquee">
+<span>
+🎉 Welcome to Dream HR Consultancy • 
+📢 New Labour Law Compliance Updates Available • 
+💼 HR Executive Jobs Open in Delhi NCR • 
+📌 PF ESIC Filing Last Date Reminder • 
+🏢 Companies Can Book HR Audit Meeting • 
+📣 Payroll Outsourcing Services Open • 
+📍 Pan India Compliance Support Available • 
+🚀 Contact Us For Quick Consultation
+</span>
+</div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40');">
+<div class="overlay">
+<h1>Latest Notifications</h1>
+<p>Stay updated with labour law changes, jobs openings, compliance alerts and business announcements.</p>
+</div>
+</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a');">
+<div class="overlay">
+<h1>Government Updates</h1>
+<p>PF, ESIC, Payroll, Factory Act and HR statutory notices updated regularly.</p>
+</div>
+</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');">
+<div class="overlay">
+<h1>Jobs & Hiring Alerts</h1>
+<p>New openings for HR Executive, Payroll Officer, Recruiter & Compliance Officer.</p>
+</div>
+</div>
+
+</section>
+
+<!-- NOTIFICATIONS -->
+<div class="container">
+
+<h2 class="section-title">Recent Notifications</h2>
+
+<div class="grid">
+
+<div class="card">
+<span class="tag">New</span>
+<h3>PF Return Filing Reminder</h3>
+<p>All establishments are advised to complete monthly PF filing before due date to avoid penalties.</p>
+</div>
+
+<div class="card">
+<span class="tag">Hiring</span>
+<h3>HR Executive Jobs Open</h3>
+<p>Freshers & experienced candidates can apply for HR, Payroll and Recruiter positions.</p>
+</div>
+
+<div class="card">
+<span class="tag">Important</span>
+<h3>ESIC Compliance Update</h3>
+<p>Ensure all eligible employees are covered under ESIC and records updated.</p>
+</div>
+
+<div class="card">
+<span class="tag">Offer</span>
+<h3>Free Consultation</h3>
+<p>Book free 30-minute consultation for PF, Payroll, Labour Law and HR setup.</p>
+</div>
+
+<div class="card">
+<span class="tag">Business</span>
+<h3>Pan India Services</h3>
+<p>Dream HR Consultancy now serving clients across multiple states in India.</p>
+</div>
+
+<div class="card">
+<span class="tag">Alert</span>
+<h3>Notice Board Compliance</h3>
+<p>All mandatory labour law notices must be displayed at office/factory premises.</p>
+</div>
+
+</div>
+</div>
+
+<footer>
+© 2026 Dream HR Consultancy | All Rights Reserved
+</footer>
+
+<script>
+let slides=document.querySelectorAll(".slide");
+let index=0;
+
+setInterval(()=>{
+slides[index].classList.remove("active");
+index=(index+1)%slides.length;
+slides[index].classList.add("active");
+},3500);
+</script>
+
+</body>
+</html>
