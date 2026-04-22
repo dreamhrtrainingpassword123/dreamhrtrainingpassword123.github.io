@@ -10,7 +10,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial;
+font-family:Arial,sans-serif;
 }
 
 body{
@@ -24,7 +24,7 @@ top:0;
 left:0;
 width:100%;
 background:#0a2540;
-padding:15px 30px;
+padding:14px 30px;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -32,12 +32,12 @@ z-index:999;
 }
 
 .logo{
-color:#fff;
-font-size:30px;
-font-weight:bold;
 display:flex;
 align-items:center;
 gap:10px;
+color:#fff;
+font-size:32px;
+font-weight:bold;
 }
 
 .logo img{
@@ -47,15 +47,19 @@ height:45px;
 nav a{
 color:#fff;
 text-decoration:none;
-margin:0 10px;
+margin:0 8px;
 font-weight:bold;
 font-size:15px;
 }
 
-.btn-top{
-background:#00c6ff;
+.topbtn{
 padding:8px 14px;
 border-radius:6px;
+background:#00c6ff;
+}
+
+.back{
+background:#ff5722;
 }
 
 /* NEWS */
@@ -64,9 +68,9 @@ margin-top:78px;
 background:#00c6ff;
 color:#fff;
 padding:10px;
-font-weight:bold;
 overflow:hidden;
 white-space:nowrap;
+font-weight:bold;
 }
 
 .news span{
@@ -80,7 +84,7 @@ animation:move 22s linear infinite;
 100%{transform:translateX(-100%);}
 }
 
-/* SLIDER */
+/* HERO */
 .hero{
 height:90vh;
 position:relative;
@@ -109,13 +113,13 @@ display:flex;
 justify-content:center;
 align-items:center;
 flex-direction:column;
-color:#fff;
 text-align:center;
+color:#fff;
 padding:20px;
 }
 
 .overlay h1{
-font-size:55px;
+font-size:56px;
 margin-bottom:10px;
 }
 
@@ -123,7 +127,7 @@ margin-bottom:10px;
 font-size:24px;
 }
 
-/* CONTACT BOX */
+/* CONTACT */
 .container{
 max-width:1200px;
 margin:auto;
@@ -137,12 +141,12 @@ gap:30px;
 background:#fff;
 padding:30px;
 border-radius:10px;
-box-shadow:0 0 15px rgba(0,0,0,0.1);
+box-shadow:0 0 15px rgba(0,0,0,0.08);
 }
 
 .box h2{
-margin-bottom:20px;
 color:#0a2540;
+margin-bottom:20px;
 }
 
 input,textarea{
@@ -151,14 +155,15 @@ padding:12px;
 margin-bottom:15px;
 border:1px solid #ccc;
 border-radius:6px;
+font-size:15px;
 }
 
 button{
-background:#00c6ff;
-color:#fff;
-border:none;
-padding:14px;
 width:100%;
+padding:14px;
+background:#00c6ff;
+border:none;
+color:#fff;
 font-size:16px;
 border-radius:6px;
 cursor:pointer;
@@ -169,6 +174,7 @@ width:100%;
 height:350px;
 border:0;
 border-radius:10px;
+margin-top:20px;
 }
 
 footer{
@@ -179,16 +185,25 @@ padding:20px;
 margin-top:30px;
 }
 
+/* MOBILE */
 @media(max-width:900px){
+
 .container{
 grid-template-columns:1fr;
 }
+
 nav{
 display:none;
 }
+
 .overlay h1{
-font-size:36px;
+font-size:34px;
 }
+
+.overlay p{
+font-size:18px;
+}
+
 }
 </style>
 </head>
@@ -209,40 +224,40 @@ Dream HR Consultancy
 <a href="jobs.html">Jobs</a>
 <a href="notifications.html">Notifications</a>
 <a href="contact.html">Contact</a>
-<a href="https://calendly.com/dreamhrtraining/30min" class="btn-top">Book Meeting</a>
-<a href="https://wa.me/918863962320" class="btn-top">WhatsApp</a>
-<a href="javascript:history.back()" class="btn-top">⬅ Back</a>
+<a href="https://calendly.com/dreamhrtraining/30min" class="topbtn">Book Meeting</a>
+<a href="https://wa.me/918863962320" class="topbtn">WhatsApp</a>
+<a href="javascript:history.back()" class="topbtn back">⬅ Back</a>
 </nav>
 
 </header>
 
 <div class="news">
 <span>
-📢 Welcome to Dream HR Consultancy | PF ESIC Support | Payroll Help | New Jobs Opening | Book Free Consultation | Contact Us Today
+📢 Welcome to Dream HR Consultancy | Call Center Support Available | PF ESIC Help | Payroll Services | New Jobs Opening | Contact Our Team Today
 </span>
 </div>
 
-<!-- SLIDER -->
+<!-- HERO -->
 
 <div class="hero">
 
 <div class="slide active" style="background-image:url('contact1.jpg');">
 <div class="overlay">
 <h1>Contact Our Experts</h1>
-<p>Call Center Support Team Available</p>
+<p>Professional HR Support Team</p>
 </div>
 </div>
 
 <div class="slide" style="background-image:url('contact2.jpg');">
 <div class="overlay">
-<h1>24x7 Business Support</h1>
-<p>We Help Companies Across India</p>
+<h1>24x7 Client Assistance</h1>
+<p>We Support Companies Across India</p>
 </div>
 </div>
 
 </div>
 
-<!-- CONTACT -->
+<!-- CONTACT SECTION -->
 
 <div class="container">
 
@@ -272,14 +287,19 @@ Dream HR Consultancy
 
 <h2>Contact Details</h2>
 
-<p><b>Phone:</b> 8863962320</p>
+<p><strong>Phone:</strong> 8863962320</p>
 <br>
-<p><b>Email:</b> support@idhrt.com</p>
-<br>
-<p><b>Office:</b> Dream HR Consultancy</p>
-<br><br>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18"></iframe>
+<p><strong>Email:</strong> support@idhrt.com</p>
+<br>
+
+<p><strong>Office:</strong> Dream HR Consultancy</p>
+
+<iframe 
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.9611155155676!2d77.32448697529114!3d28.685297075635933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfb978822b0e7%3A0x116ae7ef25089bde!2sInstitute%20of%20Dream%20HR%20Training%20and%20Compliance!5e1!3m2!1sen!2sin!4v1772543862516!5m2!1sen!2sin"
+allowfullscreen=""
+loading="lazy">
+</iframe>
 
 </div>
 
