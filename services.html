@@ -3,94 +3,412 @@
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>HR Services | PF ESIC | Payroll | Labour Law | Dream HR Consultancy</title>
+<title>Our Services | Dream HR Consultancy</title>
 
-<meta name="description" content="Complete HR Services including PF ESIC Compliance, Payroll, Labour Law, Recruitment, HR Consulting and Registration Services in India.">
+<meta name="description" content="PF ESIC Compliance, Payroll, Labour Law, Recruitment, Factory License, Audit and HR Consulting Services by Dream HR Consultancy.">
 
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f7fa;
+color:#222;
+}
+
+/* HEADER */
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#0a2a43;
+padding:14px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+color:#fff;
+font-size:16px;
+font-weight:700;
+}
+
+.logo img{
+width:42px;
+height:42px;
+border-radius:50%;
+object-fit:cover;
+}
+
+nav{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+align-items:center;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+padding:10px 14px;
+border-radius:6px;
+font-size:14px;
+font-weight:600;
+transition:0.3s;
+}
+
+nav a:hover{
+background:#113f64;
+}
+
+.book{
+background:#00c2ff;
+}
+
+.whatsapp{
+background:#25D366;
+}
+
+.back{
+background:#ff5a1f;
+}
+
+/* NEWS BAR */
+.newsbar{
+margin-top:72px;
+display:flex;
+height:48px;
+overflow:hidden;
+border-top:3px solid #fff;
+}
+
+.newsleft{
+background:#00c2ff;
+color:#fff;
+font-weight:700;
+padding:12px 20px;
+min-width:170px;
+font-size:15px;
+}
+
+.newsright{
+background:#08263b;
+color:#fff;
+flex:1;
+display:flex;
+align-items:center;
+overflow:hidden;
+white-space:nowrap;
+}
+
+.newsright span{
+display:inline-block;
+padding-left:100%;
+animation:moveNews 32s linear infinite;
+font-size:14px;
+font-weight:500;
+}
+
+@keyframes moveNews{
+0%{transform:translateX(0);}
+100%{transform:translateX(-100%);}
+}
+
+/* HERO */
+.hero{
+height:85vh;
+position:relative;
+overflow:hidden;
+}
+
+.slide{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
+opacity:0;
+transition:1s;
+}
+
+.slide.active{
+opacity:1;
+}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.55);
+}
+
+.hero-text{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+color:#fff;
+width:90%;
+z-index:5;
+}
+
+.hero-text h1{
+font-size:58px;
+margin-bottom:15px;
+font-weight:700;
+}
+
+.hero-text p{
+font-size:22px;
+}
+
+/* CONTENT */
+.container{
+max-width:1300px;
+margin:auto;
+padding:60px 20px;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+color:#0a2a43;
+margin-bottom:40px;
+font-weight:700;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:#fff;
+padding:28px;
+border-radius:14px;
+box-shadow:0 8px 22px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+font-size:24px;
+color:#0a2a43;
+margin-bottom:12px;
+}
+
+.card p{
+font-size:15px;
+line-height:1.8;
+margin-bottom:18px;
+color:#444;
+}
+
+.btn{
+display:inline-block;
+background:#00c2ff;
+color:#fff;
+padding:11px 18px;
+border-radius:7px;
+text-decoration:none;
+font-size:14px;
+font-weight:600;
+}
+
+.btn:hover{
+background:#0098c7;
+}
+
+/* FOOTER */
+footer{
+background:#0a2a43;
+color:#fff;
+text-align:center;
+padding:22px;
+margin-top:40px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+header{
+flex-direction:column;
+gap:12px;
+padding:15px;
+}
+
+nav{
+justify-content:center;
+}
+
+.hero-text h1{
+font-size:36px;
+}
+
+.hero-text p{
+font-size:17px;
+}
+
+.newsbar{
+margin-top:130px;
+}
+}
+</style>
 
 </head>
 
 <body>
 
 <header>
-<h1>Our HR & Compliance Services</h1>
-</header>
+
+<div class="logo">
+<img src="logo.png">
+<span>Dream HR Consultancy</span>
+</div>
 
 <nav>
 <a href="index.html">Home</a>
-<a href="services.html">Services</a>
 <a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="jobs.html">Jobs</a>
+<a href="notifications.html">Notifications</a>
 <a href="contact.html">Contact</a>
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="book">Book Meeting</a>
+<a href="https://wa.me/918863962310" target="_blank" class="whatsapp">WhatsApp</a>
+<a href="javascript:history.back()" class="back">⬅ Back</a>
 </nav>
 
+</header>
+
+<!-- NEWS -->
+<div class="newsbar">
+<div class="newsleft">Latest Updates</div>
+<div class="newsright">
+<span>
+🎉 Welcome to Dream HR Consultancy • PF & ESIC Registration Open • Payroll Clients Welcome • Labour Law Support Available • Hiring HR Executives • Factory Compliance Open • Contact: support@idhrt.com
+</span>
+</div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40');"></div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f');"></div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a');"></div>
+
+<div class="overlay"></div>
+
+<div class="hero-text">
+<h1>Our Services</h1>
+<p>Complete HR, Payroll & Compliance Solutions for Businesses</p>
+</div>
+
+</section>
+
+<!-- SERVICES -->
 <div class="container">
+
+<div class="title">Professional Services</div>
 
 <div class="grid">
 
-<!-- PF ESIC -->
 <div class="card">
 <h3>PF & ESIC Compliance</h3>
-<p>Registration, monthly filing, employee registration and inspection support.</p>
+<p>Registration, filing, inspection support, UAN & employee benefits management.</p>
 <a href="pf-esic.html" class="btn">Read Full Details</a>
 </div>
 
-<!-- Payroll -->
 <div class="card">
 <h3>Payroll Management</h3>
-<p>Salary processing, payslip generation and statutory deduction management.</p>
+<p>Salary processing, payslips, deductions, attendance and monthly payroll reports.</p>
 <a href="payroll.html" class="btn">Read Full Details</a>
 </div>
 
-<!-- Labour Law -->
 <div class="card">
 <h3>Labour Law Compliance</h3>
-<p>Shops Act registration, CLRA compliance and labour documentation.</p>
+<p>Shops Act, CLRA, registers, notices and legal documentation support.</p>
 <a href="labour-law.html" class="btn">Read Full Details</a>
 </div>
 
-<!-- Recruitment -->
 <div class="card">
 <h3>Recruitment Services</h3>
-<p>Pan India hiring support for companies and startups.</p>
+<p>Staff hiring solutions for startups, factories and growing companies.</p>
 <a href="recruitment.html" class="btn">Read Full Details</a>
 </div>
 
-<!-- Factory License -->
 <div class="card">
 <h3>Factory License</h3>
-<p>Factory license registration, renewal and compliance support.</p>
+<p>Factory registration, renewal, approvals and compliance management.</p>
 <a href="factory-license.html" class="btn">Read Full Details</a>
 </div>
 
-<!-- Compliance Audit -->
 <div class="card">
 <h3>Compliance Audit</h3>
-<p>PF, ESIC and labour law audit to avoid penalties and risks.</p>
+<p>PF ESIC & labour law audits to reduce penalties and risks.</p>
 <a href="compliance-audit.html" class="btn">Read Full Details</a>
 </div>
 
-<!-- HR Consulting -->
 <div class="card">
 <h3>HR Consulting</h3>
-<p>HR policy drafting, documentation and startup HR setup services.</p>
+<p>HR policies, employee systems, startup HR setup and documentation.</p>
 <a href="hr-consulting.html" class="btn">Read Full Details</a>
 </div>
 
+<div class="card">
+<h3>Professional Tax</h3>
+<p>PT registration, returns and state-wise tax compliance support.</p>
+<a href="contact.html" class="btn">Enquire Now</a>
+</div>
+
+<div class="card">
+<h3>POSH Consultant</h3>
+<p>POSH policy drafting, ICC formation and compliance training support.</p>
+<a href="contact.html" class="btn">Enquire Now</a>
 </div>
 
 </div>
 
-<!-- CALL BUTTON -->
-<a class="call" href="tel:8863962320">Call</a>
-
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/918863962320">WhatsApp</a>
+</div>
 
 <footer>
-© 2026 Dream HR Consultancy
+© 2026 Dream HR Consultancy | support@idhrt.com | +91 8863962310
 </footer>
+
+<script>
+let slides=document.querySelectorAll('.slide');
+let i=0;
+
+setInterval(()=>{
+slides[i].classList.remove('active');
+i=(i+1)%slides.length;
+slides[i].classList.add('active');
+},3000);
+</script>
 
 </body>
 </html>
