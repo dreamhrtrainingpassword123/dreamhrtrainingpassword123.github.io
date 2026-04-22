@@ -32,7 +32,6 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 z-index:9999;
-box-shadow:0 4px 12px rgba(0,0,0,0.2);
 }
 
 .logo{
@@ -60,34 +59,23 @@ border-radius:6px;
 transition:0.3s;
 }
 
-nav a:hover{
-background:#00c6ff;
-}
-
-.book{
-background:#00c6ff;
-}
-
-.whatsapp{
-background:#25d366;
-}
-
-.back{
-background:#ff5a2c;
-}
+nav a:hover{background:#00c6ff;}
+.book{background:#00c6ff;}
+.whatsapp{background:#25d366;}
+.back{background:#ff5a2c;}
 
 /* NEWS */
 .newsbar{
 margin-top:86px;
 display:flex;
-height:48px;
+height:46px;
 overflow:hidden;
 }
 
 .news-title{
 background:#00c6ff;
 color:#fff;
-padding:12px 22px;
+padding:11px 20px;
 font-weight:700;
 min-width:180px;
 }
@@ -96,22 +84,21 @@ min-width:180px;
 background:#03213b;
 color:#fff;
 flex:1;
-white-space:nowrap;
 overflow:hidden;
 position:relative;
+white-space:nowrap;
 }
 
 .news-scroll span{
 position:absolute;
-width:max-content;
-padding-top:12px;
-animation:move 28s linear infinite;
+padding-top:11px;
+animation:move 30s linear infinite;
 font-weight:600;
 }
 
 @keyframes move{
 0%{left:100%;}
-100%{left:-2200px;}
+100%{left:-2500px;}
 }
 
 /* HERO */
@@ -145,8 +132,8 @@ justify-content:center;
 align-items:center;
 flex-direction:column;
 text-align:center;
-padding:20px;
 color:#fff;
+padding:20px;
 }
 
 .overlay h1{
@@ -158,7 +145,7 @@ margin-bottom:12px;
 font-size:24px;
 }
 
-/* SECTION */
+/* CONTENT */
 .container{
 max-width:1250px;
 margin:auto;
@@ -185,7 +172,6 @@ color:#082743;
 font-size:18px;
 line-height:1.8;
 margin-bottom:14px;
-color:#333;
 }
 
 input,textarea{
@@ -215,7 +201,7 @@ cursor:pointer;
 }
 
 button:hover{
-background:#0097c7;
+background:#0099cc;
 }
 
 /* MAP */
@@ -230,7 +216,6 @@ width:100%;
 height:420px;
 border:0;
 border-radius:16px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
 /* FOOTER */
@@ -239,7 +224,6 @@ background:#082743;
 color:#fff;
 text-align:center;
 padding:24px;
-margin-top:40px;
 font-size:16px;
 }
 
@@ -254,16 +238,12 @@ gap:10px;
 font-size:22px;
 }
 
-nav{
-text-align:center;
-}
-
 .hero{
 height:420px;
 }
 
 .overlay h1{
-font-size:38px;
+font-size:36px;
 }
 
 .overlay p{
@@ -307,7 +287,7 @@ Dream HR Consultancy
 <div class="news-title">Latest Updates</div>
 <div class="news-scroll">
 <span>
-🎉 Welcome to Dream HR Consultancy | 📢 PF Return Filing Open | 💼 Jobs Hiring for HR Executive | 📍 Labour Law Compliance Available PAN India | 📞 Book Free Consultation Today | 🧾 Payroll Services Running Smoothly | 📌 Contact Us for ESIC Registration |
+📢 PF Filing Open | 💼 HR Jobs Hiring | 📞 Contact for Instant Support | 🧾 Payroll Services Available | 🎉 Welcome to Dream HR Consultancy | 📍 PAN India Compliance Support |
 </span>
 </div>
 </div>
@@ -315,24 +295,24 @@ Dream HR Consultancy
 <!-- HERO -->
 <div class="hero">
 
-<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1598257006458-087169a1f08d?auto=format&fit=crop&w=1600&q=80');">
+<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1596524430615-b46475ddff6e?auto=format&fit=crop&w=1600&q=80');">
 <div class="overlay">
-<h1>Contact Our Support Team</h1>
-<p>Fast Response | HR Experts | Friendly Assistance</p>
+<h1>Customer Support Team</h1>
+<p>Talk With Our HR Experts</p>
 </div>
 </div>
 
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1600&q=80');">
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1600&q=80');">
 <div class="overlay">
-<h1>Call Center Assistance</h1>
-<p>Talk to Our Professional Team</p>
+<h1>24x7 Consultation Help</h1>
+<p>Fast Response & Professional Guidance</p>
 </div>
 </div>
 
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1600&q=80');">
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1600&q=80');">
 <div class="overlay">
-<h1>We Are Ready to Help</h1>
-<p>Compliance | Payroll | Hiring Support</p>
+<h1>Call Us Today</h1>
+<p>PF | ESIC | Payroll | Labour Law</p>
 </div>
 </div>
 
@@ -347,8 +327,8 @@ Dream HR Consultancy
 <p><strong>Phone:</strong> 8863962310</p>
 <p><strong>Email:</strong> support@idhrt.com</p>
 <p><strong>Website:</strong> www.idhrt.com</p>
-<p><strong>Timing:</strong> Monday to Saturday (9 AM to 7 PM)</p>
-<p><strong>Support:</strong> PF, ESIC, Payroll, Labour Law, Hiring</p>
+<p><strong>Office Time:</strong> Monday to Saturday (9 AM - 7 PM)</p>
+<p><strong>Support:</strong> HR Compliance, PF, ESIC, Payroll, Hiring</p>
 </div>
 
 <div class="card">
