@@ -1,10 +1,266 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>About Founder</title>
+<title>About Us | Dream HR Consultancy</title>
 
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f7fa;
+color:#222;
+}
+
+/* HEADER */
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#0a2a43;
+padding:14px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+color:#fff;
+font-size:16px;
+font-weight:700;
+}
+
+.logo img{
+width:42px;
+height:42px;
+border-radius:50%;
+object-fit:cover;
+}
+
+nav{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+align-items:center;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+padding:10px 14px;
+border-radius:6px;
+font-size:14px;
+font-weight:600;
+transition:0.3s;
+}
+
+nav a:hover{
+background:#113f64;
+}
+
+.book{
+background:#00c2ff;
+}
+
+.whatsapp{
+background:#25D366;
+}
+
+.back{
+background:#ff5a1f;
+}
+
+/* NEWS BAR */
+.newsbar{
+margin-top:72px;
+display:flex;
+height:48px;
+overflow:hidden;
+border-top:3px solid #fff;
+}
+
+.newsleft{
+background:#00c2ff;
+color:#fff;
+font-weight:700;
+padding:12px 20px;
+min-width:170px;
+font-size:15px;
+}
+
+.newsright{
+background:#08263b;
+color:#fff;
+flex:1;
+display:flex;
+align-items:center;
+overflow:hidden;
+white-space:nowrap;
+}
+
+.newsright span{
+display:inline-block;
+padding-left:100%;
+animation:moveNews 30s linear infinite;
+font-size:14px;
+font-weight:500;
+}
+
+@keyframes moveNews{
+0%{transform:translateX(0);}
+100%{transform:translateX(-100%);}
+}
+
+/* HERO */
+.hero{
+height:85vh;
+position:relative;
+overflow:hidden;
+}
+
+.slide{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
+opacity:0;
+transition:1s;
+}
+
+.slide.active{
+opacity:1;
+}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.55);
+}
+
+.hero-text{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+color:#fff;
+width:90%;
+z-index:5;
+}
+
+.hero-text h1{
+font-size:58px;
+margin-bottom:15px;
+font-weight:700;
+}
+
+.hero-text p{
+font-size:22px;
+}
+
+/* CONTENT */
+.container{
+max-width:1200px;
+margin:auto;
+padding:60px 20px;
+}
+
+.about-box{
+display:grid;
+grid-template-columns:350px 1fr;
+gap:35px;
+align-items:center;
+background:#fff;
+padding:35px;
+border-radius:14px;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.about-box img{
+width:100%;
+border-radius:14px;
+object-fit:cover;
+}
+
+.about-text h2{
+font-size:34px;
+margin-bottom:18px;
+color:#0a2a43;
+}
+
+.about-text p{
+line-height:1.9;
+font-size:16px;
+margin-bottom:14px;
+color:#333;
+}
+
+.highlight{
+background:#eef8ff;
+padding:18px;
+border-left:5px solid #00c2ff;
+border-radius:8px;
+margin-top:15px;
+}
+
+/* FOOTER */
+footer{
+background:#0a2a43;
+color:#fff;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+header{
+flex-direction:column;
+gap:12px;
+padding:15px;
+}
+
+nav{
+justify-content:center;
+}
+
+.hero-text h1{
+font-size:36px;
+}
+
+.hero-text p{
+font-size:17px;
+}
+
+.about-box{
+grid-template-columns:1fr;
+}
+
+.newsbar{
+margin-top:130px;
+}
+}
+</style>
 
 </head>
 
@@ -12,42 +268,101 @@
 
 <header>
 
-<h1>About Founder</h1>
+<div class="logo">
+<img src="logo.png">
+<span>Dream HR Consultancy</span>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="jobs.html">Jobs</a>
+<a href="notifications.html">Notifications</a>
+<a href="contact.html">Contact</a>
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="book">Book Meeting</a>
+<a href="https://wa.me/918863962310" target="_blank" class="whatsapp">WhatsApp</a>
+<a href="javascript:history.back()" class="back">⬅ Back</a>
+</nav>
 
 </header>
 
-<nav>
+<!-- NEWS -->
+<div class="newsbar">
+<div class="newsleft">Latest Updates</div>
+<div class="newsright">
+<span>
+🎉 Welcome to Dream HR Consultancy • PF & ESIC Registration Open • New Payroll Clients Welcome • Labour Law Inspection Support Available • Hiring HR Executives • Book Free Consultation Today • Factory Compliance Services Live • Contact: support@idhrt.com
+</span>
+</div>
+</div>
 
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
+<!-- HERO -->
+<section class="hero">
 
-</nav>
+<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f');"></div>
 
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978');"></div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1517048676732-d65bc937f952');"></div>
+
+<div class="overlay"></div>
+
+<div class="hero-text">
+<h1>About Dream HR Consultancy</h1>
+<p>Trusted HR, Payroll & Compliance Partner for Growing Businesses</p>
+</div>
+
+</section>
+
+<!-- ABOUT CONTENT -->
 <div class="container">
 
-<div class="about">
+<div class="about-box">
 
 <img src="profile.jpg">
 
-<p>
+<div class="about-text">
 
-<strong>C.K. Jha</strong> is the Founder of Institute of Dream HR Training and Compliance.
+<h2>About Founder</h2>
 
-He has more than 10 years of practical experience in HR operations, payroll management, PF ESIC compliance and labour law documentation.
+<p><strong>C.K. Jha</strong> is the Founder of Dream HR Consultancy and Institute of Dream HR Training.</p>
 
-He has worked with startups, SMEs and growing companies across Delhi NCR to ensure statutory compliance and efficient HR systems.
+<p>He has more than 10+ years of practical experience in HR Operations, Payroll Management, PF ESIC Compliance, Labour Law Documentation and Statutory Audit support.</p>
 
-His expertise includes compliance management, payroll systems, labour law documentation, inspection handling and HR training programs.
+<p>He has worked with startups, SMEs, factories, contractors and corporate organizations across India to build strong HR systems and maintain legal compliance.</p>
 
-Through his consultancy and practical HR training programs he has helped many HR professionals and students build successful careers in HR and compliance field.
+<p>His expertise includes Payroll Setup, Attendance Systems, Labour Law Registrations, Inspection Handling, Recruitment Support and Practical HR Training.</p>
 
-</p>
+<p>Through consultancy and skill-based HR training, he has helped professionals and companies grow faster with proper systems and compliance support.</p>
+
+<div class="highlight">
+✅ Trusted by Businesses <br>
+✅ Fast Response Support <br>
+✅ Pan India Compliance Assistance <br>
+✅ Practical HR Expertise
+</div>
+
+</div>
 
 </div>
 
 </div>
+
+<footer>
+© 2026 Dream HR Consultancy | support@idhrt.com | +91 8863962310
+</footer>
+
+<script>
+let slides=document.querySelectorAll('.slide');
+let i=0;
+
+setInterval(()=>{
+slides[i].classList.remove('active');
+i=(i+1)%slides.length;
+slides[i].classList.add('active');
+},3000);
+</script>
 
 </body>
 </html>
