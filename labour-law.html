@@ -1,52 +1,410 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Labour Law Consultant</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Labour Law Compliance Services | Dream HR Consultancy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f7fa;
+color:#222;
+line-height:1.7;
+}
+
+/* HEADER */
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#0a2a43;
+padding:12px 28px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:9999;
+box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+.logo a{
+display:flex;
+align-items:center;
+gap:10px;
+text-decoration:none;
+color:#fff;
+font-size:22px;
+font-weight:700;
+}
+
+.logo img{
+height:42px;
+border-radius:6px;
+}
+
+nav{
+display:flex;
+gap:14px;
+align-items:center;
+flex-wrap:wrap;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+font-size:14px;
+font-weight:500;
+}
+
+.book-btn{
+background:#00c6ff;
+padding:9px 12px;
+border-radius:6px;
+}
+
+.whatsapp-btn{
+background:#25D366;
+padding:9px 12px;
+border-radius:6px;
+}
+
+.back-btn{
+background:#ff5722;
+padding:9px 12px;
+border-radius:6px;
+}
+
+/* NEWS BAR */
+.news-bar{
+position:fixed;
+top:72px;
+left:0;
+width:100%;
+display:flex;
+background:#081d2f;
+z-index:9998;
+border-top:2px solid #00c6ff;
+border-bottom:2px solid #00c6ff;
+}
+
+.news-title{
+background:#00c6ff;
+color:#fff;
+padding:12px 18px;
+font-weight:700;
+white-space:nowrap;
+}
+
+.news-scroll{
+flex:1;
+overflow:hidden;
+height:45px;
+display:flex;
+align-items:center;
+}
+
+.news-track{
+display:flex;
+width:max-content;
+animation:moveNews 40s linear infinite;
+}
+
+.news-track:hover{
+animation-play-state:paused;
+}
+
+.news-track span{
+white-space:nowrap;
+color:#fff;
+padding:0 35px;
+font-size:14px;
+}
+
+@keyframes moveNews{
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
+}
+
+/* HERO */
+.hero{
+height:90vh;
+margin-top:117px;
+position:relative;
+overflow:hidden;
+}
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+font-size:42px;
+font-weight:700;
+color:#fff;
+opacity:0;
+transition:1s;
+}
+
+.slide.active{
+opacity:1;
+}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.55);
+}
+
+/* CONTENT */
+.container{
+max-width:1200px;
+margin:auto;
+padding:45px 20px;
+display:flex;
+gap:30px;
+}
+
+.left,.right{
+background:#fff;
+padding:30px;
+border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.left{flex:2;}
+.right{flex:1;}
+
+h2,h3{
+color:#0a2a43;
+margin-bottom:15px;
+}
+
+p{
+margin-bottom:14px;
+}
+
+ul{
+padding-left:20px;
+margin-bottom:18px;
+}
+
+li{
+margin-bottom:8px;
+}
+
+.btn{
+display:inline-block;
+background:#00c6ff;
+color:#fff;
+padding:12px 22px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+margin-top:15px;
+}
+
+.right a{
+display:block;
+padding:10px 0;
+border-bottom:1px solid #eee;
+text-decoration:none;
+color:#0a2a43;
+}
+
+.notice{
+margin-top:18px;
+background:#fff3cd;
+padding:12px;
+border-radius:8px;
+}
+
+/* MOBILE */
+@media(max-width:992px){
+
+.container{
+flex-direction:column;
+}
+
+.slide{
+font-size:28px;
+}
+
+.logo a{
+font-size:18px;
+}
+
+nav{
+gap:10px;
+}
+}
+</style>
 </head>
 
 <body>
 
-<h1>Labour Law Compliance Services</h1>
+<header>
+
+<div class="logo">
+<a href="index.html">
+<img src="logo.png">
+<span>Dream HR Consultancy</span>
+</a>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="jobs.html">Jobs</a>
+<a href="notifications.html">Notifications</a>
+<a href="contact.html">Contact</a>
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="book-btn">Book Meeting</a>
+<a href="https://wa.me/918863962310" target="_blank" class="whatsapp-btn">WhatsApp</a>
+<a href="javascript:history.back()" class="back-btn">⬅ Back</a>
+</nav>
+
+</header>
+
+<!-- UPDATES -->
+<div class="news-bar">
+<div class="news-title">Latest Updates</div>
+<div class="news-scroll">
+<div class="news-track">
+
+<span>Compliance Alert: Maintain statutory registers under applicable labour laws.</span>
+<span>HR Update: Appointment letters and policy documents should be properly issued.</span>
+<span>Inspection Note: Attendance, wage and leave records must be updated monthly.</span>
+<span>Factory Update: Display mandatory notices at workplace as per law.</span>
+<span>Legal Alert: Delay in license renewal may attract penalties.</span>
+<span>Advisory: Contractor compliance documents should be verified regularly.</span>
+<span>Payroll Link: Minimum wages revision must reflect in salary structure.</span>
+<span>POSH Update: Internal Committee records should remain confidential.</span>
+<span>Shops Act: State-wise registration and renewal timelines differ.</span>
+<span>Dream HR Update: PAN India labour law consultancy support available.</span>
+
+<span>Compliance Alert: Maintain statutory registers under applicable labour laws.</span>
+<span>HR Update: Appointment letters and policy documents should be properly issued.</span>
+<span>Inspection Note: Attendance, wage and leave records must be updated monthly.</span>
+<span>Factory Update: Display mandatory notices at workplace as per law.</span>
+
+</div>
+</div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+
+<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f');">
+<div class="overlay"></div>
+Labour Law Compliance
+</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85');">
+<div class="overlay"></div>
+Legal Documentation Support
+</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216');">
+<div class="overlay"></div>
+Inspection Handling Services
+</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1554224154-26032ffc0d07');">
+<div class="overlay"></div>
+Licensing & Registrations
+</div>
+
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+<div class="left">
+
+<h2>Labour Law Compliance Services</h2>
 
 <p>
-Labour law compliance is essential for every business operating in India. Non-compliance can lead to heavy penalties, legal notices and operational disruptions. Many organizations fail to maintain proper records, registrations and documentation required under various labour laws.
+Every business must follow applicable labour laws related to wages, records, working hours, leave, contractor compliance and registrations.
 </p>
 
 <p>
-Dream HR Consultancy provides complete labour law compliance services to ensure your business operates smoothly without legal risks. We help companies stay compliant with all applicable labour laws and regulations.
+Dream HR Consultancy helps startups, SMEs and large organizations maintain smooth and penalty-free labour law compliance across India.
 </p>
 
-<h2>Why Labour Law Compliance is Important</h2>
-<ul>
-<li>Avoid legal penalties and government action</li>
-<li>Ensure smooth business operations</li>
-<li>Maintain proper employee records</li>
-<li>Build credibility and trust</li>
-<li>Required for audits and inspections</li>
-</ul>
+<h3>Our Services</h3>
 
-<h2>Risks of Non-Compliance</h2>
-<ul>
-<li>Heavy fines and penalties</li>
-<li>Legal notices and prosecution</li>
-<li>Business shutdown risk</li>
-<li>Inspection issues</li>
-<li>Employee disputes</li>
-</ul>
-
-<h2>Our Services Include</h2>
 <ul>
 <li>Shops & Establishment Registration</li>
-<li>CLRA compliance (Contract Labour)</li>
-<li>Maintenance of statutory registers</li>
-<li>Labour law documentation</li>
-<li>Inspection handling and support</li>
-<li>Compliance audit and advisory</li>
+<li>CLRA Compliance Support</li>
+<li>Minimum Wages Compliance</li>
+<li>Registers & Returns Maintenance</li>
+<li>Inspection Handling</li>
+<li>Notice Display Compliance</li>
+<li>Contract Labour Documentation</li>
+<li>State Labour License Support</li>
 </ul>
 
-<p>📞 Get expert labour law compliance support today.</p>
-<a class="call" href="tel:8863962320">📞 Call Now</a>
-<a class="whatsapp" href="https://wa.me/918863962320">💬 WhatsApp</a>
+<h3>Why Choose Us</h3>
+
+<ul>
+<li>Experienced Compliance Team</li>
+<li>Quick Documentation Support</li>
+<li>Multi-State Expertise</li>
+<li>Affordable Corporate Plans</li>
+<li>Professional Guidance</li>
+</ul>
+
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn">
+Book Free Consultation
+</a>
+
+</div>
+
+<div class="right">
+
+<h3>Our Services</h3>
+
+<a href="pf-esic.html">PF & ESIC Compliance</a>
+<a href="payroll.html">Payroll Management</a>
+<a href="labour-law.html">Labour Law Compliance</a>
+<a href="recruitment.html">Recruitment</a>
+<a href="factory-license.html">Factory License</a>
+<a href="contact.html">Contact Us</a>
+
+<div class="notice">
+Need urgent compliance help? Contact our expert team today.
+</div>
+
+</div>
+
+</div>
+
+<script>
+let slides=document.querySelectorAll(".slide");
+let index=0;
+
+setInterval(function(){
+slides[index].classList.remove("active");
+index=(index+1)%slides.length;
+slides[index].classList.add("active");
+},3000);
+</script>
+
 </body>
 </html>
