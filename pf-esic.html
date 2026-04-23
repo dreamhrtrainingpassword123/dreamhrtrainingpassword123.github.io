@@ -64,11 +64,27 @@ font-size:14px;
 font-weight:500;
 }
 
-.book{background:#00c6ff;padding:8px 12px;border-radius:7px;}
-.whatsapp{background:#25D366;padding:8px 12px;border-radius:7px;}
-.back{background:#ff5a1f;padding:8px 12px;border-radius:20px;font-size:13px;}
+.book{
+background:#00c6ff;
+padding:8px 12px;
+border-radius:7px;
+}
 
-/* NEWS BAR FIXED */
+.whatsapp{
+background:#25D366;
+padding:8px 12px;
+border-radius:7px;
+}
+
+.back{
+background:#ff5a1f;
+padding:8px 12px;
+border-radius:20px;
+font-size:13px;
+font-weight:700;
+}
+
+/* NEWS BAR */
 .news{
 position:fixed;
 top:72px;
@@ -92,8 +108,6 @@ font-weight:700;
 display:flex;
 align-items:center;
 justify-content:center;
-position:relative;
-z-index:5;
 }
 
 .news-track{
@@ -109,7 +123,7 @@ white-space:nowrap;
 line-height:38px;
 font-weight:700;
 left:100%;
-animation:ticker 15s linear infinite;
+animation:ticker 16s linear infinite;
 }
 
 @keyframes ticker{
@@ -138,7 +152,9 @@ opacity:0;
 transition:1s;
 }
 
-.slide.active{opacity:1;}
+.slide.active{
+opacity:1;
+}
 
 .overlay{
 position:absolute;
@@ -178,8 +194,13 @@ color:#082842;
 margin-bottom:15px;
 }
 
-ul{padding-left:20px;}
-li{margin-bottom:8px;}
+ul{
+padding-left:20px;
+}
+
+li{
+margin-bottom:8px;
+}
 
 .btn{
 display:inline-block;
@@ -217,17 +238,30 @@ flex-direction:column;
 gap:10px;
 }
 
-nav{justify-content:center;}
+nav{
+justify-content:center;
+}
 
-.news{top:125px;}
+.news{
+top:125px;
+}
+
 .hero{
 margin-top:163px;
 height:60vh;
 }
 
-.hero-text{font-size:28px;}
-.main{grid-template-columns:1fr;}
-.logo{font-size:18px;}
+.hero-text{
+font-size:28px;
+}
+
+.main{
+grid-template-columns:1fr;
+}
+
+.logo{
+font-size:18px;
+}
 
 .news-label{
 width:130px;
@@ -261,7 +295,7 @@ Dream HR Consultancy
 
 </header>
 
-<!-- NEWS BAR -->
+<!-- NEWS -->
 <div class="news">
 <div class="news-label">Latest Updates</div>
 <div class="news-track">
@@ -296,9 +330,15 @@ Dream HR Consultancy
 
 <h2>PF & ESIC Compliance Services</h2>
 
-<p>PF and ESIC compliance is essential for eligible establishments. Wrong filing may create penalties and notices.</p>
+<p>
+Employees Provident Fund and Employees State Insurance compliance is essential for eligible establishments.
+Wrong filing may lead to notices, damages and penalties.
+</p>
 
-<p>Dream HR Consultancy helps companies with registration, filing, inspection and claims support across India.</p>
+<p>
+Dream HR Consultancy supports businesses with registration, monthly filing, claims,
+inspections and PAN India compliance management.
+</p>
 
 <h3>Our Services</h3>
 
@@ -308,7 +348,9 @@ Dream HR Consultancy
 <li>Monthly Challan Filing</li>
 <li>Returns Submission</li>
 <li>Inspection Support</li>
-<li>Claim Assistance</li>
+<li>Claims Assistance</li>
+<li>UAN KYC Support</li>
+<li>Compliance Registers Maintenance</li>
 </ul>
 
 <a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn">
@@ -321,14 +363,14 @@ Book Free Consultation
 
 <h3>Other Services</h3>
 
-<a href="payroll.html">Payroll</a>
-<a href="labour-law.html">Labour Law</a>
-<a href="factory.html">Factory</a>
-<a href="audit.html">Audit</a>
-<a href="contact.html">Contact</a>
+<a href="payroll.html">Payroll Management</a>
+<a href="labour-law.html">Labour Law Compliance</a>
+<a href="factory.html">Factory License</a>
+<a href="audit.html">Compliance Audit</a>
+<a href="contact.html">Contact Us</a>
 
 <div class="note">
-Need urgent help? WhatsApp us now.
+Need urgent help? WhatsApp our team now.
 </div>
 
 </div>
@@ -336,7 +378,8 @@ Need urgent help? WhatsApp us now.
 </div>
 
 <script>
-/* Hero Slider */
+
+/* HERO SLIDER */
 let slides=document.querySelectorAll(".slide");
 let i=0;
 
@@ -346,25 +389,31 @@ i=(i+1)%slides.length;
 slides[i].classList.add("active");
 },3000);
 
-/* Rotating News */
+/* NEWS */
 const updates = [
-"PF Update: UAN KYC complete rakhna claim aur transfer ke liye zaruri hai.",
-"ESIC Update: Employer 3.25% and Employee 0.75% current contribution norms.",
-"Compliance Alert: Due date miss hone par penalty lag sakti hai.",
-"HR Advisory: New joinee aur exit data timely update karein.",
-"Dream HR Update: PAN India PF & ESIC support available."
+"PF Update: Keep UAN KYC completed with Aadhaar PAN and Bank details.",
+"ESIC Update: Employer 3.25% and Employee 0.75% contribution rates.",
+"Compliance Alert: Delay in challan may attract interest and penalty.",
+"PF Filing Update: Form 5A details should be updated regularly.",
+"Digital Update: DSC and e-Sign useful for online approvals.",
+"UAN Update: Face authentication service available.",
+"Family Benefit: Eligible dependents can get benefits as per rules.",
+"HR Advisory: New joinee and exit records update timely.",
+"Registers Update: Maintain wage attendance challans records.",
+"Dream HR Update: PAN India PF ESIC support available."
 ];
 
 let n=0;
 let ticker=document.getElementById("tickerText");
 
 function runNews(){
-ticker.innerHTML=updates[n];
+ticker.innerHTML = updates[n];
 n=(n+1)%updates.length;
 }
 
 runNews();
-setInterval(runNews,15000);
+setInterval(runNews,16000);
+
 </script>
 
 </body>
