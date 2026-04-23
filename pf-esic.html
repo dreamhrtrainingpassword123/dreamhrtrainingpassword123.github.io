@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>PF ESIC Compliance | Dream HR Consultancy</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
@@ -28,7 +29,7 @@ top:0;
 left:0;
 width:100%;
 background:#0a2a43;
-padding:12px 28px;
+padding:12px 30px;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -36,13 +37,12 @@ z-index:9999;
 box-shadow:0 4px 15px rgba(0,0,0,.15);
 }
 
-.logo a{
+.logo{
 display:flex;
 align-items:center;
 gap:10px;
-text-decoration:none;
 color:#fff;
-font-size:22px;
+font-size:24px;
 font-weight:700;
 }
 
@@ -53,7 +53,7 @@ border-radius:6px;
 
 nav{
 display:flex;
-gap:16px;
+gap:18px;
 align-items:center;
 }
 
@@ -62,7 +62,6 @@ color:#fff;
 text-decoration:none;
 font-size:15px;
 font-weight:500;
-transition:.3s;
 }
 
 nav a:hover{
@@ -81,39 +80,56 @@ padding:9px 14px;
 border-radius:6px;
 }
 
-.menu-toggle{
-display:none;
-font-size:30px;
-color:#fff;
-cursor:pointer;
-}
-
-/* NEWS TICKER */
-.ticker{
-margin-top:72px;
-background:#ffc107;
-color:#111;
-padding:10px 0;
+/* NEWS BAR FIXED */
+.news-bar{
+position:fixed;
+top:68px;
+left:0;
+width:100%;
+background:#ffd54f;
+color:#000;
+padding:8px 0;
 font-weight:600;
+z-index:9998;
 overflow:hidden;
 white-space:nowrap;
-position:relative;
 }
 
-.ticker span{
+.news-text{
 display:inline-block;
 padding-left:100%;
-animation:moveTicker 28s linear infinite;
+animation:moveNews 28s linear infinite;
 }
 
-@keyframes moveTicker{
+@keyframes moveNews{
 0%{transform:translateX(0);}
 100%{transform:translateX(-100%);}
 }
 
+/* BACK BUTTON */
+.back-btn{
+position:fixed;
+top:110px;
+right:20px;
+background:#ff5722;
+color:#fff;
+padding:10px 16px;
+border-radius:30px;
+text-decoration:none;
+font-size:14px;
+font-weight:600;
+z-index:9999;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.back-btn:hover{
+background:#e64a19;
+}
+
 /* HERO */
 .hero{
-height:88vh;
+height:90vh;
+margin-top:108px;
 position:relative;
 overflow:hidden;
 }
@@ -125,13 +141,13 @@ height:100%;
 background-size:cover;
 background-position:center;
 display:flex;
-justify-content:center;
 align-items:center;
+justify-content:center;
 text-align:center;
-padding:20px;
 font-size:42px;
 font-weight:700;
 color:#fff;
+padding:20px;
 opacity:0;
 transition:1s;
 }
@@ -144,73 +160,36 @@ opacity:1;
 position:absolute;
 width:100%;
 height:100%;
-background:rgba(0,0,0,.58);
+background:rgba(0,0,0,.55);
 }
 
-/* CONTENT AREA */
-.wrapper{
+/* CONTENT */
+.container{
 max-width:1200px;
 margin:auto;
-padding:25px 20px 40px;
-}
-
-.back-row{
-margin-top:-22px;
-margin-bottom:20px;
-position:relative;
-z-index:50;
-}
-
-.back-btn{
-display:inline-block;
-background:#fff;
-color:#0a2a43;
-text-decoration:none;
-padding:12px 22px;
-border-radius:40px;
-font-weight:700;
-box-shadow:0 10px 25px rgba(0,0,0,.15);
-transition:.3s;
-}
-
-.back-btn:hover{
-background:#0a2a43;
-color:#fff;
-}
-
-.container{
+padding:45px 20px;
 display:flex;
 gap:30px;
 }
 
-.left{
-flex:2;
+.left,.right{
 background:#fff;
 padding:30px;
-border-radius:14px;
+border-radius:12px;
 box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
-.right{
-flex:1;
-background:#fff;
-padding:25px;
-border-radius:14px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
+.left{flex:2;}
+.right{flex:1;}
 
 h2,h3{
 color:#0a2a43;
 margin-bottom:15px;
 }
 
-p{
-margin-bottom:14px;
-}
-
 ul{
-padding-left:20px;
-margin-bottom:18px;
+padding-left:22px;
+margin-bottom:20px;
 }
 
 li{
@@ -220,12 +199,12 @@ margin-bottom:8px;
 .btn{
 background:#00c6ff;
 color:#fff;
-padding:12px 22px;
+padding:13px 24px;
 display:inline-block;
 text-decoration:none;
 border-radius:6px;
 font-weight:600;
-margin-top:10px;
+margin-top:15px;
 }
 
 .btn:hover{
@@ -241,50 +220,40 @@ color:#0a2a43;
 }
 
 .notice{
+margin-top:20px;
 background:#fff3cd;
 padding:12px;
 border-radius:8px;
-margin-top:20px;
-font-size:14px;
 }
 
 /* MOBILE */
 @media(max-width:992px){
 
-.menu-toggle{
-display:block;
-}
-
 nav{
-position:absolute;
-top:72px;
-left:0;
-width:100%;
-background:#0a2a43;
 display:none;
-flex-direction:column;
-padding:20px;
-gap:15px;
 }
 
-nav.show{
-display:flex;
-}
-
-.container{
-flex-direction:column;
+.hero{
+height:70vh;
 }
 
 .slide{
 font-size:28px;
 }
 
-.logo a{
-font-size:18px;
+.container{
+flex-direction:column;
 }
 
-.back-row{
-margin-top:-18px;
+.back-btn{
+top:105px;
+right:10px;
+padding:8px 12px;
+font-size:12px;
+}
+
+.logo{
+font-size:18px;
 }
 }
 </style>
@@ -295,15 +264,11 @@ margin-top:-18px;
 <header>
 
 <div class="logo">
-<a href="index.html">
 <img src="logo.png">
-<span>Dream HR Consultancy</span>
-</a>
+Dream HR Consultancy
 </div>
 
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-<nav id="navbar">
+<nav>
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="services.html">Services</a>
@@ -317,11 +282,14 @@ margin-top:-18px;
 </header>
 
 <!-- MOVING NEWS -->
-<div class="ticker">
-<span>
-Latest Updates: Welcome to Dream HR Consultancy • PF & ESIC new compliance support available • Payroll outsourcing open • Jobs opening updated weekly • Book Free Consultation Today • Labour Law audit services available • Contact support@idhrt.com • PAN India Services Available •
-</span>
+<div class="news-bar">
+<div class="news-text">
+Latest Updates: PF New Circular • ESIC Benefits Updated • Hiring Openings Available • Payroll Services Available • Labour Law Notice Support • Free Consultation Available • PAN India Compliance Support • Welcome to Dream HR Consultancy
 </div>
+</div>
+
+<!-- BACK -->
+<a href="services.html" class="back-btn">⬅ Back</a>
 
 <!-- HERO -->
 <div class="hero">
@@ -349,12 +317,6 @@ Business Compliance Solutions
 </div>
 
 <!-- CONTENT -->
-<div class="wrapper">
-
-<div class="back-row">
-<a href="javascript:history.back()" class="back-btn">⬅ Back</a>
-</div>
-
 <div class="container">
 
 <div class="left">
@@ -362,24 +324,27 @@ Business Compliance Solutions
 <h2>PF & ESIC Compliance Services</h2>
 
 <p>
-The objectives of the Employees Provident Fund Act 1952 and Employees State Insurance Act 1948 are to provide social security benefits to employees and workers.
+The objectives of Employees Provident Fund Act 1952 and Employees State Insurance Act 1948 are to provide social security benefits to employees and workers.
 </p>
 
 <p>
-Even a small mistake in calculation or delayed compliance may lead to penalties, notices and employee disputes. Dream HR Consultancy helps companies remain fully compliant across India.
+Any small mistake in calculation or delay in compliance may lead to notices, disputes and financial penalties.
+</p>
+
+<p>
+Dream HR Consultancy professionally manages PAN India statutory compliances and supports smooth corporate governance.
 </p>
 
 <h3>Our Services</h3>
 
 <ul>
-<li>EPF / ESI Registration & Amendments</li>
+<li>EPF & ESI Registration</li>
 <li>Monthly Challan Processing</li>
-<li>Returns & Registers</li>
-<li>PF Transfer / Withdrawal Support</li>
-<li>ESI Claim Assistance</li>
+<li>Returns Filing</li>
 <li>Inspection Handling</li>
-<li>Department Liaison Support</li>
-<li>PAN India Compliance Support</li>
+<li>PF Transfer / Withdrawal</li>
+<li>ESI Claims Support</li>
+<li>Labour Law Guidance</li>
 </ul>
 
 <a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn">
@@ -392,18 +357,16 @@ Book Free Consultation
 
 <h3>Our Services</h3>
 
-<a href="pf-esic.html">PF & ESIC Compliance</a>
-<a href="payroll.html">Payroll Management</a>
-<a href="labour-law.html">Labour Law Compliance</a>
-<a href="recruitment.html">Recruitment</a>
-<a href="factory-license.html">Factory License</a>
-<a href="contact.html">Contact Us</a>
+<a href="pf-esic.html">PF & ESIC</a>
+<a href="payroll.html">Payroll</a>
+<a href="labour-law.html">Labour Law</a>
+<a href="factory.html">Factory Compliance</a>
+<a href="audit.html">Compliance Audit</a>
+<a href="contact.html">Contact</a>
 
 <div class="notice">
-<strong>News:</strong><br>
-Need urgent PF / ESIC help? Book consultation now.
-</div>
-
+<strong>Need urgent support?</strong><br>
+Call / WhatsApp now for immediate consultation.
 </div>
 
 </div>
@@ -411,10 +374,6 @@ Need urgent PF / ESIC help? Book consultation now.
 </div>
 
 <script>
-function toggleMenu(){
-document.getElementById("navbar").classList.toggle("show");
-}
-
 let slides=document.querySelectorAll(".slide");
 let index=0;
 
