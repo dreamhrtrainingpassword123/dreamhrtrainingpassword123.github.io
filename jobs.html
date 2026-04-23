@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jobs & Hiring | Dream HR Consultancy</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -27,18 +26,18 @@ top:0;
 left:0;
 width:100%;
 background:#0a2a43;
-padding:14px 30px;
+padding:14px 25px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-z-index:999;
+z-index:9999;
 box-shadow:0 4px 12px rgba(0,0,0,.18);
 }
 
 .logo{
 display:flex;
 align-items:center;
-gap:12px;
+gap:10px;
 color:#fff;
 font-size:18px;
 font-weight:700;
@@ -52,16 +51,16 @@ border-radius:50%;
 
 nav{
 display:flex;
-gap:10px;
+gap:8px;
 flex-wrap:wrap;
 }
 
 nav a{
 color:#fff;
 text-decoration:none;
-padding:10px 14px;
+padding:9px 12px;
 border-radius:6px;
-font-size:14px;
+font-size:13px;
 font-weight:600;
 }
 
@@ -73,68 +72,45 @@ background:#123c5e;
 .whatsapp{background:#25D366;}
 .back{background:#ff5a1f;}
 
-/* NEWS */
-.newsbar{
-margin-top:78px;
-display:flex;
-height:48px;
-overflow:hidden;
-}
-
-.newsleft{
-background:#00c6ff;
-color:#fff;
-padding:12px 18px;
-font-weight:700;
-min-width:170px;
-}
-
-.newsright{
-background:#08263b;
-color:#fff;
-flex:1;
-overflow:hidden;
-white-space:nowrap;
-display:flex;
-align-items:center;
-}
-
-.newsright span{
-display:inline-block;
-padding-left:100%;
-animation:news 45s linear infinite;
-font-size:14px;
-}
-
-.newsright span:hover{
-animation-play-state:paused;
-}
-
-@keyframes news{
-0%{transform:translateX(0);}
-100%{transform:translateX(-100%);}
-}
-
 /* HERO */
 .hero{
-background:linear-gradient(135deg,#0a2a43,#123c5e);
-padding:60px 20px;
+margin-top:78px;
+height:320px;
+background:url('https://images.unsplash.com/photo-1521791136064-7986c2920216') center/cover;
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
 text-align:center;
-color:#fff;
 }
 
-.hero h1{
-font-size:48px;
+.hero::before{
+content:'';
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.58);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+color:#fff;
+padding:20px;
+}
+
+.hero-content h1{
+font-size:44px;
 margin-bottom:10px;
 }
 
-.hero p{
-font-size:20px;
+.hero-content p{
+font-size:18px;
 }
 
-/* MAIN */
-.container{
-max-width:1400px;
+/* LAYOUT */
+.wrapper{
+max-width:1450px;
 margin:auto;
 padding:40px 20px;
 display:grid;
@@ -143,30 +119,49 @@ gap:25px;
 }
 
 /* FILTER */
-.filter-box{
+.sidebar{
 background:#fff;
 padding:25px;
 border-radius:14px;
-box-shadow:0 10px 20px rgba(0,0,0,.08);
-height:fit-content;
+box-shadow:0 10px 24px rgba(0,0,0,.08);
+height:max-content;
+position:sticky;
+top:100px;
 }
 
-.filter-box h2{
-font-size:26px;
+.sidebar h2{
+font-size:28px;
+color:#0a2a43;
+margin-bottom:20px;
+}
+
+.filter-group{
 margin-bottom:18px;
+}
+
+.filter-group label{
+display:block;
+font-weight:700;
+margin-bottom:8px;
+font-size:14px;
 color:#0a2a43;
 }
 
-.filter-box select{
+.filter-group select{
 width:100%;
 padding:12px;
-margin-bottom:15px;
 border:1px solid #ddd;
 border-radius:8px;
 font-size:14px;
 }
 
-/* JOB GRID */
+/* JOBS */
+.jobs h2{
+font-size:36px;
+color:#0a2a43;
+margin-bottom:25px;
+}
+
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
@@ -175,57 +170,59 @@ gap:22px;
 
 .card{
 background:#fff;
-padding:28px;
+padding:25px;
 border-radius:14px;
 box-shadow:0 10px 24px rgba(0,0,0,.08);
 transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-6px);
 }
 
 .card h3{
-font-size:24px;
+font-size:23px;
 color:#0a2a43;
-margin-bottom:10px;
+margin-bottom:12px;
 }
 
 .meta{
 font-size:14px;
 color:#555;
 line-height:1.8;
-margin-bottom:15px;
+margin-bottom:14px;
 }
 
 .card p{
 font-size:15px;
 line-height:1.8;
-margin-bottom:18px;
+margin-bottom:16px;
 }
 
 .btn{
 display:inline-block;
 background:#00c6ff;
 color:#fff;
-text-decoration:none;
-padding:11px 18px;
+padding:11px 16px;
 border-radius:7px;
-font-size:14px;
+text-decoration:none;
 font-weight:600;
+font-size:14px;
 }
 
 .btn:hover{
-background:#0098c7;
+background:#0097c7;
 }
 
-.nojob{
+.nojobs{
 display:none;
-font-size:28px;
+background:#fff;
+padding:30px;
+border-radius:12px;
+font-size:20px;
 font-weight:700;
 text-align:center;
-padding:60px;
-color:#ff5a1f;
+box-shadow:0 10px 24px rgba(0,0,0,.08);
 }
 
 /* FOOTER */
@@ -233,16 +230,21 @@ footer{
 background:#0a2a43;
 color:#fff;
 text-align:center;
-padding:22px;
+padding:25px;
 margin-top:40px;
 }
 
 /* MOBILE */
 @media(max-width:1000px){
-
-.container{
+.wrapper{
 grid-template-columns:1fr;
 }
+.sidebar{
+position:static;
+}
+}
+
+@media(max-width:700px){
 
 header{
 flex-direction:column;
@@ -250,12 +252,17 @@ gap:10px;
 padding:15px;
 }
 
-.newsbar{
-margin-top:130px;
+.hero{
+margin-top:140px;
+height:280px;
 }
 
-.hero h1{
-font-size:34px;
+.hero-content h1{
+font-size:30px;
+}
+
+nav{
+justify-content:center;
 }
 }
 </style>
@@ -264,7 +271,6 @@ font-size:34px;
 <body>
 
 <header>
-
 <div class="logo">
 <img src="logo.png">
 <span>Dream HR Consultancy</span>
@@ -272,80 +278,69 @@ font-size:34px;
 
 <nav>
 <a href="index.html">Home</a>
+<a href="about.html">About</a>
 <a href="services.html">Services</a>
 <a href="jobs.html">Jobs</a>
 <a href="contact.html">Contact</a>
-<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="book">Book Meeting</a>
-<a href="https://wa.me/918863962310" target="_blank" class="whatsapp">WhatsApp</a>
+<a href="https://calendly.com/dreamhrtraining/30min" class="book" target="_blank">Book Meeting</a>
+<a href="https://wa.me/918863962310" class="whatsapp" target="_blank">WhatsApp</a>
 <a href="javascript:history.back()" class="back">⬅ Back</a>
 </nav>
-
 </header>
 
-<!-- NEWS -->
-<div class="newsbar">
-<div class="newsleft">Latest Updates</div>
-<div class="newsright">
-<span>
-Hiring Open • HR Intern • BDM • Lead Generator • Accountant • Payroll Executive • Compliance Manager • Senior HRBP • Sales Head • PAN India Hiring
-</span>
-</div>
-</div>
-
-<!-- HERO -->
 <section class="hero">
+<div class="hero-content">
 <h1>Jobs & Hiring</h1>
-<p>Find Best Career Opportunities with Dream HR Consultancy</p>
+<p>Premium Career Opportunities Across India</p>
+</div>
 </section>
 
-<!-- MAIN -->
-<div class="container">
+<div class="wrapper">
 
 <!-- FILTER -->
-<div class="filter-box">
+<div class="sidebar">
+
 <h2>Job Filters</h2>
 
-<select id="type" onchange="filterJobs()">
-<option value="">Job Type</option>
+<div class="filter-group">
+<label>Job Type</label>
+<select id="jobtype" onchange="filterJobs()">
+<option value="all">All</option>
 <option>Full Time</option>
+<option>Part Time</option>
 <option>Internship</option>
 <option>Freelancer</option>
 <option>Work From Home</option>
 </select>
+</div>
 
+<div class="filter-group">
+<label>All States</label>
 <select id="state" onchange="filterJobs()">
-<option value="">All States</option>
-<option>Andhra Pradesh</option>
-<option>Arunachal Pradesh</option>
-<option>Assam</option>
-<option>Bihar</option>
-<option>Chhattisgarh</option>
+<option value="all">All States</option>
 <option>Delhi</option>
-<option>Goa</option>
 <option>Gujarat</option>
 <option>Haryana</option>
-<option>Jharkhand</option>
 <option>Karnataka</option>
-<option>Kerala</option>
-<option>Madhya Pradesh</option>
 <option>Maharashtra</option>
-<option>Punjab</option>
+<option>Noida</option>
 <option>Rajasthan</option>
 <option>Tamil Nadu</option>
-<option>Telangana</option>
 <option>Uttar Pradesh</option>
 <option>West Bengal</option>
 </select>
+</div>
 
+<div class="filter-group">
+<label>All Industries</label>
 <select id="industry" onchange="filterJobs()">
-<option value="">All Industries</option>
+<option value="all">All Industries</option>
+<option>Accounting</option>
 <option>Advertising</option>
-<option>Aerospace</option>
-<option>Agriculture</option>
 <option>Automotive</option>
 <option>Banking</option>
 <option>Construction</option>
-<option>E-commerce</option>
+<option>Consulting</option>
 <option>Education</option>
 <option>Healthcare</option>
 <option>Hospitality</option>
@@ -355,142 +350,166 @@ Hiring Open • HR Intern • BDM • Lead Generator • Accountant • Payroll 
 <option>Legal Services</option>
 <option>Logistics</option>
 <option>Manufacturing</option>
-<option>Oil and Gas</option>
-<option>Pharmaceutical</option>
-<option>Real Estate</option>
+<option>Marketing</option>
 <option>Retail</option>
 <option>Telecommunications</option>
-<option>Tourism</option>
-<option>Transportation</option>
 </select>
+</div>
 
+<div class="filter-group">
+<label>Position</label>
 <select id="position" onchange="filterJobs()">
-<option value="">Position</option>
-<option>HR Intern</option>
-<option>BDM</option>
-<option>Freelancer</option>
-<option>Lead Generator</option>
+<option value="all">All Positions</option>
 <option>Accountant</option>
+<option>Admin Executive</option>
+<option>Area Sales Manager</option>
+<option>Assistant HR</option>
+<option>BDM</option>
+<option>Branch Manager</option>
+<option>Business Head</option>
+<option>CA</option>
+<option>CEO</option>
+<option>Compliance Executive</option>
+<option>Consultant</option>
+<option>Data Analyst</option>
+<option>Digital Marketing</option>
+<option>Finance Manager</option>
+<option>Freelancer</option>
+<option>General Manager</option>
+<option>HR Executive</option>
+<option>HR Intern</option>
+<option>HR Manager</option>
+<option>Lead Generator</option>
+<option>Marketing Head</option>
+<option>MIS Executive</option>
+<option>Office Executive</option>
+<option>Operations Head</option>
 <option>Payroll Executive</option>
-<option>Compliance Manager</option>
-<option>Senior HRBP</option>
-<option>Sales Head</option>
+<option>Payroll Manager</option>
+<option>Recruiter</option>
+<option>Regional Manager</option>
+<option>Sales Executive</option>
+<option>Senior Accountant</option>
+<option>Team Leader</option>
+<option>Vice President</option>
 </select>
+</div>
+
+<div class="filter-group">
+<label>Department</label>
+<select id="department" onchange="filterJobs()">
+<option value="all">All Departments</option>
+<option>Accounting</option>
+<option>Administration</option>
+<option>Audit</option>
+<option>Compliance</option>
+<option>Customer Service</option>
+<option>Finance</option>
+<option>Human Resources</option>
+<option>Information Technology</option>
+<option>Legal</option>
+<option>Logistics</option>
+<option>Marketing</option>
+<option>Operations</option>
+<option>Payroll</option>
+<option>Recruitment</option>
+<option>Sales</option>
+<option>Taxation</option>
+<option>Training</option>
+</select>
+</div>
 
 </div>
 
 <!-- JOBS -->
-<div>
+<div class="jobs">
 
-<div class="grid" id="jobsGrid">
+<h2>Current Openings</h2>
 
-<div class="card" data-type="Internship" data-state="Delhi" data-industry="Human Resources" data-position="HR Intern">
+<div class="grid" id="jobGrid">
+
+<div class="card job" data-type="Internship" data-state="Delhi" data-industry="Human Resources" data-position="HR Intern" data-department="Human Resources">
 <h3>HR Intern</h3>
-<div class="meta">📍 Delhi | ₹10k Stipend | Fresher</div>
-<p>HR operations, recruitment, joining formalities.</p>
-<a href="#" class="btn">Apply Now</a>
+<div class="meta">📍 Delhi | 🎓 Fresher | 💰 Stipend</div>
+<p>Learn HR operations, hiring, payroll basics and employee management.</p>
+<a href="mailto:support@idhrt.com" class="btn">Apply Now</a>
 </div>
 
-<div class="card" data-type="Full Time" data-state="Delhi" data-industry="Business Consulting" data-position="BDM">
+<div class="card job" data-type="Full Time" data-state="Delhi" data-industry="Consulting" data-position="BDM" data-department="Sales">
 <h3>Business Development Manager</h3>
-<div class="meta">📍 Delhi NCR | Performance Based</div>
-<p>B2B sales for HR consultancy services.</p>
-<a href="#" class="btn">Apply Now</a>
+<div class="meta">📍 Delhi NCR | 💼 2+ Years | 💰 Performance Based</div>
+<p>Meet companies, pitch services to HR/Admin/Owners and generate B2B sales.</p>
+<a href="mailto:support@idhrt.com" class="btn">Apply Now</a>
 </div>
 
-<div class="card" data-type="Freelancer" data-state="All" data-industry="Marketing Services" data-position="Freelancer">
+<div class="card job" data-type="Freelancer" data-state="All" data-industry="Consulting" data-position="Freelancer" data-department="Sales">
 <h3>Freelancer Sales Partner</h3>
-<div class="meta">📍 PAN India | 10% Commission</div>
-<p>Generate business leads and close deals.</p>
-<a href="#" class="btn">Apply Now</a>
+<div class="meta">🌍 PAN India | 💰 10% of Total Sale</div>
+<p>Bring clients for HR, PF, ESIC, Payroll and compliance services.</p>
+<a href="mailto:support@idhrt.com" class="btn">Apply Now</a>
 </div>
 
-<div class="card" data-type="Work From Home" data-state="Delhi" data-industry="Digital Marketing" data-position="Lead Generator">
+<div class="card job" data-type="Work From Home" data-state="Delhi" data-industry="Marketing" data-position="Lead Generator" data-department="Marketing">
 <h3>Lead Generator</h3>
-<div class="meta">📍 Remote | ₹20,000</div>
-<p>Generate leads through online platforms.</p>
-<a href="#" class="btn">Apply Now</a>
+<div class="meta">🏠 Work From Home | 💰 ₹20,000</div>
+<p>Generate verified business leads through calls, email and online portals.</p>
+<a href="mailto:support@idhrt.com" class="btn">Apply Now</a>
 </div>
 
-<div class="card" data-type="Full Time" data-state="Noida" data-industry="Accounting" data-position="Accountant">
+<div class="card job" data-type="Full Time" data-state="Mumbai" data-industry="Accounting" data-position="Accountant" data-department="Accounting">
 <h3>Accountant</h3>
-<div class="meta">📍 Noida | ₹30,000</div>
-<p>Tally, GST, accounting entries.</p>
-<a href="#" class="btn">Apply Now</a>
+<div class="meta">📍 Mumbai | 💼 2 Years</div>
+<p>Accounts, GST records, vouchers, TDS and bookkeeping support.</p>
+<a href="mailto:support@idhrt.com" class="btn">Apply Now</a>
 </div>
 
-<div class="card" data-type="Full Time" data-state="Gurgaon" data-industry="Payroll" data-position="Payroll Executive">
-<h3>Payroll Executive</h3>
-<div class="meta">📍 Gurgaon | ₹35,000</div>
-<p>Salary processing, PF ESIC deductions.</p>
-<a href="#" class="btn">Apply Now</a>
-</div>
-
-<div class="card" data-type="Full Time" data-state="Mumbai" data-industry="Compliance" data-position="Compliance Manager">
-<h3>Compliance Manager</h3>
-<div class="meta">📍 Mumbai | ₹55,000</div>
-<p>Labour law and audit handling.</p>
-<a href="#" class="btn">Apply Now</a>
-</div>
-
-<div class="card" data-type="Full Time" data-state="Bangalore" data-industry="Human Resources" data-position="Senior HRBP">
-<h3>Senior HRBP</h3>
-<div class="meta">📍 Bangalore | ₹80,000</div>
-<p>Strategic HR management role.</p>
-<a href="#" class="btn">Apply Now</a>
-</div>
-
-<div class="card" data-type="Full Time" data-state="Delhi" data-industry="Sales" data-position="Sales Head">
-<h3>Sales Head</h3>
-<div class="meta">📍 Delhi | ₹1 Lakh+</div>
-<p>Lead national sales team.</p>
-<a href="#" class="btn">Apply Now</a>
+<div class="card job" data-type="Full Time" data-state="Bangalore" data-industry="Consulting" data-position="Payroll Manager" data-department="Payroll">
+<h3>Payroll Manager</h3>
+<div class="meta">📍 Bangalore | 💼 3+ Years</div>
+<p>Lead salary processing, MIS, PF ESIC deductions and payroll team.</p>
+<a href="mailto:support@idhrt.com" class="btn">Apply Now</a>
 </div>
 
 </div>
 
-<div class="nojob" id="nojob">No Jobs Available</div>
+<div class="nojobs" id="nojobs">No Jobs Available</div>
 
 </div>
-
 </div>
 
 <footer>
-© 2026 Dream HR Consultancy
+© 2026 Dream HR Consultancy | support@idhrt.com | +91 8863962310
 </footer>
 
 <script>
 function filterJobs(){
 
-let type=document.getElementById("type").value.toLowerCase();
-let state=document.getElementById("state").value.toLowerCase();
-let industry=document.getElementById("industry").value.toLowerCase();
-let position=document.getElementById("position").value.toLowerCase();
+let type=document.getElementById("jobtype").value;
+let state=document.getElementById("state").value;
+let industry=document.getElementById("industry").value;
+let position=document.getElementById("position").value;
+let department=document.getElementById("department").value;
 
-let cards=document.querySelectorAll(".card");
+let jobs=document.querySelectorAll(".job");
 let visible=0;
 
-cards.forEach(card=>{
+jobs.forEach(job=>{
 
-let ctype=card.dataset.type.toLowerCase();
-let cstate=card.dataset.state.toLowerCase();
-let cindustry=card.dataset.industry.toLowerCase();
-let cposition=card.dataset.position.toLowerCase();
+let show=true;
 
-let show=
-(type=="" || ctype.includes(type)) &&
-(state=="" || cstate.includes(state)) &&
-(industry=="" || cindustry.includes(industry)) &&
-(position=="" || cposition.includes(position));
+if(type!="all" && job.dataset.type!=type) show=false;
+if(state!="all" && job.dataset.state!=state) show=false;
+if(industry!="all" && job.dataset.industry!=industry) show=false;
+if(position!="all" && job.dataset.position!=position) show=false;
+if(department!="all" && job.dataset.department!=department) show=false;
 
-card.style.display=show?"block":"none";
+job.style.display=show ? "block" : "none";
 
 if(show) visible++;
 
 });
 
-document.getElementById("nojob").style.display=visible==0?"block":"none";
-
+document.getElementById("nojobs").style.display = visible==0 ? "block":"none";
 }
 </script>
 
