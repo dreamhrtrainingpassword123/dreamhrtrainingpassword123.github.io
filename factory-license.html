@@ -11,79 +11,62 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
-body{background:#f5f7fa;color:#222;line-height:1.6;}
+body{background:#f5f7fa;color:#222;}
 
 /* HEADER */
 header{
 position:fixed;
-top:0;left:0;width:100%;
+top:0;width:100%;
 background:#0a2a43;
 padding:12px 30px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-z-index:9999;
+z-index:999;
 }
 
-.logo a{
-display:flex;align-items:center;gap:10px;
-color:#fff;text-decoration:none;font-weight:700;font-size:22px;
-}
-
-.logo img{height:40px;}
-
-nav{display:flex;gap:10px;flex-wrap:wrap;}
+.logo{color:#fff;font-weight:700;font-size:20px;}
 
 nav a{
-color:#fff;text-decoration:none;
-padding:8px 12px;border-radius:6px;
+color:#fff;
+margin-left:10px;
+text-decoration:none;
 font-size:14px;
 }
 
-.book-btn{background:#00c6ff;}
-.whatsapp-btn{background:#25D366;}
-.back-btn{background:#ff5722;}
+.book-btn{background:#00c6ff;padding:8px;border-radius:5px;}
+.whatsapp-btn{background:#25D366;padding:8px;border-radius:5px;}
+.back-btn{background:#ff5722;padding:8px;border-radius:5px;}
 
-/* NEWS BAR */
+/* NEWS */
 .news-bar{
-position:fixed;
-top:70px;width:100%;
-display:flex;
+margin-top:65px;
 background:#081d2f;
-border-top:2px solid #00c6ff;
-border-bottom:2px solid #00c6ff;
+display:flex;
 }
 
 .news-title{
-background:#00c6ff;color:#fff;
-padding:10px 15px;font-weight:700;
-}
-
-.news-scroll{
-overflow:hidden;
-flex:1;
+background:#00c6ff;
+color:#fff;
+padding:10px;
+font-weight:700;
 }
 
 .news-track{
-display:flex;
-width:max-content;
-animation:scroll 90s linear infinite; /* SLOW */
-}
-
-.news-track span{
 color:#fff;
-padding:0 40px;
+padding:10px;
 white-space:nowrap;
+animation:scroll 60s linear infinite;
 }
 
 @keyframes scroll{
-0%{transform:translateX(0);}
-100%{transform:translateX(-50%);}
+0%{transform:translateX(100%);}
+100%{transform:translateX(-100%);}
 }
 
 /* HERO */
 .hero{
-margin-top:115px;
+margin-top:110px;
 height:90vh;
 position:relative;
 overflow:hidden;
@@ -91,17 +74,17 @@ overflow:hidden;
 
 .slide{
 position:absolute;
-width:100%;height:100%;
+width:100%;
+height:100%;
 background-size:cover;
 background-position:center;
 display:flex;
-justify-content:center;
 align-items:center;
+justify-content:center;
 color:#fff;
-font-size:38px;
+font-size:40px;
 font-weight:700;
 text-align:center;
-padding:20px;
 opacity:0;
 transition:1s;
 }
@@ -110,7 +93,8 @@ transition:1s;
 
 .overlay{
 position:absolute;
-width:100%;height:100%;
+width:100%;
+height:100%;
 background:rgba(0,0,0,0.55);
 }
 
@@ -118,28 +102,17 @@ background:rgba(0,0,0,0.55);
 .container{
 max-width:1200px;
 margin:auto;
-padding:40px 20px;
+padding:40px;
 }
-
-h2{margin-bottom:15px;color:#0a2a43;}
 
 .btn{
 background:#00c6ff;
 color:#fff;
 padding:12px 20px;
-border-radius:6px;
-text-decoration:none;
 display:inline-block;
-margin-top:15px;
-}
-
-/* FOOTER */
-footer{
-background:#0a2a43;
-color:#fff;
-text-align:center;
-padding:20px;
-margin-top:30px;
+margin-top:20px;
+text-decoration:none;
+border-radius:6px;
 }
 
 </style>
@@ -148,18 +121,12 @@ margin-top:30px;
 <body>
 
 <header>
-<div class="logo">
-<a href="#">
-<img src="logo.png">
-<span>Dream HR Consultancy</span>
-</a>
-</div>
+<div class="logo">Dream HR Consultancy</div>
 
 <nav>
-<a href="#">Home</a>
-<a href="#">Services</a>
-<a href="#">Contact</a>
-
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="contact.html">Contact</a>
 <a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="book-btn">Book Meeting</a>
 <a href="https://wa.me/918863962310" target="_blank" class="whatsapp-btn">WhatsApp</a>
 <a href="javascript:history.back()" class="back-btn">⬅ Back</a>
@@ -169,54 +136,43 @@ margin-top:30px;
 <!-- NEWS -->
 <div class="news-bar">
 <div class="news-title">Updates</div>
-<div class="news-scroll">
 <div class="news-track">
-
-<span>Factory License Renewal Required Every Year</span>
-<span>Pollution NOC Mandatory for Manufacturing Units</span>
-<span>Fire Safety Compliance Required Before Approval</span>
-<span>Boiler Certification Mandatory for Industrial Use</span>
-<span>Electrical Safety Inspection Required</span>
-<span>Lift License Required for Industrial Lifts</span>
-<span>MSME Registration Benefits for Business</span>
-<span>GST Registration Mandatory for Tax Compliance</span>
-
-</div>
+Factory License • Fire NOC • Pollution NOC • Boiler Approval • Electrical Safety • Lift License • MSME • GST • Nivesh Mitra • Health & Safety • Labour Compliance • Industrial Approvals • PAN India Services
 </div>
 </div>
 
-<!-- HERO SLIDES -->
+<!-- HERO -->
 <div class="hero">
 
-<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1581093458791-9d15482442f6');"><div class="overlay"></div>Factory License</div>
+<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1581092921461-eab10380b4b9');"><div class="overlay"></div>Factory Registration</div>
 
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');"><div class="overlay"></div>Factory Registration</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');"><div class="overlay"></div>Factory License</div>
 
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581092160607-ee22621dd758');"><div class="overlay"></div>Pollution NOC</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581091215367-59ab6b6b3b1b');"><div class="overlay"></div>Pollution Control (Smoke / Industry)</div>
 
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');"><div class="overlay"></div>Fire Safety</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1590496794008-383c8070b257');"><div class="overlay"></div>Fire Safety (Fire / Emergency)</div>
 
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581090700227-1e8b3f6e1c89');"><div class="overlay"></div>Boiler Approval</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581093458791-9c54f9a9c4bb');"><div class="overlay"></div>Boiler Inspection</div>
 
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581093588401-22c0a7b6c7c4');"><div class="overlay"></div>Electrical Safety</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1509395176047-4a66953fd231');"><div class="overlay"></div>Electrical Safety</div>
 
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2');"><div class="overlay"></div>Lift NOC</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581092919534-6b5d6b9b5c7b');"><div class="overlay"></div>Lift License</div>
 
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c');"><div class="overlay"></div>MSME Registration</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1521790797524-b2497295b8a0');"><div class="overlay"></div>MSME / Udyam</div>
 
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1554224154-26032ffc0d07');"><div class="overlay"></div>GST Registration</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f');"><div class="overlay"></div>GST Registration</div>
 
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1521790366320-1c90b46e1e9e');"><div class="overlay"></div>Legal Documentation</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581090700227-1e8e0f3b8e3b');"><div class="overlay"></div>Nivesh Mitra Portal</div>
 
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1492724441997-5dc865305da7');"><div class="overlay"></div>Industrial Compliance</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581091215458-8c3d9f0d1c44');"><div class="overlay"></div>Health & Safety</div>
 
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');"><div class="overlay"></div>Factory Inspection</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1507679799987-c73779587ccf');"><div class="overlay"></div>Legal Documentation</div>
 
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581092919534-6b3b1c2c3f3d');"><div class="overlay"></div>Safety Audit</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1556761175-4b46a572b786');"><div class="overlay"></div>Compliance Management</div>
 
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1521790797524-b2497295b8a0');"><div class="overlay"></div>Compliance Consulting</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1560264280-88b68371db39');"><div class="overlay"></div>Inspection Handling</div>
 
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f');"><div class="overlay"></div>Business Setup Support</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581092334499-7b1f1d1b0e58');"><div class="overlay"></div>Government Liaison</div>
 
 </div>
 
@@ -224,25 +180,26 @@ margin-top:30px;
 <div class="container">
 <h2>Factory License & Compliance Services</h2>
 
-<p>Dream HR Consultancy provides complete factory license and industrial compliance services across India. From registration to renewal, inspection to approvals, we manage everything professionally.</p>
+<p>Dream HR Consultancy provides complete factory compliance services including registration, approvals, inspections and renewals across India.</p>
 
 <ul>
 <li>Factory License Registration & Renewal</li>
-<li>Pollution Control Board NOC</li>
-<li>Fire Safety Approval</li>
-<li>Boiler & Electrical Certification</li>
-<li>Lift License</li>
-<li>MSME / GST Registration</li>
-<li>Legal Documentation & Inspection Support</li>
+<li>Pollution NOC (Air & Water)</li>
+<li>Fire NOC Approval</li>
+<li>Boiler Registration & Inspection</li>
+<li>Electrical Safety Certification</li>
+<li>Lift Approval & Certification</li>
+<li>MSME / GST / Nivesh Mitra</li>
+<li>Labour Law Compliance</li>
+<li>Inspection Handling</li>
+<li>Government Liaison Work</li>
 </ul>
 
-<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn">Get Free Consultation</a>
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn">
+Get Free Consultation
+</a>
 
 </div>
-
-<footer>
-© 2026 Dream HR Consultancy | support@idhrt.com | +91 8863962310
-</footer>
 
 <script>
 let slides=document.querySelectorAll(".slide");
