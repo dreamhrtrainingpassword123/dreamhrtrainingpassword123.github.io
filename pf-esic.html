@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>PF ESIC Compliance | Dream HR Consultancy</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
@@ -28,8 +27,9 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
+height:70px;
 background:#0a2a43;
-padding:12px 30px;
+padding:12px 25px;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -42,7 +42,7 @@ display:flex;
 align-items:center;
 gap:10px;
 color:#fff;
-font-size:24px;
+font-size:22px;
 font-weight:700;
 }
 
@@ -53,83 +53,76 @@ border-radius:6px;
 
 nav{
 display:flex;
-gap:18px;
+gap:16px;
 align-items:center;
 }
 
 nav a{
 color:#fff;
 text-decoration:none;
-font-size:15px;
+font-size:14px;
 font-weight:500;
-}
-
-nav a:hover{
-color:#00c6ff;
 }
 
 .book-btn{
 background:#00c6ff;
-padding:9px 14px;
+padding:8px 12px;
 border-radius:6px;
 }
 
 .whatsapp-btn{
 background:#25D366;
-padding:9px 14px;
+padding:8px 12px;
 border-radius:6px;
 }
 
-/* NEWS BAR FIXED */
+/* BACK BUTTON RIGHT TOP */
+.back-btn{
+position:fixed;
+top:18px;
+right:15px;
+background:#ff5722;
+color:#fff;
+padding:7px 14px;
+border-radius:20px;
+text-decoration:none;
+font-size:13px;
+font-weight:600;
+z-index:10000;
+box-shadow:0 5px 12px rgba(0,0,0,.2);
+}
+
+/* NEWS BAR */
 .news-bar{
 position:fixed;
-top:68px;
+top:70px;
 left:0;
 width:100%;
-background:#ffd54f;
-color:#000;
-padding:8px 0;
-font-weight:600;
-z-index:9998;
+height:38px;
+background:#ffc107;
 overflow:hidden;
 white-space:nowrap;
+z-index:9998;
+display:flex;
+align-items:center;
+font-weight:700;
 }
 
 .news-text{
 display:inline-block;
 padding-left:100%;
-animation:moveNews 28s linear infinite;
+animation:ticker 25s linear infinite;
 }
 
-@keyframes moveNews{
+@keyframes ticker{
 0%{transform:translateX(0);}
 100%{transform:translateX(-100%);}
 }
 
-/* BACK BUTTON */
-.back-btn{
-position:fixed;
-top:110px;
-right:20px;
-background:#ff5722;
-color:#fff;
-padding:10px 16px;
-border-radius:30px;
-text-decoration:none;
-font-size:14px;
-font-weight:600;
-z-index:9999;
-box-shadow:0 5px 15px rgba(0,0,0,.15);
-}
-
-.back-btn:hover{
-background:#e64a19;
-}
-
 /* HERO */
 .hero{
-height:90vh;
 margin-top:108px;
+height:88vh;
 position:relative;
 overflow:hidden;
 }
@@ -188,8 +181,7 @@ margin-bottom:15px;
 }
 
 ul{
-padding-left:22px;
-margin-bottom:20px;
+padding-left:20px;
 }
 
 li{
@@ -197,30 +189,26 @@ margin-bottom:8px;
 }
 
 .btn{
+display:inline-block;
+margin-top:15px;
 background:#00c6ff;
 color:#fff;
-padding:13px 24px;
-display:inline-block;
-text-decoration:none;
+padding:12px 22px;
 border-radius:6px;
+text-decoration:none;
 font-weight:600;
-margin-top:15px;
-}
-
-.btn:hover{
-background:#009ed1;
 }
 
 .right a{
 display:block;
 padding:10px 0;
 border-bottom:1px solid #eee;
-text-decoration:none;
 color:#0a2a43;
+text-decoration:none;
 }
 
 .notice{
-margin-top:20px;
+margin-top:18px;
 background:#fff3cd;
 padding:12px;
 border-radius:8px;
@@ -233,8 +221,12 @@ nav{
 display:none;
 }
 
+.logo{
+font-size:18px;
+}
+
 .hero{
-height:70vh;
+height:65vh;
 }
 
 .slide{
@@ -246,14 +238,10 @@ flex-direction:column;
 }
 
 .back-btn{
-top:105px;
+top:18px;
 right:10px;
-padding:8px 12px;
 font-size:12px;
-}
-
-.logo{
-font-size:18px;
+padding:6px 10px;
 }
 }
 </style>
@@ -281,15 +269,13 @@ Dream HR Consultancy
 
 </header>
 
-<!-- MOVING NEWS -->
+<a href="services.html" class="back-btn">⬅ Back</a>
+
 <div class="news-bar">
 <div class="news-text">
-Latest Updates: PF New Circular • ESIC Benefits Updated • Hiring Openings Available • Payroll Services Available • Labour Law Notice Support • Free Consultation Available • PAN India Compliance Support • Welcome to Dream HR Consultancy
+Latest Updates: PF Circular Updated • ESIC Benefits New • Jobs Hiring Open • Payroll Services Live • Labour Law Support Available • PAN India Compliance • Free Consultation Open • Welcome Dream HR Consultancy
 </div>
 </div>
-
-<!-- BACK -->
-<a href="services.html" class="back-btn">⬅ Back</a>
 
 <!-- HERO -->
 <div class="hero">
@@ -316,7 +302,6 @@ Business Compliance Solutions
 
 </div>
 
-<!-- CONTENT -->
 <div class="container">
 
 <div class="left">
@@ -324,49 +309,40 @@ Business Compliance Solutions
 <h2>PF & ESIC Compliance Services</h2>
 
 <p>
-The objectives of Employees Provident Fund Act 1952 and Employees State Insurance Act 1948 are to provide social security benefits to employees and workers.
+Employees Provident Fund and Employees State Insurance laws provide social security benefits to employees.
 </p>
 
 <p>
-Any small mistake in calculation or delay in compliance may lead to notices, disputes and financial penalties.
-</p>
-
-<p>
-Dream HR Consultancy professionally manages PAN India statutory compliances and supports smooth corporate governance.
+Any small compliance mistake may lead to notices and penalties. Dream HR Consultancy helps businesses stay compliant across India.
 </p>
 
 <h3>Our Services</h3>
 
 <ul>
-<li>EPF & ESI Registration</li>
-<li>Monthly Challan Processing</li>
+<li>PF Registration</li>
+<li>ESIC Registration</li>
+<li>Monthly Challan</li>
 <li>Returns Filing</li>
-<li>Inspection Handling</li>
-<li>PF Transfer / Withdrawal</li>
-<li>ESI Claims Support</li>
-<li>Labour Law Guidance</li>
+<li>Inspection Support</li>
+<li>Claim Support</li>
 </ul>
 
-<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn">
-Book Free Consultation
-</a>
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn">Book Free Consultation</a>
 
 </div>
 
 <div class="right">
 
-<h3>Our Services</h3>
+<h3>Services</h3>
 
 <a href="pf-esic.html">PF & ESIC</a>
 <a href="payroll.html">Payroll</a>
 <a href="labour-law.html">Labour Law</a>
-<a href="factory.html">Factory Compliance</a>
-<a href="audit.html">Compliance Audit</a>
+<a href="factory.html">Factory</a>
 <a href="contact.html">Contact</a>
 
 <div class="notice">
-<strong>Need urgent support?</strong><br>
-Call / WhatsApp now for immediate consultation.
+Need urgent help? WhatsApp us now.
 </div>
 
 </div>
