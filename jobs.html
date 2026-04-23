@@ -3,9 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Jobs & Hiring | Dream HR Consultancy</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -28,7 +26,7 @@ top:0;
 left:0;
 width:100%;
 background:#0a2a43;
-padding:14px 30px;
+padding:14px 25px;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -39,7 +37,7 @@ box-shadow:0 4px 12px rgba(0,0,0,.18);
 .logo{
 display:flex;
 align-items:center;
-gap:12px;
+gap:10px;
 color:#fff;
 font-size:18px;
 font-weight:700;
@@ -49,19 +47,18 @@ font-weight:700;
 width:42px;
 height:42px;
 border-radius:50%;
-object-fit:cover;
 }
 
 nav{
 display:flex;
-gap:10px;
+gap:8px;
 flex-wrap:wrap;
 }
 
 nav a{
 color:#fff;
 text-decoration:none;
-padding:10px 14px;
+padding:10px 13px;
 border-radius:6px;
 font-size:14px;
 font-weight:600;
@@ -79,11 +76,8 @@ background:#123c5e;
 .newsbar{
 margin-top:74px;
 display:flex;
-height:48px;
+height:46px;
 overflow:hidden;
-position:sticky;
-top:74px;
-z-index:999;
 }
 
 .newsleft{
@@ -101,6 +95,7 @@ flex:1;
 overflow:hidden;
 display:flex;
 align-items:center;
+white-space:nowrap;
 }
 
 .track{
@@ -114,9 +109,9 @@ animation-play-state:paused;
 }
 
 .track span{
-white-space:nowrap;
 padding:0 28px;
 font-size:14px;
+white-space:nowrap;
 }
 
 @keyframes news{
@@ -126,25 +121,10 @@ font-size:14px;
 
 /* HERO */
 .hero{
-height:85vh;
+height:65vh;
 position:relative;
 overflow:hidden;
-}
-
-.slide{
-position:absolute;
-width:100%;
-height:100%;
-top:0;
-left:0;
-background-size:cover;
-background-position:center;
-opacity:0;
-transition:1s;
-}
-
-.slide.active{
-opacity:1;
+background:url('https://images.unsplash.com/photo-1521791136064-7986c2920216') center/cover;
 }
 
 .overlay{
@@ -166,79 +146,136 @@ z-index:2;
 }
 
 .hero-text h1{
-font-size:58px;
-margin-bottom:12px;
+font-size:52px;
+margin-bottom:10px;
 }
 
 .hero-text p{
-font-size:22px;
+font-size:20px;
 }
 
-/* JOB SECTION */
-.container{
-max-width:1350px;
+/* MAIN */
+.main{
+max-width:1400px;
 margin:auto;
-padding:60px 20px;
+padding:50px 20px;
+display:grid;
+grid-template-columns:300px 1fr;
+gap:25px;
 }
 
-.title{
-text-align:center;
-font-size:42px;
-font-weight:700;
+/* FILTER */
+.filter-box{
+background:#fff;
+padding:25px;
+border-radius:14px;
+box-shadow:0 10px 24px rgba(0,0,0,.08);
+height:fit-content;
+position:sticky;
+top:20px;
+}
+
+.filter-box h2{
+font-size:24px;
 color:#0a2a43;
-margin-bottom:35px;
+margin-bottom:18px;
+}
+
+.filter-box label{
+font-size:14px;
+font-weight:600;
+display:block;
+margin:12px 0 6px;
+color:#333;
+}
+
+.filter-box select,
+.filter-box input{
+width:100%;
+padding:11px;
+border:1px solid #d9d9d9;
+border-radius:8px;
+font-size:14px;
+outline:none;
+}
+
+.reset-btn{
+margin-top:16px;
+width:100%;
+border:none;
+background:#ff5a1f;
+color:#fff;
+padding:12px;
+border-radius:8px;
+font-weight:700;
+cursor:pointer;
+}
+
+/* JOB GRID */
+.jobs h2{
+font-size:36px;
+color:#0a2a43;
+margin-bottom:22px;
 }
 
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:25px;
+gap:22px;
 }
 
 .card{
 background:#fff;
-padding:28px;
+padding:26px;
 border-radius:14px;
 box-shadow:0 10px 24px rgba(0,0,0,.08);
 transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-7px);
 }
 
 .card h3{
-font-size:24px;
+font-size:22px;
 color:#0a2a43;
-margin-bottom:12px;
+margin-bottom:10px;
 }
 
 .meta{
 font-size:14px;
 color:#666;
-margin-bottom:14px;
 line-height:1.8;
+margin-bottom:12px;
 }
 
 .card p{
 font-size:15px;
 line-height:1.8;
-margin-bottom:18px;
+margin-bottom:15px;
 }
 
 .btn{
 display:inline-block;
 background:#00c6ff;
 color:#fff;
-text-decoration:none;
 padding:11px 18px;
-border-radius:7px;
+border-radius:8px;
+text-decoration:none;
 font-size:14px;
 font-weight:600;
 }
 
-.btn:hover{
-background:#0098c7;
+.no-jobs{
+display:none;
+background:#fff;
+padding:30px;
+border-radius:14px;
+box-shadow:0 10px 24px rgba(0,0,0,.08);
+font-size:20px;
+font-weight:700;
+color:#ff5a1f;
+text-align:center;
 }
 
 /* FOOTER */
@@ -246,12 +283,12 @@ footer{
 background:#0a2a43;
 color:#fff;
 text-align:center;
-padding:22px;
+padding:24px;
 margin-top:40px;
 }
 
 /* MOBILE */
-@media(max-width:900px){
+@media(max-width:950px){
 
 header{
 flex-direction:column;
@@ -265,15 +302,18 @@ justify-content:center;
 
 .newsbar{
 margin-top:130px;
-top:130px;
+}
+
+.main{
+grid-template-columns:1fr;
 }
 
 .hero-text h1{
-font-size:36px;
+font-size:34px;
 }
 
 .hero-text p{
-font-size:17px;
+font-size:16px;
 }
 }
 </style>
@@ -282,7 +322,6 @@ font-size:17px;
 <body>
 
 <header>
-
 <div class="logo">
 <img src="logo.png">
 <span>Dream HR Consultancy</span>
@@ -299,7 +338,6 @@ font-size:17px;
 <a href="https://wa.me/918863962310" target="_blank" class="whatsapp">WhatsApp</a>
 <a href="javascript:history.back()" class="back">⬅ Back</a>
 </nav>
-
 </header>
 
 <!-- NEWS -->
@@ -307,163 +345,179 @@ font-size:17px;
 <div class="newsleft">Latest Hiring</div>
 <div class="newsright">
 <div class="track">
-<span>HR Intern Hiring Open</span>
-<span>BDM Required for B2B Corporate Sales</span>
-<span>Lead Generator Work From Home</span>
-<span>Accountant Vacancy Open</span>
+<span>HR Intern Open</span>
+<span>BDM Hiring Delhi NCR</span>
+<span>WFH Lead Generator Open</span>
+<span>Accountant Vacancy</span>
 <span>Operations Manager Hiring</span>
-<span>Regional Head Positions Open</span>
-<span>Freshers & Experienced Both Can Apply</span>
-<span>Send Resume: support@idhrt.com</span>
+<span>Apply Today at support@idhrt.com</span>
 
-<span>HR Intern Hiring Open</span>
-<span>BDM Required for B2B Corporate Sales</span>
-<span>Lead Generator Work From Home</span>
-<span>Accountant Vacancy Open</span>
+<span>HR Intern Open</span>
+<span>BDM Hiring Delhi NCR</span>
+<span>WFH Lead Generator Open</span>
 </div>
 </div>
 </div>
 
 <!-- HERO -->
 <section class="hero">
-
-<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216');"></div>
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978');"></div>
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3');"></div>
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40');"></div>
-
 <div class="overlay"></div>
-
 <div class="hero-text">
 <h1>Jobs & Hiring</h1>
-<p>Grow Your Career With Dream HR Consultancy</p>
+<p>Find Your Next Career Opportunity</p>
 </div>
-
 </section>
 
-<!-- JOB LIST -->
-<div class="container">
+<!-- MAIN -->
+<section class="main">
 
-<div class="title">Current Openings (9 Positions)</div>
+<!-- FILTER -->
+<div class="filter-box">
+<h2>Filter Jobs</h2>
 
-<div class="grid">
+<label>Search Position</label>
+<input type="text" id="searchBox" placeholder="HR / Manager / Sales">
 
-<div class="card">
+<label>Job Type</label>
+<select id="jobType">
+<option value="">All</option>
+<option>Full Time</option>
+<option>Internship</option>
+<option>Freelancer</option>
+<option>Work From Home</option>
+</select>
+
+<label>Location</label>
+<select id="location">
+<option value="">All</option>
+<option>Delhi</option>
+<option>Gurgaon</option>
+<option>Noida</option>
+<option>Mumbai</option>
+<option>Bangalore</option>
+<option>Remote</option>
+</select>
+
+<label>Department</label>
+<select id="dept">
+<option value="">All</option>
+<option>HR</option>
+<option>Sales</option>
+<option>Accounts</option>
+<option>Compliance</option>
+<option>Management</option>
+</select>
+
+<button class="reset-btn" onclick="resetFilters()">Reset Filters</button>
+</div>
+
+<!-- JOBS -->
+<div class="jobs">
+<h2>Current Openings</h2>
+
+<div class="grid" id="jobGrid">
+
+<div class="card job" data-title="HR Intern" data-type="Internship" data-location="Delhi" data-dept="HR">
 <h3>HR Intern</h3>
-<div class="meta">
-📍 Delhi / Noida<br>
-🎓 Fresher Welcome<br>
-💰 Stipend: As Per Interview
-</div>
-<p>Assist recruitment, joining formalities, HR records, employee coordination.</p>
-<a href="mailto:support@idhrt.com?subject=Apply HR Intern" class="btn">Apply Now</a>
+<div class="meta">📍 Delhi | Internship | Freshers Welcome</div>
+<p>Recruitment support, joining process and HR documentation.</p>
+<a href="mailto:support@idhrt.com?subject=HR Intern" class="btn">Apply Now</a>
 </div>
 
-<div class="card">
-<h3>Business Development Manager (BDM)</h3>
-<div class="meta">
-📍 Delhi NCR / Gurgaon / Noida<br>
-💼 Experience: 2+ Years<br>
-💰 Salary: As Per Performance
-</div>
-<p>Visit companies, industries and corporates. Present HR, Payroll, PF ESIC & Compliance services to HR, Owners, Admin and Management teams.</p>
-<a href="mailto:support@idhrt.com?subject=Apply BDM" class="btn">Apply Now</a>
+<div class="card job" data-title="Business Development Manager" data-type="Full Time" data-location="Gurgaon" data-dept="Sales">
+<h3>Business Development Manager</h3>
+<div class="meta">📍 Gurgaon | Full Time | Salary As Per Performance</div>
+<p>Meet corporates and generate B2B business for HR services.</p>
+<a href="mailto:support@idhrt.com?subject=BDM" class="btn">Apply Now</a>
 </div>
 
-<div class="card">
-<h3>Freelancer - B2B Sales</h3>
-<div class="meta">
-📍 Pan India<br>
-💼 Experience: Sales Preferred<br>
-💰 Earnings: 10% of Total Sale
-</div>
-<p>Generate business leads and close service deals independently.</p>
-<a href="mailto:support@idhrt.com?subject=Apply Freelancer Sales" class="btn">Apply Now</a>
+<div class="card job" data-title="Freelancer Sales Partner" data-type="Freelancer" data-location="Remote" data-dept="Sales">
+<h3>Freelancer Sales Partner</h3>
+<div class="meta">📍 Pan India | Freelancer | 10% Sale Incentive</div>
+<p>Generate clients and earn commission on closed deals.</p>
+<a href="mailto:support@idhrt.com?subject=Freelancer Sales" class="btn">Apply Now</a>
 </div>
 
-<div class="card">
-<h3>Lead Generator (WFH)</h3>
-<div class="meta">
-📍 Work From Home<br>
-💼 Experience: 1+ Year<br>
-💰 Salary: ₹20,000
-</div>
-<p>Generate qualified B2B leads via calling, LinkedIn, emails and research.</p>
-<a href="mailto:support@idhrt.com?subject=Apply Lead Generator" class="btn">Apply Now</a>
+<div class="card job" data-title="Lead Generator" data-type="Work From Home" data-location="Remote" data-dept="Sales">
+<h3>Lead Generator</h3>
+<div class="meta">📍 Remote | WFH | ₹20,000</div>
+<p>Lead generation through calls, LinkedIn and research.</p>
+<a href="mailto:support@idhrt.com?subject=Lead Generator" class="btn">Apply Now</a>
 </div>
 
-<div class="card">
+<div class="card job" data-title="Accountant" data-type="Full Time" data-location="Noida" data-dept="Accounts">
 <h3>Accountant</h3>
-<div class="meta">
-📍 Delhi / Noida<br>
-💼 Experience: 2+ Years<br>
-💰 Salary: ₹25,000+
-</div>
-<p>GST basics, vouchers, reconciliations, TDS, bookkeeping and reports.</p>
-<a href="mailto:support@idhrt.com?subject=Apply Accountant" class="btn">Apply Now</a>
+<div class="meta">📍 Noida | Full Time | ₹25,000+</div>
+<p>Accounts, vouchers, GST basics and reporting.</p>
+<a href="mailto:support@idhrt.com?subject=Accountant" class="btn">Apply Now</a>
 </div>
 
-<div class="card">
-<h3>Senior Accountant</h3>
-<div class="meta">
-📍 Gurgaon / Mumbai<br>
-💼 Experience: 4+ Years<br>
-💰 Salary: Negotiable
-</div>
-<p>Finalization, MIS, taxation support and team handling.</p>
-<a href="mailto:support@idhrt.com?subject=Apply Senior Accountant" class="btn">Apply Now</a>
-</div>
-
-<div class="card">
-<h3>Operations Manager</h3>
-<div class="meta">
-📍 Bangalore / Delhi<br>
-💼 Experience: 5+ Years<br>
-💰 Salary: Best in Industry
-</div>
-<p>Manage client operations, team productivity and service delivery.</p>
-<a href="mailto:support@idhrt.com?subject=Apply Operations Manager" class="btn">Apply Now</a>
-</div>
-
-<div class="card">
-<h3>Regional Sales Head</h3>
-<div class="meta">
-📍 Mumbai / Bangalore<br>
-💼 Experience: 6+ Years<br>
-💰 Salary: Performance Based
-</div>
-<p>Lead city sales teams and drive corporate service acquisition.</p>
-<a href="mailto:support@idhrt.com?subject=Apply Regional Head" class="btn">Apply Now</a>
-</div>
-
-<div class="card">
+<div class="card job" data-title="Compliance Manager" data-type="Full Time" data-location="Delhi" data-dept="Compliance">
 <h3>Compliance Manager</h3>
-<div class="meta">
-📍 Delhi NCR<br>
-💼 Experience: 4+ Years<br>
-💰 Salary: Negotiable
-</div>
-<p>PF ESIC, labour law audits, licenses, inspections and advisory handling.</p>
-<a href="mailto:support@idhrt.com?subject=Apply Compliance Manager" class="btn">Apply Now</a>
+<div class="meta">📍 Delhi | Full Time | Negotiable</div>
+<p>PF ESIC, labour law, licenses and audit support.</p>
+<a href="mailto:support@idhrt.com?subject=Compliance Manager" class="btn">Apply Now</a>
 </div>
 
 </div>
 
+<div class="no-jobs" id="noJobs">No Jobs Available</div>
+
 </div>
+</section>
 
 <footer>
 © 2026 Dream HR Consultancy | support@idhrt.com | +91 8863962310
 </footer>
 
 <script>
-let slides=document.querySelectorAll('.slide');
-let i=0;
+const searchBox=document.getElementById("searchBox");
+const jobType=document.getElementById("jobType");
+const locationBox=document.getElementById("location");
+const dept=document.getElementById("dept");
+const jobs=document.querySelectorAll(".job");
+const noJobs=document.getElementById("noJobs");
 
-setInterval(()=>{
-slides[i].classList.remove('active');
-i=(i+1)%slides.length;
-slides[i].classList.add('active');
-},3000);
+function filterJobs(){
+let visible=0;
+
+jobs.forEach(job=>{
+
+let title=job.dataset.title.toLowerCase();
+let type=job.dataset.type;
+let location=job.dataset.location;
+let department=job.dataset.dept;
+
+let search=searchBox.value.toLowerCase();
+let matchSearch=title.includes(search);
+let matchType=!jobType.value || type===jobType.value;
+let matchLocation=!locationBox.value || location===locationBox.value;
+let matchDept=!dept.value || department===dept.value;
+
+if(matchSearch && matchType && matchLocation && matchDept){
+job.style.display="block";
+visible++;
+}else{
+job.style.display="none";
+}
+
+});
+
+noJobs.style.display=visible===0 ? "block" : "none";
+}
+
+function resetFilters(){
+searchBox.value="";
+jobType.value="";
+locationBox.value="";
+dept.value="";
+filterJobs();
+}
+
+searchBox.addEventListener("input",filterJobs);
+jobType.addEventListener("change",filterJobs);
+locationBox.addEventListener("change",filterJobs);
+dept.addEventListener("change",filterJobs);
 </script>
 
 </body>
