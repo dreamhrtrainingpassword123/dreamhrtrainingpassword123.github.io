@@ -52,8 +52,9 @@ border-radius:50%;
 
 nav{
 display:flex;
+gap:14px;
 align-items:center;
-gap:16px;
+flex-wrap:wrap;
 }
 
 nav a{
@@ -63,61 +64,57 @@ font-size:14px;
 font-weight:500;
 }
 
-.book{
-background:#00c6ff;
-padding:9px 14px;
-border-radius:7px;
-}
+.book{background:#00c6ff;padding:8px 12px;border-radius:7px;}
+.whatsapp{background:#25D366;padding:8px 12px;border-radius:7px;}
+.back{background:#ff5a1f;padding:8px 12px;border-radius:20px;font-size:13px;}
 
-.whatsapp{
-background:#25D366;
-padding:9px 14px;
-border-radius:7px;
-}
-
-/* RIGHT TOP BACK BUTTON */
-.back{
-background:#ff5a1f;
-padding:8px 14px;
-border-radius:20px;
-font-size:13px;
-font-weight:700;
-}
-
-/* STICKY NEWS BAR */
+/* NEWS BAR FIXED */
 .news{
 position:fixed;
 top:72px;
 left:0;
 width:100%;
 height:38px;
-background:#00b7ff;
+background:#ffc107;
 z-index:99998;
 display:flex;
 align-items:center;
 overflow:hidden;
+}
+
+.news-label{
+width:180px;
+min-width:180px;
+height:38px;
+background:#e0a800;
 color:#fff;
 font-weight:700;
-}
-
-.news-left{
-background:#0798d1;
-padding:0 18px;
-height:38px;
 display:flex;
 align-items:center;
-flex-shrink:0;
+justify-content:center;
+position:relative;
+z-index:5;
 }
 
-.news-run{
+.news-track{
+flex:1;
+height:38px;
+overflow:hidden;
+position:relative;
+}
+
+.news-text{
+position:absolute;
 white-space:nowrap;
-padding-left:100%;
-animation:run 22s linear infinite;
+line-height:38px;
+font-weight:700;
+left:100%;
+animation:ticker 15s linear infinite;
 }
 
-@keyframes run{
-0%{transform:translateX(0);}
-100%{transform:translateX(-100%);}
+@keyframes ticker{
+0%{left:100%;}
+100%{left:-100%;}
 }
 
 /* HERO */
@@ -134,16 +131,14 @@ width:100%;
 height:100%;
 background-size:cover;
 background-position:center;
-opacity:0;
-transition:1s;
 display:flex;
 justify-content:center;
 align-items:center;
+opacity:0;
+transition:1s;
 }
 
-.slide.active{
-opacity:1;
-}
+.slide.active{opacity:1;}
 
 .overlay{
 position:absolute;
@@ -155,7 +150,7 @@ background:rgba(0,0,0,.55);
 position:relative;
 z-index:2;
 color:#fff;
-font-size:48px;
+font-size:46px;
 font-weight:700;
 text-align:center;
 padding:20px;
@@ -183,14 +178,8 @@ color:#082842;
 margin-bottom:15px;
 }
 
-ul{
-padding-left:20px;
-margin-top:10px;
-}
-
-li{
-margin-bottom:8px;
-}
+ul{padding-left:20px;}
+li{margin-bottom:8px;}
 
 .btn{
 display:inline-block;
@@ -228,30 +217,22 @@ flex-direction:column;
 gap:10px;
 }
 
-nav{
-flex-wrap:wrap;
-justify-content:center;
-}
+nav{justify-content:center;}
 
-.news{
-top:120px;
-}
-
+.news{top:125px;}
 .hero{
-margin-top:158px;
+margin-top:163px;
 height:60vh;
 }
 
-.hero-text{
-font-size:28px;
-}
+.hero-text{font-size:28px;}
+.main{grid-template-columns:1fr;}
+.logo{font-size:18px;}
 
-.main{
-grid-template-columns:1fr;
-}
-
-.logo{
-font-size:18px;
+.news-label{
+width:130px;
+min-width:130px;
+font-size:13px;
 }
 }
 </style>
@@ -280,10 +261,11 @@ Dream HR Consultancy
 
 </header>
 
+<!-- NEWS BAR -->
 <div class="news">
-<div class="news-left">Latest Updates</div>
-<div class="news-run">
-PF Circular Updated • ESIC Benefits New • Hiring Open • Payroll Live • Labour Law Support • PAN India Compliance • Free Consultation Available • Dream HR Consultancy
+<div class="news-label">Latest Updates</div>
+<div class="news-track">
+<div class="news-text" id="tickerText"></div>
 </div>
 </div>
 
@@ -314,13 +296,9 @@ PF Circular Updated • ESIC Benefits New • Hiring Open • Payroll Live • L
 
 <h2>PF & ESIC Compliance Services</h2>
 
-<p>
-Employees Provident Fund and ESIC compliance is essential for every growing business. Errors in filings can create notices, penalties and employee disputes.
-</p>
+<p>PF and ESIC compliance is essential for eligible establishments. Wrong filing may create penalties and notices.</p>
 
-<p>
-Dream HR Consultancy provides reliable statutory support for startups, SMEs and companies across India.
-</p>
+<p>Dream HR Consultancy helps companies with registration, filing, inspection and claims support across India.</p>
 
 <h3>Our Services</h3>
 
@@ -329,8 +307,8 @@ Dream HR Consultancy provides reliable statutory support for startups, SMEs and 
 <li>ESIC Registration</li>
 <li>Monthly Challan Filing</li>
 <li>Returns Submission</li>
-<li>Inspection Handling</li>
-<li>Claim & Withdrawal Support</li>
+<li>Inspection Support</li>
+<li>Claim Assistance</li>
 </ul>
 
 <a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn">
@@ -343,14 +321,14 @@ Book Free Consultation
 
 <h3>Other Services</h3>
 
-<a href="payroll.html">Payroll Management</a>
-<a href="labour-law.html">Labour Law Compliance</a>
-<a href="factory.html">Factory License</a>
-<a href="audit.html">Compliance Audit</a>
-<a href="contact.html">Contact Us</a>
+<a href="payroll.html">Payroll</a>
+<a href="labour-law.html">Labour Law</a>
+<a href="factory.html">Factory</a>
+<a href="audit.html">Audit</a>
+<a href="contact.html">Contact</a>
 
 <div class="note">
-Need urgent help? Contact us on WhatsApp today.
+Need urgent help? WhatsApp us now.
 </div>
 
 </div>
@@ -358,6 +336,7 @@ Need urgent help? Contact us on WhatsApp today.
 </div>
 
 <script>
+/* Hero Slider */
 let slides=document.querySelectorAll(".slide");
 let i=0;
 
@@ -366,6 +345,26 @@ slides[i].classList.remove("active");
 i=(i+1)%slides.length;
 slides[i].classList.add("active");
 },3000);
+
+/* Rotating News */
+const updates = [
+"PF Update: UAN KYC complete rakhna claim aur transfer ke liye zaruri hai.",
+"ESIC Update: Employer 3.25% and Employee 0.75% current contribution norms.",
+"Compliance Alert: Due date miss hone par penalty lag sakti hai.",
+"HR Advisory: New joinee aur exit data timely update karein.",
+"Dream HR Update: PAN India PF & ESIC support available."
+];
+
+let n=0;
+let ticker=document.getElementById("tickerText");
+
+function runNews(){
+ticker.innerHTML=updates[n];
+n=(n+1)%updates.length;
+}
+
+runNews();
+setInterval(runNews,15000);
 </script>
 
 </body>
