@@ -4,117 +4,100 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Factory License Services | Dream HR Consultancy</title>
+<title>Factory License | Dream HR Consultancy</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-
 body{background:#f5f7fa;color:#222;}
 
 /* HEADER */
 header{
-position:fixed;
-top:0;width:100%;
+position:fixed;top:0;width:100%;
 background:#0a2a43;
-padding:12px 30px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:999;
+display:flex;justify-content:space-between;
+padding:12px 30px;z-index:9999;
 }
-
-.logo{color:#fff;font-weight:700;font-size:20px;}
-
-nav a{
-color:#fff;
-margin-left:10px;
-text-decoration:none;
-font-size:14px;
-}
-
-.book-btn{background:#00c6ff;padding:8px;border-radius:5px;}
-.whatsapp-btn{background:#25D366;padding:8px;border-radius:5px;}
-.back-btn{background:#ff5722;padding:8px;border-radius:5px;}
+.logo{color:#fff;font-weight:700;font-size:22px;}
+nav a{color:#fff;margin:0 8px;text-decoration:none;font-size:14px;}
+.book-btn{background:#00c6ff;padding:8px 12px;border-radius:5px;}
+.whatsapp-btn{background:#25D366;padding:8px 12px;border-radius:5px;}
+.back-btn{background:#ff5722;padding:8px 12px;border-radius:5px;}
 
 /* NEWS */
 .news-bar{
-margin-top:65px;
-background:#081d2f;
+margin-top:60px;
 display:flex;
+background:#081d2f;
+border-top:2px solid #00c6ff;
+border-bottom:2px solid #00c6ff;
 }
-
-.news-title{
-background:#00c6ff;
-color:#fff;
-padding:10px;
-font-weight:700;
-}
-
+.news-title{background:#00c6ff;color:#fff;padding:10px;font-weight:700;}
+.news-scroll{overflow:hidden;flex:1;}
 .news-track{
-color:#fff;
-padding:10px;
-white-space:nowrap;
-animation:scroll 60s linear infinite;
+display:flex;
+animation:move 80s linear infinite;
 }
-
-@keyframes scroll{
-0%{transform:translateX(100%);}
-100%{transform:translateX(-100%);}
+.news-track span{color:#fff;padding:10px 30px;white-space:nowrap;}
+@keyframes move{
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
 }
 
 /* HERO */
-.hero{
-margin-top:110px;
-height:90vh;
-position:relative;
-overflow:hidden;
-}
-
+.hero{height:90vh;margin-top:100px;position:relative;}
 .slide{
-position:absolute;
-width:100%;
-height:100%;
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-justify-content:center;
-color:#fff;
-font-size:40px;
-font-weight:700;
-text-align:center;
-opacity:0;
-transition:1s;
+position:absolute;width:100%;height:100%;
+background-size:cover;background-position:center;
+display:flex;align-items:center;justify-content:center;
+color:#fff;font-size:38px;font-weight:700;
+opacity:0;transition:1s;
 }
-
 .slide.active{opacity:1;}
-
 .overlay{
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.55);
+position:absolute;width:100%;height:100%;
+background:rgba(0,0,0,0.6);
 }
 
 /* CONTENT */
 .container{
-max-width:1200px;
-margin:auto;
-padding:40px;
+max-width:1200px;margin:auto;
+padding:40px 20px;
+display:flex;gap:30px;
 }
+.left,.right{
+background:#fff;padding:25px;border-radius:10px;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+.left{flex:2;}
+.right{flex:1;}
+
+h2{margin-bottom:15px;color:#0a2a43;}
+ul{padding-left:20px;}
+li{margin-bottom:8px;}
 
 .btn{
+display:inline-block;
 background:#00c6ff;
 color:#fff;
-padding:12px 20px;
-display:inline-block;
-margin-top:20px;
-text-decoration:none;
+padding:10px 18px;
+margin-top:15px;
 border-radius:6px;
+text-decoration:none;
 }
 
+.right a{
+display:block;padding:10px 0;
+border-bottom:1px solid #eee;
+text-decoration:none;color:#0a2a43;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+.container{flex-direction:column;}
+.slide{font-size:26px;}
+}
 </style>
 </head>
 
@@ -124,75 +107,78 @@ border-radius:6px;
 <div class="logo">Dream HR Consultancy</div>
 
 <nav>
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="contact.html">Contact</a>
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">Jobs</a>
+<a href="#">Contact</a>
 <a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="book-btn">Book Meeting</a>
 <a href="https://wa.me/918863962310" target="_blank" class="whatsapp-btn">WhatsApp</a>
-<a href="javascript:history.back()" class="back-btn">⬅ Back</a>
+<a href="javascript:history.back()" class="back-btn">Back</a>
 </nav>
 </header>
 
 <!-- NEWS -->
 <div class="news-bar">
 <div class="news-title">Updates</div>
+<div class="news-scroll">
 <div class="news-track">
-Factory License • Fire NOC • Pollution NOC • Boiler Approval • Electrical Safety • Lift License • MSME • GST • Nivesh Mitra • Health & Safety • Labour Compliance • Industrial Approvals • PAN India Services
+<span>Factory License renewal mandatory</span>
+<span>Pollution NOC required for industries</span>
+<span>Fire NOC inspection strict now</span>
+<span>Boiler registration required</span>
+<span>Electrical safety audit recommended</span>
+<span>MSME benefits available</span>
+
+<span>Factory License renewal mandatory</span>
+<span>Pollution NOC required for industries</span>
+<span>Fire NOC inspection strict now</span>
+<span>Boiler registration required</span>
+<span>Electrical safety audit recommended</span>
+<span>MSME benefits available</span>
+</div>
 </div>
 </div>
 
-<!-- HERO -->
+<!-- SLIDER -->
 <div class="hero">
 
-<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1581092921461-eab10380b4b9');"><div class="overlay"></div>Factory Registration</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');"><div class="overlay"></div>Factory License</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581091215367-59ab6b6b3b1b');"><div class="overlay"></div>Pollution Control (Smoke / Industry)</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1590496794008-383c8070b257');"><div class="overlay"></div>Fire Safety (Fire / Emergency)</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581093458791-9c54f9a9c4bb');"><div class="overlay"></div>Boiler Inspection</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1509395176047-4a66953fd231');"><div class="overlay"></div>Electrical Safety</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581092919534-6b5d6b9b5c7b');"><div class="overlay"></div>Lift License</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1521790797524-b2497295b8a0');"><div class="overlay"></div>MSME / Udyam</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f');"><div class="overlay"></div>GST Registration</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581090700227-1e8e0f3b8e3b');"><div class="overlay"></div>Nivesh Mitra Portal</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581091215458-8c3d9f0d1c44');"><div class="overlay"></div>Health & Safety</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1507679799987-c73779587ccf');"><div class="overlay"></div>Legal Documentation</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1556761175-4b46a572b786');"><div class="overlay"></div>Compliance Management</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1560264280-88b68371db39');"><div class="overlay"></div>Inspection Handling</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581092334499-7b1f1d1b0e58');"><div class="overlay"></div>Government Liaison</div>
+<div class="slide active" style="background-image:url('https://source.unsplash.com/1600x900/?factory');"><div class="overlay"></div>Factory License</div>
+<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?factory,license');"><div class="overlay"></div>Factory Registration</div>
+<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?pollution,smoke');"><div class="overlay"></div>Pollution NOC</div>
+<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?fire,flames');"><div class="overlay"></div>Fire NOC</div>
+<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?boiler');"><div class="overlay"></div>Boiler Approval</div>
+<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?electric,panel');"><div class="overlay"></div>Electrical Safety</div>
+<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?lift,elevator');"><div class="overlay"></div>Lift NOC</div>
+<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?msme,business');"><div class="overlay"></div>MSME</div>
+<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?gst,tax');"><div class="overlay"></div>GST</div>
+<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?government,india');"><div class="overlay"></div>Nivesh Mitra</div>
+<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?safety,helmet');"><div class="overlay"></div>Safety Compliance</div>
+<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?documents');"><div class="overlay"></div>Documentation</div>
+<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?labour');"><div class="overlay"></div>Labour Law</div>
+<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?audit');"><div class="overlay"></div>Inspection</div>
+<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?consulting');"><div class="overlay"></div>Consultancy</div>
 
 </div>
 
 <!-- CONTENT -->
 <div class="container">
-<h2>Factory License & Compliance Services</h2>
 
-<p>Dream HR Consultancy provides complete factory compliance services including registration, approvals, inspections and renewals across India.</p>
+<div class="left">
+<h2>Factory License Services</h2>
 
+<p>We provide complete factory compliance and licensing services across India including approvals, renewals and inspections.</p>
+
+<h3>Our Services</h3>
 <ul>
-<li>Factory License Registration & Renewal</li>
-<li>Pollution NOC (Air & Water)</li>
-<li>Fire NOC Approval</li>
-<li>Boiler Registration & Inspection</li>
-<li>Electrical Safety Certification</li>
-<li>Lift Approval & Certification</li>
-<li>MSME / GST / Nivesh Mitra</li>
+<li>Factory License & Registration</li>
+<li>Pollution NOC</li>
+<li>Fire NOC</li>
+<li>Boiler Approval</li>
+<li>Electrical Safety</li>
+<li>Lift Approval</li>
+<li>MSME / GST</li>
 <li>Labour Law Compliance</li>
 <li>Inspection Handling</li>
-<li>Government Liaison Work</li>
 </ul>
 
 <a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn">
@@ -201,15 +187,28 @@ Get Free Consultation
 
 </div>
 
+<div class="right">
+<h3>Services</h3>
+
+<a href="#">PF & ESIC</a>
+<a href="#">Payroll</a>
+<a href="#">Labour Law</a>
+<a href="#">Recruitment</a>
+<a href="#">Factory License</a>
+
+</div>
+
+</div>
+
 <script>
 let slides=document.querySelectorAll(".slide");
-let index=0;
+let i=0;
 
 setInterval(()=>{
-slides[index].classList.remove("active");
-index=(index+1)%slides.length;
-slides[index].classList.add("active");
-},3500);
+slides[i].classList.remove("active");
+i=(i+1)%slides.length;
+slides[i].classList.add("active");
+},4000);
 </script>
 
 </body>
