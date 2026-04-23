@@ -3,15 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Factory License | Dream HR Consultancy</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-
-body{background:#f5f7fa;color:#222;line-height:1.7;}
+body{background:#f5f7fa;color:#222;}
 
 /* HEADER */
 header{
@@ -19,57 +17,46 @@ position:fixed;top:0;width:100%;
 background:#0a2a43;
 padding:12px 30px;
 display:flex;justify-content:space-between;align-items:center;
-z-index:9999;
+z-index:999;
 }
 
-.logo a{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:700;}
-.logo img{height:42px;}
+.logo{color:#fff;font-weight:700;font-size:20px;}
 
-nav{display:flex;gap:15px;flex-wrap:wrap;}
-nav a{color:#fff;text-decoration:none;font-size:14px;}
-
-.book-btn{background:#00c6ff;padding:10px;border-radius:6px;}
-.whatsapp-btn{background:#25D366;padding:10px;border-radius:6px;}
-.back-btn{background:#ff5722;padding:10px;border-radius:6px;}
+nav a{
+color:#fff;text-decoration:none;margin-left:15px;font-size:14px;
+}
 
 /* NEWS */
 .news-bar{
-position:fixed;
-top:72px;
-width:100%;
-display:flex;
-background:#081d2f;
-border-top:2px solid #00c6ff;
-border-bottom:2px solid #00c6ff;
+position:fixed;top:65px;width:100%;
+background:#081d2f;display:flex;
+border-top:2px solid #00c6ff;border-bottom:2px solid #00c6ff;
 }
 
-.news-title{background:#00c6ff;padding:12px 18px;color:#fff;font-weight:700;}
-
-.news-scroll{overflow:hidden;flex:1;display:flex;align-items:center;}
+.news-title{background:#00c6ff;color:#fff;padding:10px 15px;font-weight:700;}
 
 .news-track{
 display:flex;
-animation:moveNews 70s linear infinite;
+animation:move 80s linear infinite;
 }
 
-.news-track span{
-color:#fff;padding:0 35px;white-space:nowrap;font-size:14px;
-}
+.news-track span{color:#fff;padding:0 30px;}
 
-@keyframes moveNews{
+@keyframes move{
 0%{transform:translateX(0);}
 100%{transform:translateX(-50%);}
 }
 
 /* HERO */
-.hero{height:90vh;margin-top:117px;position:relative;}
+.hero{height:90vh;margin-top:110px;position:relative;}
 
 .slide{
 position:absolute;width:100%;height:100%;
 background-size:cover;background-position:center;
-display:flex;justify-content:center;align-items:center;
-font-size:40px;font-weight:700;color:#fff;
+display:flex;align-items:center;justify-content:center;
+font-size:36px;color:#fff;font-weight:700;
 opacity:0;transition:1s;
+text-align:center;padding:20px;
 }
 
 .slide.active{opacity:1;}
@@ -81,14 +68,13 @@ background:rgba(0,0,0,0.55);
 
 /* CONTENT */
 .container{
-max-width:1200px;margin:auto;
-padding:40px 20px;
+max-width:1200px;margin:auto;padding:40px 20px;
 display:flex;gap:30px;
 }
 
 .left,.right{
-background:#fff;padding:30px;border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+background:#fff;padding:30px;border-radius:10px;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
 }
 
 .left{flex:2;}
@@ -96,19 +82,13 @@ box-shadow:0 10px 25px rgba(0,0,0,.08);
 
 h2,h3{color:#0a2a43;margin-bottom:15px;}
 
-ul{padding-left:20px;margin-bottom:18px;}
+ul{padding-left:20px;}
 li{margin-bottom:8px;}
 
 .btn{
 background:#00c6ff;color:#fff;
-padding:12px 22px;text-decoration:none;
-border-radius:6px;display:inline-block;margin-top:15px;
-}
-
-/* MOBILE */
-@media(max-width:992px){
-.container{flex-direction:column;}
-.slide{font-size:26px;}
+padding:12px 20px;border-radius:6px;
+display:inline-block;margin-top:15px;text-decoration:none;
 }
 </style>
 </head>
@@ -116,52 +96,52 @@ border-radius:6px;display:inline-block;margin-top:15px;
 <body>
 
 <header>
-<div class="logo">
-<a href="index.html">
-<img src="logo.png">
-<span>Dream HR Consultancy</span>
-</a>
-</div>
-
+<div class="logo">Dream HR Consultancy</div>
 <nav>
 <a href="index.html">Home</a>
-<a href="about.html">About</a>
 <a href="services.html">Services</a>
 <a href="contact.html">Contact</a>
-
-<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="book-btn">Book Meeting</a>
-<a href="https://wa.me/918863962310" target="_blank" class="whatsapp-btn">WhatsApp</a>
-<a href="javascript:history.back()" class="back-btn">⬅ Back</a>
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank">Book</a>
 </nav>
 </header>
 
 <!-- NEWS -->
 <div class="news-bar">
-<div class="news-title">Latest Updates</div>
-<div class="news-scroll">
+<div class="news-title">Updates</div>
 <div class="news-track">
-<span>Factory License renewal due dates must be tracked.</span>
-<span>Pollution NOC and Fire NOC mandatory.</span>
-<span>Electrical & Boiler approvals required.</span>
-<span>Health & Safety compliance required.</span>
-<span>Dream HR supports PAN India compliance.</span>
-</div>
+<span>Factory License mandatory for manufacturing units</span>
+<span>Pollution NOC required before operations</span>
+<span>Fire safety audit must be maintained</span>
+<span>Boiler inspection compulsory for units</span>
 </div>
 </div>
 
 <!-- HERO -->
 <div class="hero">
 
-<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc');"><div class="overlay"></div>Factory License Services</div>
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1517048676732-d65bc937f952');"><div class="overlay"></div>Industrial Compliance</div>
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122');"><div class="overlay"></div>Factory Registration</div>
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3');"><div class="overlay"></div>Government Approvals</div>
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581093458791-9d09f95d1d77');"><div class="overlay"></div>Pollution Compliance</div>
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1521790797524-b2497295b8a0');"><div class="overlay"></div>Fire & Electrical NOC</div>
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581090700227-1e8c7d4c7c8c');"><div class="overlay"></div>Boiler Approval</div>
+<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1581091012184-5c7c9f9f9f7b');"><div class="overlay"></div>Factory Registration</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');"><div class="overlay"></div>Factory License Approval</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581090700227-1e8c7d4c7c8c');"><div class="overlay"></div>Boiler Inspection & Approval</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581092919532-6f6d68d4d6d1');"><div class="overlay"></div>Electrical Safety Compliance</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1605152276897-4f618f831968');"><div class="overlay"></div>Pollution NOC (Air & Water)</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1590650046871-92c887180603');"><div class="overlay"></div>Fire Safety NOC</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581093458791-9d09f95d1d77');"><div class="overlay"></div>Factory Plan Approval</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc');"><div class="overlay"></div>Industrial Setup Compliance</div>
+
 <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1556761175-b413da4baf72');"><div class="overlay"></div>Legal Documentation</div>
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40');"><div class="overlay"></div>Industrial Setup</div>
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1554224154-26032ffc0d07');"><div class="overlay"></div>PAN India Services</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b');"><div class="overlay"></div>Inspection Handling</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581092335397-9583eb92d232');"><div class="overlay"></div>Labour Law Compliance</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40');"><div class="overlay"></div>PAN India Services</div>
 
 </div>
 
@@ -169,42 +149,36 @@ border-radius:6px;display:inline-block;margin-top:15px;
 <div class="container">
 
 <div class="left">
-
 <h2>Factory License Services</h2>
 
-<p>Factory License is mandatory under the Factories Act for running industrial operations legally.</p>
+<p>Factory License is required for industrial operations under the Factories Act. It ensures safety, compliance and legal business operations.</p>
 
 <h3>Our Services</h3>
 <ul>
 <li>Factory Registration</li>
 <li>Factory License & Renewal</li>
 <li>Factory Plan Approval</li>
-<li>Pollution NOC</li>
+<li>Pollution NOC (CTE/CTO)</li>
 <li>Fire NOC</li>
 <li>Boiler Approval</li>
 <li>Electrical Safety</li>
-<li>Lift NOC</li>
-<li>MSME Registration</li>
-<li>GST Registration</li>
-<li>Nivesh Mitra</li>
-<li>Labour Compliance</li>
 <li>Inspection Handling</li>
-<li>Documentation</li>
-<li>Government Liaisoning</li>
+<li>Labour Law Compliance</li>
+<li>Documentation Support</li>
+<li>Government Liaison</li>
+<li>Industrial Setup Guidance</li>
 </ul>
 
 <a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn">
 Get Free Consultation
 </a>
-
 </div>
 
 <div class="right">
 <h3>Our Services</h3>
-<a href="pf-esic.html">PF & ESIC</a>
-<a href="payroll.html">Payroll</a>
+<a href="pf-esic.html">PF & ESIC</a><br>
+<a href="payroll.html">Payroll</a><br>
 <a href="labour-law.html">Labour Law</a>
-<a href="recruitment.html">Recruitment</a>
 </div>
 
 </div>
