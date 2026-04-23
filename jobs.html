@@ -27,20 +27,20 @@ top:0;
 left:0;
 width:100%;
 background:#0a2a43;
-padding:14px 25px;
+padding:14px 30px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 z-index:999;
-box-shadow:0 4px 15px rgba(0,0,0,.15);
+box-shadow:0 4px 12px rgba(0,0,0,.18);
 }
 
 .logo{
 display:flex;
 align-items:center;
-gap:10px;
+gap:12px;
 color:#fff;
-font-size:20px;
+font-size:18px;
 font-weight:700;
 }
 
@@ -48,7 +48,6 @@ font-weight:700;
 width:42px;
 height:42px;
 border-radius:50%;
-object-fit:cover;
 }
 
 nav{
@@ -60,7 +59,7 @@ flex-wrap:wrap;
 nav a{
 color:#fff;
 text-decoration:none;
-padding:9px 13px;
+padding:10px 14px;
 border-radius:6px;
 font-size:14px;
 font-weight:600;
@@ -78,7 +77,7 @@ background:#123c5e;
 .newsbar{
 margin-top:78px;
 display:flex;
-height:46px;
+height:48px;
 overflow:hidden;
 }
 
@@ -103,8 +102,12 @@ align-items:center;
 .newsright span{
 display:inline-block;
 padding-left:100%;
-animation:news 40s linear infinite;
+animation:news 45s linear infinite;
 font-size:14px;
+}
+
+.newsright span:hover{
+animation-play-state:paused;
 }
 
 @keyframes news{
@@ -114,116 +117,67 @@ font-size:14px;
 
 /* HERO */
 .hero{
-height:70vh;
-position:relative;
-overflow:hidden;
-}
-
-.slide{
-position:absolute;
-width:100%;
-height:100%;
-top:0;
-left:0;
-background-size:cover;
-background-position:center;
-opacity:0;
-transition:1s;
-}
-
-.slide.active{
-opacity:1;
-}
-
-.overlay{
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.55);
-}
-
-.hero-text{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
+background:linear-gradient(135deg,#0a2a43,#123c5e);
+padding:60px 20px;
 text-align:center;
 color:#fff;
-z-index:2;
-width:90%;
 }
 
-.hero-text h1{
-font-size:52px;
+.hero h1{
+font-size:48px;
 margin-bottom:10px;
 }
 
-.hero-text p{
-font-size:22px;
+.hero p{
+font-size:20px;
 }
 
 /* MAIN */
 .container{
 max-width:1400px;
 margin:auto;
-padding:50px 20px;
+padding:40px 20px;
 display:grid;
 grid-template-columns:320px 1fr;
-gap:30px;
+gap:25px;
 }
 
 /* FILTER */
-.sidebar{
+.filter-box{
 background:#fff;
 padding:25px;
 border-radius:14px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+box-shadow:0 10px 20px rgba(0,0,0,.08);
 height:fit-content;
 }
 
-.sidebar h2{
+.filter-box h2{
 font-size:26px;
-color:#0a2a43;
-margin-bottom:20px;
-}
-
-.filter-group{
 margin-bottom:18px;
-}
-
-.filter-group label{
-display:block;
-font-weight:600;
-margin-bottom:8px;
 color:#0a2a43;
 }
 
-select{
+.filter-box select{
 width:100%;
 padding:12px;
+margin-bottom:15px;
 border:1px solid #ddd;
 border-radius:8px;
 font-size:14px;
 }
 
-/* JOBS */
-.jobs h2{
-font-size:34px;
-color:#0a2a43;
-margin-bottom:25px;
-}
-
+/* JOB GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:25px;
+gap:22px;
 }
 
 .card{
 background:#fff;
-padding:25px;
+padding:28px;
 border-radius:14px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+box-shadow:0 10px 24px rgba(0,0,0,.08);
 transition:.3s;
 }
 
@@ -234,19 +188,19 @@ transform:translateY(-8px);
 .card h3{
 font-size:24px;
 color:#0a2a43;
-margin-bottom:12px;
+margin-bottom:10px;
 }
 
 .meta{
 font-size:14px;
-color:#666;
+color:#555;
 line-height:1.8;
-margin-bottom:14px;
+margin-bottom:15px;
 }
 
 .card p{
 font-size:15px;
-line-height:1.7;
+line-height:1.8;
 margin-bottom:18px;
 }
 
@@ -261,15 +215,17 @@ font-size:14px;
 font-weight:600;
 }
 
-.nojobs{
-background:#fff;
-padding:35px;
-border-radius:14px;
-text-align:center;
-font-size:22px;
-font-weight:700;
-color:#ff5a1f;
+.btn:hover{
+background:#0098c7;
+}
+
+.nojob{
 display:none;
+font-size:28px;
+font-weight:700;
+text-align:center;
+padding:60px;
+color:#ff5a1f;
 }
 
 /* FOOTER */
@@ -278,26 +234,28 @@ background:#0a2a43;
 color:#fff;
 text-align:center;
 padding:22px;
-margin-top:30px;
+margin-top:40px;
 }
 
 /* MOBILE */
 @media(max-width:1000px){
+
 .container{
 grid-template-columns:1fr;
 }
-.hero-text h1{
-font-size:34px;
-}
-.hero-text p{
-font-size:16px;
-}
+
 header{
 flex-direction:column;
 gap:10px;
+padding:15px;
 }
+
 .newsbar{
 margin-top:130px;
+}
+
+.hero h1{
+font-size:34px;
 }
 }
 </style>
@@ -314,12 +272,11 @@ margin-top:130px;
 
 <nav>
 <a href="index.html">Home</a>
-<a href="about.html">About</a>
 <a href="services.html">Services</a>
 <a href="jobs.html">Jobs</a>
 <a href="contact.html">Contact</a>
-<a href="https://calendly.com/dreamhrtraining/30min" class="book">Book Meeting</a>
-<a href="https://wa.me/918863962310" class="whatsapp">WhatsApp</a>
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="book">Book Meeting</a>
+<a href="https://wa.me/918863962310" target="_blank" class="whatsapp">WhatsApp</a>
 <a href="javascript:history.back()" class="back">⬅ Back</a>
 </nav>
 
@@ -330,168 +287,169 @@ margin-top:130px;
 <div class="newsleft">Latest Updates</div>
 <div class="newsright">
 <span>
-Hiring Open • HR Intern Delhi • BDM Gurgaon • Accountant Noida • Lead Generator WFH • Sales Freelancer Open • HR Manager Mumbai • Talent Acquisition Bangalore • Apply Now
+Hiring Open • HR Intern • BDM • Lead Generator • Accountant • Payroll Executive • Compliance Manager • Senior HRBP • Sales Head • PAN India Hiring
 </span>
 </div>
 </div>
 
 <!-- HERO -->
 <section class="hero">
-
-<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216');"></div>
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978');"></div>
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3');"></div>
-
-<div class="overlay"></div>
-
-<div class="hero-text">
 <h1>Jobs & Hiring</h1>
-<p>Find Best Career Opportunities</p>
-</div>
-
+<p>Find Best Career Opportunities with Dream HR Consultancy</p>
 </section>
 
 <!-- MAIN -->
 <div class="container">
 
 <!-- FILTER -->
-<div class="sidebar">
+<div class="filter-box">
+<h2>Job Filters</h2>
 
-<h2>Filter Jobs</h2>
-
-<div class="filter-group">
-<label>Location</label>
-<select id="location" onchange="filterJobs()">
-<option>All State</option>
-<option>Delhi</option>
-<option>Gurgaon</option>
-<option>Noida</option>
-<option>Mumbai</option>
-<option>Bangalore</option>
-<option>Pune</option>
-<option>Remote</option>
+<select id="type" onchange="filterJobs()">
+<option value="">Job Type</option>
+<option>Full Time</option>
+<option>Internship</option>
+<option>Freelancer</option>
+<option>Work From Home</option>
 </select>
-</div>
 
-<div class="filter-group">
-<label>Position</label>
+<select id="state" onchange="filterJobs()">
+<option value="">All States</option>
+<option>Andhra Pradesh</option>
+<option>Arunachal Pradesh</option>
+<option>Assam</option>
+<option>Bihar</option>
+<option>Chhattisgarh</option>
+<option>Delhi</option>
+<option>Goa</option>
+<option>Gujarat</option>
+<option>Haryana</option>
+<option>Jharkhand</option>
+<option>Karnataka</option>
+<option>Kerala</option>
+<option>Madhya Pradesh</option>
+<option>Maharashtra</option>
+<option>Punjab</option>
+<option>Rajasthan</option>
+<option>Tamil Nadu</option>
+<option>Telangana</option>
+<option>Uttar Pradesh</option>
+<option>West Bengal</option>
+</select>
+
+<select id="industry" onchange="filterJobs()">
+<option value="">All Industries</option>
+<option>Advertising</option>
+<option>Aerospace</option>
+<option>Agriculture</option>
+<option>Automotive</option>
+<option>Banking</option>
+<option>Construction</option>
+<option>E-commerce</option>
+<option>Education</option>
+<option>Healthcare</option>
+<option>Hospitality</option>
+<option>Human Resources</option>
+<option>Information Technology</option>
+<option>Insurance</option>
+<option>Legal Services</option>
+<option>Logistics</option>
+<option>Manufacturing</option>
+<option>Oil and Gas</option>
+<option>Pharmaceutical</option>
+<option>Real Estate</option>
+<option>Retail</option>
+<option>Telecommunications</option>
+<option>Tourism</option>
+<option>Transportation</option>
+</select>
+
 <select id="position" onchange="filterJobs()">
-<option>All Position</option>
+<option value="">Position</option>
 <option>HR Intern</option>
 <option>BDM</option>
+<option>Freelancer</option>
 <option>Lead Generator</option>
 <option>Accountant</option>
-<option>HR Manager</option>
 <option>Payroll Executive</option>
-<option>Compliance Officer</option>
-<option>Talent Acquisition</option>
-<option>Sales Executive</option>
-<option>Recruiter</option>
-<option>Admin Executive</option>
-<option>100+ More Positions</option>
+<option>Compliance Manager</option>
+<option>Senior HRBP</option>
+<option>Sales Head</option>
 </select>
-</div>
-
-<div class="filter-group">
-<label>Department</label>
-<select id="dept" onchange="filterJobs()">
-<option>All Department</option>
-<option>HR</option>
-<option>Sales</option>
-<option>Accounts</option>
-<option>Compliance</option>
-<option>Recruitment</option>
-<option>Admin</option>
-</select>
-</div>
-
-<div class="filter-group">
-<label>Industry</label>
-<select id="industry" onchange="filterJobs()">
-<option>All Industry</option>
-<option>Consultancy</option>
-<option>Manufacturing</option>
-<option>IT</option>
-<option>Healthcare</option>
-<option>Retail</option>
-<option>BPO</option>
-</select>
-</div>
 
 </div>
 
 <!-- JOBS -->
-<div class="jobs">
+<div>
 
-<h2>Current Openings</h2>
+<div class="grid" id="jobsGrid">
 
-<div class="grid" id="jobGrid">
-
-<div class="card job" data-location="Delhi" data-position="HR Intern" data-dept="HR">
+<div class="card" data-type="Internship" data-state="Delhi" data-industry="Human Resources" data-position="HR Intern">
 <h3>HR Intern</h3>
-<div class="meta">
-📍 Delhi <br>
-💰 Stipend + Incentive <br>
-🎓 Freshers
-</div>
-<p>Learn HR operations, payroll, recruitment & compliance.</p>
+<div class="meta">📍 Delhi | ₹10k Stipend | Fresher</div>
+<p>HR operations, recruitment, joining formalities.</p>
 <a href="#" class="btn">Apply Now</a>
 </div>
 
-<div class="card job" data-location="Gurgaon" data-position="BDM" data-dept="Sales">
+<div class="card" data-type="Full Time" data-state="Delhi" data-industry="Business Consulting" data-position="BDM">
 <h3>Business Development Manager</h3>
-<div class="meta">
-📍 Gurgaon <br>
-💰 As Per Performance <br>
-💼 Experience Required
-</div>
-<p>B2B sales, client visits, corporate meetings.</p>
+<div class="meta">📍 Delhi NCR | Performance Based</div>
+<p>B2B sales for HR consultancy services.</p>
 <a href="#" class="btn">Apply Now</a>
 </div>
 
-<div class="card job" data-location="Remote" data-position="Lead Generator" data-dept="Sales">
+<div class="card" data-type="Freelancer" data-state="All" data-industry="Marketing Services" data-position="Freelancer">
+<h3>Freelancer Sales Partner</h3>
+<div class="meta">📍 PAN India | 10% Commission</div>
+<p>Generate business leads and close deals.</p>
+<a href="#" class="btn">Apply Now</a>
+</div>
+
+<div class="card" data-type="Work From Home" data-state="Delhi" data-industry="Digital Marketing" data-position="Lead Generator">
 <h3>Lead Generator</h3>
-<div class="meta">
-📍 Work From Home <br>
-💰 ₹20,000
-</div>
-<p>Generate B2B leads online and coordinate meetings.</p>
+<div class="meta">📍 Remote | ₹20,000</div>
+<p>Generate leads through online platforms.</p>
 <a href="#" class="btn">Apply Now</a>
 </div>
 
-<div class="card job" data-location="Noida" data-position="Accountant" data-dept="Accounts">
+<div class="card" data-type="Full Time" data-state="Noida" data-industry="Accounting" data-position="Accountant">
 <h3>Accountant</h3>
-<div class="meta">
-📍 Noida <br>
-💰 ₹28,000+
-</div>
-<p>GST, TDS, books & accounting entries.</p>
+<div class="meta">📍 Noida | ₹30,000</div>
+<p>Tally, GST, accounting entries.</p>
 <a href="#" class="btn">Apply Now</a>
 </div>
 
-<div class="card job" data-location="Mumbai" data-position="HR Manager" data-dept="HR">
-<h3>HR Manager</h3>
-<div class="meta">
-📍 Mumbai <br>
-💰 Negotiable
-</div>
-<p>Lead HR team and manpower planning.</p>
+<div class="card" data-type="Full Time" data-state="Gurgaon" data-industry="Payroll" data-position="Payroll Executive">
+<h3>Payroll Executive</h3>
+<div class="meta">📍 Gurgaon | ₹35,000</div>
+<p>Salary processing, PF ESIC deductions.</p>
 <a href="#" class="btn">Apply Now</a>
 </div>
 
-<div class="card job" data-location="Bangalore" data-position="Talent Acquisition" data-dept="Recruitment">
-<h3>Talent Acquisition</h3>
-<div class="meta">
-📍 Bangalore <br>
-💰 ₹45,000+
+<div class="card" data-type="Full Time" data-state="Mumbai" data-industry="Compliance" data-position="Compliance Manager">
+<h3>Compliance Manager</h3>
+<div class="meta">📍 Mumbai | ₹55,000</div>
+<p>Labour law and audit handling.</p>
+<a href="#" class="btn">Apply Now</a>
 </div>
-<p>Bulk hiring and executive recruitment.</p>
+
+<div class="card" data-type="Full Time" data-state="Bangalore" data-industry="Human Resources" data-position="Senior HRBP">
+<h3>Senior HRBP</h3>
+<div class="meta">📍 Bangalore | ₹80,000</div>
+<p>Strategic HR management role.</p>
+<a href="#" class="btn">Apply Now</a>
+</div>
+
+<div class="card" data-type="Full Time" data-state="Delhi" data-industry="Sales" data-position="Sales Head">
+<h3>Sales Head</h3>
+<div class="meta">📍 Delhi | ₹1 Lakh+</div>
+<p>Lead national sales team.</p>
 <a href="#" class="btn">Apply Now</a>
 </div>
 
 </div>
 
-<div class="nojobs" id="nojobs">No Jobs Available</div>
+<div class="nojob" id="nojob">No Jobs Available</div>
 
 </div>
 
@@ -502,45 +460,38 @@ Hiring Open • HR Intern Delhi • BDM Gurgaon • Accountant Noida • Lead Ge
 </footer>
 
 <script>
-
-/* HERO */
-let slides=document.querySelectorAll('.slide');
-let i=0;
-
-setInterval(()=>{
-slides[i].classList.remove('active');
-i=(i+1)%slides.length;
-slides[i].classList.add('active');
-},3000);
-
-/* FILTER */
 function filterJobs(){
 
-let location=document.getElementById("location").value;
-let position=document.getElementById("position").value;
-let dept=document.getElementById("dept").value;
+let type=document.getElementById("type").value.toLowerCase();
+let state=document.getElementById("state").value.toLowerCase();
+let industry=document.getElementById("industry").value.toLowerCase();
+let position=document.getElementById("position").value.toLowerCase();
 
-let jobs=document.querySelectorAll(".job");
+let cards=document.querySelectorAll(".card");
 let visible=0;
 
-jobs.forEach(job=>{
+cards.forEach(card=>{
 
-let show=true;
+let ctype=card.dataset.type.toLowerCase();
+let cstate=card.dataset.state.toLowerCase();
+let cindustry=card.dataset.industry.toLowerCase();
+let cposition=card.dataset.position.toLowerCase();
 
-if(location!="All State" && job.dataset.location!=location) show=false;
-if(position!="All Position" && job.dataset.position!=position && position!="100+ More Positions") show=false;
-if(dept!="All Department" && job.dataset.dept!=dept) show=false;
+let show=
+(type=="" || ctype.includes(type)) &&
+(state=="" || cstate.includes(state)) &&
+(industry=="" || cindustry.includes(industry)) &&
+(position=="" || cposition.includes(position));
 
-job.style.display=show?"block":"none";
+card.style.display=show?"block":"none";
 
 if(show) visible++;
 
 });
 
-document.getElementById("nojobs").style.display=visible==0?"block":"none";
+document.getElementById("nojob").style.display=visible==0?"block":"none";
 
 }
-
 </script>
 
 </body>
