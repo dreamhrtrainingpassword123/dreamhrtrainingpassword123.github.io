@@ -1,37 +1,490 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Factory License Services</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Factory License Services | Dream HR Consultancy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f7fb;
+color:#222;
+line-height:1.7;
+}
+
+/* HEADER */
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#0a2a43;
+padding:14px 28px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:9999;
+box-shadow:0 4px 12px rgba(0,0,0,.15);
+}
+
+.logo a{
+display:flex;
+align-items:center;
+gap:10px;
+text-decoration:none;
+color:#fff;
+font-size:22px;
+font-weight:700;
+}
+
+.logo img{
+height:42px;
+border-radius:6px;
+}
+
+nav{
+display:flex;
+gap:10px;
+align-items:center;
+flex-wrap:wrap;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+font-size:14px;
+padding:9px 12px;
+border-radius:6px;
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover{
+background:#133a58;
+}
+
+.book-btn{background:#00c6ff;}
+.whatsapp-btn{background:#25D366;}
+.back-btn{background:#ff5a1f;}
+
+/* NEWS BAR */
+.news-bar{
+margin-top:76px;
+display:flex;
+height:48px;
+overflow:hidden;
+border-top:2px solid #00c6ff;
+border-bottom:2px solid #00c6ff;
+}
+
+.news-title{
+background:#00c6ff;
+color:#fff;
+padding:12px 18px;
+font-weight:700;
+white-space:nowrap;
+}
+
+.news-scroll{
+flex:1;
+background:#08263b;
+overflow:hidden;
+display:flex;
+align-items:center;
+}
+
+.news-track{
+display:flex;
+width:max-content;
+animation:newsMove 42s linear infinite;
+}
+
+.news-track span{
+color:#fff;
+padding:0 35px;
+white-space:nowrap;
+font-size:14px;
+}
+
+.news-track:hover{
+animation-play-state:paused;
+}
+
+@keyframes newsMove{
+0%{transform:translateX(100%);}
+100%{transform:translateX(-100%);}
+}
+
+/* HERO */
+.hero{
+height:88vh;
+position:relative;
+overflow:hidden;
+}
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+top:0;
+left:0;
+background-size:cover;
+background-position:center;
+opacity:0;
+transition:1s;
+}
+
+.slide.active{
+opacity:1;
+}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.55);
+}
+
+.hero-text{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+color:#fff;
+width:90%;
+z-index:2;
+}
+
+.hero-text h1{
+font-size:56px;
+margin-bottom:15px;
+}
+
+.hero-text p{
+font-size:22px;
+}
+
+/* SECTION */
+.section{
+max-width:1250px;
+margin:auto;
+padding:60px 20px;
+}
+
+.section h2{
+text-align:center;
+font-size:36px;
+color:#0a2a43;
+margin-bottom:30px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:24px;
+}
+
+.card{
+background:#fff;
+padding:26px;
+border-radius:14px;
+box-shadow:0 8px 22px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+color:#0a2a43;
+font-size:22px;
+margin-bottom:12px;
+}
+
+.card p{
+font-size:14px;
+margin-bottom:14px;
+color:#444;
+}
+
+.btn{
+display:inline-block;
+background:#00c6ff;
+color:#fff;
+padding:10px 16px;
+text-decoration:none;
+border-radius:7px;
+font-size:14px;
+font-weight:600;
+}
+
+.btn:hover{
+background:#0098c7;
+}
+
+.info-box{
+background:#fff;
+padding:35px;
+border-radius:14px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+margin-top:30px;
+}
+
+.info-box ul{
+padding-left:20px;
+}
+
+.info-box li{
+margin-bottom:10px;
+}
+
+/* FOOTER */
+footer{
+background:#0a2a43;
+color:#fff;
+text-align:center;
+padding:25px;
+margin-top:40px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+header{
+flex-direction:column;
+gap:12px;
+padding:15px;
+}
+
+nav{
+justify-content:center;
+}
+
+.news-bar{
+margin-top:130px;
+}
+
+.hero{
+height:72vh;
+}
+
+.hero-text h1{
+font-size:34px;
+}
+
+.hero-text p{
+font-size:17px;
+}
+
+.section h2{
+font-size:28px;
+}
+}
+</style>
 </head>
 
 <body>
 
+<header>
+
+<div class="logo">
+<a href="index.html">
+<img src="logo.png">
+<span>Dream HR Consultancy</span>
+</a>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="jobs.html">Jobs</a>
+<a href="notifications.html">Notifications</a>
+<a href="contact.html">Contact</a>
+
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="book-btn">Book Meeting</a>
+
+<a href="https://wa.me/918863962310" target="_blank" class="whatsapp-btn">WhatsApp</a>
+
+<a href="javascript:history.back()" class="back-btn">⬅ Back</a>
+</nav>
+
+</header>
+
+<!-- NEWS -->
+<div class="news-bar">
+
+<div class="news-title">Latest Updates</div>
+
+<div class="news-scroll">
+<div class="news-track">
+
+<span>Factory License renewal due dates should be tracked to avoid penalties.</span>
+<span>Pollution Control Board Air & Water Consent filings updated in many states.</span>
+<span>Fire NOC inspection readiness is essential before operational approvals.</span>
+<span>Boiler registration & periodic certification required for covered units.</span>
+<span>Electrical Safety approvals for LT Panels & installations recommended.</span>
+<span>Nivesh Mitra portal applications active for multiple state approvals.</span>
+<span>MSME & GST registrations useful for operational and financial benefits.</span>
+<span>Health & Safety compliance records should be maintained properly.</span>
+<span>Lift approvals mandatory where industrial passenger/service lifts installed.</span>
+<span>Dream HR Consultancy supports PAN India factory compliance solutions.</span>
+
+</div>
+</div>
+
+</div>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc');"></div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1517048676732-d65bc937f952');"></div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122');"></div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3');"></div>
+
+<div class="overlay"></div>
+
+<div class="hero-text">
 <h1>Factory License Services</h1>
+<p>Registration • NOC • Renewals • Government Applications</p>
+</div>
 
-<p>
-Factory license is mandatory for manufacturing units under the Factories Act. Without proper registration and compliance, businesses may face legal action and shutdown risk.
-</p>
+</section>
 
-<h2>Why Factory License is Important</h2>
+<!-- SERVICES -->
+<section class="section">
+
+<h2>Our Factory Compliance Services</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Factory Registration</h3>
+<p>New unit registration under applicable Factory laws.</p>
+<a href="#" class="btn">Consult Now</a>
+</div>
+
+<div class="card">
+<h3>Factory License</h3>
+<p>New license, amendment, capacity update and renewals.</p>
+<a href="#" class="btn">Consult Now</a>
+</div>
+
+<div class="card">
+<h3>Pollution NOC</h3>
+<p>Air Consent, Water Consent, CTO and CTE support.</p>
+<a href="#" class="btn">Consult Now</a>
+</div>
+
+<div class="card">
+<h3>Fire NOC</h3>
+<p>Documentation, inspection coordination and approvals.</p>
+<a href="#" class="btn">Consult Now</a>
+</div>
+
+<div class="card">
+<h3>Boiler Approval</h3>
+<p>Registration, certification and inspection compliance.</p>
+<a href="#" class="btn">Consult Now</a>
+</div>
+
+<div class="card">
+<h3>Electrical Safety</h3>
+<p>LT Panel, transformer, wiring and safety approvals.</p>
+<a href="#" class="btn">Consult Now</a>
+</div>
+
+<div class="card">
+<h3>Lift NOC</h3>
+<p>Industrial lift registration and periodic certification.</p>
+<a href="#" class="btn">Consult Now</a>
+</div>
+
+<div class="card">
+<h3>MSME / Udyam</h3>
+<p>Udyam registration and enterprise documentation.</p>
+<a href="#" class="btn">Consult Now</a>
+</div>
+
+<div class="card">
+<h3>GST Registration</h3>
+<p>GST new registration, amendment and compliance help.</p>
+<a href="#" class="btn">Consult Now</a>
+</div>
+
+<div class="card">
+<h3>Nivesh Mitra</h3>
+<p>Online approvals and state portal filing support.</p>
+<a href="#" class="btn">Consult Now</a>
+</div>
+
+<div class="card">
+<h3>Health & Safety</h3>
+<p>Registers, policies and workplace safety guidance.</p>
+<a href="#" class="btn">Consult Now</a>
+</div>
+
+<div class="card">
+<h3>Legal Documentation</h3>
+<p>All industrial applications, forms and file preparation.</p>
+<a href="#" class="btn">Consult Now</a>
+</div>
+
+</div>
+
+<div class="info-box">
+
+<h2 style="text-align:left;font-size:28px;">Why Choose Dream HR Consultancy?</h2>
+
 <ul>
-<li>Legal requirement for factories</li>
-<li>Avoid penalties and closure</li>
-<li>Ensure worker safety compliance</li>
-<li>Smooth business operations</li>
+<li>PAN India factory compliance support</li>
+<li>Expert documentation & application team</li>
+<li>Fast processing & renewal reminders</li>
+<li>Government portal handling support</li>
+<li>Affordable packages for startups to corporates</li>
+<li>Dedicated support on WhatsApp & call</li>
 </ul>
 
-<h2>Our Services Include</h2>
-<ul>
-<li>Factory license registration</li>
-<li>Renewal of license</li>
-<li>Documentation support</li>
-<li>Compliance advisory</li>
-</ul>
+<br>
 
-<p>📞 Get your factory license processed quickly.</p>
-<a class="call" href="tel:8863962320">📞 Call Now</a>
-<a class="whatsapp" href="https://wa.me/918863962320">💬 WhatsApp</a>
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn">
+Book Free Consultation
+</a>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Dream HR Consultancy | support@idhrt.com | +91 8863962310
+</footer>
+
+<script>
+let slides=document.querySelectorAll('.slide');
+let i=0;
+
+setInterval(()=>{
+slides[i].classList.remove('active');
+i=(i+1)%slides.length;
+slides[i].classList.add('active');
+},3000);
+</script>
 
 </body>
 </html>
