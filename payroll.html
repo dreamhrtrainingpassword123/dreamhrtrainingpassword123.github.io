@@ -65,23 +65,9 @@ font-size:15px;
 font-weight:500;
 }
 
-.book-btn{
-background:#00c6ff;
-padding:10px 14px;
-border-radius:6px;
-}
-
-.whatsapp-btn{
-background:#25D366;
-padding:10px 14px;
-border-radius:6px;
-}
-
-.back-btn{
-background:#ff5722;
-padding:10px 14px;
-border-radius:6px;
-}
+.book-btn{background:#00c6ff;padding:10px 14px;border-radius:6px;}
+.whatsapp-btn{background:#25D366;padding:10px 14px;border-radius:6px;}
+.back-btn{background:#ff5722;padding:10px 14px;border-radius:6px;}
 
 /* NEWS BAR */
 .news-bar{
@@ -115,7 +101,7 @@ align-items:center;
 .news-track{
 display:flex;
 width:max-content;
-animation:moveNews 28s linear infinite;
+animation:moveNews 38s linear infinite;
 }
 
 .news-track:hover{
@@ -160,9 +146,7 @@ opacity:0;
 transition:1s;
 }
 
-.slide.active{
-opacity:1;
-}
+.slide.active{opacity:1;}
 
 .overlay{
 position:absolute;
@@ -180,39 +164,24 @@ display:flex;
 gap:30px;
 }
 
-.left{
-flex:2;
+.left,.right{
 background:#fff;
 padding:30px;
 border-radius:12px;
 box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
-.right{
-flex:1;
-background:#fff;
-padding:25px;
-border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
+.left{flex:2;}
+.right{flex:1;}
 
 h2,h3{
 color:#0a2a43;
 margin-bottom:15px;
 }
 
-p{
-margin-bottom:14px;
-}
-
-ul{
-padding-left:20px;
-margin-bottom:18px;
-}
-
-li{
-margin-bottom:8px;
-}
+p{margin-bottom:14px;}
+ul{padding-left:20px;margin-bottom:18px;}
+li{margin-bottom:8px;}
 
 .btn{
 background:#00c6ff;
@@ -241,39 +210,11 @@ margin-top:20px;
 font-size:14px;
 }
 
-/* MOBILE */
 @media(max-width:992px){
-
-nav{
-flex-direction:column;
-gap:10px;
-}
-
-.hero{
-height:65vh;
-}
-
-.slide{
-font-size:28px;
-}
-
-.container{
-flex-direction:column;
-}
-
-.logo a{
-font-size:18px;
-}
-
-.news-title{
-font-size:13px;
-padding:10px;
-}
-
-.news-track span{
-font-size:13px;
-padding:0 22px;
-}
+.container{flex-direction:column;}
+.slide{font-size:28px;}
+.logo a{font-size:18px;}
+nav{gap:10px;}
 }
 </style>
 </head>
@@ -281,7 +222,6 @@ padding:0 22px;
 <body>
 
 <header>
-
 <div class="logo">
 <a href="index.html">
 <img src="logo.png">
@@ -296,23 +236,16 @@ padding:0 22px;
 <a href="jobs.html">Jobs</a>
 <a href="notifications.html">Notifications</a>
 <a href="contact.html">Contact</a>
-
 <a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="book-btn">Book Meeting</a>
-
 <a href="https://wa.me/918863962310" target="_blank" class="whatsapp-btn">WhatsApp</a>
-
 <a href="javascript:history.back()" class="back-btn">⬅ Back</a>
 </nav>
-
 </header>
 
-<!-- PAYROLL UPDATES -->
 <div class="news-bar">
 <div class="news-title">Latest Updates</div>
-
 <div class="news-scroll">
 <div class="news-track">
-
 <span>Payroll Alert: Salary processing calendar finalize before month-end closing.</span>
 <span>Compliance Update: PF, ESIC and TDS deductions must reflect correctly in payroll.</span>
 <span>HR Advisory: Full & Final settlement delays may impact employee experience.</span>
@@ -324,24 +257,15 @@ padding:0 22px;
 <span>Management Update: MIS payroll reports help cost planning decisions.</span>
 <span>Dream HR Update: PAN India outsourced payroll support available.</span>
 
-<!-- duplicate for continuous flow -->
-
 <span>Payroll Alert: Salary processing calendar finalize before month-end closing.</span>
 <span>Compliance Update: PF, ESIC and TDS deductions must reflect correctly in payroll.</span>
 <span>HR Advisory: Full & Final settlement delays may impact employee experience.</span>
 <span>Payroll Update: Maintain leave balance sync with attendance records monthly.</span>
 <span>Audit Note: Payslip structure should match appointment letter CTC breakup.</span>
-<span>Process Alert: Overtime and incentive data verify before salary release.</span>
-<span>Tax Update: Investment declarations should be collected timely from employees.</span>
-<span>Best Practice: Secure payroll data with restricted confidential access.</span>
-<span>Management Update: MIS payroll reports help cost planning decisions.</span>
-<span>Dream HR Update: PAN India outsourced payroll support available.</span>
-
 </div>
 </div>
 </div>
 
-<!-- HERO -->
 <div class="hero">
 
 <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40');">
@@ -366,23 +290,16 @@ Accurate Payroll Solutions
 
 </div>
 
-<!-- CONTENT -->
 <div class="container">
 
 <div class="left">
-
 <h2>Payroll Management Services</h2>
 
-<p>
-Payroll is one of the most critical functions in every company. Errors in salary processing, deductions, attendance or statutory compliance can create employee disputes and penalties.
-</p>
+<p>Payroll is one of the most critical functions in every company. Errors in salary processing, deductions, attendance or statutory compliance can create employee disputes and penalties.</p>
 
-<p>
-Dream HR Consultancy provides accurate and timely payroll solutions for startups, SMEs and large organizations across India.
-</p>
+<p>Dream HR Consultancy provides accurate and timely payroll solutions for startups, SMEs and large organizations across India.</p>
 
 <h3>Our Payroll Services</h3>
-
 <ul>
 <li>Monthly Salary Processing</li>
 <li>Payslip Generation</li>
@@ -394,14 +311,10 @@ Dream HR Consultancy provides accurate and timely payroll solutions for startups
 <li>Multi-location Payroll Support</li>
 </ul>
 
-<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn">
-Book Free Consultation
-</a>
-
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn">Book Free Consultation</a>
 </div>
 
 <div class="right">
-
 <h3>Our Services</h3>
 
 <a href="pf-esic.html">PF & ESIC Compliance</a>
@@ -414,7 +327,6 @@ Book Free Consultation
 <div class="notice">
 Professional payroll outsourcing support available for startups, SMEs & corporates.
 </div>
-
 </div>
 
 </div>
