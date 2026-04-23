@@ -27,7 +27,7 @@ top:0;
 left:0;
 width:100%;
 height:72px;
-background:#082842;
+background:#0a2a43;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -90,29 +90,32 @@ position:fixed;
 top:72px;
 left:0;
 width:100%;
-height:38px;
-background:#ffc107;
+height:40px;
+background:#123a59;
 z-index:99998;
 display:flex;
 align-items:center;
 overflow:hidden;
+border-top:1px solid rgba(255,255,255,.08);
 }
 
 .news-label{
-width:180px;
-min-width:180px;
-height:38px;
-background:#e0a800;
+width:190px;
+min-width:190px;
+height:40px;
+background:#082842;
 color:#fff;
 font-weight:700;
 display:flex;
 align-items:center;
 justify-content:center;
+font-size:14px;
+letter-spacing:.5px;
 }
 
 .news-track{
 flex:1;
-height:38px;
+height:40px;
 overflow:hidden;
 position:relative;
 }
@@ -120,10 +123,12 @@ position:relative;
 .news-text{
 position:absolute;
 white-space:nowrap;
-line-height:38px;
-font-weight:700;
+line-height:40px;
+font-weight:600;
+color:#fff;
 left:100%;
-animation:ticker 16s linear infinite;
+animation:ticker 18s linear infinite;
+font-size:14px;
 }
 
 @keyframes ticker{
@@ -133,7 +138,7 @@ animation:ticker 16s linear infinite;
 
 /* HERO */
 .hero{
-margin-top:110px;
+margin-top:112px;
 height:88vh;
 position:relative;
 overflow:hidden;
@@ -190,7 +195,7 @@ box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
 h2,h3{
-color:#082842;
+color:#0a2a43;
 margin-bottom:15px;
 }
 
@@ -224,7 +229,7 @@ color:#082842;
 .note{
 margin-top:18px;
 padding:12px;
-background:#fff3cd;
+background:#eef7ff;
 border-radius:8px;
 }
 
@@ -247,7 +252,7 @@ top:125px;
 }
 
 .hero{
-margin-top:163px;
+margin-top:165px;
 height:60vh;
 }
 
@@ -266,7 +271,7 @@ font-size:18px;
 .news-label{
 width:130px;
 min-width:130px;
-font-size:13px;
+font-size:12px;
 }
 }
 </style>
@@ -297,7 +302,7 @@ Dream HR Consultancy
 
 <!-- NEWS -->
 <div class="news">
-<div class="news-label">Latest Updates</div>
+<div class="news-label">LATEST UPDATES</div>
 <div class="news-track">
 <div class="news-text" id="tickerText"></div>
 </div>
@@ -331,25 +336,24 @@ Dream HR Consultancy
 <h2>PF & ESIC Compliance Services</h2>
 
 <p>
-Employees Provident Fund and Employees State Insurance compliance is essential for eligible establishments.
-Wrong filing may lead to notices, damages and penalties.
+PF and ESIC compliance requires timely registration, accurate monthly filings,
+proper records management and readiness for statutory inspections.
 </p>
 
 <p>
-Dream HR Consultancy supports businesses with registration, monthly filing, claims,
-inspections and PAN India compliance management.
+Dream HR Consultancy supports establishments with structured compliance systems,
+risk control and professional documentation standards.
 </p>
 
-<h3>Our Services</h3>
+<h3>Core Services</h3>
 
 <ul>
-<li>PF Registration</li>
-<li>ESIC Registration</li>
-<li>Monthly Challan Filing</li>
-<li>Returns Submission</li>
-<li>Inspection Support</li>
-<li>Claims Assistance</li>
-<li>UAN KYC Support</li>
+<li>PF Registration & Amendments</li>
+<li>ESIC Registration & Sub Code Support</li>
+<li>Monthly Challan Processing</li>
+<li>Returns Filing & Records Management</li>
+<li>Inspection Response Support</li>
+<li>UAN KYC & Claim Assistance</li>
 <li>Compliance Registers Maintenance</li>
 </ul>
 
@@ -370,7 +374,7 @@ Book Free Consultation
 <a href="contact.html">Contact Us</a>
 
 <div class="note">
-Need urgent help? WhatsApp our team now.
+Professional support available for compliance planning and documentation review.
 </div>
 
 </div>
@@ -379,7 +383,7 @@ Need urgent help? WhatsApp our team now.
 
 <script>
 
-/* HERO SLIDER */
+/* HERO */
 let slides=document.querySelectorAll(".slide");
 let i=0;
 
@@ -391,28 +395,39 @@ slides[i].classList.add("active");
 
 /* NEWS */
 const updates = [
-"PF Update: Keep UAN KYC completed with Aadhaar PAN and Bank details.",
-"ESIC Update: Employer 3.25% and Employee 0.75% contribution rates.",
-"Compliance Alert: Delay in challan may attract interest and penalty.",
-"PF Filing Update: Form 5A details should be updated regularly.",
-"Digital Update: DSC and e-Sign useful for online approvals.",
-"UAN Update: Face authentication service available.",
-"Family Benefit: Eligible dependents can get benefits as per rules.",
-"HR Advisory: New joinee and exit records update timely.",
-"Registers Update: Maintain wage attendance challans records.",
-"Dream HR Update: PAN India PF ESIC support available."
+
+"EPFO Advisory: Employers should ensure Aadhaar seeded UAN records to avoid delays in transfer, claim and verification processes.",
+
+"Compliance Control: Monthly PF and ESIC challans should be reconciled with payroll records before statutory due dates.",
+
+"Records Governance: Attendance, wage registers, contribution sheets and inspection files must remain updated and accessible.",
+
+"Digital Filing Update: DSC and authorised signatory credentials should remain active for uninterrupted portal submissions.",
+
+"Inspection Readiness: Establishments are advised to maintain employee onboarding, exit and wage trail documentation.",
+
+"ESIC Advisory: Employee family particulars should be reviewed periodically for eligible medical benefit continuity.",
+
+"Payroll Accuracy Alert: Contribution wages, arrears entries and joining dates should be validated before upload.",
+
+"Employer Governance: Form 5A ownership and management details should reflect current control structure.",
+
+"Risk Advisory: Delayed remittance may attract interest, damages and avoidable compliance exposure.",
+
+"Operational Standard: Multi-location establishments should maintain branch-wise compliance trackers and filing calendars."
+
 ];
 
 let n=0;
 let ticker=document.getElementById("tickerText");
 
 function runNews(){
-ticker.innerHTML = updates[n];
+ticker.innerHTML=updates[n];
 n=(n+1)%updates.length;
 }
 
 runNews();
-setInterval(runNews,16000);
+setInterval(runNews,18000);
 
 </script>
 
