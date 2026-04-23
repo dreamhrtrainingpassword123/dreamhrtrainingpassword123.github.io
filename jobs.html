@@ -32,7 +32,7 @@ padding:14px 30px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-z-index:999;
+z-index:9999;
 box-shadow:0 4px 12px rgba(0,0,0,.18);
 }
 
@@ -41,7 +41,7 @@ display:flex;
 align-items:center;
 gap:12px;
 color:#fff;
-font-size:16px;
+font-size:18px;
 font-weight:700;
 }
 
@@ -77,10 +77,13 @@ background:#123c5e;
 
 /* NEWS */
 .newsbar{
-margin-top:72px;
+margin-top:74px;
 display:flex;
 height:48px;
 overflow:hidden;
+position:sticky;
+top:74px;
+z-index:999;
 }
 
 .newsleft{
@@ -96,21 +99,29 @@ background:#08263b;
 color:#fff;
 flex:1;
 overflow:hidden;
-white-space:nowrap;
 display:flex;
 align-items:center;
 }
 
-.newsright span{
-display:inline-block;
-padding-left:100%;
-animation:news 28s linear infinite;
+.track{
+display:flex;
+width:max-content;
+animation:news 34s linear infinite;
+}
+
+.track:hover{
+animation-play-state:paused;
+}
+
+.track span{
+white-space:nowrap;
+padding:0 28px;
 font-size:14px;
 }
 
 @keyframes news{
 0%{transform:translateX(0);}
-100%{transform:translateX(-100%);}
+100%{transform:translateX(-50%);}
 }
 
 /* HERO */
@@ -140,7 +151,7 @@ opacity:1;
 position:absolute;
 width:100%;
 height:100%;
-background:rgba(0,0,0,.55);
+background:rgba(0,0,0,.58);
 }
 
 .hero-text{
@@ -165,14 +176,14 @@ font-size:22px;
 
 /* JOB SECTION */
 .container{
-max-width:1300px;
+max-width:1350px;
 margin:auto;
 padding:60px 20px;
 }
 
 .title{
 text-align:center;
-font-size:40px;
+font-size:42px;
 font-weight:700;
 color:#0a2a43;
 margin-bottom:35px;
@@ -254,6 +265,7 @@ justify-content:center;
 
 .newsbar{
 margin-top:130px;
+top:130px;
 }
 
 .hero-text h1{
@@ -292,11 +304,23 @@ font-size:17px;
 
 <!-- NEWS -->
 <div class="newsbar">
-<div class="newsleft">Latest Updates</div>
+<div class="newsleft">Latest Hiring</div>
 <div class="newsright">
-<span>
-🔥 HR Executive Hiring Open • Payroll Manager Required • Apply Today • Freshers Can Apply • Walk-In Interviews • Resume Send on support@idhrt.com • Dream HR Consultancy Welcomes You
-</span>
+<div class="track">
+<span>HR Intern Hiring Open</span>
+<span>BDM Required for B2B Corporate Sales</span>
+<span>Lead Generator Work From Home</span>
+<span>Accountant Vacancy Open</span>
+<span>Operations Manager Hiring</span>
+<span>Regional Head Positions Open</span>
+<span>Freshers & Experienced Both Can Apply</span>
+<span>Send Resume: support@idhrt.com</span>
+
+<span>HR Intern Hiring Open</span>
+<span>BDM Required for B2B Corporate Sales</span>
+<span>Lead Generator Work From Home</span>
+<span>Accountant Vacancy Open</span>
+</div>
 </div>
 </div>
 
@@ -304,16 +328,15 @@ font-size:17px;
 <section class="hero">
 
 <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216');"></div>
-
 <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978');"></div>
-
 <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3');"></div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40');"></div>
 
 <div class="overlay"></div>
 
 <div class="hero-text">
 <h1>Jobs & Hiring</h1>
-<p>Find HR, Payroll & Compliance Career Opportunities</p>
+<p>Grow Your Career With Dream HR Consultancy</p>
 </div>
 
 </section>
@@ -321,52 +344,107 @@ font-size:17px;
 <!-- JOB LIST -->
 <div class="container">
 
-<div class="title">Current Openings</div>
+<div class="title">Current Openings (9 Positions)</div>
 
 <div class="grid">
 
 <div class="card">
-<h3>HR Executive</h3>
-<div class="meta">
-📍 Delhi NCR<br>
-💼 Experience: 1-3 Years<br>
-💰 Salary: ₹18,000 - ₹28,000
-</div>
-<p>Handle attendance, joining formalities, documentation and employee support.</p>
-<a href="mailto:support@idhrt.com?subject=Apply for HR Executive" class="btn">Apply Now</a>
-</div>
-
-<div class="card">
-<h3>Payroll Executive</h3>
-<div class="meta">
-📍 Remote / Delhi<br>
-💼 Experience: 2+ Years<br>
-💰 Salary: ₹22,000 - ₹35,000
-</div>
-<p>Salary processing, payslips, PF ESIC deductions and MIS reports.</p>
-<a href="mailto:support@idhrt.com?subject=Apply for Payroll Executive" class="btn">Apply Now</a>
-</div>
-
-<div class="card">
-<h3>Compliance Officer</h3>
-<div class="meta">
-📍 Gurgaon<br>
-💼 Experience: 2-5 Years<br>
-💰 Salary: Negotiable
-</div>
-<p>PF ESIC returns, labour law registers, inspections and licences.</p>
-<a href="mailto:support@idhrt.com?subject=Apply for Compliance Officer" class="btn">Apply Now</a>
-</div>
-
-<div class="card">
 <h3>HR Intern</h3>
 <div class="meta">
-📍 Work From Office<br>
-🎓 Freshers Welcome<br>
-💰 Stipend Available
+📍 Delhi / Noida<br>
+🎓 Fresher Welcome<br>
+💰 Stipend: As Per Interview
 </div>
-<p>Learn practical HR operations, recruitment and payroll systems.</p>
-<a href="mailto:support@idhrt.com?subject=Apply for HR Intern" class="btn">Apply Now</a>
+<p>Assist recruitment, joining formalities, HR records, employee coordination.</p>
+<a href="mailto:support@idhrt.com?subject=Apply HR Intern" class="btn">Apply Now</a>
+</div>
+
+<div class="card">
+<h3>Business Development Manager (BDM)</h3>
+<div class="meta">
+📍 Delhi NCR / Gurgaon / Noida<br>
+💼 Experience: 2+ Years<br>
+💰 Salary: As Per Performance
+</div>
+<p>Visit companies, industries and corporates. Present HR, Payroll, PF ESIC & Compliance services to HR, Owners, Admin and Management teams.</p>
+<a href="mailto:support@idhrt.com?subject=Apply BDM" class="btn">Apply Now</a>
+</div>
+
+<div class="card">
+<h3>Freelancer - B2B Sales</h3>
+<div class="meta">
+📍 Pan India<br>
+💼 Experience: Sales Preferred<br>
+💰 Earnings: 10% of Total Sale
+</div>
+<p>Generate business leads and close service deals independently.</p>
+<a href="mailto:support@idhrt.com?subject=Apply Freelancer Sales" class="btn">Apply Now</a>
+</div>
+
+<div class="card">
+<h3>Lead Generator (WFH)</h3>
+<div class="meta">
+📍 Work From Home<br>
+💼 Experience: 1+ Year<br>
+💰 Salary: ₹20,000
+</div>
+<p>Generate qualified B2B leads via calling, LinkedIn, emails and research.</p>
+<a href="mailto:support@idhrt.com?subject=Apply Lead Generator" class="btn">Apply Now</a>
+</div>
+
+<div class="card">
+<h3>Accountant</h3>
+<div class="meta">
+📍 Delhi / Noida<br>
+💼 Experience: 2+ Years<br>
+💰 Salary: ₹25,000+
+</div>
+<p>GST basics, vouchers, reconciliations, TDS, bookkeeping and reports.</p>
+<a href="mailto:support@idhrt.com?subject=Apply Accountant" class="btn">Apply Now</a>
+</div>
+
+<div class="card">
+<h3>Senior Accountant</h3>
+<div class="meta">
+📍 Gurgaon / Mumbai<br>
+💼 Experience: 4+ Years<br>
+💰 Salary: Negotiable
+</div>
+<p>Finalization, MIS, taxation support and team handling.</p>
+<a href="mailto:support@idhrt.com?subject=Apply Senior Accountant" class="btn">Apply Now</a>
+</div>
+
+<div class="card">
+<h3>Operations Manager</h3>
+<div class="meta">
+📍 Bangalore / Delhi<br>
+💼 Experience: 5+ Years<br>
+💰 Salary: Best in Industry
+</div>
+<p>Manage client operations, team productivity and service delivery.</p>
+<a href="mailto:support@idhrt.com?subject=Apply Operations Manager" class="btn">Apply Now</a>
+</div>
+
+<div class="card">
+<h3>Regional Sales Head</h3>
+<div class="meta">
+📍 Mumbai / Bangalore<br>
+💼 Experience: 6+ Years<br>
+💰 Salary: Performance Based
+</div>
+<p>Lead city sales teams and drive corporate service acquisition.</p>
+<a href="mailto:support@idhrt.com?subject=Apply Regional Head" class="btn">Apply Now</a>
+</div>
+
+<div class="card">
+<h3>Compliance Manager</h3>
+<div class="meta">
+📍 Delhi NCR<br>
+💼 Experience: 4+ Years<br>
+💰 Salary: Negotiable
+</div>
+<p>PF ESIC, labour law audits, licenses, inspections and advisory handling.</p>
+<a href="mailto:support@idhrt.com?subject=Apply Compliance Manager" class="btn">Apply Now</a>
 </div>
 
 </div>
