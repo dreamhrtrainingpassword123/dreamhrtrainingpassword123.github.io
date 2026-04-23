@@ -36,12 +36,6 @@ z-index:9999;
 box-shadow:0 4px 15px rgba(0,0,0,0.15);
 }
 
-.logo-area{
-display:flex;
-flex-direction:column;
-align-items:flex-start;
-}
-
 .logo a{
 display:flex;
 align-items:center;
@@ -57,24 +51,6 @@ height:42px;
 border-radius:6px;
 }
 
-/* NEW BACK BUTTON */
-.back-left{
-margin-top:8px;
-display:inline-block;
-background:#ff5722;
-color:#fff;
-text-decoration:none;
-padding:7px 14px;
-border-radius:6px;
-font-size:14px;
-font-weight:600;
-transition:0.3s;
-}
-
-.back-left:hover{
-background:#e64a19;
-}
-
 nav{
 display:flex;
 align-items:center;
@@ -86,7 +62,7 @@ color:#fff;
 text-decoration:none;
 font-size:15px;
 font-weight:500;
-transition:0.3s;
+transition:.3s;
 }
 
 nav a:hover{
@@ -97,14 +73,12 @@ color:#00c6ff;
 background:#00c6ff;
 padding:10px 15px;
 border-radius:6px;
-font-weight:600;
 }
 
 .whatsapp-btn{
 background:#25D366;
 padding:10px 15px;
 border-radius:6px;
-font-weight:600;
 }
 
 .menu-toggle{
@@ -117,7 +91,7 @@ cursor:pointer;
 /* HERO */
 .hero{
 height:90vh;
-margin-top:90px;
+margin-top:72px;
 position:relative;
 overflow:hidden;
 }
@@ -129,13 +103,13 @@ height:100%;
 background-size:cover;
 background-position:center;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
-padding:20px;
 font-size:42px;
 font-weight:700;
 color:#fff;
+padding:20px;
 opacity:0;
 transition:1s;
 }
@@ -148,24 +122,51 @@ opacity:1;
 position:absolute;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.55);
+background:rgba(0,0,0,.55);
+}
+
+/* NEW PREMIUM BACK BUTTON */
+.back-wrap{
+max-width:1200px;
+margin:auto;
+position:relative;
+}
+
+.back-btn{
+position:absolute;
+top:-32px;
+left:20px;
+background:#ffffff;
+color:#0a2a43;
+padding:12px 22px;
+border-radius:40px;
+text-decoration:none;
+font-weight:700;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+transition:.3s;
+z-index:999;
+}
+
+.back-btn:hover{
+background:#0a2a43;
+color:#fff;
+transform:translateY(-2px);
 }
 
 /* CONTENT */
 .container{
 max-width:1200px;
 margin:auto;
-padding:40px 20px;
+padding:60px 20px 40px;
 display:flex;
 gap:30px;
-align-items:flex-start;
 }
 
 .left{
 flex:2;
 background:#fff;
 padding:30px;
-border-radius:12px;
+border-radius:14px;
 box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
@@ -173,18 +174,13 @@ box-shadow:0 10px 25px rgba(0,0,0,.08);
 flex:1;
 background:#fff;
 padding:25px;
-border-radius:12px;
+border-radius:14px;
 box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
-h2{
+h2,h3{
 color:#0a2a43;
 margin-bottom:15px;
-}
-
-h3{
-color:#0a2a43;
-margin:25px 0 12px;
 }
 
 p{
@@ -207,16 +203,16 @@ padding:12px 22px;
 display:inline-block;
 text-decoration:none;
 border-radius:6px;
-margin-top:15px;
 font-weight:600;
+margin-top:10px;
 }
 
 .right a{
 display:block;
 padding:10px 0;
 border-bottom:1px solid #eee;
-color:#0a2a43;
 text-decoration:none;
+color:#0a2a43;
 }
 
 .notice{
@@ -236,14 +232,13 @@ display:block;
 
 nav{
 position:absolute;
-top:95px;
+top:72px;
 left:0;
 width:100%;
 background:#0a2a43;
 display:none;
 flex-direction:column;
 padding:20px;
-gap:15px;
 }
 
 nav.show{
@@ -262,8 +257,11 @@ font-size:28px;
 font-size:18px;
 }
 
-.hero{
-margin-top:110px;
+.back-btn{
+left:15px;
+top:-25px;
+padding:10px 16px;
+font-size:14px;
 }
 }
 </style>
@@ -273,24 +271,18 @@ margin-top:110px;
 
 <header>
 
-<div class="logo-area">
-
 <div class="logo">
 <a href="index.html">
-<img src="logo.png" alt="Logo">
+<img src="logo.png">
 <span>Dream HR Consultancy</span>
 </a>
-</div>
-
-<a href="javascript:history.back()" class="back-left">⬅ Back</a>
-
 </div>
 
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
 <nav id="navbar">
 <a href="index.html">Home</a>
-<a href="about.html">About Us</a>
+<a href="about.html">About</a>
 <a href="services.html">Services</a>
 <a href="jobs.html">Jobs</a>
 <a href="news.html">Notifications</a>
@@ -328,6 +320,11 @@ Business Compliance Solutions
 
 </div>
 
+<!-- BACK BUTTON -->
+<div class="back-wrap">
+<a href="javascript:history.back()" class="back-btn">⬅ Back</a>
+</div>
+
 <!-- CONTENT -->
 <div class="container">
 
@@ -336,22 +333,22 @@ Business Compliance Solutions
 <h2>PF & ESIC Compliance Services</h2>
 
 <p>
-The objectives of the Employees Provident Fund Act, 1952 and Employees State Insurance Act, 1948 are to provide social security benefits to employees and workers.
+The objectives of EPF Act 1952 and ESI Act 1948 are to provide social security benefits to employees and workers.
 </p>
 
 <p>
-Dream HR Consultancy is professionally equipped to manage PAN India statutory compliances and become your trusted strategic partner.
+Dream HR Consultancy helps organizations maintain complete statutory compliance across India.
 </p>
 
 <h3>Our Services</h3>
 
 <ul>
-<li>EPF & ESI Registration / Amendments</li>
+<li>EPF / ESI Registration</li>
 <li>Monthly Challan Processing</li>
-<li>PF Transfer / Withdrawal Support</li>
-<li>ESI Claim Assistance</li>
-<li>Inspection Handling</li>
+<li>Inspection Support</li>
 <li>Returns & Registers</li>
+<li>Claim Assistance</li>
+<li>PAN India Support</li>
 </ul>
 
 <a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn">
@@ -364,12 +361,12 @@ Book Free Consultation
 
 <h3>Our Services</h3>
 
-<a href="pf-esic.html">PF & ESIC Compliance</a>
-<a href="payroll.html">Payroll Processing</a>
-<a href="factory.html">Factory Act Compliance</a>
-<a href="labour-law.html">Labour Law Licensing</a>
-<a href="audit.html">Compliance Audit</a>
-<a href="contact.html">Contact Us</a>
+<a href="pf-esic.html">PF & ESIC</a>
+<a href="payroll.html">Payroll</a>
+<a href="labour-law.html">Labour Law</a>
+<a href="factory.html">Factory</a>
+<a href="audit.html">Audit</a>
+<a href="contact.html">Contact</a>
 
 <div class="notice">
 <strong>News:</strong><br>
