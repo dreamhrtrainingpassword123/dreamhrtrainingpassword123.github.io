@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PF ESIC Compliance | Dream HR Consultancy</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
@@ -84,25 +85,24 @@ font-size:13px;
 font-weight:700;
 }
 
-/* NEWS BAR */
+/* NEWS */
 .news{
 position:fixed;
 top:72px;
 left:0;
 width:100%;
-height:40px;
-background:#123a59;
-z-index:99998;
+height:42px;
+background:#103554;
 display:flex;
 align-items:center;
 overflow:hidden;
-border-top:1px solid rgba(255,255,255,.08);
+z-index:99998;
 }
 
 .news-label{
 width:190px;
 min-width:190px;
-height:40px;
+height:42px;
 background:#082842;
 color:#fff;
 font-weight:700;
@@ -110,12 +110,11 @@ display:flex;
 align-items:center;
 justify-content:center;
 font-size:14px;
-letter-spacing:.5px;
 }
 
 .news-track{
 flex:1;
-height:40px;
+height:42px;
 overflow:hidden;
 position:relative;
 }
@@ -123,22 +122,32 @@ position:relative;
 .news-text{
 position:absolute;
 white-space:nowrap;
-line-height:40px;
+line-height:42px;
+font-size:14px;
 font-weight:600;
 color:#fff;
-left:100%;
-animation:ticker 18s linear infinite;
-font-size:14px;
+will-change:transform;
+animation:ticker 22s linear infinite;
+}
+
+/* Hover Pause */
+.news-track:hover .news-text{
+animation-play-state:paused;
+cursor:pointer;
 }
 
 @keyframes ticker{
-0%{left:100%;}
-100%{left:-100%;}
+0%{
+transform:translateX(100%);
+}
+100%{
+transform:translateX(-100%);
+}
 }
 
 /* HERO */
 .hero{
-margin-top:112px;
+margin-top:114px;
 height:88vh;
 position:relative;
 overflow:hidden;
@@ -226,13 +235,6 @@ text-decoration:none;
 color:#082842;
 }
 
-.note{
-margin-top:18px;
-padding:12px;
-background:#eef7ff;
-border-radius:8px;
-}
-
 /* MOBILE */
 @media(max-width:992px){
 
@@ -248,11 +250,11 @@ justify-content:center;
 }
 
 .news{
-top:125px;
+top:126px;
 }
 
 .hero{
-margin-top:165px;
+margin-top:168px;
 height:60vh;
 }
 
@@ -293,8 +295,8 @@ Dream HR Consultancy
 <a href="jobs.html">Jobs</a>
 <a href="news.html">Notifications</a>
 <a href="contact.html">Contact</a>
-<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="book">Book Meeting</a>
-<a href="https://wa.me/918863962310" target="_blank" class="whatsapp">WhatsApp</a>
+<a href="https://calendly.com/dreamhrtraining/30min" class="book" target="_blank">Book Meeting</a>
+<a href="https://wa.me/918863962310" class="whatsapp" target="_blank">WhatsApp</a>
 <a href="services.html" class="back">⬅ Back</a>
 </nav>
 
@@ -332,32 +334,22 @@ Dream HR Consultancy
 <div class="main">
 
 <div class="box">
-
 <h2>PF & ESIC Compliance Services</h2>
 
 <p>
-PF and ESIC compliance requires timely registration, accurate monthly filings,
-proper records management and readiness for statutory inspections.
+Professional PF & ESIC compliance solutions for establishments requiring accurate statutory processing and risk-free operations.
 </p>
-
-<p>
-Dream HR Consultancy supports establishments with structured compliance systems,
-risk control and professional documentation standards.
-</p>
-
-<h3>Core Services</h3>
 
 <ul>
-<li>PF Registration & Amendments</li>
-<li>ESIC Registration & Sub Code Support</li>
-<li>Monthly Challan Processing</li>
-<li>Returns Filing & Records Management</li>
-<li>Inspection Response Support</li>
-<li>UAN KYC & Claim Assistance</li>
-<li>Compliance Registers Maintenance</li>
+<li>PF Registration</li>
+<li>ESIC Registration</li>
+<li>Monthly Challan</li>
+<li>Returns Filing</li>
+<li>Inspection Support</li>
+<li>Registers Maintenance</li>
 </ul>
 
-<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn">
+<a href="https://calendly.com/dreamhrtraining/30min" class="btn" target="_blank">
 Book Free Consultation
 </a>
 
@@ -367,15 +359,10 @@ Book Free Consultation
 
 <h3>Other Services</h3>
 
-<a href="payroll.html">Payroll Management</a>
-<a href="labour-law.html">Labour Law Compliance</a>
-<a href="factory.html">Factory License</a>
-<a href="audit.html">Compliance Audit</a>
-<a href="contact.html">Contact Us</a>
-
-<div class="note">
-Professional support available for compliance planning and documentation review.
-</div>
+<a href="payroll.html">Payroll</a>
+<a href="labour-law.html">Labour Law</a>
+<a href="factory.html">Factory</a>
+<a href="contact.html">Contact</a>
 
 </div>
 
@@ -393,41 +380,41 @@ i=(i+1)%slides.length;
 slides[i].classList.add("active");
 },3000);
 
-/* NEWS */
+/* TICKER */
 const updates = [
 
-"EPFO Advisory: Employers should ensure Aadhaar seeded UAN records to avoid delays in transfer, claim and verification processes.",
+"EPFO Advisory: Aadhaar seeded UAN records are recommended for seamless claim and transfer processing.",
 
-"Compliance Control: Monthly PF and ESIC challans should be reconciled with payroll records before statutory due dates.",
+"Compliance Control: Monthly PF and ESIC challans should match payroll summaries before due dates.",
 
-"Records Governance: Attendance, wage registers, contribution sheets and inspection files must remain updated and accessible.",
+"Governance Standard: Wage registers attendance records and statutory files should remain updated.",
 
-"Digital Filing Update: DSC and authorised signatory credentials should remain active for uninterrupted portal submissions.",
+"Digital Filing Alert: Active DSC credentials are essential for uninterrupted employer filings.",
 
-"Inspection Readiness: Establishments are advised to maintain employee onboarding, exit and wage trail documentation.",
+"Inspection Readiness: Joining exit and salary trail documents should be maintained properly.",
 
-"ESIC Advisory: Employee family particulars should be reviewed periodically for eligible medical benefit continuity.",
+"ESIC Benefit Note: Eligible family particulars should be reviewed periodically.",
 
-"Payroll Accuracy Alert: Contribution wages, arrears entries and joining dates should be validated before upload.",
+"Payroll Accuracy: Contribution wages and arrears entries should be validated before upload.",
 
-"Employer Governance: Form 5A ownership and management details should reflect current control structure.",
+"Employer Record Update: Form 5A management details should reflect present structure.",
 
-"Risk Advisory: Delayed remittance may attract interest, damages and avoidable compliance exposure.",
+"Risk Control: Delayed remittance may attract damages interest and notices.",
 
-"Operational Standard: Multi-location establishments should maintain branch-wise compliance trackers and filing calendars."
+"Operational Discipline: Multi-location units should maintain branch-wise compliance calendars."
 
 ];
 
 let n=0;
 let ticker=document.getElementById("tickerText");
 
-function runNews(){
+function changeNews(){
 ticker.innerHTML=updates[n];
 n=(n+1)%updates.length;
 }
 
-runNews();
-setInterval(runNews,18000);
+changeNews();
+setInterval(changeNews,22000);
 
 </script>
 
