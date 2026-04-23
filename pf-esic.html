@@ -36,6 +36,12 @@ z-index:9999;
 box-shadow:0 4px 15px rgba(0,0,0,0.15);
 }
 
+.logo-area{
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+}
+
 .logo a{
 display:flex;
 align-items:center;
@@ -49,6 +55,24 @@ font-weight:700;
 .logo img{
 height:42px;
 border-radius:6px;
+}
+
+/* NEW BACK BUTTON */
+.back-left{
+margin-top:8px;
+display:inline-block;
+background:#ff5722;
+color:#fff;
+text-decoration:none;
+padding:7px 14px;
+border-radius:6px;
+font-size:14px;
+font-weight:600;
+transition:0.3s;
+}
+
+.back-left:hover{
+background:#e64a19;
 }
 
 nav{
@@ -76,21 +100,11 @@ border-radius:6px;
 font-weight:600;
 }
 
-.book-btn:hover{
-background:#009ed1;
-color:#fff;
-}
-
 .whatsapp-btn{
 background:#25D366;
 padding:10px 15px;
 border-radius:6px;
 font-weight:600;
-}
-
-.whatsapp-btn:hover{
-background:#1daa50;
-color:#fff;
 }
 
 .menu-toggle{
@@ -100,10 +114,10 @@ color:#fff;
 cursor:pointer;
 }
 
-/* HERO SLIDER */
+/* HERO */
 .hero{
 height:90vh;
-margin-top:72px;
+margin-top:90px;
 position:relative;
 overflow:hidden;
 }
@@ -197,10 +211,6 @@ margin-top:15px;
 font-weight:600;
 }
 
-.btn:hover{
-background:#009ed1;
-}
-
 .right a{
 display:block;
 padding:10px 0;
@@ -226,7 +236,7 @@ display:block;
 
 nav{
 position:absolute;
-top:72px;
+top:95px;
 left:0;
 width:100%;
 background:#0a2a43;
@@ -240,12 +250,6 @@ nav.show{
 display:flex;
 }
 
-nav a{
-width:100%;
-padding:10px;
-border-bottom:1px solid rgba(255,255,255,0.08);
-}
-
 .container{
 flex-direction:column;
 }
@@ -257,20 +261,29 @@ font-size:28px;
 .logo a{
 font-size:18px;
 }
+
+.hero{
+margin-top:110px;
+}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
+
+<div class="logo-area">
 
 <div class="logo">
 <a href="index.html">
 <img src="logo.png" alt="Logo">
 <span>Dream HR Consultancy</span>
 </a>
+</div>
+
+<a href="javascript:history.back()" class="back-left">⬅ Back</a>
+
 </div>
 
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
@@ -283,13 +296,9 @@ font-size:18px;
 <a href="news.html">Notifications</a>
 <a href="contact.html">Contact</a>
 
-<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="book-btn">
-Book Meeting
-</a>
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="book-btn">Book Meeting</a>
 
-<a href="https://wa.me/918863962310" target="_blank" class="whatsapp-btn">
-WhatsApp
-</a>
+<a href="https://wa.me/918863962310" target="_blank" class="whatsapp-btn">WhatsApp</a>
 </nav>
 
 </header>
@@ -327,11 +336,11 @@ Business Compliance Solutions
 <h2>PF & ESIC Compliance Services</h2>
 
 <p>
-The objectives of the Employees Provident Fund Act, 1952 and Employees State Insurance Act, 1948 are to provide social security benefits to employees and workers. A small mistake in calculation or delay in compliance may lead to disputes, notices, and financial penalties.
+The objectives of the Employees Provident Fund Act, 1952 and Employees State Insurance Act, 1948 are to provide social security benefits to employees and workers.
 </p>
 
 <p>
-Dream HR Consultancy is professionally equipped to manage PAN India statutory compliances and become your trusted strategic partner in corporate governance and labour law compliance.
+Dream HR Consultancy is professionally equipped to manage PAN India statutory compliances and become your trusted strategic partner.
 </p>
 
 <h3>Our Services</h3>
@@ -339,22 +348,10 @@ Dream HR Consultancy is professionally equipped to manage PAN India statutory co
 <ul>
 <li>EPF & ESI Registration / Amendments</li>
 <li>Monthly Challan Processing</li>
-<li>PF Transfer / Withdrawal / Pension Support</li>
+<li>PF Transfer / Withdrawal Support</li>
 <li>ESI Claim Assistance</li>
 <li>Inspection Handling</li>
-<li>Department Liaison Support</li>
-<li>Statutory Returns & Registers</li>
-<li>Multi-State Compliance Support</li>
-</ul>
-
-<h3>Advantages with Dream HR Consultancy</h3>
-
-<ul>
-<li>Strong Government Liaison</li>
-<li>Expert Compliance Team</li>
-<li>Fast & Accurate Service</li>
-<li>PAN India Coverage</li>
-<li>Corporate Governance Support</li>
+<li>Returns & Registers</li>
 </ul>
 
 <a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn">
@@ -376,7 +373,7 @@ Book Free Consultation
 
 <div class="notice">
 <strong>News:</strong><br>
-Latest PF / ESIC / Labour Law updates available. Contact us for guidance.
+Latest PF / ESIC / Labour Law updates available.
 </div>
 
 </div>
