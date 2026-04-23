@@ -29,11 +29,11 @@ left:0;
 width:100%;
 height:70px;
 background:#0a2a43;
-padding:12px 25px;
+padding:12px 20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-z-index:9999;
+z-index:99999;
 box-shadow:0 4px 15px rgba(0,0,0,.15);
 }
 
@@ -55,6 +55,7 @@ nav{
 display:flex;
 gap:16px;
 align-items:center;
+margin-right:90px;
 }
 
 nav a{
@@ -76,45 +77,54 @@ padding:8px 12px;
 border-radius:6px;
 }
 
-/* BACK BUTTON RIGHT TOP */
+/* SMALL RIGHT BACK BUTTON */
 .back-btn{
 position:fixed;
 top:18px;
 right:15px;
-background:#ff5722;
+background:#ff5a1f;
 color:#fff;
 padding:7px 14px;
 border-radius:20px;
 text-decoration:none;
 font-size:13px;
 font-weight:600;
-z-index:10000;
-box-shadow:0 5px 12px rgba(0,0,0,.2);
+z-index:100000;
+box-shadow:0 4px 12px rgba(0,0,0,.25);
 }
 
-/* NEWS BAR */
+/* FIXED UPDATE BAR */
 .news-bar{
 position:fixed;
 top:70px;
 left:0;
 width:100%;
 height:38px;
-background:#ffc107;
-overflow:hidden;
-white-space:nowrap;
-z-index:9998;
+background:#00c6ff;
+color:#fff;
 display:flex;
 align-items:center;
+overflow:hidden;
+z-index:99998;
 font-weight:700;
 }
 
-.news-text{
-display:inline-block;
-padding-left:100%;
-animation:ticker 25s linear infinite;
+.news-label{
+background:#009ed1;
+height:38px;
+display:flex;
+align-items:center;
+padding:0 18px;
+flex-shrink:0;
 }
 
-@keyframes ticker{
+.news-track{
+white-space:nowrap;
+padding-left:100%;
+animation:moveNews 22s linear infinite;
+}
+
+@keyframes moveNews{
 0%{transform:translateX(0);}
 100%{transform:translateX(-100%);}
 }
@@ -154,6 +164,11 @@ position:absolute;
 width:100%;
 height:100%;
 background:rgba(0,0,0,.55);
+}
+
+.slide-text{
+position:relative;
+z-index:2;
 }
 
 /* CONTENT */
@@ -222,7 +237,7 @@ display:none;
 }
 
 .logo{
-font-size:18px;
+font-size:17px;
 }
 
 .hero{
@@ -242,6 +257,15 @@ top:18px;
 right:10px;
 font-size:12px;
 padding:6px 10px;
+}
+
+.news-label{
+padding:0 10px;
+font-size:12px;
+}
+
+.news-track{
+font-size:12px;
 }
 }
 </style>
@@ -272,8 +296,9 @@ Dream HR Consultancy
 <a href="services.html" class="back-btn">⬅ Back</a>
 
 <div class="news-bar">
-<div class="news-text">
-Latest Updates: PF Circular Updated • ESIC Benefits New • Jobs Hiring Open • Payroll Services Live • Labour Law Support Available • PAN India Compliance • Free Consultation Open • Welcome Dream HR Consultancy
+<div class="news-label">Latest Updates</div>
+<div class="news-track">
+PF Circular Updated • ESIC New Benefits • Jobs Hiring Open • Payroll Service Available • Labour Law Support • PAN India Compliance • Free Consultation Open • Dream HR Consultancy
 </div>
 </div>
 
@@ -282,22 +307,22 @@ Latest Updates: PF Circular Updated • ESIC Benefits New • Jobs Hiring Open �
 
 <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f');">
 <div class="overlay"></div>
-PF & ESIC Compliance
+<div class="slide-text">PF & ESIC Compliance</div>
 </div>
 
 <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f');">
 <div class="overlay"></div>
-Inspection & Legal Support
+<div class="slide-text">Inspection & Legal Support</div>
 </div>
 
 <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1528747045269-390fe33c19d3');">
 <div class="overlay"></div>
-Labour Law Compliance
+<div class="slide-text">Labour Law Compliance</div>
 </div>
 
 <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85');">
 <div class="overlay"></div>
-Business Compliance Solutions
+<div class="slide-text">Business Compliance Solutions</div>
 </div>
 
 </div>
