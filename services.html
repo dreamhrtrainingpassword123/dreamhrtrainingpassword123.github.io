@@ -12,89 +12,41 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
-body{
-background:#f5f7fa;
-color:#222;
-}
+body{background:#f5f7fa;color:#222;}
 
 /* HEADER */
 header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-background:#0a2a43;
-padding:14px 30px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:999;
-box-shadow:0 3px 10px rgba(0,0,0,0.2);
+position:fixed;top:0;left:0;width:100%;
+background:#0a2a43;padding:14px 30px;
+display:flex;justify-content:space-between;align-items:center;
+z-index:999;box-shadow:0 3px 10px rgba(0,0,0,0.2);
 }
 
-.logo{
-display:flex;
-align-items:center;
-gap:12px;
-color:#fff;
-font-size:16px;
-font-weight:700;
-}
+.logo{display:flex;align-items:center;gap:12px;color:#fff;font-size:16px;font-weight:700;}
+.logo img{width:42px;height:42px;border-radius:50%;object-fit:cover;}
 
-.logo img{
-width:42px;
-height:42px;
-border-radius:50%;
-object-fit:cover;
-}
-
-nav{
-display:flex;
-gap:10px;
-flex-wrap:wrap;
-align-items:center;
-}
+nav{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
 
 nav a{
-color:#fff;
-text-decoration:none;
-padding:10px 14px;
-border-radius:6px;
-font-size:14px;
-font-weight:600;
+color:#fff;text-decoration:none;padding:10px 14px;
+border-radius:6px;font-size:14px;font-weight:600;
 transition:0.3s;
 }
 
-nav a:hover{
-background:#113f64;
-}
+nav a:hover{background:#113f64;}
 
-.book{
-background:#00c2ff;
-}
+.book{background:#00c2ff;}
+.whatsapp{background:#25D366;}
+.back{background:#ff5a1f;}
 
-.whatsapp{
-background:#25D366;
-}
-
-.back{
-background:#ff5a1f;
-}
-
-/* NEWS BAR */
+/* NEWS BAR (SLOW FIXED) */
 .newsbar{
 margin-top:72px;
 display:flex;
 height:48px;
 overflow:hidden;
-border-top:3px solid #fff;
 }
 
 .newsleft{
@@ -103,87 +55,64 @@ color:#fff;
 font-weight:700;
 padding:12px 20px;
 min-width:170px;
-font-size:15px;
 }
 
 .newsright{
 background:#08263b;
-color:#fff;
 flex:1;
 display:flex;
 align-items:center;
 overflow:hidden;
+}
+
+.news-track{
+display:flex;
+width:max-content;
+animation:scrollNews 55s linear infinite;
+}
+
+.news-track span{
+color:#fff;
+padding:0 40px;
 white-space:nowrap;
-}
-
-.newsright span{
-display:inline-block;
-padding-left:100%;
-animation:moveNews 32s linear infinite;
 font-size:14px;
-font-weight:500;
 }
 
-@keyframes moveNews{
+.news-track:hover{animation-play-state:paused;}
+
+@keyframes scrollNews{
 0%{transform:translateX(0);}
-100%{transform:translateX(-100%);}
+100%{transform:translateX(-50%);}
 }
 
 /* HERO */
-.hero{
-height:85vh;
-position:relative;
-overflow:hidden;
-}
+.hero{height:85vh;position:relative;overflow:hidden;}
 
 .slide{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background-size:cover;
-background-position:center;
-opacity:0;
-transition:1s;
+position:absolute;top:0;left:0;width:100%;height:100%;
+background-size:cover;background-position:center;
+opacity:0;transition:1s;
 }
 
-.slide.active{
-opacity:1;
-}
+.slide.active{opacity:1;}
 
 .overlay{
-position:absolute;
-width:100%;
-height:100%;
+position:absolute;width:100%;height:100%;
 background:rgba(0,0,0,0.55);
 }
 
 .hero-text{
-position:absolute;
-top:50%;
-left:50%;
+position:absolute;top:50%;left:50%;
 transform:translate(-50%,-50%);
-text-align:center;
-color:#fff;
-width:90%;
-z-index:5;
+text-align:center;color:#fff;width:90%;z-index:5;
 }
 
-.hero-text h1{
-font-size:58px;
-margin-bottom:15px;
-font-weight:700;
-}
-
-.hero-text p{
-font-size:22px;
-}
+.hero-text h1{font-size:58px;margin-bottom:15px;}
+.hero-text p{font-size:22px;}
 
 /* CONTENT */
 .container{
-max-width:1300px;
-margin:auto;
+max-width:1300px;margin:auto;
 padding:60px 20px;
 }
 
@@ -192,7 +121,6 @@ text-align:center;
 font-size:40px;
 color:#0a2a43;
 margin-bottom:40px;
-font-weight:700;
 }
 
 .grid{
@@ -209,19 +137,13 @@ box-shadow:0 8px 22px rgba(0,0,0,0.08);
 transition:0.3s;
 }
 
-.card:hover{
-transform:translateY(-8px);
-}
+.card:hover{transform:translateY(-8px);}
 
-.card h3{
-font-size:24px;
-color:#0a2a43;
-margin-bottom:12px;
-}
+.card h3{font-size:22px;color:#0a2a43;margin-bottom:12px;}
 
 .card p{
-font-size:15px;
-line-height:1.8;
+font-size:14px;
+line-height:1.7;
 margin-bottom:18px;
 color:#444;
 }
@@ -237,9 +159,7 @@ font-size:14px;
 font-weight:600;
 }
 
-.btn:hover{
-background:#0098c7;
-}
+.btn:hover{background:#0098c7;}
 
 /* FOOTER */
 footer{
@@ -252,28 +172,11 @@ margin-top:40px;
 
 /* MOBILE */
 @media(max-width:900px){
-
-header{
-flex-direction:column;
-gap:12px;
-padding:15px;
-}
-
-nav{
-justify-content:center;
-}
-
-.hero-text h1{
-font-size:36px;
-}
-
-.hero-text p{
-font-size:17px;
-}
-
-.newsbar{
-margin-top:130px;
-}
+header{flex-direction:column;gap:12px;padding:15px;}
+nav{justify-content:center;}
+.hero-text h1{font-size:34px;}
+.hero-text p{font-size:17px;}
+.newsbar{margin-top:130px;}
 }
 </style>
 
@@ -282,7 +185,6 @@ margin-top:130px;
 <body>
 
 <header>
-
 <div class="logo">
 <img src="logo.png">
 <span>Dream HR Consultancy</span>
@@ -299,16 +201,26 @@ margin-top:130px;
 <a href="https://wa.me/918863962310" target="_blank" class="whatsapp">WhatsApp</a>
 <a href="javascript:history.back()" class="back">⬅ Back</a>
 </nav>
-
 </header>
 
 <!-- NEWS -->
 <div class="newsbar">
 <div class="newsleft">Latest Updates</div>
 <div class="newsright">
-<span>
-🎉 Welcome to Dream HR Consultancy • PF & ESIC Registration Open • Payroll Clients Welcome • Labour Law Support Available • Hiring HR Executives • Factory Compliance Open • Contact: support@idhrt.com
-</span>
+<div class="news-track">
+<span>PF & ESIC Registration Open</span>
+<span>Payroll Clients Welcome</span>
+<span>Labour Law Compliance Support</span>
+<span>Factory License & NOC Services</span>
+<span>Compliance Audit Available</span>
+<span>HR Consulting for Startups</span>
+<span>Professional Tax Registration Open</span>
+
+<span>PF & ESIC Registration Open</span>
+<span>Payroll Clients Welcome</span>
+<span>Labour Law Compliance Support</span>
+<span>Factory License & NOC Services</span>
+</div>
 </div>
 </div>
 
@@ -316,16 +228,14 @@ margin-top:130px;
 <section class="hero">
 
 <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40');"></div>
-
 <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f');"></div>
-
 <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a');"></div>
 
 <div class="overlay"></div>
 
 <div class="hero-text">
 <h1>Our Services</h1>
-<p>Complete HR, Payroll & Compliance Solutions for Businesses</p>
+<p>Complete HR, Payroll & Compliance Solutions</p>
 </div>
 
 </section>
@@ -339,56 +249,56 @@ margin-top:130px;
 
 <div class="card">
 <h3>PF & ESIC Compliance</h3>
-<p>Registration, filing, inspection support, UAN & employee benefits management.</p>
+<p>Registration, filing, inspection and employee benefits management.</p>
 <a href="pf-esic.html" class="btn">Read Full Details</a>
 </div>
 
 <div class="card">
 <h3>Payroll Management</h3>
-<p>Salary processing, payslips, deductions, attendance and monthly payroll reports.</p>
+<p>Salary processing, payslips, deductions and reports.</p>
 <a href="payroll.html" class="btn">Read Full Details</a>
 </div>
 
 <div class="card">
 <h3>Labour Law Compliance</h3>
-<p>Shops Act, CLRA, registers, notices and legal documentation support.</p>
+<p>Shops Act, CLRA, registers and legal compliance.</p>
 <a href="labour-law.html" class="btn">Read Full Details</a>
 </div>
 
 <div class="card">
 <h3>Recruitment Services</h3>
-<p>Staff hiring solutions for startups, factories and growing companies.</p>
+<p>Hiring solutions for companies and factories.</p>
 <a href="recruitment.html" class="btn">Read Full Details</a>
 </div>
 
 <div class="card">
 <h3>Factory License</h3>
-<p>Factory registration, renewal, approvals and compliance management.</p>
+<p>Factory registration, NOC and approvals.</p>
 <a href="factory-license.html" class="btn">Read Full Details</a>
 </div>
 
 <div class="card">
 <h3>Compliance Audit</h3>
-<p>PF ESIC & labour law audits to reduce penalties and risks.</p>
+<p>SEDEX, SMETA, labour audits and compliance checks.</p>
 <a href="compliance-audit.html" class="btn">Read Full Details</a>
 </div>
 
 <div class="card">
 <h3>HR Consulting</h3>
-<p>HR policies, employee systems, startup HR setup and documentation.</p>
+<p>HR policies, startup setup and documentation.</p>
 <a href="hr-consulting.html" class="btn">Read Full Details</a>
 </div>
 
 <div class="card">
 <h3>Professional Tax</h3>
-<p>PT registration, returns and state-wise tax compliance support.</p>
-<a href="contact.html" class="btn">Enquire Now</a>
+<p>PT registration, returns and compliance support.</p>
+<a href="professional-tax.html" class="btn">Read Full Details</a>
 </div>
 
 <div class="card">
 <h3>POSH Consultant</h3>
-<p>POSH policy drafting, ICC formation and compliance training support.</p>
-<a href="contact.html" class="btn">Enquire Now</a>
+<p>POSH policy, ICC formation and training.</p>
+<a href="posh.html" class="btn">Read Full Details</a>
 </div>
 
 </div>
@@ -407,7 +317,7 @@ setInterval(()=>{
 slides[i].classList.remove('active');
 i=(i+1)%slides.length;
 slides[i].classList.add('active');
-},3000);
+},3500);
 </script>
 
 </body>
