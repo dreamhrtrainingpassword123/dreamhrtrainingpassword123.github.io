@@ -1,28 +1,351 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>HR Consulting</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HR Consulting Services | Dream HR Consultancy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f7fa;
+color:#222;
+line-height:1.7;
+}
+
+/* HEADER */
+header{
+position:fixed;
+top:0;
+width:100%;
+background:#0a2a43;
+padding:12px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:9999;
+}
+
+.logo{
+color:#fff;
+font-size:22px;
+font-weight:700;
+}
+
+nav a{
+color:#fff;
+margin:0 8px;
+text-decoration:none;
+font-size:14px;
+}
+
+.book-btn{background:#00c6ff;padding:8px 12px;border-radius:5px;}
+.whatsapp-btn{background:#25D366;padding:8px 12px;border-radius:5px;}
+.back-btn{background:#ff5722;padding:8px 12px;border-radius:5px;}
+
+/* NEWS */
+.news-bar{
+margin-top:60px;
+display:flex;
+background:#081d2f;
+border-top:2px solid #00c6ff;
+border-bottom:2px solid #00c6ff;
+}
+
+.news-title{
+background:#00c6ff;
+color:#fff;
+padding:10px;
+font-weight:700;
+}
+
+.news-scroll{
+overflow:hidden;
+flex:1;
+}
+
+.news-track{
+display:flex;
+animation:move 60s linear infinite;
+}
+
+.news-track span{
+color:#fff;
+padding:10px 30px;
+white-space:nowrap;
+}
+
+@keyframes move{
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
+}
+
+/* HERO */
+.hero{
+height:90vh;
+margin-top:100px;
+position:relative;
+}
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:#fff;
+font-size:40px;
+font-weight:700;
+opacity:0;
+transition:1s;
+}
+
+.slide.active{opacity:1;}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+}
+
+/* CONTENT */
+.container{
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+display:flex;
+gap:30px;
+}
+
+.left,.right{
+background:#fff;
+padding:25px;
+border-radius:10px;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+.left{flex:2;}
+.right{flex:1;}
+
+h2,h3{
+color:#0a2a43;
+margin-bottom:15px;
+}
+
+ul{
+padding-left:20px;
+}
+
+li{
+margin-bottom:8px;
+}
+
+.btn{
+display:inline-block;
+background:#00c6ff;
+color:#fff;
+padding:12px 20px;
+margin-top:15px;
+border-radius:6px;
+text-decoration:none;
+}
+
+.right a{
+display:block;
+padding:10px 0;
+border-bottom:1px solid #eee;
+color:#0a2a43;
+text-decoration:none;
+}
+
+/* SECTION CARDS */
+.section{
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#fff;
+padding:20px;
+border-radius:10px;
+box-shadow:0 6px 15px rgba(0,0,0,0.1);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+/* FOOTER */
+footer{
+background:#0a2a43;
+color:#fff;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+.container{flex-direction:column;}
+.slide{font-size:26px;}
+}
+</style>
 </head>
 
 <body>
 
-<header><h1>HR Consulting Services</h1></header>
+<header>
+<div class="logo">Dream HR Consultancy</div>
 
-<div class="container">
+<nav>
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">Jobs</a>
+<a href="#">Contact</a>
 
-<p>We help businesses build strong HR systems...</p>
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="book-btn">Book Meeting</a>
+<a href="https://wa.me/918863962310" target="_blank" class="whatsapp-btn">WhatsApp</a>
+<a href="javascript:history.back()" class="back-btn">Back</a>
+</nav>
+</header>
 
-<ul>
-<li>HR Policy</li>
-<li>Documentation</li>
-<li>Setup</li>
-</ul>
+<!-- NEWS -->
+<div class="news-bar">
+<div class="news-title">Updates</div>
+<div class="news-scroll">
+<div class="news-track">
+
+<span>HR Policy drafting mandatory for growing companies</span>
+<span>Labour law compliance audits increasing in India</span>
+<span>Payroll outsourcing demand rising among startups</span>
+<span>Employee engagement improves retention</span>
+<span>Performance appraisal systems needed</span>
+<span>HR automation tools trending</span>
+
+<span>HR Policy drafting mandatory for growing companies</span>
+<span>Labour law compliance audits increasing in India</span>
+<span>Payroll outsourcing demand rising among startups</span>
+<span>Employee engagement improves retention</span>
+<span>Performance appraisal systems needed</span>
+
+</div>
+</div>
+</div>
+
+<!-- SLIDER -->
+<div class="hero">
+
+<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978');"><div class="overlay"></div>HR Consulting</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d');"><div class="overlay"></div>HR Strategy</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1551836022-d5d88e9218df');"><div class="overlay"></div>Recruitment Planning</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f');"><div class="overlay"></div>Employee Engagement</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1551836022-4c4c79ecde51');"><div class="overlay"></div>Performance Management</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');"><div class="overlay"></div>HR Policies</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1553877522-43269d4ea984');"><div class="overlay"></div>Compliance Advisory</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1492724441997-5dc865305da7');"><div class="overlay"></div>Training & Development</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644');"><div class="overlay"></div>HR Automation</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d');"><div class="overlay"></div>Workforce Planning</div>
 
 </div>
 
-<a class="call" href="tel:8863962320">📞 Call Now</a>
-<a class="whatsapp" href="https://wa.me/918863962320">💬 WhatsApp</a>
+<!-- CONTENT -->
+<div class="container">
+
+<div class="left">
+<h2>HR Consulting Services</h2>
+
+<p>We provide complete HR consulting solutions to help businesses manage their workforce effectively, ensure compliance and improve productivity.</p>
+
+<h3>Our HR Services</h3>
+<ul>
+<li>HR Policy Drafting</li>
+<li>Recruitment & Hiring Strategy</li>
+<li>Employee Engagement Programs</li>
+<li>Performance Management System</li>
+<li>HR Compliance Advisory</li>
+<li>Payroll Structuring</li>
+<li>Organization Structure Planning</li>
+<li>HR Audit & Gap Analysis</li>
+<li>Employee Handbook Creation</li>
+<li>Training & Development</li>
+<li>HR Automation Setup</li>
+<li>Exit Management & FNF</li>
+</ul>
+
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn">
+Get Free Consultation
+</a>
+
+</div>
+
+<div class="right">
+<h3>Our Services</h3>
+
+<a href="#">PF & ESIC</a>
+<a href="#">Payroll</a>
+<a href="#">Labour Law</a>
+<a href="#">Recruitment</a>
+<a href="#">Factory License</a>
+<a href="#">Compliance Audit</a>
+
+</div>
+
+</div>
+
+<!-- EXTRA SERVICES -->
+<section class="section">
+
+<h2 style="text-align:center;">Advanced HR Solutions</h2>
+
+<div class="grid">
+
+<div class="card"><h3>HR Audit</h3><p>Complete HR system audit & gap identification.</p></div>
+<div class="card"><h3>Compliance Setup</h3><p>Labour law compliance implementation.</p></div>
+<div class="card"><h3>KPI Design</h3><p>Employee performance metrics design.</p></div>
+<div class="card"><h3>Startup HR Setup</h3><p>End-to-end HR setup for new companies.</p></div>
+<div class="card"><h3>Employee Retention</h3><p>Retention strategies & engagement plans.</p></div>
+<div class="card"><h3>HR Analytics</h3><p>Data-driven HR decisions & reporting.</p></div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Dream HR Consultancy | support@idhrt.com | +91 8863962310
+</footer>
+
+<script>
+let slides=document.querySelectorAll(".slide");
+let i=0;
+
+setInterval(()=>{
+slides[i].classList.remove("active");
+i=(i+1)%slides.length;
+slides[i].classList.add("active");
+},4000);
+</script>
 
 </body>
 </html>
