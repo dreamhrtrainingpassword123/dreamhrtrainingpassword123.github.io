@@ -3,26 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Compliance Audit | Dream HR Consultancy</title>
+
+<title>Compliance Audit Services | Dream HR Consultancy</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
-body{background:#f5f7fa;color:#222;line-height:1.7;}
+body{background:#f5f7fa;color:#222;}
 
 /* HEADER */
 header{
 position:fixed;top:0;width:100%;
 background:#0a2a43;
 display:flex;justify-content:space-between;
+align-items:center;
 padding:12px 30px;
 z-index:9999;
 }
-.logo{color:#fff;font-size:22px;font-weight:700;}
 
-nav a{color:#fff;margin:0 8px;text-decoration:none;font-size:14px;}
+.logo{color:#fff;font-weight:700;font-size:22px;}
+
+nav a{
+color:#fff;margin:0 8px;text-decoration:none;font-size:14px;
+}
+
 .book-btn{background:#00c6ff;padding:8px 12px;border-radius:5px;}
 .whatsapp-btn{background:#25D366;padding:8px 12px;border-radius:5px;}
 .back-btn{background:#ff5722;padding:8px 12px;border-radius:5px;}
@@ -35,32 +41,44 @@ background:#081d2f;
 border-top:2px solid #00c6ff;
 border-bottom:2px solid #00c6ff;
 }
+
 .news-title{background:#00c6ff;color:#fff;padding:10px;font-weight:700;}
+
 .news-scroll{overflow:hidden;flex:1;}
+
 .news-track{
 display:flex;
-animation:move 60s linear infinite;
+animation:move 120s linear infinite; /* slow speed */
 }
+
 .news-track span{
-color:#fff;
-padding:10px 30px;
-white-space:nowrap;
+color:#fff;padding:10px 40px;white-space:nowrap;
 }
+
 @keyframes move{
 0%{transform:translateX(0);}
 100%{transform:translateX(-50%);}
 }
 
 /* HERO */
-.hero{height:90vh;margin-top:100px;position:relative;}
+.hero{
+height:90vh;
+margin-top:100px;
+position:relative;
+overflow:hidden;
+}
+
 .slide{
 position:absolute;width:100%;height:100%;
 background-size:cover;background-position:center;
 display:flex;align-items:center;justify-content:center;
-color:#fff;font-size:38px;font-weight:700;
+text-align:center;
+color:#fff;font-size:40px;font-weight:700;
 opacity:0;transition:1s;
 }
+
 .slide.active{opacity:1;}
+
 .overlay{
 position:absolute;width:100%;height:100%;
 background:rgba(0,0,0,0.6);
@@ -72,14 +90,18 @@ max-width:1200px;margin:auto;
 padding:40px 20px;
 display:flex;gap:30px;
 }
+
 .left,.right{
 background:#fff;padding:25px;border-radius:10px;
 box-shadow:0 8px 20px rgba(0,0,0,0.1);
 }
+
 .left{flex:2;}
 .right{flex:1;}
 
-h2,h3{color:#0a2a43;margin-bottom:15px;}
+h2{margin-bottom:15px;color:#0a2a43;}
+h3{margin:15px 0;color:#0a2a43;}
+
 ul{padding-left:20px;}
 li{margin-bottom:8px;}
 
@@ -87,10 +109,11 @@ li{margin-bottom:8px;}
 display:inline-block;
 background:#00c6ff;
 color:#fff;
-padding:10px 18px;
+padding:12px 20px;
 margin-top:15px;
 border-radius:6px;
 text-decoration:none;
+font-weight:600;
 }
 
 .right a{
@@ -117,6 +140,7 @@ text-decoration:none;color:#0a2a43;
 <a href="#">Services</a>
 <a href="#">Jobs</a>
 <a href="#">Contact</a>
+
 <a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="book-btn">Book Meeting</a>
 <a href="https://wa.me/918863962310" target="_blank" class="whatsapp-btn">WhatsApp</a>
 <a href="javascript:history.back()" class="back-btn">Back</a>
@@ -126,18 +150,24 @@ text-decoration:none;color:#0a2a43;
 <!-- NEWS -->
 <div class="news-bar">
 <div class="news-title">Updates</div>
+
 <div class="news-scroll">
 <div class="news-track">
-<span>Compliance audit helps avoid heavy penalties and notices.</span>
-<span>PF & ESIC audit mandatory for organizations.</span>
-<span>SEDEX & SMETA audits required for export companies.</span>
-<span>Factory compliance audit important before inspections.</span>
-<span>Payroll audit ensures salary accuracy.</span>
-<span>POSH compliance mandatory for companies.</span>
-<span>Contractor compliance audit reduces legal risk.</span>
 
-<span>Compliance audit helps avoid heavy penalties and notices.</span>
-<span>PF & ESIC audit mandatory for organizations.</span>
+<span>SEDEX & SMETA Audit demand increasing for export companies</span>
+<span>Factory Compliance Audit mandatory for manufacturing units</span>
+<span>Labour Law Audit helps avoid penalties & notices</span>
+<span>ESIC & PF audit verification strict by departments</span>
+<span>Health & Safety Audit required in factories</span>
+<span>Fire Safety audit essential for industrial approval</span>
+<span>Contract Labour compliance audit important</span>
+<span>POSH audit required for workplace safety</span>
+<span>Environmental audit needed for pollution control</span>
+<span>Wages & Minimum wages audit inspections increasing</span>
+
+<span>SEDEX & SMETA Audit demand increasing for export companies</span>
+<span>Factory Compliance Audit mandatory for manufacturing units</span>
+
 </div>
 </div>
 </div>
@@ -145,29 +175,29 @@ text-decoration:none;color:#0a2a43;
 <!-- SLIDER -->
 <div class="hero">
 
-<div class="slide active" style="background-image:url('https://source.unsplash.com/1600x900/?audit,documents');"><div class="overlay"></div>Compliance Audit</div>
+<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789');"><div class="overlay"></div>Compliance Audit</div>
 
-<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?pf,office');"><div class="overlay"></div>PF Audit</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1521790797524-b2497295b8a0');"><div class="overlay"></div>SEDEX Audit</div>
 
-<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?hospital,insurance');"><div class="overlay"></div>ESIC Audit</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1551836022-d5d88e9218df');"><div class="overlay"></div>SMETA Audit</div>
 
-<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?salary,payslip');"><div class="overlay"></div>Payroll Audit</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');"><div class="overlay"></div>Factory Audit</div>
 
-<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?factory,inspection');"><div class="overlay"></div>Factory Audit</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581093588401-22f4f6c74c59');"><div class="overlay"></div>Labour Law Audit</div>
 
-<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?workers,labour');"><div class="overlay"></div>Labour Law Audit</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1567427017947-545c5f8d16ad');"><div class="overlay"></div>Fire Safety Audit</div>
 
-<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?documents,files');"><div class="overlay"></div>Documentation Audit</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1590658268037-6bf12165a8df');"><div class="overlay"></div>Health & Safety Audit</div>
 
-<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?risk,analysis');"><div class="overlay"></div>Risk Assessment</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581091870627-3d1d9e4c8c3c');"><div class="overlay"></div>Electrical Audit</div>
 
-<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?office,meeting');"><div class="overlay"></div>Internal Audit</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581093458791-9d09a8e79b02');"><div class="overlay"></div>Boiler Audit</div>
 
-<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?checklist,compliance');"><div class="overlay"></div>Compliance Checklist</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1560185127-6ed189bf02f4');"><div class="overlay"></div>Environmental Audit</div>
 
-<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?inspection,government');"><div class="overlay"></div>Inspection Preparation</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f');"><div class="overlay"></div>Payroll Audit</div>
 
-<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?report,analysis');"><div class="overlay"></div>Audit Reporting</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1554224154-26032ffc0d07');"><div class="overlay"></div>Wages Audit</div>
 
 </div>
 
@@ -178,37 +208,26 @@ text-decoration:none;color:#0a2a43;
 
 <h2>Compliance Audit Services</h2>
 
-<p>
-Compliance Audit is a systematic review of an organization’s adherence to labour laws and statutory regulations.
-Dream HR Consultancy provides complete audit services for Manufacturing Units, Shops & Establishments and Corporates.
-</p>
+<p>Compliance Audit ensures that your business follows all labour laws, factory laws, and statutory regulations. It helps identify risks, avoid penalties and maintain smooth operations.</p>
 
 <h3>Our Audit Services</h3>
 
 <ul>
-<li>Labour Law Compliance Audit</li>
-<li>PF & ESIC Audit</li>
-<li>Payroll Audit</li>
+<li>SEDEX Audit</li>
+<li>SMETA Audit</li>
 <li>Factory Compliance Audit</li>
-<li>Shops & Establishment Audit</li>
-<li>Contractor Compliance Audit</li>
-<li>SEDEX / SMETA Audit Support</li>
-<li>Social Security Audit</li>
+<li>Labour Law Audit</li>
+<li>PF & ESIC Audit</li>
+<li>Contract Labour Audit</li>
+<li>Payroll Audit</li>
+<li>Minimum Wages Audit</li>
 <li>Health & Safety Audit</li>
-<li>POSH Audit</li>
-<li>Inspection Preparation Audit</li>
-<li>Documentation & Register Audit</li>
-<li>Internal Audit & Gap Analysis</li>
-</ul>
-
-<h3>Why Compliance Audit?</h3>
-
-<ul>
-<li>Avoid penalties and legal risk</li>
-<li>Ensure full compliance</li>
-<li>Prepare for inspections</li>
-<li>Improve HR processes</li>
-<li>Build business credibility</li>
+<li>Fire Safety Audit</li>
+<li>Electrical Safety Audit</li>
+<li>Boiler Inspection Audit</li>
+<li>Environmental / Pollution Audit</li>
+<li>POSH Compliance Audit</li>
+<li>Shop & Establishment Audit</li>
 </ul>
 
 <a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn">
@@ -226,6 +245,7 @@ Get Free Consultation
 <a href="#">Labour Law</a>
 <a href="#">Recruitment</a>
 <a href="#">Factory License</a>
+<a href="#">Compliance Audit</a>
 
 </div>
 
@@ -239,7 +259,7 @@ setInterval(()=>{
 slides[i].classList.remove("active");
 i=(i+1)%slides.length;
 slides[i].classList.add("active");
-},4000);
+},3500);
 </script>
 
 </body>
