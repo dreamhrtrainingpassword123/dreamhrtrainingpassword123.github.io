@@ -1,28 +1,276 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Compliance Audit</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Factory License | Dream HR Consultancy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f5f7fa;color:#222;}
+
+/* HEADER */
+header{
+position:fixed;top:0;width:100%;
+background:#0a2a43;
+display:flex;justify-content:space-between;
+padding:12px 30px;z-index:9999;
+}
+.logo a{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-size:22px;font-weight:700;}
+.logo img{height:42px;}
+
+nav{display:flex;gap:12px;flex-wrap:wrap;}
+nav a{color:#fff;text-decoration:none;font-size:14px;}
+.book-btn{background:#00c6ff;padding:8px 12px;border-radius:5px;}
+.whatsapp-btn{background:#25D366;padding:8px 12px;border-radius:5px;}
+.back-btn{background:#ff5722;padding:8px 12px;border-radius:5px;}
+
+/* NEWS */
+.news-bar{
+position:fixed;
+top:70px;
+width:100%;
+display:flex;
+background:#081d2f;
+border-top:2px solid #00c6ff;
+border-bottom:2px solid #00c6ff;
+}
+
+.news-title{background:#00c6ff;color:#fff;padding:10px;font-weight:700;}
+
+.news-scroll{overflow:hidden;flex:1;}
+
+.news-track{
+display:flex;
+animation:move 40s linear infinite;
+}
+.news-track span{
+color:#fff;
+padding:10px 30px;
+white-space:nowrap;
+}
+
+@keyframes move{
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
+}
+
+/* HERO */
+.hero{
+height:90vh;
+margin-top:110px;
+position:relative;
+overflow:hidden;
+}
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+font-size:40px;
+font-weight:700;
+color:#fff;
+opacity:0;
+transition:1s;
+}
+
+.slide.active{opacity:1;}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+}
+
+/* CONTENT */
+.container{
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+display:flex;
+gap:30px;
+}
+
+.left,.right{
+background:#fff;
+padding:25px;
+border-radius:10px;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+.left{flex:2;}
+.right{flex:1;}
+
+h2,h3{color:#0a2a43;margin-bottom:15px;}
+
+ul{padding-left:20px;}
+li{margin-bottom:8px;}
+
+.btn{
+display:inline-block;
+background:#00c6ff;
+color:#fff;
+padding:10px 18px;
+margin-top:15px;
+border-radius:6px;
+text-decoration:none;
+}
+
+.right a{
+display:block;
+padding:10px 0;
+border-bottom:1px solid #eee;
+text-decoration:none;
+color:#0a2a43;
+}
+
+.notice{
+background:#fff3cd;
+padding:12px;
+border-radius:8px;
+margin-top:20px;
+}
+
+@media(max-width:900px){
+.container{flex-direction:column;}
+.slide{font-size:26px;}
+}
+</style>
 </head>
 
 <body>
 
-<header><h1>Compliance Audit</h1></header>
+<header>
+<div class="logo">
+<a href="#">
+<img src="logo.png">
+<span>Dream HR Consultancy</span>
+</a>
+</div>
 
-<div class="container">
+<nav>
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">Jobs</a>
+<a href="#">Contact</a>
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="book-btn">Book Meeting</a>
+<a href="https://wa.me/918863962310" target="_blank" class="whatsapp-btn">WhatsApp</a>
+<a href="javascript:history.back()" class="back-btn">⬅ Back</a>
+</nav>
+</header>
 
-<p>Audit helps identify risks before penalties...</p>
+<!-- NEWS -->
+<div class="news-bar">
+<div class="news-title">Latest Updates</div>
+<div class="news-scroll">
+<div class="news-track">
 
-<ul>
-<li>PF Audit</li>
-<li>ESIC Audit</li>
-<li>Labour Audit</li>
-</ul>
+<span>Factory License renewal deadlines must be tracked to avoid penalties.</span>
+<span>Pollution Control Board NOC mandatory before factory operations.</span>
+<span>Fire Safety NOC inspection required before approval.</span>
+<span>Boiler registration & certification compulsory for industrial units.</span>
+<span>Electrical safety audit required for factory machinery.</span>
+<span>Lift approval mandatory for industrial elevators.</span>
+<span>Health & safety compliance records must be maintained.</span>
+<span>Labour law inspection increased across industries.</span>
+<span>Government approvals via online portals like Nivesh Mitra.</span>
+
+<span>Factory License renewal deadlines must be tracked to avoid penalties.</span>
+<span>Pollution Control Board NOC mandatory before factory operations.</span>
+<span>Fire Safety NOC inspection required before approval.</span>
+
+</div>
+</div>
+</div>
+
+<!-- SLIDER -->
+<div class="hero">
+
+<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc');"><div class="overlay"></div>Factory License</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122');"><div class="overlay"></div>Factory Registration</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1565514020179-026b92b2d5a7');"><div class="overlay"></div>Pollution NOC</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4');"><div class="overlay"></div>Fire NOC</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581092334421-cf8a6f1f81f9');"><div class="overlay"></div>Boiler Approval</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581092919531-4f7f7b2f9c74');"><div class="overlay"></div>Electrical Safety</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1570129477492-45c003edd2be');"><div class="overlay"></div>Lift NOC</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581091012184-5c5a1c1b5e32');"><div class="overlay"></div>Safety Compliance</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1556740749-887f6717d7e4');"><div class="overlay"></div>Labour Compliance</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216');"><div class="overlay"></div>Documentation</div>
 
 </div>
 
-<a class="call" href="tel:8863962320">📞 Call Now</a>
-<a class="whatsapp" href="https://wa.me/918863962320">💬 WhatsApp</a>
+<!-- CONTENT -->
+<div class="container">
+
+<div class="left">
+<h2>Factory License Services</h2>
+
+<p>Factory License is mandatory for manufacturing units. Proper approvals, registrations and compliance ensure smooth business operations and avoid penalties.</p>
+
+<h3>Our Services</h3>
+<ul>
+<li>Factory License Registration & Renewal</li>
+<li>Pollution NOC (Air & Water)</li>
+<li>Fire NOC Approval</li>
+<li>Boiler Registration</li>
+<li>Electrical Safety Approval</li>
+<li>Lift License</li>
+<li>Health & Safety Compliance</li>
+<li>Labour Law Compliance</li>
+<li>Inspection Handling & Documentation</li>
+</ul>
+
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn">
+Get Free Consultation
+</a>
+
+</div>
+
+<div class="right">
+<h3>Our Services</h3>
+
+<a href="#">PF & ESIC Compliance</a>
+<a href="#">Payroll Management</a>
+<a href="#">Labour Law Compliance</a>
+<a href="#">Recruitment</a>
+<a href="#">Factory License</a>
+
+<div class="notice">
+Complete factory compliance support available PAN India.
+</div>
+
+</div>
+
+</div>
+
+<script>
+let slides=document.querySelectorAll(".slide");
+let i=0;
+
+setInterval(()=>{
+slides[i].classList.remove("active");
+i=(i+1)%slides.length;
+slides[i].classList.add("active");
+},3000);
+</script>
 
 </body>
 </html>
