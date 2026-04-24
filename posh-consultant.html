@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>POSH Consultant Services | Dream HR Consultancy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f5f7fa;color:#222;line-height:1.7;}
+
+/* HEADER */
+header{
+position:fixed;top:0;width:100%;
+background:#0a2a43;
+padding:12px 30px;
+display:flex;justify-content:space-between;
+align-items:center;
+z-index:9999;
+}
+
+.logo{
+display:flex;align-items:center;gap:10px;
+color:#fff;font-size:20px;font-weight:700;
+}
+
+.logo img{height:42px;border-radius:6px;}
+
+nav{display:flex;gap:12px;flex-wrap:wrap;}
+nav a{
+color:#fff;text-decoration:none;
+padding:9px 13px;border-radius:6px;
+font-size:14px;
+}
+.book{background:#00c6ff;}
+.whatsapp{background:#25D366;}
+.back{background:#ff5722;}
+
+/* NEWS BAR */
+.news-bar{
+margin-top:72px;
+display:flex;
+background:#081d2f;
+border-top:2px solid #00c6ff;
+border-bottom:2px solid #00c6ff;
+}
+
+.news-title{
+background:#00c6ff;
+color:#fff;
+padding:10px 15px;
+font-weight:700;
+}
+
+.news-scroll{
+overflow:hidden;
+flex:1;
+display:flex;
+align-items:center;
+}
+
+.news-track{
+display:flex;
+width:max-content;
+animation:moveNews 60s linear infinite;
+}
+
+.news-track span{
+color:#fff;
+padding:0 30px;
+white-space:nowrap;
+font-size:14px;
+}
+
+@keyframes moveNews{
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
+}
+
+/* HERO */
+.hero{
+height:90vh;
+margin-top:110px;
+position:relative;
+overflow:hidden;
+}
+
+.slide{
+position:absolute;
+width:100%;height:100%;
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#fff;
+font-size:38px;
+font-weight:700;
+opacity:0;
+transition:1s;
+text-align:center;
+padding:20px;
+}
+
+.slide.active{opacity:1;}
+
+.overlay{
+position:absolute;
+width:100%;height:100%;
+background:rgba(0,0,0,0.6);
+}
+
+/* CONTENT */
+.container{
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+display:flex;
+gap:30px;
+}
+
+.left,.right{
+background:#fff;
+padding:25px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.left{flex:2;}
+.right{flex:1;}
+
+h2,h3{color:#0a2a43;margin-bottom:15px;}
+p{margin-bottom:14px;}
+
+ul{padding-left:20px;margin-bottom:18px;}
+li{margin-bottom:8px;}
+
+.btn{
+background:#00c6ff;
+color:#fff;
+padding:12px 20px;
+text-decoration:none;
+border-radius:6px;
+display:inline-block;
+margin-top:10px;
+}
+
+.right a{
+display:block;
+padding:10px 0;
+border-bottom:1px solid #eee;
+color:#0a2a43;
+text-decoration:none;
+}
+
+.notice{
+background:#fff3cd;
+padding:12px;
+border-radius:8px;
+margin-top:15px;
+font-size:14px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+.container{flex-direction:column;}
+.slide{font-size:24px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+<img src="logo.png">
+<span>Dream HR Consultancy</span>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="jobs.html">Jobs</a>
+<a href="contact.html">Contact</a>
+
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="book">Book Meeting</a>
+<a href="https://wa.me/918863962310" target="_blank" class="whatsapp">WhatsApp</a>
+<a href="javascript:history.back()" class="back">⬅ Back</a>
+</nav>
+</header>
+
+<!-- NEWS -->
+<div class="news-bar">
+<div class="news-title">POSH Updates</div>
+<div class="news-scroll">
+<div class="news-track">
+
+<span>POSH Act compliance mandatory for all companies with 10+ employees.</span>
+<span>Internal Complaints Committee (ICC) formation required.</span>
+<span>Annual POSH report submission compulsory.</span>
+<span>Employee awareness training must be conducted yearly.</span>
+<span>Non-compliance may lead to heavy penalties.</span>
+<span>POSH policy must be displayed at workplace.</span>
+<span>External member mandatory in ICC panel.</span>
+
+<span>POSH Act compliance mandatory for all companies with 10+ employees.</span>
+<span>Internal Complaints Committee (ICC) formation required.</span>
+
+</div>
+</div>
+</div>
+
+<!-- SLIDER -->
+<div class="hero">
+
+<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d');"><div class="overlay"></div>POSH Compliance Services</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1551836022-d5d88e9218df');"><div class="overlay"></div>POSH Policy Drafting</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1507679799987-c73779587ccf');"><div class="overlay"></div>ICC Formation</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7');"><div class="overlay"></div>Employee Training</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1529336953121-ad5a0d43d0d2');"><div class="overlay"></div>Complaint Handling</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1492724441997-5dc865305da7');"><div class="overlay"></div>POSH Audit</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40');"><div class="overlay"></div>Documentation Support</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');"><div class="overlay"></div>Workplace Safety</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a');"><div class="overlay"></div>Legal Compliance</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1554224154-26032ffc0d07');"><div class="overlay"></div>Annual Reporting</div>
+
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+<div class="left">
+
+<h2>POSH Consultant Services</h2>
+
+<p>The POSH Act (Prevention of Sexual Harassment at Workplace) mandates every organization to ensure a safe working environment for employees.</p>
+
+<p>Dream HR Consultancy provides complete POSH compliance services including policy drafting, ICC formation, training and audits.</p>
+
+<h3>Our POSH Services</h3>
+
+<ul>
+<li>POSH Policy Drafting & Implementation</li>
+<li>Internal Complaints Committee (ICC) Formation</li>
+<li>External Member Appointment</li>
+<li>POSH Awareness Training for Employees</li>
+<li>Management Sensitization Workshops</li>
+<li>Complaint Handling & Inquiry Support</li>
+<li>POSH Annual Report Preparation</li>
+<li>POSH Audit & Compliance Check</li>
+<li>Legal Documentation & Notices</li>
+<li>Workplace Safety Assessment</li>
+<li>Online & Offline Training Sessions</li>
+<li>POSH Poster & Policy Display Support</li>
+<li>HR Team POSH Training</li>
+<li>Case Investigation Support</li>
+<li>Confidential Complaint Handling System</li>
+</ul>
+
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn">
+Get Free Consultation
+</a>
+
+</div>
+
+<div class="right">
+
+<h3>Our Services</h3>
+
+<a href="pf-esic.html">PF & ESIC</a>
+<a href="payroll.html">Payroll</a>
+<a href="labour-law.html">Labour Law</a>
+<a href="factory-license.html">Factory License</a>
+<a href="compliance-audit.html">Compliance Audit</a>
+<a href="hr-consulting.html">HR Consulting</a>
+<a href="professional-tax.html">Professional Tax</a>
+
+<div class="notice">
+POSH compliance ensures safe workplace & legal protection.
+</div>
+
+</div>
+
+</div>
+
+<script>
+let slides=document.querySelectorAll(".slide");
+let i=0;
+
+setInterval(()=>{
+slides[i].classList.remove("active");
+i=(i+1)%slides.length;
+slides[i].classList.add("active");
+},3000);
+</script>
+
+</body>
+</html>
