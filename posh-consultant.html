@@ -69,10 +69,7 @@ padding:10px;
 font-weight:700;
 }
 
-.news-scroll{
-overflow:hidden;
-flex:1;
-}
+.news-scroll{overflow:hidden;flex:1;}
 
 .news-track{
 display:flex;
@@ -90,11 +87,12 @@ white-space:nowrap;
 100%{transform:translateX(-100%);}
 }
 
-/* HERO */
+/* HERO SLIDER */
 .hero{
 height:90vh;
 margin-top:100px;
 position:relative;
+overflow:hidden;
 }
 
 .slide{
@@ -107,7 +105,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 color:#fff;
-font-size:36px;
+font-size:42px;
 font-weight:700;
 opacity:0;
 transition:1s;
@@ -121,7 +119,12 @@ padding:20px;
 position:absolute;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.6);
+background:rgba(0,0,0,0.55);
+}
+
+.slide-text{
+position:relative;
+z-index:2;
 }
 
 /* CONTENT */
@@ -169,7 +172,6 @@ text-decoration:none;
 color:#0a2a43;
 }
 
-/* MOBILE */
 @media(max-width:900px){
 .container{flex-direction:column;}
 .slide{font-size:26px;}
@@ -215,15 +217,30 @@ color:#0a2a43;
 <!-- SLIDER -->
 <div class="hero">
 
-<div class="slide active" style="background-image:url('https://source.unsplash.com/1600x900/?office,team');"><div class="overlay"></div>POSH Compliance</div>
+<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80');">
+<div class="overlay"></div>
+<div class="slide-text">POSH Compliance</div>
+</div>
 
-<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?training,corporate');"><div class="overlay"></div>Employee Training</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80');">
+<div class="overlay"></div>
+<div class="slide-text">Employee Training</div>
+</div>
 
-<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?meeting,discussion');"><div class="overlay"></div>ICC Committee Setup</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1600&q=80');">
+<div class="overlay"></div>
+<div class="slide-text">ICC Committee Setup</div>
+</div>
 
-<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?law,justice');"><div class="overlay"></div>Legal Compliance</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80');">
+<div class="overlay"></div>
+<div class="slide-text">Legal Compliance</div>
+</div>
 
-<div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?workplace,office');"><div class="overlay"></div>Safe Workplace</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80');">
+<div class="overlay"></div>
+<div class="slide-text">Safe Workplace</div>
+</div>
 
 </div>
 
@@ -233,18 +250,18 @@ color:#0a2a43;
 <div class="left">
 <h2>POSH Consultant Services</h2>
 
-<p>The Prevention of Sexual Harassment (POSH) Act is mandatory for organizations in India. Companies must ensure a safe working environment and proper complaint mechanism.</p>
+<p>The Prevention of Sexual Harassment (POSH) Act ensures a safe workplace environment. Every company must follow compliance guidelines strictly.</p>
 
 <h3>Our POSH Services</h3>
 <ul>
 <li>POSH Policy Drafting</li>
 <li>ICC Committee Formation</li>
 <li>Employee Awareness Training</li>
-<li>Handling Complaints</li>
-<li>Annual Report Preparation</li>
-<li>Legal Advisory & Documentation</li>
-<li>Workplace Investigation Support</li>
-<li>Compliance Audit</li>
+<li>Complaint Handling Support</li>
+<li>Annual Compliance Report</li>
+<li>Legal Advisory</li>
+<li>Workplace Investigation</li>
+<li>Audit & Documentation</li>
 </ul>
 
 <a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn">
@@ -268,14 +285,14 @@ Get Free Consultation
 </div>
 
 <script>
-let slides=document.querySelectorAll(".slide");
-let i=0;
+let slides = document.querySelectorAll(".slide");
+let i = 0;
 
 setInterval(()=>{
 slides[i].classList.remove("active");
-i=(i+1)%slides.length;
+i = (i + 1) % slides.length;
 slides[i].classList.add("active");
-},4000);
+}, 4000);
 </script>
 
 </body>
