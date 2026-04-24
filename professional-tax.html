@@ -15,108 +15,152 @@ body{background:#f5f7fa;color:#222;line-height:1.7;}
 /* HEADER */
 header{
 position:fixed;top:0;width:100%;
-background:#0a2a43;padding:12px 30px;
-display:flex;justify-content:space-between;align-items:center;
+background:#0a2a43;
+padding:12px 30px;
+display:flex;justify-content:space-between;
+align-items:center;
 z-index:9999;
 }
-.logo{color:#fff;font-size:22px;font-weight:700;}
 
-nav a{
-color:#fff;margin:0 8px;text-decoration:none;font-size:14px;
+.logo{
+display:flex;align-items:center;gap:10px;
+color:#fff;font-size:20px;font-weight:700;
 }
-.book-btn{background:#00c6ff;padding:8px 12px;border-radius:5px;}
-.whatsapp-btn{background:#25D366;padding:8px 12px;border-radius:5px;}
-.back-btn{background:#ff5722;padding:8px 12px;border-radius:5px;}
 
-/* NEWS */
+.logo img{height:42px;border-radius:6px;}
+
+nav{display:flex;gap:12px;flex-wrap:wrap;}
+nav a{
+color:#fff;text-decoration:none;
+padding:9px 13px;border-radius:6px;
+font-size:14px;
+}
+.book{background:#00c6ff;}
+.whatsapp{background:#25D366;}
+.back{background:#ff5722;}
+
+/* NEWS BAR */
 .news-bar{
-margin-top:60px;
+margin-top:72px;
 display:flex;
 background:#081d2f;
 border-top:2px solid #00c6ff;
 border-bottom:2px solid #00c6ff;
 }
+
 .news-title{
-background:#00c6ff;color:#fff;padding:10px;font-weight:700;
+background:#00c6ff;
+color:#fff;
+padding:10px 15px;
+font-weight:700;
 }
-.news-scroll{overflow:hidden;flex:1;}
+
+.news-scroll{
+overflow:hidden;
+flex:1;
+display:flex;
+align-items:center;
+}
+
 .news-track{
 display:flex;
-animation:move 65s linear infinite;
+width:max-content;
+animation:moveNews 55s linear infinite;
 }
+
 .news-track span{
-color:#fff;padding:10px 30px;white-space:nowrap;
+color:#fff;
+padding:0 30px;
+white-space:nowrap;
+font-size:14px;
 }
-@keyframes move{
+
+@keyframes moveNews{
 0%{transform:translateX(0);}
 100%{transform:translateX(-50%);}
 }
 
 /* HERO */
-.hero{height:90vh;margin-top:100px;position:relative;}
-.slide{
-position:absolute;width:100%;height:100%;
-background-size:cover;background-position:center;
-display:flex;justify-content:center;align-items:center;
-text-align:center;color:#fff;font-size:40px;font-weight:700;
-opacity:0;transition:1s;
+.hero{
+height:90vh;
+margin-top:110px;
+position:relative;
+overflow:hidden;
 }
+
+.slide{
+position:absolute;
+width:100%;height:100%;
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#fff;
+font-size:40px;
+font-weight:700;
+opacity:0;
+transition:1s;
+text-align:center;
+}
+
 .slide.active{opacity:1;}
+
 .overlay{
-position:absolute;width:100%;height:100%;
+position:absolute;
+width:100%;height:100%;
 background:rgba(0,0,0,0.6);
 }
 
 /* CONTENT */
 .container{
-max-width:1200px;margin:auto;
+max-width:1200px;
+margin:auto;
 padding:40px 20px;
-display:flex;gap:30px;
+display:flex;
+gap:30px;
 }
+
 .left,.right{
-background:#fff;padding:25px;border-radius:10px;
-box-shadow:0 8px 20px rgba(0,0,0,0.1);
+background:#fff;
+padding:25px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
 }
+
 .left{flex:2;}
 .right{flex:1;}
 
 h2,h3{color:#0a2a43;margin-bottom:15px;}
-ul{padding-left:20px;}
+p{margin-bottom:14px;}
+
+ul{padding-left:20px;margin-bottom:18px;}
 li{margin-bottom:8px;}
 
 .btn{
+background:#00c6ff;
+color:#fff;
+padding:12px 20px;
+text-decoration:none;
+border-radius:6px;
 display:inline-block;
-background:#00c6ff;color:#fff;
-padding:12px 20px;border-radius:6px;
-text-decoration:none;margin-top:15px;
+margin-top:10px;
 }
 
 .right a{
-display:block;padding:10px 0;
+display:block;
+padding:10px 0;
 border-bottom:1px solid #eee;
-color:#0a2a43;text-decoration:none;
+color:#0a2a43;
+text-decoration:none;
 }
 
-/* GRID */
-.section{
-max-width:1200px;margin:auto;padding:40px 20px;
-}
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-.card{
-background:#fff;padding:20px;border-radius:10px;
-box-shadow:0 6px 15px rgba(0,0,0,0.1);
-transition:.3s;
-}
-.card:hover{transform:translateY(-5px);}
-
-/* FOOTER */
-footer{
-background:#0a2a43;color:#fff;
-text-align:center;padding:20px;margin-top:40px;
+.notice{
+background:#fff3cd;
+padding:12px;
+border-radius:8px;
+margin-top:15px;
+font-size:14px;
 }
 
 /* MOBILE */
@@ -129,65 +173,71 @@ text-align:center;padding:20px;margin-top:40px;
 
 <body>
 
+<!-- HEADER -->
 <header>
-<div class="logo">Dream HR Consultancy</div>
+<div class="logo">
+<img src="logo.png">
+<span>Dream HR Consultancy</span>
+</div>
 
 <nav>
-<a href="#">Home</a>
-<a href="#">Services</a>
-<a href="#">Jobs</a>
-<a href="#">Contact</a>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="jobs.html">Jobs</a>
+<a href="contact.html">Contact</a>
 
-<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="book-btn">Book Meeting</a>
-<a href="https://wa.me/918863962310" target="_blank" class="whatsapp-btn">WhatsApp</a>
-<a href="javascript:history.back()" class="back-btn">Back</a>
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="book">Book Meeting</a>
+<a href="https://wa.me/918863962310" target="_blank" class="whatsapp">WhatsApp</a>
+<a href="javascript:history.back()" class="back">⬅ Back</a>
 </nav>
 </header>
 
 <!-- NEWS -->
 <div class="news-bar">
-<div class="news-title">Updates</div>
+<div class="news-title">Latest Updates</div>
+
 <div class="news-scroll">
 <div class="news-track">
 
-<span>Professional Tax registration mandatory in applicable states</span>
-<span>Monthly PT return filing deadlines must be followed</span>
-<span>Late PT payment may attract penalty & interest</span>
-<span>Employee salary slab based PT deduction required</span>
-<span>State-wise PT rules differ across India</span>
-<span>PT compliance audit increasing in companies</span>
+<span>Professional Tax registration mandatory in applicable states.</span>
+<span>Monthly & yearly PT returns must be filed on time.</span>
+<span>Late PT payment may attract penalty and interest.</span>
+<span>Employee salary slab based PT deduction required.</span>
+<span>State-wise PT rules differ - compliance is important.</span>
+<span>PT enrollment certificate needed for employers.</span>
+<span>Maintain PT records for audit and inspection.</span>
+<span>Dream HR provides PAN India PT compliance support.</span>
 
-<span>Professional Tax registration mandatory in applicable states</span>
-<span>Monthly PT return filing deadlines must be followed</span>
-<span>Late PT payment may attract penalty & interest</span>
-<span>Employee salary slab based PT deduction required</span>
+<span>Professional Tax registration mandatory in applicable states.</span>
+<span>Monthly & yearly PT returns must be filed on time.</span>
+<span>Late PT payment may attract penalty and interest.</span>
 
 </div>
 </div>
 </div>
 
-<!-- SLIDER -->
+<!-- HERO SLIDER -->
 <div class="hero">
 
-<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1554224154-26032ffc0d07');"><div class="overlay"></div>Professional Tax Services</div>
+<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1554224154-26032ffc0d07');">
+<div class="overlay"></div>Professional Tax Services
+</div>
 
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85');"><div class="overlay"></div>PT Registration</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f');">
+<div class="overlay"></div>PT Registration
+</div>
 
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f');"><div class="overlay"></div>PT Return Filing</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40');">
+<div class="overlay"></div>Return Filing
+</div>
 
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1556740749-887f6717d7e4');"><div class="overlay"></div>Salary Deduction</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a');">
+<div class="overlay"></div>Compliance Management
+</div>
 
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0');"><div class="overlay"></div>Compliance Management</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1553877522-43269d4ea984');"><div class="overlay"></div>Government Filing</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40');"><div class="overlay"></div>Audit Support</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');"><div class="overlay"></div>Documentation</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a');"><div class="overlay"></div>Accurate Calculations</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1551836022-d5d88e9218df');"><div class="overlay"></div>Business Compliance</div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1507679799987-c73779587ccf');">
+<div class="overlay"></div>Tax Deduction Support
+</div>
 
 </div>
 
@@ -197,22 +247,23 @@ text-align:center;padding:20px;margin-top:40px;
 <div class="left">
 <h2>Professional Tax Services</h2>
 
-<p>Professional Tax is a state-level tax applicable on salaried employees and professionals. Proper registration, deduction and timely return filing is mandatory to avoid penalties.</p>
+<p>Professional Tax (PT) is a state-level tax applicable to employers and employees. Proper registration, deduction and return filing is essential to avoid penalties.</p>
 
-<h3>Our Professional Tax Services</h3>
+<p>Dream HR Consultancy provides complete Professional Tax compliance services across India.</p>
+
+<h3>Our PT Services</h3>
+
 <ul>
 <li>PT Registration (Employer & Employee)</li>
+<li>PT Enrollment Certificate</li>
 <li>Monthly / Quarterly Return Filing</li>
-<li>Salary Based PT Deduction</li>
-<li>State-wise Compliance Handling</li>
-<li>PT Payment & Challan Management</li>
-<li>Late Payment Penalty Handling</li>
-<li>PT Audit & Notice Support</li>
-<li>Employee Data Management</li>
-<li>Multi-State PT Compliance</li>
-<li>Correction & Amendment</li>
-<li>Online Portal Handling</li>
-<li>Consultation & Advisory</li>
+<li>Salary Slab Based Deduction</li>
+<li>PT Payment & Challan Support</li>
+<li>Penalty & Notice Handling</li>
+<li>State-wise Compliance Management</li>
+<li>PT Audit & Record Maintenance</li>
+<li>New Company PT Setup</li>
+<li>Employee PT Data Management</li>
 </ul>
 
 <a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn">
@@ -222,41 +273,25 @@ Get Free Consultation
 </div>
 
 <div class="right">
+
 <h3>Our Services</h3>
 
-<a href="#">PF & ESIC</a>
-<a href="#">Payroll</a>
-<a href="#">Labour Law</a>
-<a href="#">Recruitment</a>
-<a href="#">Factory License</a>
-<a href="#">Compliance Audit</a>
+<a href="pf-esic.html">PF & ESIC</a>
+<a href="payroll.html">Payroll</a>
+<a href="labour-law.html">Labour Law</a>
+<a href="factory-license.html">Factory License</a>
+<a href="compliance-audit.html">Compliance Audit</a>
+<a href="hr-consulting.html">HR Consulting</a>
 
+<div class="notice">
+PT compliance made easy with expert support.
 </div>
 
 </div>
 
-<!-- EXTRA -->
-<section class="section">
-
-<h2 style="text-align:center;">Why Choose Us?</h2>
-
-<div class="grid">
-
-<div class="card"><h3>Accurate Filing</h3><p>Error-free PT calculations & filings.</p></div>
-<div class="card"><h3>On-Time Compliance</h3><p>Never miss PT deadlines.</p></div>
-<div class="card"><h3>Multi-State Support</h3><p>Handling all state PT laws.</p></div>
-<div class="card"><h3>Expert Team</h3><p>Experienced compliance professionals.</p></div>
-<div class="card"><h3>Affordable Plans</h3><p>Best pricing for startups & corporates.</p></div>
-<div class="card"><h3>Quick Support</h3><p>Call & WhatsApp assistance.</p></div>
-
 </div>
 
-</section>
-
-<footer>
-© 2026 Dream HR Consultancy | support@idhrt.com | +91 8863962310
-</footer>
-
+<!-- SLIDER SCRIPT -->
 <script>
 let slides=document.querySelectorAll(".slide");
 let i=0;
@@ -265,7 +300,7 @@ setInterval(()=>{
 slides[i].classList.remove("active");
 i=(i+1)%slides.length;
 slides[i].classList.add("active");
-},4000);
+},3000);
 </script>
 
 </body>
