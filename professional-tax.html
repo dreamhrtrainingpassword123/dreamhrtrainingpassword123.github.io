@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Professional Tax Services | Dream HR Consultancy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f5f7fa;color:#222;line-height:1.7;}
+
+/* HEADER */
+header{
+position:fixed;top:0;width:100%;
+background:#0a2a43;padding:12px 30px;
+display:flex;justify-content:space-between;align-items:center;
+z-index:9999;
+}
+.logo{color:#fff;font-size:22px;font-weight:700;}
+
+nav a{
+color:#fff;margin:0 8px;text-decoration:none;font-size:14px;
+}
+.book-btn{background:#00c6ff;padding:8px 12px;border-radius:5px;}
+.whatsapp-btn{background:#25D366;padding:8px 12px;border-radius:5px;}
+.back-btn{background:#ff5722;padding:8px 12px;border-radius:5px;}
+
+/* NEWS */
+.news-bar{
+margin-top:60px;
+display:flex;
+background:#081d2f;
+border-top:2px solid #00c6ff;
+border-bottom:2px solid #00c6ff;
+}
+.news-title{
+background:#00c6ff;color:#fff;padding:10px;font-weight:700;
+}
+.news-scroll{overflow:hidden;flex:1;}
+.news-track{
+display:flex;
+animation:move 65s linear infinite;
+}
+.news-track span{
+color:#fff;padding:10px 30px;white-space:nowrap;
+}
+@keyframes move{
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
+}
+
+/* HERO */
+.hero{height:90vh;margin-top:100px;position:relative;}
+.slide{
+position:absolute;width:100%;height:100%;
+background-size:cover;background-position:center;
+display:flex;justify-content:center;align-items:center;
+text-align:center;color:#fff;font-size:40px;font-weight:700;
+opacity:0;transition:1s;
+}
+.slide.active{opacity:1;}
+.overlay{
+position:absolute;width:100%;height:100%;
+background:rgba(0,0,0,0.6);
+}
+
+/* CONTENT */
+.container{
+max-width:1200px;margin:auto;
+padding:40px 20px;
+display:flex;gap:30px;
+}
+.left,.right{
+background:#fff;padding:25px;border-radius:10px;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+.left{flex:2;}
+.right{flex:1;}
+
+h2,h3{color:#0a2a43;margin-bottom:15px;}
+ul{padding-left:20px;}
+li{margin-bottom:8px;}
+
+.btn{
+display:inline-block;
+background:#00c6ff;color:#fff;
+padding:12px 20px;border-radius:6px;
+text-decoration:none;margin-top:15px;
+}
+
+.right a{
+display:block;padding:10px 0;
+border-bottom:1px solid #eee;
+color:#0a2a43;text-decoration:none;
+}
+
+/* GRID */
+.section{
+max-width:1200px;margin:auto;padding:40px 20px;
+}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+.card{
+background:#fff;padding:20px;border-radius:10px;
+box-shadow:0 6px 15px rgba(0,0,0,0.1);
+transition:.3s;
+}
+.card:hover{transform:translateY(-5px);}
+
+/* FOOTER */
+footer{
+background:#0a2a43;color:#fff;
+text-align:center;padding:20px;margin-top:40px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+.container{flex-direction:column;}
+.slide{font-size:26px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Dream HR Consultancy</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">Jobs</a>
+<a href="#">Contact</a>
+
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="book-btn">Book Meeting</a>
+<a href="https://wa.me/918863962310" target="_blank" class="whatsapp-btn">WhatsApp</a>
+<a href="javascript:history.back()" class="back-btn">Back</a>
+</nav>
+</header>
+
+<!-- NEWS -->
+<div class="news-bar">
+<div class="news-title">Updates</div>
+<div class="news-scroll">
+<div class="news-track">
+
+<span>Professional Tax registration mandatory in applicable states</span>
+<span>Monthly PT return filing deadlines must be followed</span>
+<span>Late PT payment may attract penalty & interest</span>
+<span>Employee salary slab based PT deduction required</span>
+<span>State-wise PT rules differ across India</span>
+<span>PT compliance audit increasing in companies</span>
+
+<span>Professional Tax registration mandatory in applicable states</span>
+<span>Monthly PT return filing deadlines must be followed</span>
+<span>Late PT payment may attract penalty & interest</span>
+<span>Employee salary slab based PT deduction required</span>
+
+</div>
+</div>
+</div>
+
+<!-- SLIDER -->
+<div class="hero">
+
+<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1554224154-26032ffc0d07');"><div class="overlay"></div>Professional Tax Services</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85');"><div class="overlay"></div>PT Registration</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f');"><div class="overlay"></div>PT Return Filing</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1556740749-887f6717d7e4');"><div class="overlay"></div>Salary Deduction</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0');"><div class="overlay"></div>Compliance Management</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1553877522-43269d4ea984');"><div class="overlay"></div>Government Filing</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40');"><div class="overlay"></div>Audit Support</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');"><div class="overlay"></div>Documentation</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a');"><div class="overlay"></div>Accurate Calculations</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1551836022-d5d88e9218df');"><div class="overlay"></div>Business Compliance</div>
+
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+<div class="left">
+<h2>Professional Tax Services</h2>
+
+<p>Professional Tax is a state-level tax applicable on salaried employees and professionals. Proper registration, deduction and timely return filing is mandatory to avoid penalties.</p>
+
+<h3>Our Professional Tax Services</h3>
+<ul>
+<li>PT Registration (Employer & Employee)</li>
+<li>Monthly / Quarterly Return Filing</li>
+<li>Salary Based PT Deduction</li>
+<li>State-wise Compliance Handling</li>
+<li>PT Payment & Challan Management</li>
+<li>Late Payment Penalty Handling</li>
+<li>PT Audit & Notice Support</li>
+<li>Employee Data Management</li>
+<li>Multi-State PT Compliance</li>
+<li>Correction & Amendment</li>
+<li>Online Portal Handling</li>
+<li>Consultation & Advisory</li>
+</ul>
+
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn">
+Get Free Consultation
+</a>
+
+</div>
+
+<div class="right">
+<h3>Our Services</h3>
+
+<a href="#">PF & ESIC</a>
+<a href="#">Payroll</a>
+<a href="#">Labour Law</a>
+<a href="#">Recruitment</a>
+<a href="#">Factory License</a>
+<a href="#">Compliance Audit</a>
+
+</div>
+
+</div>
+
+<!-- EXTRA -->
+<section class="section">
+
+<h2 style="text-align:center;">Why Choose Us?</h2>
+
+<div class="grid">
+
+<div class="card"><h3>Accurate Filing</h3><p>Error-free PT calculations & filings.</p></div>
+<div class="card"><h3>On-Time Compliance</h3><p>Never miss PT deadlines.</p></div>
+<div class="card"><h3>Multi-State Support</h3><p>Handling all state PT laws.</p></div>
+<div class="card"><h3>Expert Team</h3><p>Experienced compliance professionals.</p></div>
+<div class="card"><h3>Affordable Plans</h3><p>Best pricing for startups & corporates.</p></div>
+<div class="card"><h3>Quick Support</h3><p>Call & WhatsApp assistance.</p></div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Dream HR Consultancy | support@idhrt.com | +91 8863962310
+</footer>
+
+<script>
+let slides=document.querySelectorAll(".slide");
+let i=0;
+
+setInterval(()=>{
+slides[i].classList.remove("active");
+i=(i+1)%slides.length;
+slides[i].classList.add("active");
+},4000);
+</script>
+
+</body>
+</html>
