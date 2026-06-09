@@ -9,7 +9,7 @@
 
 <meta name="description" content="Dream HR Consultancy provides PF ESIC compliance, payroll management, labour law compliance, recruitment, factory license, HR consulting and professional tax services across India.">
 
-<meta name="keywords" content="PF ESIC, Payroll Services, Labour Law Compliance, HR Consulting, Factory License, Compliance Services India">
+<meta name="keywords" content="PF ESIC Payroll Labour Law HR Consulting Compliance India">
 
 <meta name="robots" content="index, follow">
 
@@ -91,9 +91,9 @@ nav a:hover{
 background:rgba(255,255,255,.12);
 }
 
-.book-btn{background:#00c6ff;}
-.whatsapp-btn{background:#25D366;}
+/* BUTTON COLORS */
 .pay-btn{background:#ff9800;}
+.whatsapp-btn{background:#25D366;}
 .back-btn{background:#ff5722;}
 
 /* NEWS */
@@ -175,6 +175,20 @@ margin-bottom:15px;
 
 .hero-content p{
 font-size:18px;
+margin-bottom:20px;
+}
+
+/* BUTTON */
+.btn{
+display:inline-block;
+padding:12px 18px;
+border-radius:8px;
+background:#00c6ff;
+color:#fff;
+text-decoration:none;
+font-size:14px;
+font-weight:600;
+margin:5px;
 }
 
 /* SERVICES */
@@ -215,17 +229,6 @@ margin-bottom:10px;
 color:#0a2a43;
 }
 
-.btn{
-display:inline-block;
-padding:10px 14px;
-border-radius:8px;
-background:#00c6ff;
-color:#fff;
-text-decoration:none;
-font-size:14px;
-margin-top:10px;
-}
-
 /* FOOTER */
 footer{
 background:#0a2a43;
@@ -237,6 +240,7 @@ margin-top:40px;
 
 /* MOBILE */
 @media(max-width:768px){
+
 header{
 flex-direction:column;
 gap:10px;
@@ -246,9 +250,10 @@ gap:10px;
 height:70vh;
 }
 
-.hero h1{
+.hero-content h1{
 font-size:28px;
 }
+
 }
 
 </style>
@@ -257,6 +262,7 @@ font-size:28px;
 
 <body>
 
+<!-- HEADER -->
 <header>
 
 <div class="logo">
@@ -274,9 +280,10 @@ font-size:28px;
 <a href="notifications.html">Notifications</a>
 <a href="contact.html">Contact</a>
 
+<!-- FIX 1: HEADER PAY BUTTON -->
 <a href="pay.html" class="pay-btn">Pay Now</a>
+
 <a href="https://wa.me/918863962310" class="whatsapp-btn" target="_blank">WhatsApp</a>
-<a href="javascript:history.back()" class="back-btn">Back</a>
 </nav>
 
 </header>
@@ -288,9 +295,8 @@ font-size:28px;
 <span>PF Filing Open</span>
 <span>ESIC Compliance Support</span>
 <span>Payroll Services Available</span>
-<span>Factory License Renewal</span>
 <span>HR Audit Services</span>
-<span>POSH Training Available</span>
+<span>Factory License Renewal</span>
 </div>
 </div>
 
@@ -299,17 +305,14 @@ font-size:28px;
 
 <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85');">
 <div class="overlay"></div>
+
 <div class="hero-content">
 <h1>Dream HR Consultancy</h1>
-<p>PF | ESIC | Payroll | Labour Law Compliance Experts</p>
-</div>
-</div>
+<p>PF | ESIC | Payroll | Labour Law Experts</p>
 
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f');">
-<div class="overlay"></div>
-<div class="hero-content">
-<h1>Trusted HR Partner</h1>
-<p>Helping Businesses Across India</p>
+<!-- FIX 2: HERO PAY CTA -->
+<a href="pay.html" class="btn">Pay Your Invoice</a>
+
 </div>
 </div>
 
@@ -328,13 +331,8 @@ font-size:28px;
 </div>
 
 <div class="card">
-<h3>Payroll Management</h3>
+<h3>Payroll</h3>
 <a href="payroll.html" class="btn">Consult</a>
-</div>
-
-<div class="card">
-<h3>Labour Law</h3>
-<a href="labour-law.html" class="btn">Consult</a>
 </div>
 
 <div class="card">
@@ -342,13 +340,10 @@ font-size:28px;
 <a href="compliance-audit.html" class="btn">Consult</a>
 </div>
 
+<!-- FIX 3: PAYMENT CTA CARD -->
 <div class="card">
-<h3>Recruitment</h3>
-<a href="jobs.html" class="btn">Apply Now</a>
-</div>
-
-<div class="card">
-<h3>Payment Portal</h3>
+<h3>Billing Portal</h3>
+<p>Secure client payment system</p>
 <a href="pay.html" class="btn">Pay Now</a>
 </div>
 
@@ -356,11 +351,13 @@ font-size:28px;
 
 </section>
 
+<!-- FOOTER -->
 <footer>
 © 2026 Dream HR Consultancy | support@idhrt.com | +91 8863962310
 </footer>
 
 <script>
+
 let slides=document.querySelectorAll(".slide");
 let i=0;
 
@@ -369,6 +366,7 @@ slides[i].classList.remove("active");
 i=(i+1)%slides.length;
 slides[i].classList.add("active");
 },3500);
+
 </script>
 
 </body>
