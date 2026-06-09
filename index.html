@@ -69,6 +69,7 @@ width:60px;
 border-radius:50%;
 object-fit:cover;
 }
+
 nav{
 display:flex;
 gap:10px;
@@ -164,9 +165,7 @@ transition:1s;
 color:#fff;
 }
 
-.slide.active{
-opacity:1;
-}
+.slide.active{opacity:1;}
 
 .overlay{
 position:absolute;
@@ -215,6 +214,7 @@ padding:25px;
 border-radius:14px;
 box-shadow:0 8px 20px rgba(0,0,0,.08);
 transition:.3s;
+text-align:center;
 }
 
 .card:hover{
@@ -236,6 +236,7 @@ border-radius:7px;
 text-decoration:none;
 font-size:14px;
 font-weight:600;
+margin:5px;
 }
 
 footer{
@@ -255,38 +256,19 @@ flex-direction:column;
 gap:12px;
 }
 
-.logo a{
-font-size:18px;
-}
+.logo a{font-size:18px;}
 
-nav{
-justify-content:center;
-}
+nav{justify-content:center;}
 
-nav a{
-font-size:12px;
-padding:7px 8px;
-}
+.news-bar{margin-top:125px;}
 
-.news-bar{
-margin-top:125px;
-}
+.hero{height:70vh;}
 
-.hero{
-height:70vh;
-}
+.hero-content h1{font-size:28px;}
 
-.hero-content h1{
-font-size:28px;
-}
+.hero-content p{font-size:15px;}
 
-.hero-content p{
-font-size:15px;
-}
-
-.section h2{
-font-size:26px;
-}
+.section h2{font-size:26px;}
 }
 </style>
 
@@ -310,7 +292,10 @@ font-size:26px;
 <a href="jobs.html">Jobs</a>
 <a href="notifications.html">Notifications</a>
 <a href="contact.html">Contact</a>
-<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="book-btn">Book Meeting</a>
+
+<!-- PAYMENT LINK FIXED -->
+<a href="pay.html" class="book-btn">Make Payment</a>
+
 <a href="https://wa.me/918863962310" target="_blank" class="whatsapp-btn">WhatsApp</a>
 <a href="javascript:history.back()" class="back-btn">⬅ Back</a>
 </nav>
@@ -360,22 +345,6 @@ font-size:26px;
 </div>
 </div>
 
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1507679799987-c73779587ccf');">
-<div class="overlay"></div>
-<div class="hero-content">
-<h1>Factory License</h1>
-<p>Registration & Renewal</p>
-</div>
-</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978');">
-<div class="overlay"></div>
-<div class="hero-content">
-<h1>HR Consulting</h1>
-<p>Policies & HR Setup</p>
-</div>
-</div>
-
 </div>
 
 <!-- SERVICES -->
@@ -418,6 +387,11 @@ font-size:26px;
 <div class="card">
 <h3>POSH Consultant</h3>
 <a href="posh-consultant.html" class="btn">Get Consultation</a>
+</div>
+
+<div class="card">
+<h3>Client Payment</h3>
+<a href="pay.html" class="btn">Make Payment</a>
 </div>
 
 </div>
