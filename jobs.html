@@ -27,31 +27,52 @@ z-index:9999;
 box-shadow:0 4px 12px rgba(0,0,0,.18);
 }
 
-.logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;}
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+color:#fff;
+font-weight:700;
+}
+
 .logo img{width:42px;height:42px;border-radius:50%;}
 
 nav{display:flex;gap:8px;flex-wrap:wrap;}
-nav a{color:#fff;text-decoration:none;padding:8px 12px;border-radius:6px;font-size:13px;font-weight:600;}
+
+nav a{
+color:#fff;
+text-decoration:none;
+padding:8px 12px;
+border-radius:6px;
+font-size:13px;
+font-weight:600;
+}
+
 nav a:hover{background:#123c5e;}
 
 .hero{
 margin-top:78px;
 height:280px;
 background:url('https://images.unsplash.com/photo-1521791136064-7986c2920216') center/cover;
-position:relative;
 display:flex;
 align-items:center;
 justify-content:center;
+position:relative;
 color:#fff;
 text-align:center;
 }
+
 .hero::before{
 content:'';
 position:absolute;
 inset:0;
 background:rgba(0,0,0,.6);
 }
-.hero h1{position:relative;font-size:40px;}
+
+.hero h1{
+position:relative;
+font-size:42px;
+}
 
 .wrapper{
 max-width:1400px;
@@ -72,7 +93,10 @@ position:sticky;
 top:100px;
 }
 
-.sidebar h3{margin-bottom:10px;color:#0a2a43;}
+.sidebar h3{
+margin-bottom:12px;
+color:#0a2a43;
+}
 
 select{
 width:100%;
@@ -82,8 +106,11 @@ border-radius:6px;
 border:1px solid #ddd;
 }
 
-/* JOBS */
-.jobs h2{font-size:32px;margin-bottom:20px;}
+/* JOB GRID */
+.jobs h2{
+font-size:32px;
+margin-bottom:20px;
+}
 
 .grid{
 display:grid;
@@ -96,16 +123,31 @@ background:#fff;
 padding:22px;
 border-radius:12px;
 box-shadow:0 8px 18px rgba(0,0,0,.08);
+transition:.3s;
 }
 
-.card h3{color:#0a2a43;margin-bottom:8px;}
+.card:hover{transform:translateY(-6px);}
 
-.meta{font-size:13px;color:#555;margin-bottom:10px;}
+.card h3{
+color:#0a2a43;
+margin-bottom:8px;
+}
 
-.card p{font-size:13px;line-height:1.6;margin-bottom:8px;}
+.meta{
+font-size:13px;
+color:#555;
+margin-bottom:10px;
+}
+
+.card p{
+font-size:13px;
+line-height:1.6;
+margin-bottom:6px;
+}
 
 .btn{
 display:inline-block;
+margin-top:10px;
 background:#00c6ff;
 color:#fff;
 padding:10px 14px;
@@ -113,6 +155,8 @@ border-radius:6px;
 text-decoration:none;
 font-size:13px;
 }
+
+.btn:hover{background:#0099cc;}
 
 </style>
 </head>
@@ -141,14 +185,19 @@ font-size:13px;
 <!-- SIDEBAR FILTERS -->
 <div class="sidebar">
 
-<h3>Filters</h3>
+<h3>Job Filters</h3>
 
 <select id="state" onchange="filterJobs()">
 <option value="all">All States (28)</option>
 <option>Delhi</option><option>Maharashtra</option><option>Karnataka</option>
-<option>Gujarat</option><option>Rajasthan</option><option>UP</option>
+<option>Gujarat</option><option>Rajasthan</option><option>Uttar Pradesh</option>
 <option>Haryana</option><option>Tamil Nadu</option><option>Punjab</option>
-<option>Bihar</option><option>West Bengal</option><option>MP</option>
+<option>Bihar</option><option>West Bengal</option><option>Madhya Pradesh</option>
+<option>Kerala</option><option>Telangana</option><option>Odisha</option>
+<option>Assam</option><option>Jharkhand</option><option>Goa</option>
+<option>Chhattisgarh</option><option>Uttarakhand</option><option>HP</option>
+<option>J&K</option><option>Chandigarh</option><option>Delhi NCR</option>
+<option>Noida</option><option>Gurgaon</option><option>Lucknow</option>
 </select>
 
 <select id="type" onchange="filterJobs()">
@@ -167,11 +216,12 @@ font-size:13px;
 <option>Field Sales</option>
 <option>Compliance</option>
 <option>HR Recruiter</option>
+<option>Lead Generator</option>
 </select>
 
 </div>
 
-<!-- JOB LIST -->
+<!-- JOBS -->
 <div class="jobs">
 
 <h2>Open Positions</h2>
@@ -181,11 +231,11 @@ font-size:13px;
 <!-- BDM -->
 <div class="card job" data-state="Delhi" data-type="Freelancer" data-position="BDM">
 <h3>Freelancer BDM</h3>
-<div class="meta">💰 ₹45,000 + Incentives | 🌍 PAN India</div>
-<p><b>Experience:</b> 1–5 Years in Sales</p>
-<p><b>Qualification:</b> Graduate / MBA Preferred</p>
-<p><b>Responsibilities:</b> Generate leads, sell HR services (PF, ESIC, Payroll), client meetings</p>
-<p><b>Skills:</b> Communication, Negotiation, Corporate Sales</p>
+<div class="meta">💰 ₹45,000 + Incentive | 🌍 PAN India</div>
+<p><b>Experience:</b> 1–5 Years Sales</p>
+<p><b>Qualification:</b> Graduate / MBA</p>
+<p><b>Responsibility:</b> HR services sales, corporate meetings, lead conversion</p>
+<p><b>Skills:</b> Negotiation, Communication</p>
 <a href="mailto:support@idhrt.com" class="btn">Apply Now</a>
 </div>
 
@@ -193,10 +243,10 @@ font-size:13px;
 <div class="card job" data-state="All" data-type="WFH" data-position="Telecaller">
 <h3>Telecaller (WFH)</h3>
 <div class="meta">💰 ₹18K–₹25K</div>
-<p><b>Experience:</b> Fresher/Experienced</p>
+<p><b>Experience:</b> Fresher</p>
 <p><b>Qualification:</b> 12th / Graduate</p>
-<p><b>Responsibilities:</b> Lead calling, explain services, fix meetings</p>
-<p><b>Skills:</b> Hindi + English Communication</p>
+<p><b>Responsibility:</b> Calling leads, explaining services</p>
+<p><b>Skills:</b> Hindi + English</p>
 <a href="mailto:support@idhrt.com" class="btn">Apply Now</a>
 </div>
 
@@ -205,17 +255,16 @@ font-size:13px;
 <h3>Digital Marketing Executive</h3>
 <div class="meta">💰 ₹30K–₹50K</div>
 <p><b>Experience:</b> 1–3 Years</p>
-<p><b>Qualification:</b> Marketing/IT Background</p>
-<p><b>Responsibilities:</b> Ads, SEO, Social Media Leads</p>
+<p><b>Responsibility:</b> Ads, SEO, Lead Generation</p>
+<p><b>Skills:</b> Meta Ads, Google Ads</p>
 <a href="mailto:support@idhrt.com" class="btn">Apply Now</a>
 </div>
 
-<!-- FIELD -->
+<!-- FIELD SALES -->
 <div class="card job" data-state="Delhi" data-type="Full Time" data-position="Field Sales">
 <h3>Field Sales Executive</h3>
-<div class="meta">💰 ₹25K + Incentives</div>
-<p><b>Experience:</b> Sales Preferred</p>
-<p><b>Responsibilities:</b> B2B visits, client acquisition</p>
+<div class="meta">💰 ₹25K + Incentive</div>
+<p><b>Responsibility:</b> B2B client visits, HR service sales</p>
 <a href="mailto:support@idhrt.com" class="btn">Apply Now</a>
 </div>
 
@@ -223,12 +272,13 @@ font-size:13px;
 <div class="card job" data-state="All" data-type="Full Time" data-position="Compliance">
 <h3>Compliance Executive</h3>
 <div class="meta">💰 ₹40K/month</div>
-<p><b>Experience:</b> Labour Law Knowledge</p>
-<p><b>Responsibilities:</b> PF, ESIC, Audit, Filing</p>
+<p><b>Experience:</b> Labour Law knowledge</p>
+<p><b>Responsibility:</b> PF, ESIC, Payroll compliance</p>
 <a href="mailto:support@idhrt.com" class="btn">Apply Now</a>
 </div>
 
 </div>
+
 </div>
 
 </div>
