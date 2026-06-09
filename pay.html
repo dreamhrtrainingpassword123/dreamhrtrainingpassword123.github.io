@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Client Payment | Dream HR Consultancy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0a2a43,#00c6ff);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.box{
+background:#fff;
+width:400px;
+max-width:90%;
+padding:30px;
+border-radius:16px;
+box-shadow:0 15px 40px rgba(0,0,0,0.3);
+}
+
+h2{
+text-align:center;
+color:#0a2a43;
+margin-bottom:20px;
+font-size:26px;
+}
+
+p{
+text-align:center;
+font-size:13px;
+color:#666;
+margin-bottom:20px;
+}
+
+label{
+font-size:13px;
+font-weight:600;
+color:#0a2a43;
+display:block;
+margin-top:10px;
+}
+
+input{
+width:100%;
+padding:12px;
+margin-top:5px;
+border:1px solid #ddd;
+border-radius:8px;
+outline:none;
+font-size:14px;
+}
+
+input:focus{
+border-color:#00c6ff;
+}
+
+.amount-box{
+background:#f4f7fb;
+padding:12px;
+border-radius:10px;
+margin-top:15px;
+text-align:center;
+font-weight:600;
+color:#0a2a43;
+}
+
+.btn{
+width:100%;
+padding:14px;
+margin-top:20px;
+background:#00c6ff;
+border:none;
+color:#fff;
+font-size:16px;
+border-radius:10px;
+cursor:pointer;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#0097c7;
+}
+
+.note{
+font-size:11px;
+color:#888;
+text-align:center;
+margin-top:12px;
+}
+
+.footer{
+text-align:center;
+font-size:11px;
+color:#aaa;
+margin-top:15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Secure Client Payment</h2>
+<p>Dream HR Consultancy Billing System</p>
+
+<label>Client Name</label>
+<input type="text" placeholder="Enter Client Name">
+
+<label>Client Code</label>
+<input type="text" placeholder="Example: DHR-1001">
+
+<label>Service Description</label>
+<input type="text" placeholder="PF / ESIC / Payroll / Compliance">
+
+<label>Enter Amount (₹)</label>
+<input type="number" id="amount" placeholder="Enter Payment Amount">
+
+<div class="amount-box">
+Selected Amount: ₹<span id="showAmount">0</span>
+</div>
+
+<button class="btn" onclick="payNow()">Pay Now</button>
+
+<p class="note">
+Secure Payment Gateway will be activated via Razorpay soon
+</p>
+
+<div class="footer">
+© 2026 Dream HR Consultancy
+</div>
+
+</div>
+
+<script>
+let amountInput = document.getElementById("amount");
+let showAmount = document.getElementById("showAmount");
+
+amountInput.addEventListener("input", function(){
+showAmount.innerText = this.value || 0;
+});
+
+function payNow(){
+
+let amt = amountInput.value;
+
+if(!amt || amt <= 0){
+alert("Please enter valid amount");
+return;
+}
+
+/* Future Razorpay Integration Point */
+alert("Redirecting to secure payment gateway...");
+
+}
+</script>
+
+</body>
+</html>
