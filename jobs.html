@@ -8,9 +8,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-body{background:#f4f7fb;color:#222;}
+body{
+background:#f4f7fb;
+color:#222;
+}
 
 /* HEADER */
 header{
@@ -19,47 +27,107 @@ top:0;
 left:0;
 width:100%;
 background:#0a2a43;
-padding:14px 25px;
+padding:12px 22px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-z-index:9999;
-box-shadow:0 4px 12px rgba(0,0,0,.18);
+z-index:99999;
+box-shadow:0 4px 15px rgba(0,0,0,.15);
 }
 
-.logo{
+.logo a{
 display:flex;
 align-items:center;
 gap:10px;
+text-decoration:none;
 color:#fff;
 font-weight:700;
 }
 
-.logo img{width:42px;height:42px;border-radius:50%;}
+.logo img{
+width:42px;
+height:42px;
+border-radius:50%;
+}
 
-nav{display:flex;gap:8px;flex-wrap:wrap;}
+nav{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+align-items:center;
+}
 
 nav a{
 color:#fff;
 text-decoration:none;
-padding:8px 12px;
-border-radius:6px;
 font-size:13px;
 font-weight:600;
+padding:8px 10px;
+border-radius:6px;
 }
 
-nav a:hover{background:#123c5e;}
+nav a:hover{
+background:rgba(255,255,255,.1);
+}
 
-.hero{
-margin-top:78px;
-height:280px;
-background:url('https://images.unsplash.com/photo-1521791136064-7986c2920216') center/cover;
+.book{background:#00c6ff;}
+.whatsapp{background:#25D366;}
+.back{background:#ff5a1f;}
+
+/* NEWS BAR */
+.news-bar{
+margin-top:72px;
+background:#081d2f;
+display:flex;
+border-top:2px solid #00c6ff;
+border-bottom:2px solid #00c6ff;
+overflow:hidden;
+}
+
+.news-title{
+background:#00c6ff;
+color:#fff;
+padding:12px 16px;
+font-weight:700;
+white-space:nowrap;
+}
+
+.news-scroll{
+flex:1;
 display:flex;
 align-items:center;
-justify-content:center;
-position:relative;
+overflow:hidden;
+}
+
+.news-track{
+display:flex;
+width:max-content;
+animation:scroll 40s linear infinite;
+}
+
+.news-track span{
 color:#fff;
+padding:0 30px;
+white-space:nowrap;
+font-size:14px;
+}
+
+@keyframes scroll{
+0%{transform:translateX(100%);}
+100%{transform:translateX(-100%);}
+}
+
+/* HERO */
+.hero{
+height:280px;
+margin-top:0;
+background:url('https://images.unsplash.com/photo-1521791136064-7986c2920216') center/cover;
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
 text-align:center;
+color:#fff;
 }
 
 .hero::before{
@@ -71,9 +139,10 @@ background:rgba(0,0,0,.6);
 
 .hero h1{
 position:relative;
-font-size:42px;
+font-size:40px;
 }
 
+/* WRAPPER */
 .wrapper{
 max-width:1400px;
 margin:auto;
@@ -83,7 +152,7 @@ grid-template-columns:320px 1fr;
 gap:25px;
 }
 
-/* SIDEBAR */
+/* FILTER */
 .sidebar{
 background:#fff;
 padding:20px;
@@ -106,10 +175,11 @@ border-radius:6px;
 border:1px solid #ddd;
 }
 
-/* JOB GRID */
+/* JOBS */
 .jobs h2{
 font-size:32px;
 margin-bottom:20px;
+color:#0a2a43;
 }
 
 .grid{
@@ -126,11 +196,14 @@ box-shadow:0 8px 18px rgba(0,0,0,.08);
 transition:.3s;
 }
 
-.card:hover{transform:translateY(-6px);}
+.card:hover{
+transform:translateY(-6px);
+}
 
 .card h3{
 color:#0a2a43;
-margin-bottom:8px;
+margin-bottom:10px;
+font-size:18px;
 }
 
 .meta{
@@ -156,36 +229,70 @@ text-decoration:none;
 font-size:13px;
 }
 
-.btn:hover{background:#0099cc;}
+/* MOBILE */
+@media(max-width:900px){
+.wrapper{
+grid-template-columns:1fr;
+}
+.sidebar{
+position:static;
+}
+}
 
 </style>
 </head>
 
 <body>
 
+<!-- HEADER (YOUR ORIGINAL SAFE) -->
 <header>
 <div class="logo">
+<a href="index.html">
 <img src="logo.png?v=99">
 <span>Dream HR Consultancy</span>
+</a>
 </div>
 
 <nav>
 <a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
 <a href="jobs.html">Jobs</a>
+<a href="news.html">Notifications</a>
 <a href="contact.html">Contact</a>
+<a href="https://calendly.com/dreamhrtraining/30min" class="book" target="_blank">Book Meeting</a>
+<a href="https://wa.me/918863962310" class="whatsapp" target="_blank">WhatsApp</a>
+<a href="javascript:history.back()" class="back">⬅ Back</a>
 </nav>
 </header>
 
+<!-- NEWS BAR (ORIGINAL SAFE) -->
+<div class="news-bar">
+<div class="news-title">Latest Updates</div>
+<div class="news-scroll">
+<div class="news-track">
+<span>PF Return Filing Assistance Open</span>
+<span>ESIC Claim Support Available</span>
+<span>Payroll Services Available</span>
+<span>Factory License Renewal Support</span>
+<span>POSH Compliance Advisory Live</span>
+<span>Professional Tax Registration Help</span>
+<span>Compliance Audit Support Available</span>
+</div>
+</div>
+</div>
+
+<!-- HERO -->
 <section class="hero">
 <h1>Jobs & Hiring Portal</h1>
 </section>
 
 <div class="wrapper">
 
-<!-- SIDEBAR FILTERS -->
+<!-- FILTERS -->
 <div class="sidebar">
 
-<h3>Job Filters</h3>
+<h3>Filters</h3>
 
 <select id="state" onchange="filterJobs()">
 <option value="all">All States (28)</option>
@@ -195,9 +302,9 @@ font-size:13px;
 <option>Bihar</option><option>West Bengal</option><option>Madhya Pradesh</option>
 <option>Kerala</option><option>Telangana</option><option>Odisha</option>
 <option>Assam</option><option>Jharkhand</option><option>Goa</option>
-<option>Chhattisgarh</option><option>Uttarakhand</option><option>HP</option>
-<option>J&K</option><option>Chandigarh</option><option>Delhi NCR</option>
-<option>Noida</option><option>Gurgaon</option><option>Lucknow</option>
+<option>Chhattisgarh</option><option>Uttarakhand</option><option>Himachal Pradesh</option>
+<option>J&K</option><option>Chandigarh</option><option>Noida</option>
+<option>Gurgaon</option><option>Lucknow</option><option>Delhi NCR</option>
 </select>
 
 <select id="type" onchange="filterJobs()">
@@ -221,7 +328,7 @@ font-size:13px;
 
 </div>
 
-<!-- JOBS -->
+<!-- JOB LIST -->
 <div class="jobs">
 
 <h2>Open Positions</h2>
@@ -231,11 +338,11 @@ font-size:13px;
 <!-- BDM -->
 <div class="card job" data-state="Delhi" data-type="Freelancer" data-position="BDM">
 <h3>Freelancer BDM</h3>
-<div class="meta">💰 ₹45,000 + Incentive | 🌍 PAN India</div>
-<p><b>Experience:</b> 1–5 Years Sales</p>
+<div class="meta">💰 ₹45,000 + Incentives</div>
+<p><b>Experience:</b> 1–5 Years</p>
 <p><b>Qualification:</b> Graduate / MBA</p>
-<p><b>Responsibility:</b> HR services sales, corporate meetings, lead conversion</p>
-<p><b>Skills:</b> Negotiation, Communication</p>
+<p><b>Responsibility:</b> HR service sales, lead generation, client meetings</p>
+<p><b>Skills:</b> Communication, Sales</p>
 <a href="mailto:support@idhrt.com" class="btn">Apply Now</a>
 </div>
 
@@ -243,7 +350,7 @@ font-size:13px;
 <div class="card job" data-state="All" data-type="WFH" data-position="Telecaller">
 <h3>Telecaller (WFH)</h3>
 <div class="meta">💰 ₹18K–₹25K</div>
-<p><b>Experience:</b> Fresher</p>
+<p><b>Experience:</b> Fresher/Experienced</p>
 <p><b>Qualification:</b> 12th / Graduate</p>
 <p><b>Responsibility:</b> Calling leads, explaining services</p>
 <p><b>Skills:</b> Hindi + English</p>
@@ -255,15 +362,14 @@ font-size:13px;
 <h3>Digital Marketing Executive</h3>
 <div class="meta">💰 ₹30K–₹50K</div>
 <p><b>Experience:</b> 1–3 Years</p>
-<p><b>Responsibility:</b> Ads, SEO, Lead Generation</p>
-<p><b>Skills:</b> Meta Ads, Google Ads</p>
+<p><b>Responsibility:</b> Ads, SEO, lead generation</p>
 <a href="mailto:support@idhrt.com" class="btn">Apply Now</a>
 </div>
 
 <!-- FIELD SALES -->
 <div class="card job" data-state="Delhi" data-type="Full Time" data-position="Field Sales">
 <h3>Field Sales Executive</h3>
-<div class="meta">💰 ₹25K + Incentive</div>
+<div class="meta">💰 ₹25K + Incentives</div>
 <p><b>Responsibility:</b> B2B client visits, HR service sales</p>
 <a href="mailto:support@idhrt.com" class="btn">Apply Now</a>
 </div>
@@ -272,7 +378,7 @@ font-size:13px;
 <div class="card job" data-state="All" data-type="Full Time" data-position="Compliance">
 <h3>Compliance Executive</h3>
 <div class="meta">💰 ₹40K/month</div>
-<p><b>Experience:</b> Labour Law knowledge</p>
+<p><b>Experience:</b> Labour Law</p>
 <p><b>Responsibility:</b> PF, ESIC, Payroll compliance</p>
 <a href="mailto:support@idhrt.com" class="btn">Apply Now</a>
 </div>
