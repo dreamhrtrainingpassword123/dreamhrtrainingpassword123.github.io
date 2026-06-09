@@ -9,19 +9,13 @@
 
 <meta name="description" content="Dream HR Consultancy provides PF ESIC compliance, payroll management, labour law compliance, recruitment, factory license, HR consulting and professional tax services across India.">
 
-<meta name="keywords" content="PF ESIC Payroll Labour Law HR Consulting Compliance India">
+<meta name="keywords" content="Dream HR Consultancy, PF ESIC, Payroll Services, Labour Law Compliance, Factory License, HR Consulting, Recruitment Services, Professional Tax">
 
 <meta name="robots" content="index, follow">
 
 <link rel="canonical" href="https://idhrt.com/">
 
-<link rel="icon" href="logo.png?v=99" type="image/png">
-
-<meta property="og:title" content="Dream HR Consultancy">
-<meta property="og:description" content="Trusted HR, Payroll & Compliance Experts Across India">
-<meta property="og:url" content="https://idhrt.com/">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://idhrt.com/logo.png?v=99">
+<link rel="icon" href="logo.png?v=2" type="image/png">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
@@ -51,7 +45,6 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 z-index:99999;
-box-shadow:0 4px 15px rgba(0,0,0,.15);
 }
 
 .logo a{
@@ -68,7 +61,6 @@ font-weight:700;
 height:55px;
 width:55px;
 border-radius:50%;
-object-fit:cover;
 }
 
 nav{
@@ -82,17 +74,15 @@ nav a{
 color:#fff;
 text-decoration:none;
 font-size:14px;
-font-weight:500;
 padding:8px 10px;
 border-radius:6px;
 }
 
 nav a:hover{
-background:rgba(255,255,255,.12);
+background:rgba(255,255,255,0.1);
 }
 
-/* BUTTON COLORS */
-.pay-btn{background:#ff9800;}
+.book-btn{background:#00c6ff;}
 .whatsapp-btn{background:#25D366;}
 .back-btn{background:#ff5722;}
 
@@ -109,25 +99,23 @@ border-bottom:2px solid #00c6ff;
 .news-title{
 background:#00c6ff;
 color:#fff;
-padding:12px 18px;
+padding:10px 15px;
 font-weight:700;
-white-space:nowrap;
 }
 
 .news-track{
 display:flex;
-width:max-content;
-animation:moveNews 50s linear infinite;
+animation:move 25s linear infinite;
+white-space:nowrap;
 }
 
 .news-track span{
+padding:10px 30px;
 color:#fff;
-padding:0 30px;
-white-space:nowrap;
 font-size:14px;
 }
 
-@keyframes moveNews{
+@keyframes move{
 0%{transform:translateX(100%);}
 100%{transform:translateX(-100%);}
 }
@@ -136,124 +124,81 @@ font-size:14px;
 .hero{
 height:90vh;
 position:relative;
-overflow:hidden;
-}
-
-.slide{
-position:absolute;
-width:100%;
-height:100%;
-background-size:cover;
-background-position:center;
-opacity:0;
-transition:1s;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
 color:#fff;
+background:url('https://images.unsplash.com/photo-1521791136064-7986c2920216') center/cover;
 }
 
-.slide.active{opacity:1;}
-
-.overlay{
+.hero::before{
+content:'';
 position:absolute;
 inset:0;
-background:rgba(0,0,0,.6);
+background:rgba(0,0,0,0.6);
 }
 
-.hero-content{
+.hero h1{
+font-size:45px;
 position:relative;
-z-index:2;
-max-width:900px;
 }
 
-.hero-content h1{
-font-size:48px;
-margin-bottom:15px;
-}
-
-.hero-content p{
+.hero p{
+position:relative;
 font-size:18px;
-margin-bottom:20px;
-}
-
-/* BUTTON */
-.btn{
-display:inline-block;
-padding:12px 18px;
-border-radius:8px;
-background:#00c6ff;
-color:#fff;
-text-decoration:none;
-font-size:14px;
-font-weight:600;
-margin:5px;
 }
 
 /* SERVICES */
 .section{
+padding:60px 20px;
 max-width:1200px;
 margin:auto;
-padding:60px 20px;
 }
 
 .section h2{
 text-align:center;
-font-size:34px;
+font-size:32px;
 margin-bottom:30px;
-color:#0a2a43;
 }
 
 .services{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:20px;
 }
 
 .card{
 background:#fff;
-padding:25px;
-border-radius:14px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+padding:20px;
+border-radius:12px;
+box-shadow:0 6px 18px rgba(0,0,0,0.1);
 text-align:center;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-6px);
 }
 
 .card h3{
-margin-bottom:10px;
-color:#0a2a43;
+margin-bottom:12px;
 }
 
-/* FOOTER */
+.btn{
+display:inline-block;
+padding:10px 14px;
+margin:5px;
+border-radius:6px;
+text-decoration:none;
+font-size:13px;
+font-weight:600;
+}
+
+.primary{background:#00c6ff;color:#fff;}
+.pay{background:#ff9800;color:#fff;}
+
 footer{
 background:#0a2a43;
 color:#fff;
 text-align:center;
-padding:22px;
+padding:20px;
 margin-top:40px;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-header{
-flex-direction:column;
-gap:10px;
-}
-
-.hero{
-height:70vh;
-}
-
-.hero-content h1{
-font-size:28px;
-}
-
 }
 
 </style>
@@ -262,12 +207,10 @@ font-size:28px;
 
 <body>
 
-<!-- HEADER -->
 <header>
-
 <div class="logo">
 <a href="/">
-<img src="logo.png?v=99" alt="Dream HR Consultancy">
+<img src="logo.png?v=99">
 <span>Dream HR Consultancy</span>
 </a>
 </div>
@@ -279,13 +222,10 @@ font-size:28px;
 <a href="jobs.html">Jobs</a>
 <a href="notifications.html">Notifications</a>
 <a href="contact.html">Contact</a>
-
-<!-- FIX 1: HEADER PAY BUTTON -->
-<a href="pay.html" class="pay-btn">Pay Now</a>
-
-<a href="https://wa.me/918863962310" class="whatsapp-btn" target="_blank">WhatsApp</a>
+<a href="pay.html" class="book-btn">Pay Now</a>
+<a href="https://wa.me/918863962310" class="whatsapp-btn">WhatsApp</a>
+<a href="javascript:history.back()" class="back-btn">Back</a>
 </nav>
-
 </header>
 
 <!-- NEWS -->
@@ -293,81 +233,76 @@ font-size:28px;
 <div class="news-title">Latest Updates</div>
 <div class="news-track">
 <span>PF Filing Open</span>
-<span>ESIC Compliance Support</span>
-<span>Payroll Services Available</span>
-<span>HR Audit Services</span>
+<span>ESIC Claim Support</span>
+<span>Payroll Services</span>
 <span>Factory License Renewal</span>
+<span>Compliance Audit</span>
 </div>
 </div>
 
 <!-- HERO -->
-<div class="hero">
-
-<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85');">
-<div class="overlay"></div>
-
-<div class="hero-content">
+<section class="hero">
+<div>
 <h1>Dream HR Consultancy</h1>
-<p>PF | ESIC | Payroll | Labour Law Experts</p>
-
-<!-- FIX 2: HERO PAY CTA -->
-<a href="pay.html" class="btn">Pay Your Invoice</a>
-
+<p>HR | Payroll | Compliance Experts</p>
 </div>
-</div>
-
-</div>
+</section>
 
 <!-- SERVICES -->
 <section class="section">
-
 <h2>Our Services</h2>
 
 <div class="services">
 
 <div class="card">
 <h3>PF & ESIC</h3>
-<a href="pf-esic.html" class="btn">Consult</a>
+<a href="pf-esic.html" class="btn primary">Get Consultation</a>
+<a href="pay.html" class="btn pay">Pay Now</a>
 </div>
 
 <div class="card">
-<h3>Payroll</h3>
-<a href="payroll.html" class="btn">Consult</a>
+<h3>Payroll Services</h3>
+<a href="payroll.html" class="btn primary">Get Consultation</a>
+<a href="pay.html" class="btn pay">Pay Now</a>
+</div>
+
+<div class="card">
+<h3>Labour Law</h3>
+<a href="labour-law.html" class="btn primary">Get Consultation</a>
+<a href="pay.html" class="btn pay">Pay Now</a>
+</div>
+
+<div class="card">
+<h3>Factory License</h3>
+<a href="factory-license.html" class="btn primary">Get Consultation</a>
+<a href="pay.html" class="btn pay">Pay Now</a>
 </div>
 
 <div class="card">
 <h3>Compliance Audit</h3>
-<a href="compliance-audit.html" class="btn">Consult</a>
+<a href="compliance-audit.html" class="btn primary">Get Consultation</a>
+<a href="pay.html" class="btn pay">Pay Now</a>
 </div>
 
-<!-- FIX 3: PAYMENT CTA CARD -->
 <div class="card">
-<h3>Billing Portal</h3>
-<p>Secure client payment system</p>
-<a href="pay.html" class="btn">Pay Now</a>
+<h3>Professional Tax</h3>
+<a href="professional-tax.html" class="btn primary">Get Consultation</a>
+<a href="pay.html" class="btn pay">Pay Now</a>
+</div>
+
+<div class="card">
+<h3>POSH Consultant</h3>
+<a href="posh-consultant.html" class="btn primary">Get Consultation</a>
+<a href="pay.html" class="btn pay">Pay Now</a>
 </div>
 
 </div>
 
 </section>
 
-<!-- FOOTER -->
 <footer>
 © 2026 Dream HR Consultancy | support@idhrt.com | +91 8863962310
 </footer>
-
-<script>
-
-let slides=document.querySelectorAll(".slide");
-let i=0;
-
-setInterval(()=>{
-slides[i].classList.remove("active");
-i=(i+1)%slides.length;
-slides[i].classList.add("active");
-},3500);
-
-</script>
 
 </body>
 </html>
