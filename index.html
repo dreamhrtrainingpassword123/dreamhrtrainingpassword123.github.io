@@ -3,14 +3,18 @@
 <head>
 
 <meta charset="UTF-8">
+<title>Dream HR Consultancy | Complete HR, Payroll & Labour Law Compliance Solutions Across India</title>
 
+<meta name="description" content="Dream HR Consultancy, A Unit of Institute of Dream HR Training & Compliance, provides PF, ESIC, Payroll, Labour Law Compliance, Factory Act, CLRA, BOCW, POSH, Recruitment, Licensing and Complete Statutory Compliance Services across India.">
+
+<meta name="keywords" content="Dream HR Consultancy, Institute of Dream HR Training & Compliance, PF Registration, EPF Consultant, ESIC Registration, Payroll Processing, Labour Law Consultant, Factory Act Compliance, CLRA Compliance, BOCW Registration, Establishment Compliance, Professional Tax, POSH Consultant, Statutory Compliance, HR Consultancy India, Compliance Audit, Labour License, Recruitment Services, HR Outsourcing">
+
+<meta name="application-name" content="Dream HR Consultancy">
+<meta name="theme-color" content="#0057ff">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:site_name" content="Dream HR Consultancy">
+<meta property="og:locale" content="en_IN">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Dream HR Consultancy | PF, ESIC, Payroll, Labour Law & HR Services</title>
-
-<meta name="description" content="Dream HR Consultancy provides PF Registration, ESIC Registration, Payroll Management, Labour Law Compliance, Recruitment, Factory License and HR Consultancy across India.">
-
-<meta name="keywords" content="PF Registration, ESIC Registration, Payroll, Labour Law, Recruitment, HR Consultancy, Factory License">
 
 <meta name="robots" content="index,follow">
 
@@ -64,6 +68,34 @@ overflow-x:hidden;
 
 }
 
+#preloader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#ffffff;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:999999;
+transition:.5s;
+}
+
+.loader{
+width:70px;
+height:70px;
+border:6px solid #e5e5e5;
+border-top:6px solid #0057ff;
+border-radius:50%;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+100%{
+transform:rotate(360deg);
+}
+}
 a{
 
 text-decoration:none;
@@ -108,10 +140,16 @@ padding:90px 0;
 
 --bg:#f5f8fc;
 
+--glass:rgba(255,255,255,.12);
+
+--glass-border:rgba(255,255,255,.25);
+
+--shadow:0 20px 50px rgba(0,0,0,.12);
+
+--radius:24px;
+
 }
-
 header{
-
 position:fixed;
 
 top:0;
@@ -120,16 +158,21 @@ left:0;
 
 width:100%;
 
-background:rgba(255,255,255,.95);
+background:rgba(255,255,255,.82);
 
-backdrop-filter:blur(15px);
+backdrop-filter:blur(20px);
 
-box-shadow:0 5px 20px rgba(0,0,0,.05);
+-webkit-backdrop-filter:blur(20px);
+
+border-bottom:1px solid rgba(255,255,255,.4);
+
+box-shadow:0 15px 45px rgba(0,0,0,.08);
+
+transition:.35s ease;
 
 z-index:9999;
 
 }
-
 nav{
 
 height:80px;
@@ -172,15 +215,24 @@ align-items:center;
 
 color:#333;
 
-font-weight:500;
+font-weight:600;
 
-transition:.3s;
+padding:10px 16px;
+
+border-radius:10px;
+
+transition:.35s;
 
 }
+.menu a:hover,
 
-.menu a:hover{
+.menu a.active{
 
-color:var(--primary);
+color:#fff;
+
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+
+box-shadow:0 10px 25px rgba(0,87,255,.25);
 
 }
 
@@ -306,15 +358,21 @@ transform:translateY(-4px);
 
 .hero-card{
 
-background:rgba(255,255,255,.12);
+background:var(--glass);
 
 padding:35px;
 
-border-radius:25px;
+border-radius:var(--radius);
 
 backdrop-filter:blur(20px);
 
-box-shadow:0 15px 40px rgba(0,0,0,.2);
+-webkit-backdrop-filter:blur(20px);
+
+border:1px solid var(--glass-border);
+
+box-shadow:var(--shadow);
+
+transition:.4s;
 
 }
 
@@ -519,15 +577,21 @@ gap:30px;
 
 .service-card{
 
-background:#fff;
+background:rgba(255,255,255,.85);
 
 padding:35px;
 
-border-radius:20px;
+border-radius:var(--radius);
 
-box-shadow:0 15px 35px rgba(0,0,0,.08);
+backdrop-filter:blur(16px);
 
-transition:.35s;
+-webkit-backdrop-filter:blur(16px);
+
+border:1px solid rgba(255,255,255,.5);
+
+box-shadow:var(--shadow);
+
+transition:.4s;
 
 position:relative;
 
@@ -555,12 +619,13 @@ background:linear-gradient(90deg,var(--primary),var(--secondary));
 
 .service-card:hover{
 
-transform:translateY(-12px);
+transform:translateY(-15px) scale(1.03);
 
-box-shadow:0 25px 50px rgba(0,0,0,.15);
+box-shadow:0 30px 70px rgba(0,87,255,.22);
+
+border-color:#0057ff;
 
 }
-
 .service-icon{
 
 width:75px;
@@ -653,10 +718,11 @@ transition:.3s;
 
 .why-box:hover{
 
-transform:translateX(8px);
+transform:translateX(10px) scale(1.02);
+
+box-shadow:0 25px 60px rgba(0,87,255,.15);
 
 }
-
 .why-box i{
 
 font-size:35px;
@@ -715,11 +781,13 @@ transition:.3s;
 
 .industry:hover{
 
-background:#fff;
+background:#ffffff;
 
 color:#111;
 
-transform:translateY(-10px);
+transform:translateY(-15px) scale(1.03);
+
+box-shadow:0 25px 60px rgba(0,87,255,.20);
 
 }
 
@@ -842,9 +910,9 @@ transition:.35s;
 
 .testimonial:hover{
 
-transform:translateY(-10px);
+transform:translateY(-15px) scale(1.02);
 
-box-shadow:0 25px 50px rgba(0,0,0,.15);
+box-shadow:0 30px 70px rgba(0,87,255,.20);
 
 }
 
@@ -1412,14 +1480,24 @@ grid-template-columns:1fr;
 </head>
 
 <body>
-  <header>
+
+<div id="preloader">
+    <div class="loader"></div>
+</div>  <header>
 
 <div class="container">
 
 <nav>
 
-<a href="#" class="logo">Dream <span>HR</span></a>
-
+<a href="#" class="logo">
+    Dream <span>HR</span>
+    <small style="display:block;font-size:12px;font-weight:500;color:#666;line-height:1.4;margin-top:2px;">
+        Consultancy
+    </small>
+    <small style="display:block;font-size:11px;font-weight:500;color:#0d6efd;line-height:1.4;">
+        A Unit of Institute of Dream HR Training & Compliance
+    </small>
+</a>
 <div class="menu">
 
 <a href="#home">Home</a>
@@ -1452,42 +1530,41 @@ grid-template-columns:1fr;
 
 <div>
 
-<h4>India's Trusted HR & Compliance Partner</h4>
+<h4>Dream HR Consultancy</h4>
 
+<h5 style="color:#8fd9ff;font-size:18px;font-weight:500;margin:12px 0 20px;">
+A Unit of Institute of Dream HR Training & Compliance
+</h5>
 <h1>
-
-PF Registration<br>
-
-ESIC Registration<br>
-
-Payroll Management<br>
-
-Labour Law Compliance
-
+Complete HR, Payroll &<br>
+Labour Law Compliance<br>
+Solutions for Modern<br>
+Businesses Across India
 </h1>
 
 <p>
 
-Dream HR Consultancy provides complete HR Consultancy, Payroll Management,
-
-Recruitment, Labour Law Compliance, Factory License,
-
-Professional Tax, HR Audit and Statutory Compliance services across India.
+Dream HR Consultancy, A Unit of Institute of Dream HR Training & Compliance,
+delivers complete HR, Payroll, Recruitment and Labour Law Compliance solutions
+for MSMEs, Startups, Manufacturing Units, IT Companies, Hospitals,
+Educational Institutions and Large Enterprises across India. We help businesses
+remain fully compliant with all applicable labour laws through accurate,
+timely and professional compliance management.
 
 </p>
 
 <div class="hero-buttons">
 
 <a href="#services" class="btn btn-primary">
-
-Explore Services
-
+Explore Our Services
 </a>
 
-<a href="#contact" class="btn btn-white">
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn btn-white">
+Book Free Meeting
+</a>
 
-Free Consultation
-
+<a href="https://wa.me/918863962310" target="_blank" class="btn btn-primary">
+WhatsApp Now
 </a>
 
 </div>
@@ -1498,30 +1575,29 @@ Free Consultation
 
 <div class="hero-card">
 
-<h3>Our Core Services</h3>
+<h3>Why Choose Dream HR Consultancy?</h3>
 
 <ul>
 
-<li><i class="fa-solid fa-check"></i> PF Registration & Monthly Compliance</li>
+<li><i class="fa-solid fa-circle-check"></i> 100% Statutory Compliance Support</li>
 
-<li><i class="fa-solid fa-check"></i> ESIC Registration & Filing</li>
+<li><i class="fa-solid fa-circle-check"></i> PF, ESIC & Payroll Specialists</li>
 
-<li><i class="fa-solid fa-check"></i> Payroll Processing</li>
+<li><i class="fa-solid fa-circle-check"></i> Factory Act, CLRA & BOCW Experts</li>
 
-<li><i class="fa-solid fa-check"></i> Labour Law Compliance</li>
+<li><i class="fa-solid fa-circle-check"></i> PAN India Compliance Services</li>
 
-<li><i class="fa-solid fa-check"></i> Recruitment Services</li>
+<li><i class="fa-solid fa-circle-check"></i> Dedicated HR Compliance Team</li>
 
-<li><i class="fa-solid fa-check"></i> Factory License</li>
+<li><i class="fa-solid fa-circle-check"></i> Fast Documentation & Licensing</li>
 
-<li><i class="fa-solid fa-check"></i> Professional Tax</li>
+<li><i class="fa-solid fa-circle-check"></i> Compliance Audit & Inspection Support</li>
 
-<li><i class="fa-solid fa-check"></i> HR Training</li>
+<li><i class="fa-solid fa-circle-check"></i> Trusted by Startups, MSMEs & Corporates</li>
 
 </ul>
 
 </div>
-
 </div>
 
 </div>
@@ -1529,39 +1605,26 @@ Free Consultation
 <div class="stats">
 
 <div class="stat">
-
-<h2 class="stat-count" data-goal="500">0</h2>
-
-<p>Happy Clients</p>
-
-</div>
-
-<div class="stat">
-
 <h2 class="stat-count" data-goal="1000">0</h2>
-
-<p>Monthly Compliance</p>
-
+<p>Happy Clients</p>
 </div>
 
 <div class="stat">
-
-<h2 class="stat-count" data-goal="250">0</h2>
-
-<p>Recruitments</p>
-
+<h2 class="stat-count" data-goal="5000">0</h2>
+<p>Monthly Compliance Managed</p>
 </div>
 
 <div class="stat">
+<h2 class="stat-count" data-goal="28">0</h2>
+<p>HR & Compliance Services</p>
+</div>
 
-<h2 class="stat-count" data-goal="99">0</h2>
-
-<p>Client Satisfaction</p>
-
+<div class="stat">
+<h2 class="stat-count" data-goal="15">0</h2>
+<p>Years of Professional Experience</p>
 </div>
 
 </div>
-
 </div>
 
 </section>
@@ -1574,6 +1637,9 @@ Free Consultation
 
 <h2>About Dream HR Consultancy</h2>
 
+<h4 style="margin-top:15px;color:#0d6efd;font-weight:600;">
+A Unit of Institute of Dream HR Training & Compliance
+</h4>
 <p>
 
 Professional HR, Payroll, Recruitment and Compliance Solutions
@@ -1598,43 +1664,39 @@ Hospitals, Educational Institutions and Corporate Offices.
 
 <h3>
 
-Helping Businesses Stay 100% Compliant
+Empowering Businesses with Complete HR, Payroll & Statutory Compliance Solutions
 
 </h3>
 
 <p>
 
-Dream HR Consultancy delivers complete HR solutions
-
-covering employee lifecycle, statutory compliance,
-
-payroll management, recruitment,
-
-factory compliance and labour law consultancy.
+Dream HR Consultancy is a trusted HR & Compliance partner delivering end-to-end solutions for businesses across India. We specialize in PF, ESIC, Payroll Processing, Labour Law Compliance, Factory Act Compliance, CLRA, BOCW, Professional Tax, Recruitment, HR Outsourcing and Statutory Compliance. Our experienced team helps organizations remain legally compliant, reduce compliance risks and focus on business growth with complete peace of mind.
 
 </p>
 
 <p>
 
-Our experienced professionals ensure every business
-
-operates smoothly without compliance risk.
+With a proactive approach, industry expertise and technology-driven processes, we ensure timely statutory compliance, accurate payroll management and complete HR support. Our mission is to help organizations build a legally compliant, efficient and future-ready workplace while maintaining the highest standards of professionalism and client satisfaction.
 
 </p>
 
 <ul class="about-list">
 
-<li><i class="fa-solid fa-circle-check"></i> PF & ESIC Experts</li>
+<li><i class="fa-solid fa-circle-check"></i> PF, ESIC & Payroll Compliance</li>
 
-<li><i class="fa-solid fa-circle-check"></i> Payroll Specialists</li>
+<li><i class="fa-solid fa-circle-check"></i> Factory Act, CLRA & BOCW Compliance</li>
 
-<li><i class="fa-solid fa-circle-check"></i> Labour Law Consultants</li>
+<li><i class="fa-solid fa-circle-check"></i> Labour Law Licensing & Registration</li>
 
-<li><i class="fa-solid fa-circle-check"></i> Recruitment Experts</li>
+<li><i class="fa-solid fa-circle-check"></i> Compliance Audit & Inspection Support</li>
 
-<li><i class="fa-solid fa-circle-check"></i> PAN India Services</li>
+<li><i class="fa-solid fa-circle-check"></i> Recruitment, HR Outsourcing & Training</li>
 
-<li><i class="fa-solid fa-circle-check"></i> HR Outsourcing</li>
+<li><i class="fa-solid fa-circle-check"></i> PAN India Corporate Compliance Services</li>
+
+<li><i class="fa-solid fa-circle-check"></i> Dedicated Relationship Manager</li>
+
+<li><i class="fa-solid fa-circle-check"></i> Transparent, Timely & Professional Service</li>
 
 </ul>
 
@@ -1651,12 +1713,10 @@ operates smoothly without compliance risk.
 
 <div class="section-title">
 
-<h2>Our Professional Services</h2>
-
+<h2>Comprehensive HR, Payroll & Compliance Services</h2>
 <p>
 
-We provide complete HR, Payroll, Recruitment and Labour Law Compliance
-solutions under one roof for businesses of every size.
+From Startup Registration to Complete Statutory Compliance, Dream HR Consultancy delivers end-to-end HR, Payroll, Recruitment, Licensing and Labour Law solutions for MSMEs, Manufacturing Units, IT Companies, Hospitals, Educational Institutions and Large Enterprises across India.
 
 </p>
 
@@ -1672,12 +1732,10 @@ solutions under one roof for businesses of every size.
 
 </div>
 
-<h3>PF Registration & Compliance</h3>
-
+<h3>EPF Registration & Complete Compliance</h3>
 <p>
 
-New PF Registration, Monthly ECR, Challan, KYC, UAN Activation,
-Transfer, Withdrawal and Complete EPFO Compliance Support.
+End-to-end EPF services including New Registration, Establishment Code, UAN Activation, KYC, ECR Upload, Monthly Challan, Transfer Claims, Withdrawals, Annual Returns, Notices Handling and Complete EPFO Compliance for organizations across India.
 
 </p>
 
@@ -1693,14 +1751,10 @@ Transfer, Withdrawal and Complete EPFO Compliance Support.
 
 </div>
 
-<h3>ESIC Registration</h3>
-
+<h3>ESIC Registration & Complete Compliance</h3>
 <p>
 
-ESIC Registration, Employee Registration,
-Monthly Contribution,
-Returns Filing,
-Inspection Support and ESIC Compliance.
+Complete ESIC services including Employer Registration, Employee IP Registration, Monthly Contribution Upload, Challan Generation, Returns Filing, TIC, Dispensary Mapping, Inspection Support, Benefits Guidance and End-to-End ESIC Compliance across India.
 
 </p>
 
@@ -1716,16 +1770,10 @@ Inspection Support and ESIC Compliance.
 
 </div>
 
-<h3>Payroll Management</h3>
-
+<h3>Payroll Processing & HR Outsourcing</h3>
 <p>
 
-Salary Processing,
-Payslip,
-Leave Management,
-Attendance,
-Bonus,
-Full & Final Settlement and Payroll Outsourcing.
+Comprehensive payroll solutions including Salary Processing, Payslip Generation, Attendance Management, Leave Management, Bonus, Incentives, Statutory Deductions, Full & Final Settlement, MIS Reports and End-to-End Payroll Outsourcing with complete statutory compliance.
 
 </p>
 
@@ -1741,20 +1789,12 @@ Full & Final Settlement and Payroll Outsourcing.
 
 </div>
 
-<h3>Labour Law Compliance</h3>
-
+<h3>Labour Law & Statutory Compliance</h3>
 <p>
 
-Shops & Establishment,
-CLRA,
-Minimum Wages,
-Bonus,
-Gratuity,
-Standing Orders,
-Registers and Labour Law Advisory.
+Comprehensive Labour Law Compliance including Shops & Establishment Registration, CLRA Compliance, Minimum Wages, Bonus, Gratuity, Standing Orders, Labour Welfare, Statutory Registers, Returns, Compliance Audit and Expert Labour Law Advisory Services.
 
 </p>
-
 <a href="#contact" class="read-btn">Know More →</a>
 
 </div>
@@ -1767,16 +1807,10 @@ Registers and Labour Law Advisory.
 
 </div>
 
-<h3>Recruitment Services</h3>
-
+<h3>Recruitment & Talent Acquisition</h3>
 <p>
 
-Permanent Hiring,
-Bulk Hiring,
-Blue Collar,
-White Collar,
-Executive Search,
-HR Outsourcing and Placement Services.
+We provide Permanent Hiring, Bulk Hiring, Executive Search, Leadership Hiring, Blue Collar & White Collar Recruitment, Campus Hiring, Contract Staffing, HR Outsourcing and End-to-End Talent Acquisition solutions across India.
 
 </p>
 
@@ -1792,16 +1826,10 @@ HR Outsourcing and Placement Services.
 
 </div>
 
-<h3>Factory License</h3>
-
+<h3>Factory License & Factory Act Compliance</h3>
 <p>
 
-Factory License,
-Renewal,
-Factory Compliance,
-Inspection Support,
-Safety Documentation
-and Factory Consultancy.
+Complete Factory Act Compliance including New Factory License Registration, Renewal, Amendment, Plan Approval, Safety Documentation, Health & Safety Compliance, Inspection Assistance, Occupier & Manager Compliance and Complete Factory Consultancy Services.
 
 </p>
 
@@ -1817,15 +1845,10 @@ and Factory Consultancy.
 
 </div>
 
-<h3>Professional Tax</h3>
-
+<h3>Professional Tax Registration & Compliance</h3>
 <p>
 
-Professional Tax Registration,
-Return Filing,
-Compliance,
-State Registration
-and Advisory Services.
+We provide Professional Tax Registration, Enrollment Certificate, Registration Certificate, Monthly & Annual Return Filing, Tax Payment, State-wise Compliance, Notices Handling and Complete Professional Tax Consultancy Services across India.
 
 </p>
 
@@ -1841,18 +1864,12 @@ and Advisory Services.
 
 </div>
 
-<h3>Compliance Audit</h3>
-
+<h3>Compliance Audit & Risk Assessment</h3>
 <p>
 
-Complete HR Audit,
-Compliance Gap Analysis,
-Registers Verification,
-Inspection Preparation
-and Documentation Review.
+Our Compliance Audit includes HR Compliance Review, Statutory Compliance Audit, Labour Law Risk Assessment, Documentation Verification, Registers & Records Audit, Inspection Readiness, Compliance Gap Analysis and Corrective Action Planning to ensure 100% legal compliance.
 
 </p>
-
 <a href="#contact" class="read-btn">Know More →</a>
 
 </div>
@@ -1865,18 +1882,12 @@ and Documentation Review.
 
 </div>
 
-<h3>HR Training</h3>
-
+<h3>HR Training & Corporate Development</h3>
 <p>
 
-Practical HR Training,
-Payroll Training,
-PF & ESIC Training,
-Labour Law Classes
-and Corporate Workshops.
+Industry-focused HR Training Programs including Payroll Training, PF & ESIC Practical Training, Labour Law Certification, POSH Awareness, Compliance Workshops, HR Analytics, Interview Skills and Customized Corporate Training for HR Professionals, Managers and Organizations.
 
 </p>
-
 <a href="#contact" class="read-btn">Know More →</a>
 
 </div>
@@ -1896,10 +1907,8 @@ TESTIMONIALS
 
 <div class="section-title">
 
-<h2>What Our Clients Say</h2>
-
-<p>Businesses across India trust Dream HR Consultancy.</p>
-
+<h2>Trusted by Businesses Across India</h2>
+<p>Our commitment to timely compliance, transparent communication and professional HR solutions has earned the trust of startups, MSMEs and leading organizations across India.</p>
 </div>
 
 <div class="testimonial-grid">
@@ -1922,8 +1931,7 @@ professionally. Highly recommended."
 
 <div class="client">
 
-<h4>Manufacturing Company</h4>
-
+<h4>Manufacturing Industry - HR Head</h4>
 <span>Delhi NCR</span>
 
 </div>
@@ -1946,8 +1954,7 @@ professionally. Highly recommended."
 
 <div class="client">
 
-<h4>Corporate Client</h4>
-
+<h4>Corporate Compliance Manager</h4>
 <span>Noida</span>
 
 </div>
@@ -1970,8 +1977,7 @@ professionally. Highly recommended."
 
 <div class="client">
 
-<h4>Startup Founder</h4>
-
+<h4>Startup Director</h4>
 <span>Gurugram</span>
 
 </div>
@@ -1992,28 +1998,26 @@ CTA SECTION
 
 <div class="container">
 
-<h2>Need HR & Compliance Support?</h2>
+<h2>Let's Make Your Business 100% Compliant</h2>
 
 <p>
 
-Get expert consultation for Payroll, PF, ESIC, Labour Law,
-
-Recruitment and Factory Compliance.
+Whether you need PF, ESIC, Payroll, Labour Law Compliance, Factory Act Compliance, Recruitment or HR Outsourcing, our experts are ready to help your business with fast, reliable and professional compliance solutions across India.
 
 </p>
 
 <div class="cta-buttons">
 
-<a href="https://wa.me/918863962310" class="btn btn-primary">
-
+<a href="https://wa.me/918863962310" target="_blank" class="btn btn-primary">
 WhatsApp Now
-
 </a>
 
-<a href="#contact" class="btn btn-outline">
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn btn-white">
+Book Free Meeting
+</a>
 
-Book Consultation
-
+<a href="tel:+918863962310" class="btn btn-primary">
+Call Now
 </a>
 
 </div>
@@ -2021,7 +2025,6 @@ Book Consultation
 </div>
 
 </section>
-
 <!-- =========================
 FAQ
 ========================= -->
@@ -2034,17 +2037,17 @@ FAQ
 
 <h2>Frequently Asked Questions</h2>
 
+<p style="max-width:750px;margin:15px auto 0;color:#666;text-align:center;">
+Find answers to the most common questions about PF, ESIC, Payroll, Labour Law Compliance, Recruitment and Statutory Compliance Services offered by Dream HR Consultancy.
+</p>
 </div>
 
 <div class="faq-item">
 
-<h3>Is PF Registration mandatory?</h3>
-
+<h3>Who needs PF Registration?</h3>
 <p>
 
-Yes. Applicable establishments must register under EPFO
-
-as per Government rules.
+Any establishment covered under the EPF Act is required to obtain PF Registration. Our experts assist with registration, monthly compliance, UAN, KYC, ECR filing and complete EPFO support.
 
 </p>
 
@@ -2052,13 +2055,10 @@ as per Government rules.
 
 <div class="faq-item">
 
-<h3>Do you provide Payroll Services?</h3>
-
+<h3>Do you provide complete Payroll Management?</h3>
 <p>
 
-Yes. Complete payroll processing, salary sheet,
-
-payslip and statutory deductions.
+Yes. We provide complete payroll processing including salary calculation, payslips, attendance, leave management, statutory deductions, bonus, F&F settlement and compliance reporting.
 
 </p>
 
@@ -2066,16 +2066,12 @@ payslip and statutory deductions.
 
 <div class="faq-item">
 
-<h3>Do you work PAN India?</h3>
-
+<h3>Do you provide services across India?</h3>
 <p>
 
-Yes. We provide online HR & Compliance services
-
-across India.
+Yes. Dream HR Consultancy provides PAN India HR, Payroll, Recruitment, PF, ESIC, Labour Law Compliance, Factory Act Compliance, Licensing and Statutory Compliance services through both online and onsite support.
 
 </p>
-
 </div>
 
 </div>
@@ -2091,11 +2087,14 @@ CONTACT
 
 <div class="section-title">
 
-<h2>Contact Dream HR Consultancy</h2>
+<h2>Get in Touch with Dream HR Consultancy</h2>
 
+<h4 style="margin-top:12px;color:#0d6efd;font-weight:600;">
+A Unit of Institute of Dream HR Training & Compliance
+</h4>
 <p>
 
-Let's discuss your HR, Payroll and Compliance requirements.
+Need assistance with PF, ESIC, Payroll, Labour Law Compliance, Factory Act, Recruitment or HR Outsourcing? Contact our experts today for a quick and professional consultation.
 
 </p>
 
@@ -2105,29 +2104,26 @@ Let's discuss your HR, Payroll and Compliance requirements.
 
 <div class="contact-box">
 
-<h3>Contact Information</h3>
-
+<h3>Corporate Office</h3>
 <p>
 
 <i class="fa-solid fa-location-dot"></i>
 
-Delhi NCR, India
+Delhi NCR, India (Serving Clients PAN India)
 
 </p>
-
 <p>
 
 <i class="fa-solid fa-phone"></i>
 
-+91 8863962310
+<a href="tel:+918863962310">+91 8863962310</a>
 
 </p>
-
 <p>
 
 <i class="fa-solid fa-envelope"></i>
 
-support@idhrt.com
+<a href="mailto:support@idhrt.com">support@idhrt.com</a>
 
 </p>
 
@@ -2135,10 +2131,9 @@ support@idhrt.com
 
 <i class="fa-solid fa-globe"></i>
 
-https://idhrt.com
+<a href="https://idhrt.com" target="_blank">www.idhrt.com</a>
 
 </p>
-
 <p>
 
 <i class="fa-solid fa-clock"></i>
@@ -2237,24 +2232,23 @@ FOOTER
 
 <div class="footer-logo">
 
-Dream <span>HR</span>
+Dream <span>HR</span><br>
+
+<small style="font-size:14px;font-weight:500;color:#9fd8ff;line-height:1.6;">
+Consultancy
+</small>
+
+<small style="display:block;font-size:12px;font-weight:400;color:#cfe8ff;">
+A Unit of Institute of Dream HR Training & Compliance
+</small>
 
 </div>
 
 <p class="footer-about">
 
-Dream HR Consultancy provides complete HR,
-
-Payroll, PF Registration, ESIC,
-
-Labour Law Compliance,
-
-Recruitment and HR Consultancy Services
-
-across India.
+Dream HR Consultancy is a trusted HR & Compliance partner delivering complete Payroll Processing, PF & ESIC Compliance, Labour Law Compliance, Factory Act Compliance, Recruitment, HR Outsourcing, Professional Tax, Licensing and Statutory Compliance services across India with a commitment to quality, transparency and timely execution.
 
 </p>
-
 <div class="social-icons">
 
 <a href="https://www.facebook.com/profile.php?id=61570617880654" target="_blank">
@@ -2511,15 +2505,12 @@ Monday - Saturday
 
 <p>
 
-© 2026 Dream HR Consultancy.
-
-All Rights Reserved.
+© <span id="copyrightYear"></span> Dream HR Consultancy | A Unit of Institute of Dream HR Training & Compliance. All Rights Reserved.
 
 </p>
-
 <p>
 
-Designed by Dream HR Consultancy
+Designed & Developed by Institute of Dream HR Training and Compliance, New Delhi.
 
 </p>
 
@@ -2699,7 +2690,47 @@ window.addEventListener("scroll",()=>{
 
 const header=document.querySelector("header");
 
-header.classList.toggle("sticky",window.scrollY>80);
+if(window.scrollY>80){
+
+header.classList.add("sticky");
+
+}else{
+
+header.classList.remove("sticky");
+
+}
+
+const sections=document.querySelectorAll("section[id]");
+
+const navLinks=document.querySelectorAll(".menu a");
+
+let current="";
+
+sections.forEach(section=>{
+
+const sectionTop=section.offsetTop-120;
+
+const sectionHeight=section.offsetHeight;
+
+if(window.pageYOffset>=sectionTop && window.pageYOffset<sectionTop+sectionHeight){
+
+current=section.getAttribute("id");
+
+}
+
+});
+
+navLinks.forEach(link=>{
+
+link.classList.remove("active");
+
+if(link.getAttribute("href")==="#"+current){
+
+link.classList.add("active");
+
+}
+
+});
 
 });
 
@@ -2707,7 +2738,7 @@ const topBtn=document.querySelector(".top");
 
 window.addEventListener("scroll",()=>{
 
-if(window.scrollY>500){
+if(window.scrollY>400){
 
 topBtn.classList.add("show");
 
@@ -2719,7 +2750,7 @@ topBtn.classList.remove("show");
 
 });
 
-topBtn.onclick=()=>{
+topBtn.addEventListener("click",()=>{
 
 window.scrollTo({
 
@@ -2729,15 +2760,18 @@ behavior:"smooth"
 
 });
 
-};
+});
+const observer=new IntersectionObserver((entries)=>{
 
-const observer=new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
+entries.forEach((entry)=>{
 
 if(entry.isIntersecting){
 
 entry.target.classList.add("show");
+
+}else{
+
+entry.target.classList.remove("show");
 
 }
 
@@ -2745,61 +2779,58 @@ entry.target.classList.add("show");
 
 },{
 
-threshold:.15
+threshold:0.15
 
 });
 
 document.querySelectorAll(
 
-".service-card,.industry-card,.process-card,.testimonial,.contact-box,.about-content,.about-image"
+".service-card,.stat,.industry,.process-card,.testimonial,.contact-box,.about-content,.about-image,.hero-card"
 
-).forEach(el=>{
+).forEach((el)=>{
 
 observer.observe(el);
 
 });
+const counters=document.querySelectorAll(".stat-count");
 
-const counters=document.querySelectorAll(".counter");
-
-let started=false;
+let counterStarted=false;
 
 window.addEventListener("scroll",()=>{
 
-const section=document.querySelector(".counter-section");
+const stats=document.querySelector(".stats");
 
-if(!section)return;
+if(!stats || counterStarted) return;
 
-const top=section.offsetTop-500;
+if(window.scrollY > stats.offsetTop-500){
 
-if(window.scrollY>top && !started){
-
-started=true;
+counterStarted=true;
 
 counters.forEach(counter=>{
 
-const target=+counter.dataset.target;
+const target=Number(counter.dataset.goal);
 
 let count=0;
 
-const speed=Math.ceil(target/150);
+const step=Math.max(1,Math.ceil(target/150));
 
-const update=()=>{
+function update(){
 
-count+=speed;
+count+=step;
 
 if(count>=target){
 
-counter.innerHTML=target+"+";
+counter.textContent=target+"+";
 
 }else{
 
-counter.innerHTML=count+"+";
+counter.textContent=count+"+";
 
 requestAnimationFrame(update);
 
 }
 
-};
+}
 
 update();
 
@@ -2808,28 +2839,42 @@ update();
 }
 
 });
-
 </script>
 <script>
 
 const faq=document.querySelectorAll(".faq-item");
 
-faq.forEach(item=>{
+faq.forEach((item)=>{
 
-const question=item.querySelector(".faq-question");
+item.addEventListener("click",()=>{
 
-question.onclick=()=>{
+faq.forEach((other)=>{
 
-faq.forEach(f=>{
+if(other!==item){
 
-if(f!==item){
+other.classList.remove("active");
 
-f.classList.remove("active");
+const ans=other.querySelector(".faq-answer");
+
+if(ans) ans.style.display="none";
 
 }
 
 });
 
+item.classList.toggle("active");
+
+const answer=item.querySelector(".faq-answer");
+
+if(answer){
+
+answer.style.display=item.classList.contains("active")?"block":"none";
+
+}
+
+});
+
+});
 item.classList.toggle("active");
 
 };
@@ -2848,24 +2893,21 @@ slide.style.display=index===current?"block":"none";
 
 });
 
-current++;
-
-if(current>=slides.length){
-
-current=0;
+current=(current+1)%slides.length;
 
 }
 
-}
-
-if(slides.length){
+if(slides.length>1){
 
 testimonialSlider();
 
 setInterval(testimonialSlider,5000);
 
-}
+}else if(slides.length===1){
 
+slides[0].style.display="block";
+
+}
 const form=document.querySelector(".contact-form");
 
 if(form){
@@ -2884,12 +2926,31 @@ form.reset();
 
 window.addEventListener("load",()=>{
 
+const preloader=document.getElementById("preloader");
+
+if(preloader){
+
+preloader.style.opacity="0";
+
+preloader.style.visibility="hidden";
+
+setTimeout(()=>{
+
+preloader.remove();
+
+},500);
+
+}
+
 document.body.classList.add("loaded");
 
 });
 
 </script>
 
-</body>
+<script>
+document.getElementById("copyrightYear").textContent = new Date().getFullYear();
+</script>
 
+</body>
 </html>
