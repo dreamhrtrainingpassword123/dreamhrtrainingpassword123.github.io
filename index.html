@@ -565,7 +565,83 @@ object-fit:cover;
 background:#f5f8fc;
 
 }
-  .services-grid{
+/*==============================
+PREMIUM SCROLL ANIMATION
+==============================*/
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(80px);
+
+transition:all .9s cubic-bezier(.2,.65,.3,1);
+
+will-change:transform,opacity;
+
+}
+
+.reveal.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+.reveal-left{
+
+opacity:0;
+
+transform:translateX(-80px);
+
+transition:all .9s cubic-bezier(.2,.65,.3,1);
+
+}
+
+.reveal-left.show{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+.reveal-right{
+
+opacity:0;
+
+transform:translateX(80px);
+
+transition:all .9s cubic-bezier(.2,.65,.3,1);
+
+}
+
+.reveal-right.show{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+.reveal-zoom{
+
+opacity:0;
+
+transform:scale(.85);
+
+transition:all .9s ease;
+
+}
+
+.reveal-zoom.show{
+
+opacity:1;
+
+transform:scale(1);
+
+}.services-grid{
 
 display:grid;
 
@@ -576,6 +652,8 @@ gap:30px;
 }
 
 .service-card{
+
+position:relative;
 
 background:rgba(255,255,255,.85);
 
@@ -593,12 +671,11 @@ box-shadow:var(--shadow);
 
 transition:.4s;
 
-position:relative;
-
 overflow:hidden;
 
-}
+isolation:isolate;
 
+}
 .service-card:before{
 
 content:"";
@@ -619,14 +696,18 @@ background:linear-gradient(90deg,var(--primary),var(--secondary));
 
 .service-card:hover{
 
-transform:translateY(-15px) scale(1.03);
+transform:translateY(-18px) scale(1.04) rotateX(4deg);
 
-box-shadow:0 30px 70px rgba(0,87,255,.22);
+box-shadow:0 35px 90px rgba(0,87,255,.28);
 
-border-color:#0057ff;
+border-color:#3b82f6;
+
+background:linear-gradient(135deg,
+rgba(255,255,255,.96),
+rgba(241,248,255,.96));
 
 }
-.service-icon{
+  .service-icon{
 
 width:75px;
 
@@ -2731,9 +2812,13 @@ link.classList.toggle("active",link.getAttribute("href")==="#"+current);
 });
 
 });
-});
+/*==========================
+BACK TO TOP BUTTON
+==========================*/
 
-const topBtn=document.querySelector(".top");
+const topBtn = document.querySelector(".top");
+
+if(topBtn){
 
 window.addEventListener("scroll",()=>{
 
@@ -2749,8 +2834,6 @@ topBtn.classList.remove("show");
 
 });
 
-if(topBtn){
-
 topBtn.addEventListener("click",()=>{
 
 window.scrollTo({
@@ -2763,6 +2846,35 @@ behavior:"smooth"
 
 });
 
+}
+
+/*==========================
+SMOOTH SCROLL
+==========================*/
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+
+anchor.addEventListener("click",function(e){
+
+const target=document.querySelector(this.getAttribute("href"));
+
+if(target){
+
+e.preventDefault();
+
+target.scrollIntoView({
+
+behavior:"smooth",
+
+block:"start"
+
+});
+
+}
+
+});
+
+});
 const observer=new IntersectionObserver((entries)=>{
 
 entries.forEach((entry)=>{
@@ -2788,8 +2900,9 @@ document.querySelectorAll(
 
 ).forEach((el)=>{
 
-observer.observe(el);
+el.classList.add("reveal");
 
+observer.observe(el);
 });
 const counters=document.querySelectorAll(".stat-count");
 
@@ -2872,13 +2985,14 @@ answer.style.display=item.classList.contains("active")?"block":"none";
 });
 
 });
-item.classList.toggle("active");
 
-};
-
-});
+/*==========================
+TESTIMONIAL SLIDER
+==========================*/
 
 const slides=document.querySelectorAll(".testimonial");
+
+if(slides.length){
 
 let current=0;
 
@@ -2895,19 +3009,20 @@ slide.style.opacity=index===current?"1":"0";
 current=(current+1)%slides.length;
 
 }
-if(slides.length>1){
 
 testimonialSlider();
 
+if(slides.length>1){
+
 setInterval(testimonialSlider,4000);
 
-}else if(slides.length===1){
-
-slides[0].style.display="block";
-
-slides[0].style.opacity="1";
+}
 
 }
+/*====================================
+CONTACT FORM
+====================================*/
+
 const form=document.querySelector(".contact-form");
 
 if(form){
@@ -2919,28 +3034,37 @@ e.preventDefault();
 const button=form.querySelector("button");
 
 if(!button) return;
-const originalText=button.innerHTML;
 
-button.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+const originalText=button.innerHTML;
 
 button.disabled=true;
 
+button.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+
 setTimeout(()=>{
 
-alert("Thank you for contacting Dream HR Consultancy.\n\nOur team will contact you shortly.");
+button.innerHTML='<i class="fa-solid fa-circle-check"></i> Sent Successfully';
+
+button.style.background="#16a34a";
+
+setTimeout(()=>{
 
 form.reset();
 
-button.innerHTML=originalText;
-
 button.disabled=false;
 
-},1200);
+button.innerHTML=originalText;
+
+button.style.background="";
+
+},1800);
+
+},1500);
 
 });
 
 }
-window.addEventListener("load",()=>{
+  window.addEventListener("load",()=>{
 
 const preloader=document.getElementById("preloader");
 
