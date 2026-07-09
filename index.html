@@ -2666,37 +2666,36 @@ const menuBtn=document.querySelector(".menu-toggle");
 
 const nav=document.querySelector(".navbar");
 
-menuBtn.onclick=()=>{
+if(menuBtn && nav){
+
+menuBtn.addEventListener("click",()=>{
 
 nav.classList.toggle("active");
 
 menuBtn.classList.toggle("active");
 
-};
+});
 
 document.querySelectorAll(".navbar a").forEach(link=>{
 
-link.onclick=()=>{
+link.addEventListener("click",()=>{
 
 nav.classList.remove("active");
 
 menuBtn.classList.remove("active");
 
-};
+});
 
 });
 
+}
 window.addEventListener("scroll",()=>{
 
 const header=document.querySelector("header");
 
-if(window.scrollY>80){
+if(header){
 
-header.classList.add("sticky");
-
-}else{
-
-header.classList.remove("sticky");
+header.classList.toggle("sticky",window.scrollY>80);
 
 }
 
@@ -2712,9 +2711,9 @@ const sectionTop=section.offsetTop-120;
 
 const sectionHeight=section.offsetHeight;
 
-if(window.pageYOffset>=sectionTop && window.pageYOffset<sectionTop+sectionHeight){
+if(window.scrollY>=sectionTop && window.scrollY<sectionTop+sectionHeight){
 
-current=section.getAttribute("id");
+current=section.id;
 
 }
 
@@ -2722,16 +2721,11 @@ current=section.getAttribute("id");
 
 navLinks.forEach(link=>{
 
-link.classList.remove("active");
-
-if(link.getAttribute("href")==="#"+current){
-
-link.classList.add("active");
-
-}
+link.classList.toggle("active",link.getAttribute("href")==="#"+current);
 
 });
 
+});
 });
 
 const topBtn=document.querySelector(".top");
@@ -2750,6 +2744,8 @@ topBtn.classList.remove("show");
 
 });
 
+if(topBtn){
+
 topBtn.addEventListener("click",()=>{
 
 window.scrollTo({
@@ -2761,6 +2757,7 @@ behavior:"smooth"
 });
 
 });
+
 const observer=new IntersectionObserver((entries)=>{
 
 entries.forEach((entry)=>{
@@ -2769,9 +2766,7 @@ if(entry.isIntersecting){
 
 entry.target.classList.add("show");
 
-}else{
-
-entry.target.classList.remove("show");
+observer.unobserve(entry.target);
 
 }
 
@@ -2782,7 +2777,6 @@ entry.target.classList.remove("show");
 threshold:0.15
 
 });
-
 document.querySelectorAll(
 
 ".service-card,.stat,.industry,.process-card,.testimonial,.contact-box,.about-content,.about-image,.hero-card"
@@ -2794,19 +2788,13 @@ observer.observe(el);
 });
 const counters=document.querySelectorAll(".stat-count");
 
-let counterStarted=false;
+const counterObserver=new IntersectionObserver((entries)=>{
 
-window.addEventListener("scroll",()=>{
+entries.forEach(entry=>{
 
-const stats=document.querySelector(".stats");
+if(entry.isIntersecting){
 
-if(!stats || counterStarted) return;
-
-if(window.scrollY > stats.offsetTop-500){
-
-counterStarted=true;
-
-counters.forEach(counter=>{
+const counter=entry.target;
 
 const target=Number(counter.dataset.goal);
 
@@ -2834,11 +2822,15 @@ requestAnimationFrame(update);
 
 update();
 
-});
+counterObserver.unobserve(counter);
 
 }
 
 });
+
+});
+
+counters.forEach(counter=>counterObserver.observe(counter));
 </script>
 <script>
 
@@ -2891,39 +2883,57 @@ slides.forEach((slide,index)=>{
 
 slide.style.display=index===current?"block":"none";
 
+slide.style.opacity=index===current?"1":"0";
+
 });
 
 current=(current+1)%slides.length;
 
 }
-
 if(slides.length>1){
 
 testimonialSlider();
 
-setInterval(testimonialSlider,5000);
+setInterval(testimonialSlider,4000);
 
 }else if(slides.length===1){
 
 slides[0].style.display="block";
+
+slides[0].style.opacity="1";
 
 }
 const form=document.querySelector(".contact-form");
 
 if(form){
 
-form.addEventListener("submit",function(e){
+form.addEventListener("submit",(e)=>{
 
 e.preventDefault();
 
-alert("Thank you! Our HR Team will contact you shortly.");
+const button=form.querySelector("button");
+
+const originalText=button.innerHTML;
+
+button.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+
+button.disabled=true;
+
+setTimeout(()=>{
+
+alert("Thank you for contacting Dream HR Consultancy.\n\nOur team will contact you shortly.");
 
 form.reset();
+
+button.innerHTML=originalText;
+
+button.disabled=false;
+
+},1200);
 
 });
 
 }
-
 window.addEventListener("load",()=>{
 
 const preloader=document.getElementById("preloader");
@@ -2942,10 +2952,11 @@ preloader.remove();
 
 }
 
+window.scrollTo(0,0);
+
 document.body.classList.add("loaded");
 
 });
-
 </script>
 
 <script>
