@@ -150,6 +150,7 @@ padding:90px 0;
 
 }
 header{
+
 position:fixed;
 
 top:0;
@@ -158,22 +159,22 @@ left:0;
 
 width:100%;
 
-background:rgba(255,255,255,.82);
+background:rgba(255,255,255,.78);
 
-backdrop-filter:blur(20px);
+backdrop-filter:blur(24px);
 
--webkit-backdrop-filter:blur(20px);
+-webkit-backdrop-filter:blur(24px);
 
-border-bottom:1px solid rgba(255,255,255,.4);
+border-bottom:1px solid rgba(255,255,255,.35);
 
-box-shadow:0 15px 45px rgba(0,0,0,.08);
+box-shadow:0 20px 50px rgba(0,0,0,.10);
 
-transition:.35s ease;
+transition:all .35s ease;
 
 z-index:9999;
 
 }
-nav{
+  nav{
 
 height:80px;
 
@@ -213,6 +214,8 @@ align-items:center;
 
 .menu a{
 
+position:relative;
+
 color:#333;
 
 font-weight:600;
@@ -221,7 +224,7 @@ padding:10px 16px;
 
 border-radius:10px;
 
-transition:.35s;
+transition:all .35s ease;
 
 }
 .menu a:hover,
@@ -232,10 +235,11 @@ color:#fff;
 
 background:linear-gradient(135deg,var(--primary),var(--secondary));
 
-box-shadow:0 10px 25px rgba(0,87,255,.25);
+box-shadow:0 12px 30px rgba(0,87,255,.30);
+
+transform:translateY(-2px);
 
 }
-
 .btn{
 
 display:inline-block;
@@ -1365,26 +1369,31 @@ border:none;
 cursor:pointer;
 
 }
-  footer{
+footer{
 
-background:#051937;
+background:
+linear-gradient(135deg,#021326 0%,#06264d 45%,#0a3d7a 100%);
 
 color:#d8e6f3;
 
-padding:80px 0 20px;
+padding:90px 0 25px;
+
+position:relative;
+
+overflow:hidden;
 
 }
-
 .footer-grid{
 
 display:grid;
 
 grid-template-columns:2fr 1fr 1fr 1.2fr;
 
-gap:40px;
+gap:50px;
+
+align-items:flex-start;
 
 }
-
 .footer-logo{
 
 font-size:32px;
@@ -1410,19 +1419,23 @@ line-height:1.9;
 margin-bottom:25px;
 
 }
-
 .footer-title{
 
 font-size:22px;
 
-font-weight:600;
+font-weight:700;
 
-margin-bottom:20px;
+margin-bottom:22px;
 
 color:#fff;
 
-}
+letter-spacing:.5px;
 
+position:relative;
+
+padding-bottom:10px;
+
+}
 .footer-links{
 
 list-style:none;
@@ -1434,23 +1447,24 @@ list-style:none;
 margin-bottom:12px;
 
 }
-
 .footer-links a{
 
 color:#d8e6f3;
 
-transition:.3s;
+transition:all .35s ease;
+
+display:inline-block;
 
 }
-
 .footer-links a:hover{
 
 color:#00c6ff;
 
-padding-left:8px;
+padding-left:12px;
+
+transform:translateX(3px);
 
 }
-
 .social-icons{
 
 display:flex;
@@ -1508,14 +1522,13 @@ color:#00c6ff;
 margin-right:10px;
 
 }
-
 .footer-bottom{
 
-margin-top:60px;
+margin-top:70px;
 
-padding-top:25px;
+padding-top:30px;
 
-border-top:1px solid rgba(255,255,255,.1);
+border-top:1px solid rgba(255,255,255,.15);
 
 display:flex;
 
@@ -1529,8 +1542,9 @@ gap:20px;
 
 font-size:15px;
 
-}
+color:rgba(255,255,255,.78);
 
+}
 .whatsapp{
 
 position:fixed;
