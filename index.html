@@ -65,7 +65,7 @@ background:#f6f9fc;
 color:#222;
 
 overflow-x:hidden;
-
+cursor:default;
 }
 
 #preloader{
@@ -1635,7 +1635,33 @@ opacity:1;
 visibility:visible;
 
 }
+/*==============================
+PREMIUM CURSOR GLOW
+==============================*/
 
+.cursor-glow{
+
+position:fixed;
+
+width:18px;
+
+height:18px;
+
+border-radius:50%;
+
+background:rgba(0,87,255,.35);
+
+pointer-events:none;
+
+transform:translate(-50%,-50%);
+
+backdrop-filter:blur(4px);
+
+z-index:99999;
+
+transition:transform .08s linear;
+
+}
 @media(max-width:1100px){
 
 .hero-grid,
@@ -1727,7 +1753,7 @@ grid-template-columns:1fr;
 }
 
 </style>
-
+<link rel="icon" href="favicon.ico">
 </head>
 
 <body>
@@ -1763,7 +1789,7 @@ grid-template-columns:1fr;
 
 <a href="#contact">Contact</a>
 
-<a href="https://calendly.com/" target="_blank" class="btn btn-primary">Book Meeting</a>
+<a href="https://calendly.com/" target="_blank" rel="noopener" class="btn btn-primary">Book Meeting</a>
 
 </div>
 
@@ -1810,11 +1836,11 @@ timely and professional compliance management.
 <i class="fa-solid fa-briefcase"></i> Explore All Services
 </a>
 
-<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn btn-white">
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" rel="noopener" class="btn btn-white">
 <i class="fa-solid fa-calendar-check"></i> Schedule Free Consultation
 </a>
 
-<a href="https://wa.me/918863962310" target="_blank" class="btn btn-primary">
+<a href="https://wa.me/918863962310" target="_blank" rel="noopener" class="btn btn-primary">
 <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
 </a>
 
@@ -1908,7 +1934,7 @@ Hospitals, Educational Institutions and Corporate Offices.
 
 <div class="about-image">
 
-<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80">
+<img loading="lazy" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80">
 
 </div>
 
@@ -2261,11 +2287,11 @@ Whether you need PF, ESIC, Payroll, Labour Law Compliance, Factory Act Complianc
 
 <div class="cta-buttons">
 
-<a href="https://wa.me/918863962310" target="_blank" class="btn btn-primary">
+<a href="https://wa.me/918863962310" target="_blank" rel="noopener" class="btn btn-primary">
 <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
 </a>
 
-<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" class="btn btn-white">
+<a href="https://calendly.com/dreamhrtraining/30min" target="_blank" rel="noopener" class="btn btn-white">
 <i class="fa-solid fa-calendar-check"></i> Schedule Free Consultation
 </a>
 
@@ -2387,7 +2413,7 @@ Delhi NCR, India (Serving Clients PAN India)
 
 <i class="fa-solid fa-globe"></i>
 
-<a href="https://idhrt.com" target="_blank">www.idhrt.com</a>
+<a href="https://idhrt.com" target="_blank" rel="noopener">www.idhrt.com</a>
 
 </p>
 <p>
@@ -2473,7 +2499,16 @@ Send Enquiry
 <!-- =========================
 FOOTER
 ========================= -->
-
+<section class="map">
+<iframe
+src="https://www.google.com/maps?q=Delhi%20NCR&output=embed"
+width="100%"
+height="450"
+style="border:0;"
+loading="lazy"
+allowfullscreen>
+</iframe>
+</section>
 <footer>
 
 <div class="container">
@@ -2503,25 +2538,25 @@ Dream HR Consultancy is a trusted HR & Compliance partner delivering complete Pa
 </p>
 <div class="social-icons">
 
-<a href="https://www.facebook.com/profile.php?id=61570617880654" target="_blank">
+<a href="https://www.facebook.com/profile.php?id=61570617880654" target="_blank" rel="noopener">
 
 <i class="fab fa-facebook-f"></i>
 
 </a>
 
-<a href="https://www.instagram.com/idhrtdelhi/" target="_blank">
+<a href="https://www.instagram.com/idhrtdelhi/" target="_blank" rel="noopener">
 
 <i class="fab fa-instagram"></i>
 
 </a>
 
-<a href="https://www.linkedin.com/in/chandan-jha-hr/" target="_blank">
+<a href="https://www.linkedin.com/in/chandan-jha-hr/" target="_blank" rel="noopener">
 
 <i class="fab fa-linkedin-in"></i>
 
 </a>
 
-<a href="https://x.com/DreamH40549" target="_blank">
+<a href="https://x.com/DreamH40549" target="_blank" rel="noopener">
 
 <i class="fab fa-x-twitter"></i>
 
@@ -2777,7 +2812,7 @@ href="https://wa.me/918863962310"
 
 class="whatsapp"
 
-target="_blank"
+target="_blank" rel="noopener"
 
 >
 
@@ -2947,6 +2982,61 @@ document.querySelectorAll(
 el.classList.add("reveal");
 
 observer.observe(el);
+});
+   /*==========================
+PREMIUM MOUSE PARALLAX
+==========================*/
+
+document.querySelectorAll(".service-card").forEach(card=>{
+
+card.addEventListener("mousemove",(e)=>{
+
+const rect=card.getBoundingClientRect();
+
+const x=e.clientX-rect.left;
+
+const y=e.clientY-rect.top;
+
+const rotateY=((x/rect.width)-0.5)*12;
+
+const rotateX=((rect.height/2-y)/rect.height)*12;
+
+card.style.transform=
+`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-20px) scale(1.03)`;
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform="";
+
+});
+
+});
+/*==========================
+MAGNETIC BUTTON EFFECT
+==========================*/
+
+document.querySelectorAll(".btn").forEach(btn=>{
+
+btn.addEventListener("mousemove",(e)=>{
+
+const rect=btn.getBoundingClientRect();
+
+const x=e.clientX-rect.left-rect.width/2;
+
+const y=e.clientY-rect.top-rect.height/2;
+
+btn.style.transform=`translate(${x*0.12}px,${y*0.12}px)`;
+
+});
+
+btn.addEventListener("mouseleave",()=>{
+
+btn.style.transform="";
+
+});
+
 });
 const counters=document.querySelectorAll(".stat-count");
 
@@ -3137,6 +3227,23 @@ document.body.classList.add("loaded");
 </script>
 
 <script>
+/*==========================
+CURSOR GLOW
+==========================*/
+
+const glow=document.querySelector(".cursor-glow");
+
+if(glow){
+
+document.addEventListener("mousemove",(e)=>{
+
+glow.style.left=e.clientX+"px";
+
+glow.style.top=e.clientY+"px";
+
+});
+
+}
 document.getElementById("copyrightYear").textContent = new Date().getFullYear();
 </script>
 
