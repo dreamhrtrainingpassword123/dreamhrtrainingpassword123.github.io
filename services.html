@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 
-
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -116,7 +115,7 @@ nav a:hover{background:#113f64;}
 
 /* NEWS BAR (SLOW FIXED) */
 .newsbar{
-margin-top:72px;
+margin-top:90px;
 display:flex;
 height:48px;
 overflow:hidden;
@@ -262,6 +261,8 @@ font-size:32px;
 color:#fff;
 cursor:pointer;
 font-weight:bold;
+z-index:1001;
+line-height:1;
 }
 
 @media(max-width:900px){
@@ -277,6 +278,7 @@ flex-wrap:nowrap;
 
 .menu-toggle{
 display:block !important;
+margin-left:10px;
 }
 .logo{
 max-width:75%;
@@ -289,6 +291,10 @@ height:38px;
 
 .logo div div:first-child{
 font-size:15px !important;
+}
+
+.logo div div:last-child{
+font-size:9px !important;
 }
 
 .logo div div:last-child{
