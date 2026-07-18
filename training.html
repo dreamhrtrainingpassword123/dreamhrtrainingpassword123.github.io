@@ -90,15 +90,20 @@ margin-top:55px;
 
 .course-card{
 position:relative;
-background:linear-gradient(135deg,#ffffff,#f6f9ff);
-border-radius:25px;
-padding:40px 32px;
+background:#ffffff;
+border-radius:24px;
+padding:38px 30px;
 overflow:hidden;
-border:1px solid rgba(0,87,255,.12);
-box-shadow:0 18px 45px rgba(0,0,0,.12);
-transition:.35s ease;
+border:1px solid #e8edf7;
+box-shadow:0 20px 45px rgba(0,0,0,.08);
+transition:.35s;
 }
 
+.course-card:hover{
+transform:translateY(-12px);
+box-shadow:0 28px 60px rgba(0,87,255,.20);
+border-color:#0057ff;
+}
 .course-card::before{
 content:"";
 position:absolute;
@@ -135,20 +140,21 @@ color:#003b99;
 }
 
 .price{
-font-size:52px;
+font-size:54px;
 font-weight:800;
-color:#0057ff;
-margin:18px 0 10px;
+background:linear-gradient(90deg,#0057ff,#00a2ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin:20px 0;
 }
 
 .duration{
 display:inline-block;
-padding:8px 18px;
-background:#edf4ff;
-border-radius:30px;
-font-size:15px;
+padding:10px 22px;
+background:#ffb400;
+color:#111;
 font-weight:700;
-color:#0057ff;
+border-radius:50px;
 margin-bottom:25px;
 }
 
@@ -169,14 +175,18 @@ margin-bottom:8px;
 display:block;
 margin-top:30px;
 padding:16px;
-border-radius:50px;
-text-decoration:none;
+background:linear-gradient(90deg,#0057ff,#00a2ff);
+color:#fff;
 font-weight:700;
 font-size:17px;
-background:linear-gradient(90deg,#0057ff,#003e9d);
-color:#fff;
-box-shadow:0 12px 30px rgba(0,87,255,.25);
+border-radius:50px;
+text-decoration:none;
 transition:.3s;
+}
+
+.course-card .course-btn:hover{
+background:linear-gradient(90deg,#ffb400,#ff9100);
+color:#111;
 }
 
 .course-card .course-btn:hover{
@@ -222,65 +232,7 @@ font-size:14px;
 
 }
 
-.course-card h3{
-font-size:30px;
-font-weight:700;
-color:#fff;
-margin-bottom:20px;
-line-height:1.4;
-}
 
-.price{
-font-size:56px;
-font-weight:800;
-color:#ffcc33;
-margin:20px 0;
-text-shadow:0 3px 10px rgba(0,0,0,.4);
-}
-
-.duration{
-display:inline-block;
-padding:10px 20px;
-background:#ffb400;
-color:#111;
-font-weight:700;
-border-radius:30px;
-margin-bottom:25px;
-font-size:15px;
-}
-
-.course-card ul{
-margin:0 0 30px;
-padding-left:20px;
-text-align:left;
-line-height:2;
-font-size:16px;
-color:#f2f2f2;
-}
-
-.course-card ul li{
-margin-bottom:8px;
-}
-
-.course-card .course-btn{
-display:block;
-width:100%;
-padding:16px;
-background:linear-gradient(90deg,#ffb400,#ff8c00);
-color:#111;
-font-weight:700;
-font-size:18px;
-text-decoration:none;
-border-radius:50px;
-transition:.3s;
-box-shadow:0 12px 30px rgba(255,180,0,.35);
-}
-
-.course-card .course-btn:hover{
-background:#fff;
-color:#003b99;
-transform:translateY(-3px);
-}
 @media(max-width:768px){
 
 .course-hero h1{
@@ -364,7 +316,6 @@ A Unit of Institute of Dream HR Training & Compliance
 
 </div>
 
-</header>
 
 </header>
 <section class="course-hero">
@@ -411,8 +362,7 @@ Select the course according to your career goals and experience.
 Duration : 1 Month
 </div>
 
-<ul style="text-align:left;line-height:2;font-size:16px;">
-
+<ul>
 <li>Complete HR Fundamentals</li>
 
 <li>Recruitment & Interview Process</li>
@@ -451,8 +401,7 @@ Enroll Now
 Duration : 3 Months
 </div>
 
-<ul style="text-align:left;line-height:2;font-size:16px;">
-
+<ul>
 <li>Everything in 1 Month Course</li>
 
 <li>Complete Payroll Processing</li>
@@ -493,8 +442,7 @@ Enroll Now
 Duration : 6 Months
 </div>
 
-<ul style="text-align:left;line-height:2;font-size:16px;">
-
+<ul>
 <li>Everything in 3 Month Course</li>
 
 <li>Complete HR Operations</li>
